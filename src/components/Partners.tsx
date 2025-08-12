@@ -67,10 +67,10 @@ const Partners = () => {
             {partnerLogos.map((partner, index) => (
               <div
                 key={`third-${index}`}
-              className="flex-shrink-0 mx-8 flex items-center justify-center h-24 w-48 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-100 group hover-lift hover-glow"
+                className="flex-shrink-0 mx-8 flex items-center justify-center h-24 w-48 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-100 group hover-lift hover-glow"
               >
                 <div className="text-blue-700 text-sm font-semibold text-center px-6 group-hover:text-blue-900 transition-colors duration-300">
-              <div className="text-blue-700 text-sm font-semibold text-center px-6 group-hover:text-blue-900 transition-all duration-300 group-hover:scale-105">
+                  {partner.name}
                 </div>
               </div>
             ))}
