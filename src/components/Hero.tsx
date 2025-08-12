@@ -129,6 +129,7 @@ html {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 bg-gradient-to-br from-slate-50 via-blue-50 to-white">
 /* Smooth scroll transitions with refined easing */
 html {
+    }
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
 }
