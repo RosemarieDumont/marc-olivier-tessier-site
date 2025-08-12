@@ -1,332 +1,146 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+import React from 'react';
+import { ArrowDown } from 'lucide-react';
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+const Hero = () => {
+  return (
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 bg-gradient-to-br from-slate-50 via-blue-50 to-white">
+      {/* Animated House Construction - Positioned strategically */}
+      <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 opacity-6 z-0">
+        <svg width="500" height="375" viewBox="0 0 400 300" className="drop-shadow-sm">
+          {/* Foundation */}
+          <line 
+            x1="40" y1="260" x2="360" y2="260" 
+            stroke="rgb(30 58 138)" 
+            strokeWidth="5" 
+            className="animate-draw-foundation"
+          />
+          
+          {/* Left Wall */}
+          <line 
+            x1="40" y1="260" x2="40" y2="140" 
+            stroke="rgb(59 130 246)" 
+            strokeWidth="4" 
+            className="animate-draw-walls"
+          />
+          
+          {/* Right Wall */}
+          <line 
+            x1="360" y1="260" x2="360" y2="140" 
+            stroke="rgb(59 130 246)" 
+            strokeWidth="4" 
+            className="animate-draw-walls"
+          />
+          
+          {/* Left Roof Line */}
+          <line 
+            x1="40" y1="140" x2="200" y2="60" 
+            stroke="rgb(71 85 105)" 
+            strokeWidth="4" 
+            className="animate-draw-roof"
+          />
+          
+          {/* Right Roof Line */}
+          <line 
+            x1="360" y1="140" x2="200" y2="60" 
+            stroke="rgb(71 85 105)" 
+            strokeWidth="4" 
+            className="animate-draw-roof"
+          />
+          
+          {/* Door */}
+          <rect 
+            x="170" y="200" width="60" height="60" 
+            fill="none" 
+            stroke="rgb(30 58 138)" 
+            strokeWidth="3" 
+            className="animate-draw-details"
+          />
+          
+          {/* Window */}
+          <rect 
+            x="260" y="170" width="50" height="40" 
+            fill="none" 
+            stroke="rgb(59 130 246)" 
+            strokeWidth="3" 
+            className="animate-draw-details"
+          />
+          
+          {/* Window Cross */}
+          <line 
+            x1="285" y1="170" x2="285" y2="210" 
+            stroke="rgb(59 130 246)" 
+            strokeWidth="2" 
+            className="animate-draw-details"
+          />
+          <line 
+            x1="260" y1="190" x2="310" y2="190" 
+            stroke="rgb(59 130 246)" 
+            strokeWidth="2" 
+            className="animate-draw-details"
+          />
+        </svg>
+      </div>
 
-* {
-  font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-12 gap-8 items-center min-h-[80vh]">
+          
+          {/* Left Side - Main Title (spans 7 columns) */}
+          <div className="lg:col-span-7 text-left animate-fade-in">
+            <div className="relative">
+              {/* Subtle background accent */}
+              <div className="absolute -inset-6 bg-gradient-to-r from-white/80 to-transparent rounded-3xl backdrop-blur-sm border border-blue-100/50 shadow-lg -z-10"></div>
+              
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-blue-900 relative z-10">
+                Bâtissons ensemble des fondations solides pour votre avenir financier.
+              </h1>
+              
+              {/* Subtle decorative line */}
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-slate-600 rounded-full mb-6"></div>
+              
+              {/* Bouton Prendre rendez-vous */}
+              <div className="mt-8">
+                <a
+                  href="https://outlook-sdf.office.com/bookwithme/user/0cb6ca6a017f4d5ea6b053f4dacafad2%40agc.ia.ca?anonymous&ismsaljsauthenabled=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 bg-blue-900 hover:bg-blue-800 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  Prendre rendez-vous
+                </a>
+              </div>
+            </div>
+          </div>
 
-html {
-  scroll-behavior: smooth;
-}
+          {/* Right Side - Photo de Marc-Olivier (spans 5 columns) */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end animate-fade-in-delay">
+            <div className="relative group">
+              {/* Photo principale */}
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl border-4 border-white group-hover:shadow-3xl transition-all duration-500">
+                <img
+                  src="./MarcOlivierPro.jpg"
+                  alt="Marc-Olivier Tessier, Conseiller en sécurité financière"
+                  className="w-80 h-96 object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                />
+                
+                {/* Overlay gradient subtil */}
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 via-transparent to-transparent"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce group cursor-pointer z-20">
+        <div className="w-6 h-10 border-2 border-blue-400 rounded-full flex justify-center bg-white/50 backdrop-blur-sm group-hover:bg-white/70 transition-all duration-300">
+          <ArrowDown className="w-3 h-3 text-blue-900 mt-2" />
+        </div>
+      </div>
+    </section>
+  );
+};
 
-@keyframes fade-in-delay {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-fade-in {
-  animation: fade-in 1s ease-out;
-}
-
-.animate-fade-in-delay {
-  animation: fade-in-delay 1s ease-out 0.3s both;
-}
-
-@keyframes loading-bar {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(400%);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes float-delayed {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-}
-
-.animate-loading-bar {
-  animation: loading-bar 2s ease-in-out infinite;
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-.animate-float-delayed {
-  animation: float-delayed 3s ease-in-out infinite 1.5s;
-}
-
-@keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes bounce-slow {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-.animate-spin-slow {
-  animation: spin-slow 20s linear infinite;
-}
-
-.animate-bounce-slow {
-  animation: bounce-slow 4s ease-in-out infinite;
-}
-
-@keyframes scroll-horizontal {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-33.333%);
-  }
-}
-
-.animate-scroll-horizontal {
-  animation: scroll-horizontal 30s linear infinite;
-}
-
-.animate-scroll-horizontal:hover {
-  animation-play-state: paused;
-}
-
-/* Smooth scroll transitions with refined easing */
-html {
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 bg-gradient-to-br from-slate-50 via-blue-50 to-white">
-/* Smooth scroll transitions with refined easing */
-html {
-    }
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px;
-}
-
-/* Section reveal animations */
-@keyframes slideInFromLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-60px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInFromRight {
-  0% {
-    opacity: 0;
-    transform: translateX(60px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInFromBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(60px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes scaleIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Section animation classes */
-.animate-slide-in-left {
-  animation: slideInFromLeft 0.8s ease-out forwards;
-}
-
-.animate-slide-in-right {
-  animation: slideInFromRight 0.8s ease-out forwards;
-}
-
-.animate-slide-in-bottom {
-  animation: slideInFromBottom 0.8s ease-out forwards;
-}
-
-.animate-scale-in {
-  animation: scaleIn 0.8s ease-out forwards;
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-/* Staggered animation delays */
-.animate-delay-100 {
-  animation-delay: 0.1s;
-}
-
-.animate-delay-200 {
-  animation-delay: 0.2s;
-}
-
-.animate-delay-300 {
-  animation-delay: 0.3s;
-}
-
-.animate-delay-400 {
-  animation-delay: 0.4s;
-}
-
-.animate-delay-500 {
-  animation-delay: 0.5s;
-}
-
-/* Intersection Observer ready states */
-.section-hidden {
-  opacity: 0;
-  transform: translateY(40px);
-}
-
-.section-visible {
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-/* Enhanced hover effects for navigation */
-.nav-link {
-  position: relative;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #3b82f6, #1e40af);
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transform: translateX(-50%);
-}
-
-.nav-link:hover::after {
-  width: 100%;
-}
-
-/* Smooth page transitions */
-.page-transition {
-  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-/* House construction animations */
-@keyframes draw-foundation {
-  0% {
-    stroke-dashoffset: 200;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw-walls {
-  0% {
-    stroke-dashoffset: 300;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw-roof {
-  0% {
-    stroke-dashoffset: 250;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw-details {
-  0% {
-    stroke-dashoffset: 100;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-.animate-draw-foundation {
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
-  animation: draw-foundation 3s ease-in-out 1s forwards;
-}
-
-.animate-draw-walls {
-  stroke-dasharray: 300;
-  stroke-dashoffset: 300;
-  animation: draw-walls 4s ease-in-out 3s forwards;
-}
-
-.animate-draw-roof {
-  stroke-dasharray: 250;
-  stroke-dashoffset: 250;
-  animation: draw-roof 3s ease-in-out 6s forwards;
-}
-
-.animate-draw-details {
-  stroke-dasharray: 100;
-  stroke-dashoffset: 100;
-  animation: draw-details 2s ease-in-out 8s forwards;
-}
+export default Hero;

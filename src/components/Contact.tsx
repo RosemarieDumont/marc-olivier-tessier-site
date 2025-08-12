@@ -1,328 +1,168 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+import React from 'react';
+import { Phone, Mail, Linkedin, Facebook, MapPin, Clock, Send } from 'lucide-react';
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+const Contact = () => {
+  const contactInfo = [
+    {
+      icon: <Phone className="w-6 h-6" />,
+      label: "Téléphone",
+      value: "(581) 992-7850",
+      href: "tel:+15819927850",
+      color: "from-blue-500 to-blue-600"
+    },
+    {
+      icon: <Mail className="w-6 h-6" />,
+      label: "Email",
+      value: "marc-olivier.tessier@agc.ia.ca",
+      href: "mailto:marc-olivier.tessier@agc.ia.ca",
+      color: "from-blue-600 to-blue-700"
+    },
+    {
+      icon: <Linkedin className="w-6 h-6" />,
+      label: "LinkedIn",
+      value: "Marc-Olivier Tessier",
+      href: "https://www.linkedin.com/in/marc-olivier-tessier-csf-7b70a21b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      color: "from-blue-700 to-blue-800"
+    },
+    {
+      icon: <Facebook className="w-6 h-6" />,
+      label: "Facebook",
+      value: "Marc-Olivier Tessier",
+      href: "https://www.facebook.com/share/1GpZpR6eML/?mibextid=wwXIfr",
+      color: "from-blue-500 to-blue-700"
+    },
+    {
+      icon: <MapPin className="w-6 h-6" />,
+      label: "Adresse",
+      value: "1255, boul. Lebourgneuf, bureau 400, Québec (Québec) G2K 0M6",
+      href: "https://maps.google.com/?q=1255+boul.+Lebourgneuf,+bureau+400,+Québec,+QC+G2K+0M6",
+      color: "from-blue-800 to-blue-900"
+    }
+  ];
 
-* {
-  font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-}
+  return (
+    <section id="contact" className="py-20 bg-blue-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-6">Nous contacter</h2>
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+            Prêt à commencer votre parcours vers la sécurité financière ? Contactez-nous dès aujourd'hui
+          </p>
+        </div>
 
-html {
-  scroll-behavior: smooth;
-}
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact Information */}
+          <div className="relative z-10">
+            <h3 className="text-2xl font-bold text-white mb-8">Informations de contact</h3>
+            <div className="space-y-6">
+              {contactInfo.map((info, index) => (
+                <a
+                  key={index}
+                  href={info.href}
+                  target={info.href.startsWith('http') ? '_blank' : undefined}
+                  rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  className="group flex items-start gap-4 p-6 bg-white/10 rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/30 backdrop-blur-sm"
+                >
+                  <div className="p-3 rounded-xl bg-blue-600 text-white">
+                    {info.icon}
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-white mb-1">{info.label}</h4>
+                    <p className="text-blue-100">
+                      {info.value}
+                    </p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+          {/* Contact Form */}
+          <div className="relative z-10">
+            <h3 className="text-2xl font-bold text-white mb-8">Demande de consultation</h3>
+            <form className="space-y-6">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-blue-100 mb-2">
+                    Prénom
+                  </label>
+                  <input
+                    type="text"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-300 backdrop-blur-sm"
+                    placeholder="Votre prénom"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-blue-100 mb-2">
+                    Nom
+                  </label>
+                  <input
+                    type="text"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-300 backdrop-blur-sm"
+                    placeholder="Votre nom"
+                  />
+                </div>
+              </div>
 
-@keyframes fade-in-delay {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+              <div>
+                <label className="block text-sm font-medium text-blue-100 mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-300 backdrop-blur-sm"
+                  placeholder="votre@email.com"
+                />
+              </div>
 
-.animate-fade-in {
-  animation: fade-in 1s ease-out;
-}
+              <div>
+                <label className="block text-sm font-medium text-blue-100 mb-2">
+                  Téléphone
+                </label>
+                <input
+                  type="tel"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-300 backdrop-blur-sm"
+                  placeholder="(514) 555-0123"
+                />
+              </div>
 
-.animate-fade-in-delay {
-  animation: fade-in-delay 1s ease-out 0.3s both;
-}
+              <div>
+                <label className="block text-sm font-medium text-blue-100 mb-2">
+                  Service d'intérêt
+                </label>
+                <select className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-300 backdrop-blur-sm">
+                  <option value="">Sélectionnez un service</option>
+                  <option value="epargne">Épargne et placements</option>
+                  <option value="assurance">Assurance</option>
+                  <option value="corporatif">Services corporatifs</option>
+                  <option value="consultation">Consultation générale</option>
+                </select>
+              </div>
 
-@keyframes loading-bar {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(400%);
-  }
-}
+              <div>
+                <label className="block text-sm font-medium text-blue-100 mb-2">
+                  Message
+                </label>
+                <textarea
+                  rows={4}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-300 resize-none backdrop-blur-sm"
+                  placeholder="Décrivez brièvement vos besoins ou questions..."
+                ></textarea>
+              </div>
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
+              <button
+                type="submit"
+                className="w-full bg-white text-blue-900 hover:bg-blue-50 py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-lg"
+              >
+                <Send className="w-5 h-5" />
+                Envoyer la demande
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-@keyframes float-delayed {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-}
-
-.animate-loading-bar {
-  animation: loading-bar 2s ease-in-out infinite;
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-.animate-float-delayed {
-  animation: float-delayed 3s ease-in-out infinite 1.5s;
-}
-
-@keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes bounce-slow {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-.animate-spin-slow {
-  animation: spin-slow 20s linear infinite;
-}
-
-.animate-bounce-slow {
-  animation: bounce-slow 4s ease-in-out infinite;
-}
-
-@keyframes scroll-horizontal {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-33.333%);
-  }
-}
-
-.animate-scroll-horizontal {
-  animation: scroll-horizontal 30s linear infinite;
-}
-
-.animate-scroll-horizontal:hover {
-  animation-play-state: paused;
-}
-
-/* Smooth scroll transitions with refined easing */
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px;
-}
-
-/* Section reveal animations */
-@keyframes slideInFromLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-60px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInFromRight {
-  0% {
-    opacity: 0;
-    transform: translateX(60px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInFromBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(60px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes scaleIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Section animation classes */
-.animate-slide-in-left {
-  animation: slideInFromLeft 0.8s ease-out forwards;
-}
-
-.animate-slide-in-right {
-  animation: slideInFromRight 0.8s ease-out forwards;
-}
-
-.animate-slide-in-bottom {
-  animation: slideInFromBottom 0.8s ease-out forwards;
-}
-
-.animate-scale-in {
-  animation: scaleIn 0.8s ease-out forwards;
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-/* Staggered animation delays */
-.animate-delay-100 {
-  animation-delay: 0.1s;
-}
-
-.animate-delay-200 {
-  animation-delay: 0.2s;
-}
-
-.animate-delay-300 {
-  animation-delay: 0.3s;
-}
-
-.animate-delay-400 {
-  animation-delay: 0.4s;
-}
-
-.animate-delay-500 {
-  animation-delay: 0.5s;
-}
-
-/* Intersection Observer ready states */
-.section-hidden {
-  opacity: 0;
-  transform: translateY(40px);
-}
-
-.section-visible {
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-/* Enhanced hover effects for navigation */
-.nav-link {
-  position: relative;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #3b82f6, #1e40af);
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transform: translateX(-50%);
-}
-
-.nav-link:hover::after {
-  width: 100%;
-}
-
-/* Smooth page transitions */
-.page-transition {
-  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-/* House construction animations */
-@keyframes draw-foundation {
-  0% {
-    stroke-dashoffset: 200;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw-walls {
-  0% {
-    stroke-dashoffset: 300;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw-roof {
-  0% {
-    stroke-dashoffset: 250;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw-details {
-  0% {
-    stroke-dashoffset: 100;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-.animate-draw-foundation {
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
-  animation: draw-foundation 3s ease-in-out 1s forwards;
-}
-
-.animate-draw-walls {
-  stroke-dasharray: 300;
-  stroke-dashoffset: 300;
-  animation: draw-walls 4s ease-in-out 3s forwards;
-}
-
-.animate-draw-roof {
-  stroke-dasharray: 250;
-  stroke-dashoffset: 250;
-  animation: draw-roof 3s ease-in-out 6s forwards;
-}
-
-.animate-draw-details {
-  stroke-dasharray: 100;
-  stroke-dashoffset: 100;
-  animation: draw-details 2s ease-in-out 8s forwards;
-}
+export default Contact;
