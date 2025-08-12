@@ -1,105 +1,274 @@
-import React from 'react';
-import { Shield, User, Handshake, TrendingUp, Award, Users } from 'lucide-react';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-const Welcome = () => {
-  const approaches = [
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Stabilité",
-      description: "Nous posons les bonnes fondations pour construire un avenir financier solide et durable."
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Création de valeur",
-      description: "Nous aidons à faire croître votre patrimoine avec cohérence et confiance."
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Relations humaines",
-      description: "Nous privilégions des relations durables basées sur la confiance et la transparence."
-    },
-    {
-      icon: <Award className="w-8 h-8" />,
-      title: "Vision à long terme",
-      description: "Nous construisons ensemble un plan financier durable qui évolue avec vos besoins."
-    }
-  ];
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-  return (
-    <section id="bienvenue" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-blue-900 mb-6">Bienvenue</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Notre approche repose sur quatre valeurs fondamentales : stabilité, création de valeur, relations humaines, et vision à long terme. Parce qu'un avenir financier solide ne se construit pas au hasard, il vous aide à poser les bonnes fondations, à sécuriser l'essentiel, puis à faire croître votre patrimoine avec cohérence et confiance.
-          </p>
-        </div>
+* {
+  font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
 
-        {/* Notre approche */}
-        <div className="mb-20">
-          <h3 className="text-3xl font-bold text-blue-900 text-center mb-12">Notre approche</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {approaches.map((approach, index) => (
-              <div key={index} className="group bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200 hover:-translate-y-1">
-                <div className="relative z-10">
-                  <div className="text-blue-600 mb-4">{approach.icon}</div>
-                  <h4 className="text-xl font-semibold text-blue-900 mb-3">{approach.title}</h4>
-                  <p className="text-gray-600 leading-relaxed">{approach.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+html {
+  scroll-behavior: smooth;
+}
 
-        {/* Marc-Olivier Tessier */}
-        <div className="mb-20">
-          <div className="bg-blue-900 rounded-2xl p-8 lg:p-12 text-white shadow-xl">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="relative z-10">
-                <h3 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                  <div className="p-2 bg-blue-700 rounded-lg">
-                    <User className="w-6 h-6 text-white" />
-                  </div>
-                  Marc-Olivier Tessier
-                </h3>
-                <div className="space-y-4 text-blue-100 leading-relaxed text-lg">
-                  <p>
-                    Marc-Olivier Tessier est conseiller en sécurité financière certifié auprès de l'Autorité des marchés financiers, 
-                    affilié à iA Groupe financier au sein de l'agence Les Rivières. Il accompagne ses clients dans des décisions clés 
-                    liées à l'assurance, à l'épargne et à la retraite, en s'appuyant sur une approche structurée et orientée résultats. 
-                    Propriétaire de biens immobiliers et investisseur actif, il transforme son expérience concrète du marché en conseils 
-                    pratiques, pour aider à construire un avenir financier structuré, fiable et enraciné dans la réalité du terrain.
-                  </p>
-                </div>
-              </div>
-              <div className="flex justify-center relative z-10">
-                <div className="bg-white/10 p-8 rounded-xl border border-white/20">
-                  <div className="grid grid-cols-2 gap-6 text-center">
-                    <div>
-                      <div className="text-3xl font-bold text-white">AMF</div>
-                      <div className="text-sm text-blue-200">Certifié</div>
-                    </div>
-                    <div>
-                      <div className="text-3xl font-bold text-white">iA</div>
-                      <div className="text-sm text-blue-200">Affilié</div>
-                    </div>
-                    <div>
-                      <div className="text-3xl font-bold text-white">Immobilier</div>
-                      <div className="text-sm text-blue-200">Propriétaire</div>
-                    </div>
-                    <div>
-                      <div className="text-3xl font-bold text-white">Investisseur</div>
-                      <div className="text-sm text-blue-200">Actif</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-export default Welcome;
+@keyframes fade-in-delay {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}
+
+.animate-fade-in-delay {
+  animation: fade-in-delay 1s ease-out 0.3s both;
+}
+
+@keyframes loading-bar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes float-delayed {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-loading-bar {
+  animation: loading-bar 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 3s ease-in-out infinite 1.5s;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 4s ease-in-out infinite;
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-scroll-horizontal {
+  animation: scroll-horizontal 30s linear infinite;
+}
+
+.animate-scroll-horizontal:hover {
+  animation-play-state: paused;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out;
+}
+
+.animate-slide-in-bottom {
+  animation: slide-in-bottom 0.8s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.8s ease-out;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.6s ease-out;
+}
+
+.animate-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animate-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animate-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.animate-delay-500 {
+  animation-delay: 0.5s;
+}
+
+.animate-delay-600 {
+  animation-delay: 0.6s;
+}
+
+.animate-delay-700 {
+  animation-delay: 0.7s;
+}
+
+/* House construction animations */
+@keyframes draw-foundation {
+  0% {
+    stroke-dashoffset: 200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-walls {
+  0% {
+    stroke-dashoffset: 300;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-roof {
+  0% {
+    stroke-dashoffset: 250;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-details {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-draw-foundation {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: draw-foundation 3s ease-in-out 1s forwards;
+}
+
+.animate-draw-walls {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: draw-walls 4s ease-in-out 3s forwards;
+}
+
+.animate-draw-roof {
+  stroke-dasharray: 250;
+  stroke-dashoffset: 250;
+  animation: draw-roof 3s ease-in-out 6s forwards;
+}
+
+.animate-draw-details {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: draw-details 2s ease-in-out 8s forwards;
+}

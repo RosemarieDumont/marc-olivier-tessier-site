@@ -1,79 +1,189 @@
-import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-  const navItems = [
-    { name: 'Accueil', href: '#home' },
-    { name: 'Bienvenue', href: '#welcome' },
-    { name: 'Services', href: '#services' },
-    { name: 'Témoignages', href: '#testimonials' },
-    { name: 'Nous contacter', href: '#contact' },
-  ];
+* {
+  font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsMenuOpen(false);
-  };
+html {
+  scroll-behavior: smooth;
+}
 
-  return (
-    <header className="fixed top-0 left-0 right-0 z-50 pt-4">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-slate-900 rounded-2xl shadow-xl backdrop-blur-sm bg-opacity-95 border border-slate-700">
-          <div className="flex justify-between items-center h-16 px-6">
-            <div className="flex-shrink-0">
-              <h1 className="text-xl font-bold text-white">Marc-Olivier Tessier</h1>
-              <p className="text-xs text-slate-300">Conseiller en sécurité financière</p>
-            </div>
-          
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-8">
-              {navItems.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => scrollToSection(item.href)}
-                  className="text-slate-300 hover:text-white transition-colors duration-200 font-medium"
-                >
-                  {item.name}
-                </button>
-              ))}
-            </nav>
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-            {/* Mobile menu button */}
-            <div className="md:hidden">
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-slate-300 hover:text-white"
-              >
-                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+@keyframes fade-in-delay {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
-      {/* Mobile Navigation */}
-      {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-20 bg-slate-900 bg-opacity-95 backdrop-blur-sm z-40 rounded-2xl mx-4 mt-2">
-          <div className="px-6 pt-6 pb-6 space-y-2">
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left px-4 py-4 text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-all duration-200 text-lg font-medium"
-              >
-                {item.name}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
-    </header>
-  );
-};
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}
 
-export default Header;
+.animate-fade-in-delay {
+  animation: fade-in-delay 1s ease-out 0.3s both;
+}
+
+@keyframes loading-bar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes float-delayed {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-loading-bar {
+  animation: loading-bar 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 3s ease-in-out infinite 1.5s;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 4s ease-in-out infinite;
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-scroll-horizontal {
+  animation: scroll-horizontal 30s linear infinite;
+}
+
+.animate-scroll-horizontal:hover {
+  animation-play-state: paused;
+}
+/* House construction animations */
+@keyframes draw-foundation {
+  0% {
+    stroke-dashoffset: 200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-walls {
+  0% {
+    stroke-dashoffset: 300;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-roof {
+  0% {
+    stroke-dashoffset: 250;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-details {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-draw-foundation {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: draw-foundation 3s ease-in-out 1s forwards;
+}
+
+.animate-draw-walls {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: draw-walls 4s ease-in-out 3s forwards;
+}
+
+.animate-draw-roof {
+  stroke-dasharray: 250;
+  stroke-dashoffset: 250;
+  animation: draw-roof 3s ease-in-out 6s forwards;
+}
+
+.animate-draw-details {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: draw-details 2s ease-in-out 8s forwards;
+}
+
+.nav-link {
+  transition: color 0.2s ease-in-out;
+}

@@ -1,91 +1,332 @@
-import React from 'react';
-import { Star, Quote } from 'lucide-react';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-const Testimonials = () => {
-  const testimonials = [
-    {
-      name: "Salomé",
-      content: "Marco est très professionnel, et il sait se montrer aussi chaleureux et amical. Il donne des explications claires sur les placements, et la stratégie à suivre en fonction de vos besoins. Je recommande.",
-      rating: 5,
-      image: "./salomé.jpeg"
-    },
-    {
-      name: "Philippe",
-      content: "Je recommande vivement Marc-Olivier pour son expertise. Son approche personnalisée et son souci du détail font de lui le choix idéal pour sécuriser votre avenir financier.",
-      rating: 5,
-      image: "./philippe.jpeg"
-    },
-    {
-      name: "Jonathan",
-      content: "Merci Marc-Olivier pour ton super service. Super accompagnement dans l'approche et la démarche. Répond parfaitement à mes besoins sans chercher à me vendre ce que je n'ai pas besoin. Au plaisir de refaire affaire.",
-      rating: 5,
-      image: "./jonathan.jpeg"
-    }
-  ];
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-  return (
-    <section id="testimonials" className="py-20 bg-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-block mb-4">
-            <span className="px-6 py-2 bg-white border border-blue-200 rounded-full text-blue-700 text-sm font-medium">
-              Avis clients
-            </span>
-          </div>
-          <h2 className="text-4xl font-bold text-blue-900 mb-6">Témoignages</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Découvrez ce que nos clients disent de nos services
-          </p>
-        </div>
+* {
+  font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
 
-        <div className="grid lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-blue-200 hover:-translate-y-1">
-              {/* Quote Icon */}
-              <div className="bg-blue-700 p-6">
-                <div>
-                  <div className="p-2 bg-white/20 rounded-lg inline-block">
-                    <Quote className="w-6 h-6 text-white" />
-                  </div>
-                </div>
-              </div>
+html {
+  scroll-behavior: smooth;
+}
 
-              <div className="p-6 flex gap-6 items-start relative z-10">
-                {/* Large Photo on the Side */}
-                <div className="flex-shrink-0">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-24 h-24 rounded-full object-cover shadow-lg border-4 border-white group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-                {/* Content */}
-                <div className="flex-1">
-                  {/* Rating */}
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-blue-400 text-blue-400" />
-                    ))}
-                  </div>
+@keyframes fade-in-delay {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
-                  {/* Content */}
-                  <p className="text-gray-600 mb-4 leading-relaxed italic">
-                    "{testimonial.content}"
-                  </p>
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}
 
-                  {/* Author */}
-                  <div>
-                    <h4 className="font-bold text-blue-900 text-lg">{testimonial.name}</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
+.animate-fade-in-delay {
+  animation: fade-in-delay 1s ease-out 0.3s both;
+}
 
-export default Testimonials;
+@keyframes loading-bar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes float-delayed {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-loading-bar {
+  animation: loading-bar 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 3s ease-in-out infinite 1.5s;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 4s ease-in-out infinite;
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-scroll-horizontal {
+  animation: scroll-horizontal 30s linear infinite;
+}
+
+.animate-scroll-horizontal:hover {
+  animation-play-state: paused;
+}
+
+/* Smooth scroll transitions with refined easing */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+/* Section reveal animations */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section animation classes */
+.animate-slide-in-left {
+  animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInFromRight 0.8s ease-out forwards;
+}
+
+.animate-slide-in-bottom {
+  animation: slideInFromBottom 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.8s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Staggered animation delays */
+.animate-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animate-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animate-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.animate-delay-500 {
+  animation-delay: 0.5s;
+}
+
+.animate-delay-600 {
+  animation-delay: 0.6s;
+}
+
+/* Intersection Observer ready states */
+.section-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Enhanced hover effects for navigation */
+.nav-link {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #1e40af);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Smooth page transitions */
+.page-transition {
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+/* House construction animations */
+@keyframes draw-foundation {
+  0% {
+    stroke-dashoffset: 200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-walls {
+  0% {
+    stroke-dashoffset: 300;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-roof {
+  0% {
+    stroke-dashoffset: 250;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-details {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-draw-foundation {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: draw-foundation 3s ease-in-out 1s forwards;
+}
+
+.animate-draw-walls {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: draw-walls 4s ease-in-out 3s forwards;
+}
+
+.animate-draw-roof {
+  stroke-dasharray: 250;
+  stroke-dashoffset: 250;
+  animation: draw-roof 3s ease-in-out 6s forwards;
+}
+
+.animate-draw-details {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: draw-details 2s ease-in-out 8s forwards;
+}
