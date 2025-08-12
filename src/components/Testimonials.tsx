@@ -7,19 +7,19 @@ const Testimonials = () => {
       name: "Salomé",
       content: "Marco est très professionnel, et il sait se montrer aussi chaleureux et amical. Il donne des explications claires sur les placements, et la stratégie à suivre en fonction de vos besoins. Je recommande.",
       rating: 5,
-      image: "/salomé.jpeg"
+      image: "./salomé.jpeg"
     },
     {
       name: "Philippe",
       content: "Je recommande vivement Marc-Olivier pour son expertise. Son approche personnalisée et son souci du détail font de lui le choix idéal pour sécuriser votre avenir financier.",
       rating: 5,
-      image: "/philippe.jpeg"
+      image: "./philippe.jpeg"
     },
     {
       name: "Jonathan",
       content: "Merci Marc-Olivier pour ton super service. Super accompagnement dans l'approche et la démarche. Répond parfaitement à mes besoins sans chercher à me vendre ce que je n'ai pas besoin. Au plaisir de refaire affaire.",
       rating: 5,
-      image: "/jonathan.jpeg"
+      image: "./jonathan.jpeg"
     }
   ];
 

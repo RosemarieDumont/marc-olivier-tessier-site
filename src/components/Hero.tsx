@@ -105,7 +105,7 @@ const Hero = () => {
               {/* Photo principale */}
               <div className="relative overflow-hidden rounded-2xl shadow-2xl border-4 border-white group-hover:shadow-3xl transition-all duration-500">
                 <img
-                  src="/MarcOlivierPro.jpg"
+                  src="./MarcOlivierPro.jpg"
                   alt="Marc-Olivier Tessier, Conseiller en sécurité financière"
                   className="w-80 h-96 object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
