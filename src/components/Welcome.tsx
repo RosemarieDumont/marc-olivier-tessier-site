@@ -6,12 +6,12 @@ const Welcome = () => {
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Stabilité",
-      description: "Nous posons les bonnes fondations pour construire un avenir financier solide et durable."
+      description: "Nous mettons vos priorités en premier et privilégions des solutions fiables, négociées au meilleur taux disponible et ajustées à votre réalité."
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
       title: "Création de valeur",
-      description: "Nous aidons à faire croître votre patrimoine avec cohérence et confiance."
+      description: "Nous optimisons les leviers de croissance: placements pertinents, stratégie fiscale et réinvestissement."
     },
     {
       icon: <Users className="w-8 h-8" />,
