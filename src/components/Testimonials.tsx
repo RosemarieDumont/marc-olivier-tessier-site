@@ -51,7 +51,7 @@ const Testimonials = () => {
     <section id="testimonials" className="py-20 bg-white section-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-slide-in-right">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
             Ce que disent mes clients
           </h2>
@@ -65,7 +65,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.name}
-              className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+              className={`bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-slide-in-right animate-delay-${(index + 1) * 100}`}
             >
               {/* Quote Icon */}
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-6">
@@ -101,7 +101,7 @@ const Testimonials = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-16 animate-slide-in-right animate-delay-600">
           <div className="bg-blue-600 rounded-3xl p-8 md:p-12 inline-block">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Rejoignez mes clients satisfaits

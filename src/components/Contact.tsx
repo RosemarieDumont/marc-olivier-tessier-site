@@ -41,7 +41,7 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Left side - Contact Info */}
-          <div>
+          <div className="animate-slide-in-left">
             <div className="bg-white rounded-3xl p-8 shadow-lg">
               <h3 className="text-2xl font-bold text-slate-900 mb-8">Informations de contact</h3>
               
@@ -112,7 +112,7 @@ const Contact = () => {
           </div>
 
           {/* Right side - Contact Form */}
-          <div>
+          <div className="animate-slide-in-right">
             <div className="bg-white rounded-3xl p-8 shadow-lg">
               <h3 className="text-2xl font-bold text-slate-900 mb-8">Envoyez-moi un message</h3>
               
