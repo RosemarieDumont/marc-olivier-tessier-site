@@ -85,7 +85,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-12 gap-8 items-center min-h-[80vh]">
           
           {/* Left Side - Main Title (spans 7 columns) */}
-          <div className="lg:col-span-7 text-left animate-fade-in">
+          <div className="lg:col-span-7 text-left animate-fade-in scroll-reveal">
             <div className="relative">
               {/* Subtle background accent */}
               <div className="absolute -inset-6 bg-gradient-to-r from-white/80 to-transparent rounded-3xl backdrop-blur-sm border border-blue-100/50 shadow-lg -z-10"></div>
@@ -115,7 +115,7 @@ const Hero = () => {
           </div>
 
           {/* Right Side - Photo de Marc-Olivier (spans 5 columns) */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end animate-fade-in-delay">
+          <div className="lg:col-span-5 flex justify-center lg:justify-end animate-fade-in-delay scroll-reveal">
             <div className="relative group">
               {/* Photo principale */}
               <div className="relative overflow-hidden rounded-2xl shadow-2xl border-4 border-white group-hover:shadow-3xl transition-all duration-500">

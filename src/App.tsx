@@ -1,5 +1,30 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+
+// Scroll reveal functionality
+const useScrollReveal = () => {
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all scroll-reveal elements
+    const scrollElements = document.querySelectorAll('.scroll-reveal, .stagger-children');
+    scrollElements.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+};
+
 import LoadingPage from './components/LoadingPage';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -12,6 +37,9 @@ import Footer from './components/Footer';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  
+  // Initialize scroll reveal
+  useScrollReveal();
 
   useEffect(() => {
     // Simulate loading time

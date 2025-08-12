@@ -52,7 +52,7 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
-          <div className="relative z-10">
+          <div className="relative z-10 scroll-reveal">
             <h3 className="text-2xl font-bold text-white mb-8">Informations de contact</h3>
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
@@ -78,7 +78,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="relative z-10">
+          <div className="relative z-10 scroll-reveal">
             <h3 className="text-2xl font-bold text-white mb-8">Demande de consultation</h3>
             <form className="space-y-6">
               <div className="grid grid-cols-2 gap-4">
