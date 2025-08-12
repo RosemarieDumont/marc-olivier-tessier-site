@@ -1,86 +1,274 @@
-import React from 'react';
-import { Award, Users, TrendingUp, Shield } from 'lucide-react';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-const Welcome = () => {
-  return (
-    <section id="welcome" className="py-20 bg-white section-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left content */}
-          <div className="animate-slide-in-left">
-            <div className="mb-8">
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-                Bienvenue chez
-                <span className="block text-blue-600">Marc-Olivier Gagnon</span>
-              </h2>
-              <p className="text-xl text-slate-600 leading-relaxed">
-                Conseiller en sécurité financière passionné, je mets mon expertise au service de votre tranquillité d'esprit et de vos ambitions financières.
-              </p>
-            </div>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4 animate-fade-in-up animate-delay-200">
-                <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <Shield className="w-6 h-6 text-blue-600" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-slate-900 mb-2">Protection personnalisée</h3>
-                  <p className="text-slate-600">Solutions d'assurance adaptées à votre situation unique et à vos besoins spécifiques.</p>
-                </div>
-              </div>
+* {
+  font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
 
-              <div className="flex items-start space-x-4 animate-fade-in-up animate-delay-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                  <TrendingUp className="w-6 h-6 text-green-600" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-slate-900 mb-2">Croissance patrimoniale</h3>
-                  <p className="text-slate-600">Stratégies d'investissement pour faire fructifier votre patrimoine à long terme.</p>
-                </div>
-              </div>
+html {
+  scroll-behavior: smooth;
+}
 
-              <div className="flex items-start space-x-4 animate-fade-in-up animate-delay-400">
-                <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                  <Users className="w-6 h-6 text-purple-600" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-slate-900 mb-2">Accompagnement familial</h3>
-                  <p className="text-slate-600">Conseil personnalisé pour protéger et sécuriser l'avenir de votre famille.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-          {/* Right content - Image */}
-          <div className="animate-scale-in animate-delay-500">
-            <div className="relative">
-              <img
-                src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Marc-Olivier Gagnon - Conseiller en sécurité financière"
-                className="w-full h-[600px] object-cover rounded-2xl shadow-2xl"
-              />
-              
-              {/* Overlay card */}
-              <div className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-sm p-6 rounded-xl shadow-lg animate-fade-in-up animate-delay-600">
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
-                    <Award className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-slate-900">Certification professionnelle</h4>
-                    <p className="text-sm text-slate-600">Autorité des marchés financiers (AMF)</p>
-                  </div>
-                </div>
-                <p className="text-sm text-slate-600">
-                  "Mon engagement : vous offrir des conseils transparents et des solutions financières qui s'alignent parfaitement avec vos objectifs de vie."
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
+@keyframes fade-in-delay {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
-export default Welcome;
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}
+
+.animate-fade-in-delay {
+  animation: fade-in-delay 1s ease-out 0.3s both;
+}
+
+@keyframes loading-bar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes float-delayed {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-loading-bar {
+  animation: loading-bar 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 3s ease-in-out infinite 1.5s;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 4s ease-in-out infinite;
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-scroll-horizontal {
+  animation: scroll-horizontal 30s linear infinite;
+}
+
+.animate-scroll-horizontal:hover {
+  animation-play-state: paused;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out;
+}
+
+.animate-slide-in-bottom {
+  animation: slide-in-bottom 0.8s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.8s ease-out;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.6s ease-out;
+}
+
+.animate-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animate-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animate-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.animate-delay-500 {
+  animation-delay: 0.5s;
+}
+
+.animate-delay-600 {
+  animation-delay: 0.6s;
+}
+
+.animate-delay-700 {
+  animation-delay: 0.7s;
+}
+
+/* House construction animations */
+@keyframes draw-foundation {
+  0% {
+    stroke-dashoffset: 200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-walls {
+  0% {
+    stroke-dashoffset: 300;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-roof {
+  0% {
+    stroke-dashoffset: 250;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-details {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-draw-foundation {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: draw-foundation 3s ease-in-out 1s forwards;
+}
+
+.animate-draw-walls {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: draw-walls 4s ease-in-out 3s forwards;
+}
+
+.animate-draw-roof {
+  stroke-dasharray: 250;
+  stroke-dashoffset: 250;
+  animation: draw-roof 3s ease-in-out 6s forwards;
+}
+
+.animate-draw-details {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: draw-details 2s ease-in-out 8s forwards;
+}
