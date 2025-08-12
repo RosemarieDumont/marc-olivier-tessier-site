@@ -109,7 +109,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 stagger-children">
+        <div className="grid lg:grid-cols-3 gap-8">
           {Object.entries(services).map(([key, category]) => (
             <div key={key} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               {/* Header */}

@@ -38,7 +38,7 @@ const Welcome = () => {
         {/* Notre approche */}
         <div className="mb-20">
           <h3 className="text-3xl font-bold text-blue-900 text-center mb-12">Notre approche</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {approaches.map((approach, index) => (
               <div key={index} className="group bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200 hover:-translate-y-1">
                 <div className="relative z-10">

@@ -38,7 +38,7 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 stagger-children">
+        <div className="grid lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-blue-200 hover:-translate-y-1">
               {/* Quote Icon */}
