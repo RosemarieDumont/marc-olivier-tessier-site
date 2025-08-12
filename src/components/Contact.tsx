@@ -1,328 +1,230 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+import React, { useState } from 'react';
+import { Phone, Mail, MapPin, Clock, Calendar, Send, CheckCircle } from 'lucide-react';
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-* {
-  font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-}
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Simulate form submission
+    setIsSubmitted(true);
+    setTimeout(() => setIsSubmitted(false), 3000);
+    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+  };
 
-html {
-  scroll-behavior: smooth;
-}
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+  return (
+    <section id="contact" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 section-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+            Contactez-moi
+          </h2>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            Prêt à prendre en main votre avenir financier ? Contactez-moi pour une consultation personnalisée.
+          </p>
+        </div>
 
-@keyframes fade-in-delay {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+        <div className="grid lg:grid-cols-2 gap-16">
+          {/* Left side - Contact Info */}
+          <div className="animate-slide-in-left">
+            <div className="bg-white rounded-3xl p-8 shadow-lg">
+              <h3 className="text-2xl font-bold text-slate-900 mb-8">Informations de contact</h3>
+              
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-slate-900 mb-1">Téléphone</h4>
+                    <p className="text-slate-600">+1 (514) 123-4567</p>
+                    <p className="text-sm text-slate-500">Lun-Ven: 8h00 - 18h00</p>
+                  </div>
+                </div>
 
-.animate-fade-in {
-  animation: fade-in 1s ease-out;
-}
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-slate-900 mb-1">Courriel</h4>
+                    <p className="text-slate-600">marc-olivier@exemple.com</p>
+                    <p className="text-sm text-slate-500">Réponse sous 24h</p>
+                  </div>
+                </div>
 
-.animate-fade-in-delay {
-  animation: fade-in-delay 1s ease-out 0.3s both;
-}
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-slate-900 mb-1">Bureau</h4>
+                    <p className="text-slate-600">123 Rue Principale<br />Montréal, QC H1A 1A1</p>
+                    <p className="text-sm text-slate-500">Rendez-vous sur place ou virtuel</p>
+                  </div>
+                </div>
 
-@keyframes loading-bar {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(400%);
-  }
-}
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-6 h-6 text-orange-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-slate-900 mb-1">Heures d'ouverture</h4>
+                    <p className="text-slate-600">
+                      Lun-Ven: 8h00 - 18h00<br />
+                      Sam: 9h00 - 15h00<br />
+                      Dim: Sur rendez-vous
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
+              {/* Quick Booking Button */}
+              <div className="mt-8 p-6 bg-blue-600 rounded-2xl text-center">
+                <h4 className="text-xl font-bold text-white mb-3">Réservation rapide</h4>
+                <p className="text-blue-100 mb-4">Planifiez votre consultation en quelques clics</p>
+                <a
+                  href="https://outlook-sdf.office.com/bookwithme/user/0cb6ca6a017f4d5ea6b053f4dacafad2%40agc.ia.ca?anonymous&ismsaljsauthenabled=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors duration-200"
+                >
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Prendre rendez-vous
+                </a>
+              </div>
+            </div>
+          </div>
 
-@keyframes float-delayed {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-}
+          {/* Right side - Contact Form */}
+          <div className="animate-slide-in-right">
+            <div className="bg-white rounded-3xl p-8 shadow-lg">
+              <h3 className="text-2xl font-bold text-slate-900 mb-8">Envoyez-moi un message</h3>
+              
+              {isSubmitted ? (
+                <div className="text-center py-12">
+                  <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+                  <h4 className="text-xl font-semibold text-slate-900 mb-2">Message envoyé !</h4>
+                  <p className="text-slate-600">Je vous répondrai dans les plus brefs délais.</p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
+                        Nom complet *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        value={formData.name}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                        placeholder="Votre nom"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
+                        Courriel *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                        placeholder="votre@email.com"
+                      />
+                    </div>
+                  </div>
 
-.animate-loading-bar {
-  animation: loading-bar 2s ease-in-out infinite;
-}
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">
+                        Téléphone
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                        placeholder="(514) 123-4567"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-2">
+                        Sujet *
+                      </label>
+                      <select
+                        id="subject"
+                        name="subject"
+                        required
+                        value={formData.subject}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                      >
+                        <option value="">Sélectionnez un sujet</option>
+                        <option value="assurance-vie">Assurance vie</option>
+                        <option value="placements">Placements et REER</option>
+                        <option value="assurance-invalidite">Assurance invalidité</option>
+                        <option value="planification-retraite">Planification retraite</option>
+                        <option value="autre">Autre</option>
+                      </select>
+                    </div>
+                  </div>
 
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
+                      Message *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      rows={6}
+                      value={formData.message}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 resize-none"
+                      placeholder="Décrivez votre situation et vos besoins..."
+                    ></textarea>
+                  </div>
 
-.animate-float-delayed {
-  animation: float-delayed 3s ease-in-out infinite 1.5s;
-}
+                  <button
+                    type="submit"
+                    className="w-full bg-blue-600 text-white font-semibold py-4 px-6 rounded-lg hover:bg-blue-700 transform hover:scale-105 transition-all duration-200 flex items-center justify-center"
+                  >
+                    <Send className="w-5 h-5 mr-2" />
+                    Envoyer le message
+                  </button>
+                </form>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-@keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes bounce-slow {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-.animate-spin-slow {
-  animation: spin-slow 20s linear infinite;
-}
-
-.animate-bounce-slow {
-  animation: bounce-slow 4s ease-in-out infinite;
-}
-
-@keyframes scroll-horizontal {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-33.333%);
-  }
-}
-
-.animate-scroll-horizontal {
-  animation: scroll-horizontal 30s linear infinite;
-}
-
-.animate-scroll-horizontal:hover {
-  animation-play-state: paused;
-}
-
-/* Smooth scroll transitions with refined easing */
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px;
-}
-
-/* Section reveal animations */
-@keyframes slideInFromLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-60px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInFromRight {
-  0% {
-    opacity: 0;
-    transform: translateX(60px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInFromBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(60px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes scaleIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Section animation classes */
-.animate-slide-in-left {
-  animation: slideInFromLeft 0.8s ease-out forwards;
-}
-
-.animate-slide-in-right {
-  animation: slideInFromRight 0.8s ease-out forwards;
-}
-
-.animate-slide-in-bottom {
-  animation: slideInFromBottom 0.8s ease-out forwards;
-}
-
-.animate-scale-in {
-  animation: scaleIn 0.8s ease-out forwards;
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-/* Staggered animation delays */
-.animate-delay-100 {
-  animation-delay: 0.1s;
-}
-
-.animate-delay-200 {
-  animation-delay: 0.2s;
-}
-
-.animate-delay-300 {
-  animation-delay: 0.3s;
-}
-
-.animate-delay-400 {
-  animation-delay: 0.4s;
-}
-
-.animate-delay-500 {
-  animation-delay: 0.5s;
-}
-
-/* Intersection Observer ready states */
-.section-hidden {
-  opacity: 0;
-  transform: translateY(40px);
-}
-
-.section-visible {
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-/* Enhanced hover effects for navigation */
-.nav-link {
-  position: relative;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #3b82f6, #1e40af);
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transform: translateX(-50%);
-}
-
-.nav-link:hover::after {
-  width: 100%;
-}
-
-/* Smooth page transitions */
-.page-transition {
-  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-/* House construction animations */
-@keyframes draw-foundation {
-  0% {
-    stroke-dashoffset: 200;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw-walls {
-  0% {
-    stroke-dashoffset: 300;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw-roof {
-  0% {
-    stroke-dashoffset: 250;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw-details {
-  0% {
-    stroke-dashoffset: 100;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-.animate-draw-foundation {
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
-  animation: draw-foundation 3s ease-in-out 1s forwards;
-}
-
-.animate-draw-walls {
-  stroke-dasharray: 300;
-  stroke-dashoffset: 300;
-  animation: draw-walls 4s ease-in-out 3s forwards;
-}
-
-.animate-draw-roof {
-  stroke-dasharray: 250;
-  stroke-dashoffset: 250;
-  animation: draw-roof 3s ease-in-out 6s forwards;
-}
-
-.animate-draw-details {
-  stroke-dasharray: 100;
-  stroke-dashoffset: 100;
-  animation: draw-details 2s ease-in-out 8s forwards;
-}
+export default Contact;

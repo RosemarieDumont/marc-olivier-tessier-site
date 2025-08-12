@@ -1,332 +1,125 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+import React from 'react';
+import { Star, Quote } from 'lucide-react';
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+const Testimonials = () => {
+  const testimonials = [
+    {
+      name: "Marie-Claude Dubois",
+      role: "Propriétaire d'entreprise",
+      content: "Marc-Olivier a su comprendre mes besoins spécifiques en tant qu'entrepreneure. Ses conseils m'ont permis de protéger mon entreprise tout en planifiant ma retraite. Un service exceptionnel !",
+      rating: 5,
+      image: "https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=150"
+    },
+    {
+      name: "Jean-François Martin",
+      role: "Père de famille",
+      content: "Grâce à Marc-Olivier, notre famille est maintenant bien protégée. Il a pris le temps de nous expliquer chaque option et nous a guidés vers les meilleures solutions pour notre budget.",
+      rating: 5,
+      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150"
+    },
+    {
+      name: "Sophie Tremblay",
+      role: "Professionnelle de la santé",
+      content: "L'approche personnalisée de Marc-Olivier fait toute la différence. Il m'a aidée à optimiser mes placements REER et à choisir une assurance invalidité adaptée à ma profession.",
+      rating: 5,
+      image: "https://images.pexels.com/photos/3762800/pexels-photo-3762800.jpeg?auto=compress&cs=tinysrgb&w=150"
+    },
+    {
+      name: "Robert Gagnon",
+      role: "Retraité",
+      content: "Marc-Olivier nous a accompagnés dans la planification de notre succession. Son expertise et sa patience nous ont rassurés. Nous recommandons ses services sans hésitation.",
+      rating: 5,
+      image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150"
+    },
+    {
+      name: "Amélie Bouchard",
+      role: "Jeune professionnelle",
+      content: "En tant que jeune diplômée, j'avais besoin de conseils clairs pour débuter ma planification financière. Marc-Olivier a su adapter ses recommandations à ma situation et mes objectifs.",
+      rating: 5,
+      image: "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=150"
+    },
+    {
+      name: "Daniel Lavoie",
+      role: "Cadre supérieur",
+      content: "La planification de ma retraite anticipée semblait complexe, mais Marc-Olivier a rendu le processus simple et transparent. Ses stratégies d'investissement ont dépassé mes attentes.",
+      rating: 5,
+      image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=150"
+    }
+  ];
 
-* {
-  font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-}
+  return (
+    <section id="testimonials" className="py-20 bg-white section-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16 animate-slide-in-right">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+            Ce que disent mes clients
+          </h2>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            La satisfaction de mes clients est ma priorité. Découvrez leurs témoignages sur l'accompagnement personnalisé que je leur offre.
+          </p>
+        </div>
 
-html {
-  scroll-behavior: smooth;
-}
+        {/* Testimonials Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={testimonial.name}
+              className={`bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-slide-in-right animate-delay-${(index + 1) * 100}`}
+            >
+              {/* Quote Icon */}
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                <Quote className="w-6 h-6 text-blue-600" />
+              </div>
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+              {/* Rating */}
+              <div className="flex items-center mb-4">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                ))}
+              </div>
 
-@keyframes fade-in-delay {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+              {/* Content */}
+              <p className="text-slate-700 mb-6 leading-relaxed italic">
+                "{testimonial.content}"
+              </p>
 
-.animate-fade-in {
-  animation: fade-in 1s ease-out;
-}
+              {/* Author */}
+              <div className="flex items-center">
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  className="w-12 h-12 rounded-full object-cover mr-4"
+                />
+                <div>
+                  <h4 className="font-semibold text-slate-900">{testimonial.name}</h4>
+                  <p className="text-sm text-slate-600">{testimonial.role}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
 
-.animate-fade-in-delay {
-  animation: fade-in-delay 1s ease-out 0.3s both;
-}
+        {/* Bottom CTA */}
+        <div className="text-center mt-16 animate-slide-in-right animate-delay-600">
+          <div className="bg-blue-600 rounded-3xl p-8 md:p-12 inline-block">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Rejoignez mes clients satisfaits
+            </h3>
+            <p className="text-blue-100 mb-6 max-w-2xl">
+              Bénéficiez d'un accompagnement personnalisé pour atteindre vos objectifs financiers
+            </p>
+            <div className="flex items-center justify-center space-x-2 text-yellow-400 mb-6">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-6 h-6 fill-current" />
+              ))}
+              <span className="text-white ml-2 font-semibold">4.9/5 (127 avis)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-@keyframes loading-bar {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(400%);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes float-delayed {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-}
-
-.animate-loading-bar {
-  animation: loading-bar 2s ease-in-out infinite;
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-.animate-float-delayed {
-  animation: float-delayed 3s ease-in-out infinite 1.5s;
-}
-
-@keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes bounce-slow {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-.animate-spin-slow {
-  animation: spin-slow 20s linear infinite;
-}
-
-.animate-bounce-slow {
-  animation: bounce-slow 4s ease-in-out infinite;
-}
-
-@keyframes scroll-horizontal {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-33.333%);
-  }
-}
-
-.animate-scroll-horizontal {
-  animation: scroll-horizontal 30s linear infinite;
-}
-
-.animate-scroll-horizontal:hover {
-  animation-play-state: paused;
-}
-
-/* Smooth scroll transitions with refined easing */
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px;
-}
-
-/* Section reveal animations */
-@keyframes slideInFromLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-60px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInFromRight {
-  0% {
-    opacity: 0;
-    transform: translateX(60px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInFromBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(60px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes scaleIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Section animation classes */
-.animate-slide-in-left {
-  animation: slideInFromLeft 0.8s ease-out forwards;
-}
-
-.animate-slide-in-right {
-  animation: slideInFromRight 0.8s ease-out forwards;
-}
-
-.animate-slide-in-bottom {
-  animation: slideInFromBottom 0.8s ease-out forwards;
-}
-
-.animate-scale-in {
-  animation: scaleIn 0.8s ease-out forwards;
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-/* Staggered animation delays */
-.animate-delay-100 {
-  animation-delay: 0.1s;
-}
-
-.animate-delay-200 {
-  animation-delay: 0.2s;
-}
-
-.animate-delay-300 {
-  animation-delay: 0.3s;
-}
-
-.animate-delay-400 {
-  animation-delay: 0.4s;
-}
-
-.animate-delay-500 {
-  animation-delay: 0.5s;
-}
-
-.animate-delay-600 {
-  animation-delay: 0.6s;
-}
-
-/* Intersection Observer ready states */
-.section-hidden {
-  opacity: 0;
-  transform: translateY(40px);
-}
-
-.section-visible {
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-/* Enhanced hover effects for navigation */
-.nav-link {
-  position: relative;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #3b82f6, #1e40af);
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transform: translateX(-50%);
-}
-
-.nav-link:hover::after {
-  width: 100%;
-}
-
-/* Smooth page transitions */
-.page-transition {
-  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-/* House construction animations */
-@keyframes draw-foundation {
-  0% {
-    stroke-dashoffset: 200;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw-walls {
-  0% {
-    stroke-dashoffset: 300;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw-roof {
-  0% {
-    stroke-dashoffset: 250;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw-details {
-  0% {
-    stroke-dashoffset: 100;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-.animate-draw-foundation {
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
-  animation: draw-foundation 3s ease-in-out 1s forwards;
-}
-
-.animate-draw-walls {
-  stroke-dasharray: 300;
-  stroke-dashoffset: 300;
-  animation: draw-walls 4s ease-in-out 3s forwards;
-}
-
-.animate-draw-roof {
-  stroke-dasharray: 250;
-  stroke-dashoffset: 250;
-  animation: draw-roof 3s ease-in-out 6s forwards;
-}
-
-.animate-draw-details {
-  stroke-dasharray: 100;
-  stroke-dashoffset: 100;
-  animation: draw-details 2s ease-in-out 8s forwards;
-}
+export default Testimonials;

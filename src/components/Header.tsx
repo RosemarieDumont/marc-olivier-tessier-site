@@ -1,189 +1,99 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+import React, { useState, useEffect } from 'react';
+import { Menu, X, Home } from 'lucide-react';
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-* {
-  font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-}
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
 
-html {
-  scroll-behavior: smooth;
-}
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
 
-@keyframes fade-in-delay {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700' 
+        : 'bg-slate-900/90 backdrop-blur-sm'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+          <div className="flex items-center space-x-3">
+            <div className="bg-blue-600 p-2 rounded-lg">
+              <Home className="w-6 h-6 text-white" />
+            </div>
+            <div>
+              <h1 className="text-xl font-bold text-white">Marc-Olivier Gagnon</h1>
+              <p className="text-sm text-slate-300">Conseiller en sécurité financière</p>
+            </div>
+          </div>
 
-.animate-fade-in {
-  animation: fade-in 1s ease-out;
-}
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex space-x-8">
+            {[
+              { name: 'Accueil', id: 'home' },
+              { name: 'Bienvenue', id: 'welcome' },
+              { name: 'Services', id: 'services' },
+              { name: 'Témoignages', id: 'testimonials' },
+              { name: 'Nous contacter', id: 'contact' }
+            ].map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="nav-link text-slate-300 hover:text-white font-medium transition-colors duration-200"
+              >
+                {item.name}
+              </button>
+            ))}
+          </nav>
 
-.animate-fade-in-delay {
-  animation: fade-in-delay 1s ease-out 0.3s both;
-}
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors duration-200"
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
 
-@keyframes loading-bar {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(400%);
-  }
-}
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden py-4 border-t border-slate-700">
+            <nav className="flex flex-col space-y-3">
+              {[
+                { name: 'Accueil', id: 'home' },
+                { name: 'Bienvenue', id: 'welcome' },
+                { name: 'Services', id: 'services' },
+                { name: 'Témoignages', id: 'testimonials' },
+                { name: 'Nous contacter', id: 'contact' }
+              ].map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="text-left px-4 py-2 text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors duration-200"
+                >
+                  {item.name}
+                </button>
+              ))}
+            </nav>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+};
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes float-delayed {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-}
-
-.animate-loading-bar {
-  animation: loading-bar 2s ease-in-out infinite;
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-.animate-float-delayed {
-  animation: float-delayed 3s ease-in-out infinite 1.5s;
-}
-
-@keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes bounce-slow {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-.animate-spin-slow {
-  animation: spin-slow 20s linear infinite;
-}
-
-.animate-bounce-slow {
-  animation: bounce-slow 4s ease-in-out infinite;
-}
-
-@keyframes scroll-horizontal {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-33.333%);
-  }
-}
-
-.animate-scroll-horizontal {
-  animation: scroll-horizontal 30s linear infinite;
-}
-
-.animate-scroll-horizontal:hover {
-  animation-play-state: paused;
-}
-/* House construction animations */
-@keyframes draw-foundation {
-  0% {
-    stroke-dashoffset: 200;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw-walls {
-  0% {
-    stroke-dashoffset: 300;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw-roof {
-  0% {
-    stroke-dashoffset: 250;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw-details {
-  0% {
-    stroke-dashoffset: 100;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-.animate-draw-foundation {
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
-  animation: draw-foundation 3s ease-in-out 1s forwards;
-}
-
-.animate-draw-walls {
-  stroke-dasharray: 300;
-  stroke-dashoffset: 300;
-  animation: draw-walls 4s ease-in-out 3s forwards;
-}
-
-.animate-draw-roof {
-  stroke-dasharray: 250;
-  stroke-dashoffset: 250;
-  animation: draw-roof 3s ease-in-out 6s forwards;
-}
-
-.animate-draw-details {
-  stroke-dasharray: 100;
-  stroke-dashoffset: 100;
-  animation: draw-details 2s ease-in-out 8s forwards;
-}
-
-.nav-link {
-  transition: color 0.2s ease-in-out;
-}
+export default Header;

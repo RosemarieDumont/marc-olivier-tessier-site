@@ -1,257 +1,109 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+import React from 'react';
+import { Shield, TrendingUp, Home, Heart, Briefcase, Users, Calendar } from 'lucide-react';
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+const Services = () => {
+  const services = [
+    {
+      icon: Shield,
+      title: "Assurance vie",
+      description: "Protection financière pour votre famille avec des solutions d'assurance vie temporaire et permanente adaptées à vos besoins.",
+      features: ["Assurance vie temporaire", "Assurance vie permanente", "Assurance hypothécaire", "Protection du revenu"]
+    },
+    {
+      icon: Heart,
+      title: "Assurance maladie grave",
+      description: "Couverture complète contre les maladies graves pour vous permettre de vous concentrer sur votre guérison.",
+      features: ["25+ maladies couvertes", "Versement forfaitaire", "Utilisation libre des fonds", "Options de remboursement"]
+    },
+    {
+      icon: Briefcase,
+      title: "Assurance invalidité",
+      description: "Protégez votre capacité de gain avec une assurance invalidité qui maintient votre niveau de vie.",
+      features: ["Remplacement du revenu", "Prestations à court terme", "Prestations à long terme", "Options d'indexation"]
+    },
+    {
+      icon: TrendingUp,
+      title: "Placements et REER",
+      description: "Stratégies d'investissement personnalisées pour faire croître votre patrimoine et préparer votre retraite.",
+      features: ["REER et FERR", "CELI optimisé", "Fonds communs", "Portefeuilles équilibrés"]
+    },
+    {
+      icon: Home,
+      title: "Planification hypothécaire",
+      description: "Conseils experts pour l'achat de votre propriété et l'optimisation de votre financement hypothécaire.",
+      features: ["Pré-approbation", "Refinancement", "Assurance prêt", "Stratégies de remboursement"]
+    },
+    {
+      icon: Users,
+      title: "Planification successorale",
+      description: "Assurez la transmission harmonieuse de votre patrimoine à vos proches selon vos volontés.",
+      features: ["Testament et mandat", "Fiducies familiales", "Optimisation fiscale", "Protection des héritiers"]
+    }
+  ];
 
-* {
-  font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-}
+  return (
+    <section id="services" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 section-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16 animate-slide-in-bottom">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+            Mes services
+          </h2>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            Des solutions financières complètes et personnalisées pour chaque étape de votre vie
+          </p>
+        </div>
 
-html {
-  scroll-behavior: smooth;
-}
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {services.map((service, index) => {
+            const Icon = service.icon;
+            return (
+              <div
+                key={service.title}
+                className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-slide-in-bottom animate-delay-${(index + 2) * 100}`}
+              >
+                <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+                  <Icon className="w-8 h-8 text-blue-600" />
+                </div>
+                
+                <h3 className="text-xl font-bold text-slate-900 mb-4">{service.title}</h3>
+                <p className="text-slate-600 mb-6 leading-relaxed">{service.description}</p>
+                
+                <ul className="space-y-2">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-slate-600">
+                      <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 flex-shrink-0"></div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+        {/* CTA Section */}
+        <div className="bg-blue-600 rounded-3xl p-8 md:p-12 text-center animate-slide-in-bottom animate-delay-600">
+          <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Prêt à sécuriser votre avenir financier ?
+          </h3>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Planifions ensemble une stratégie financière qui correspond à vos objectifs et à votre situation unique.
+          </p>
+          <a
+            href="https://outlook-sdf.office.com/bookwithme/user/0cb6ca6a017f4d5ea6b053f4dacafad2%40agc.ia.ca?anonymous&ismsaljsauthenabled=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            <Calendar className="w-5 h-5 mr-2" />
+            Prendre rendez-vous
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-@keyframes fade-in-delay {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-fade-in {
-  animation: fade-in 1s ease-out;
-}
-
-.animate-fade-in-delay {
-  animation: fade-in-delay 1s ease-out 0.3s both;
-}
-
-@keyframes loading-bar {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(400%);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes float-delayed {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-}
-
-.animate-loading-bar {
-  animation: loading-bar 2s ease-in-out infinite;
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-.animate-float-delayed {
-  animation: float-delayed 3s ease-in-out infinite 1.5s;
-}
-
-@keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes bounce-slow {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-.animate-spin-slow {
-  animation: spin-slow 20s linear infinite;
-}
-
-.animate-bounce-slow {
-  animation: bounce-slow 4s ease-in-out infinite;
-}
-
-@keyframes scroll-horizontal {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-33.333%);
-  }
-}
-
-.animate-scroll-horizontal {
-  animation: scroll-horizontal 30s linear infinite;
-}
-
-.animate-scroll-horizontal:hover {
-  animation-play-state: paused;
-}
-
-/* House construction animations */
-@keyframes draw-foundation {
-  0% {
-    stroke-dashoffset: 200;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw-walls {
-  0% {
-    stroke-dashoffset: 300;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw-roof {
-  0% {
-    stroke-dashoffset: 250;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw-details {
-  0% {
-    stroke-dashoffset: 100;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-.animate-draw-foundation {
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
-  animation: draw-foundation 3s ease-in-out 1s forwards;
-}
-
-.animate-draw-walls {
-  stroke-dasharray: 300;
-  stroke-dashoffset: 300;
-  animation: draw-walls 4s ease-in-out 3s forwards;
-}
-
-.animate-draw-roof {
-  stroke-dasharray: 250;
-  stroke-dashoffset: 250;
-  animation: draw-roof 3s ease-in-out 6s forwards;
-}
-
-.animate-draw-details {
-  stroke-dasharray: 100;
-  stroke-dashoffset: 100;
-  animation: draw-details 2s ease-in-out 8s forwards;
-}
-
-/* Additional animations for services section */
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slide-in-bottom {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes scale-in {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fade-in-up 1s ease-out;
-}
-
-.animate-slide-in-bottom {
-  animation: slide-in-bottom 1s ease-out;
-}
-
-.animate-scale-in {
-  animation: scale-in 1s ease-out;
-}
-
-.animate-delay-200 {
-  animation-delay: 200ms;
-}
-
-.animate-delay-400 {
-  animation-delay: 400ms;
-}
-
-.animate-delay-500 {
-  animation-delay: 500ms;
-}
-
-.animate-delay-600 {
-  animation-delay: 600ms;
-}
-
-.section-hidden {
-  opacity: 0;
-}
-
-.section-visible {
-  opacity: 1;
-  transition: opacity 0.6s ease-in-out;
-}
+export default Services;
