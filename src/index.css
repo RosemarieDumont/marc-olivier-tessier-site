@@ -8,8 +8,50 @@
   font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
 }
 
+/* CSS Variables for customizable colors */
+:root {
+  --hero-primary-hue: 220;
+  --hero-secondary-hue: 210;
+  --hero-accent-hue: 200;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+/* Parallax gradient background */
+.parallax-gradient {
+  background: 
+    radial-gradient(ellipse at top left, hsla(var(--hero-primary-hue), 15%, 95%, 0.8) 0%, transparent 50%),
+    radial-gradient(ellipse at top right, hsla(var(--hero-secondary-hue), 20%, 92%, 0.6) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom left, hsla(var(--hero-accent-hue), 25%, 88%, 0.4) 0%, transparent 50%),
+    linear-gradient(135deg, 
+      hsla(var(--hero-primary-hue), 10%, 98%, 1) 0%,
+      hsla(var(--hero-secondary-hue), 15%, 96%, 1) 25%,
+      hsla(var(--hero-accent-hue), 20%, 94%, 1) 50%,
+      hsla(var(--hero-primary-hue), 12%, 97%, 1) 75%,
+      hsla(var(--hero-secondary-hue), 8%, 99%, 1) 100%
+    );
+  background-attachment: fixed;
+  background-size: 200% 200%, 180% 180%, 160% 160%, 100% 100%;
+  background-position: 0% 0%, 100% 0%, 0% 100%, 0% 0%;
+  will-change: transform;
+}
+
+/* Mobile optimization - disable fixed attachment for better performance */
+@media (max-width: 768px) {
+  .parallax-gradient {
+    background-attachment: scroll;
+    background-size: 150% 150%, 140% 140%, 130% 130%, 100% 100%;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .parallax-gradient {
+    background-attachment: scroll;
+    background-size: 100% 100%;
+  }
 }
 
 @keyframes fade-in {
