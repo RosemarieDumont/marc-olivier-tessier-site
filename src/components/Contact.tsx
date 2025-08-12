@@ -79,14 +79,15 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="relative z-10 animate-slide-in-right stagger-2">
-            <h3 className="text-2xl font-bold text-white mb-8 animate-slide-up stagger-1">Demande de consultation</h3>
-            <form className="space-y-6 animate-slide-up stagger-2">
+            <h3 className="text-2xl font-bold text-white mb-8 animate-slide-up stagger-1">Assistance & renseignements</h3>
+            <form action="mailto:marc-olivier.tessier@agc.ia.ca" method="post" enctype="text/plain" className="space-y-6 animate-slide-up stagger-2">
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-blue-100 mb-2">
                     Prénom
                   </label>
                   <input
+                    name="prenom"
                     type="text"
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
                     placeholder="Votre prénom"
@@ -97,6 +98,7 @@ const Contact = () => {
                     Nom
                   </label>
                   <input
+                    name="nom"
                     type="text"
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
                     placeholder="Votre nom"
@@ -109,6 +111,7 @@ const Contact = () => {
                   Email
                 </label>
                 <input
+                  name="email"
                   type="email"
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
                   placeholder="votre@email.com"
@@ -120,6 +123,7 @@ const Contact = () => {
                   Téléphone
                 </label>
                 <input
+                  name="telephone"
                   type="tel"
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
                   placeholder="(514) 555-0123"
@@ -130,7 +134,7 @@ const Contact = () => {
                 <label className="block text-sm font-medium text-blue-100 mb-2">
                   Service d'intérêt
                 </label>
-                <select className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15">
+                <select name="service" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15">
                   <option value="">Sélectionnez un service</option>
                   <option value="epargne">Épargne et placements</option>
                   <option value="assurance">Assurance</option>
@@ -144,6 +148,7 @@ const Contact = () => {
                   Message
                 </label>
                 <textarea
+                  name="message"
                   rows={4}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-500 resize-none backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
                   placeholder="Décrivez brièvement vos besoins ou questions..."

@@ -31,16 +31,15 @@ const Welcome = () => {
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl font-bold text-blue-900 mb-6 animate-slide-up stagger-1">Bienvenue</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-slide-up stagger-2">
-            Notre approche repose sur quatre valeurs fondamentales : stabilité, création de valeur, relations humaines, et vision à long terme. Parce qu'un avenir financier solide ne se construit pas au hasard, il vous aide à poser les bonnes fondations, à sécuriser l'essentiel, puis à faire croître votre patrimoine avec cohérence et confiance.
+            Notre approche s'appuie sur la stabilité, la création de valeur, les relations humaines et la vision à long terme pour assurer votre sécurité financière. Nous ancrons d'abord les fondations, installons la structure, puis faisons grandir votre patrimoine avec régularité et confiance.
           </p>
         </div>
 
         {/* Notre approche */}
         <div className="mb-20">
-          <h3 className="text-3xl font-bold text-blue-900 text-center mb-12 animate-slide-up stagger-1">Notre approche</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {approaches.map((approach, index) => (
-              <div key={index} className={`group bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-100 hover:border-blue-200 hover-lift hover-glow animate-scale-in stagger-${index + 2}`}>
+              <div key={index} className={`group bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-100 hover:border-blue-200 hover-lift hover-glow animate-scale-in stagger-${index + 1}`}>
                 <div className="relative z-10">
                   <div className="text-blue-600 mb-4 transition-transform duration-300 group-hover:scale-110">{approach.icon}</div>
                   <h4 className="text-xl font-semibold text-blue-900 mb-3 transition-colors duration-300 group-hover:text-blue-700">{approach.title}</h4>
@@ -53,7 +52,7 @@ const Welcome = () => {
 
         {/* Marc-Olivier Tessier */}
         <div className="mb-20">
-          <div className="bg-blue-900 rounded-2xl p-8 lg:p-12 text-white shadow-xl hover-lift hover-glow animate-slide-up stagger-3 transition-all duration-500">
+          <div className="bg-blue-900 rounded-2xl p-8 lg:p-12 text-white shadow-xl hover-lift hover-glow animate-slide-up stagger-2 transition-all duration-500">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="relative z-10 animate-slide-in-left stagger-1">
                 <h3 className="text-3xl font-bold mb-6 flex items-center gap-3 animate-slide-up stagger-1">
