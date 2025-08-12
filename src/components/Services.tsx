@@ -45,7 +45,7 @@ const Services = () => {
     <section id="services" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 section-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16 animate-slide-in-bottom">
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
             Mes services
           </h2>
@@ -61,7 +61,7 @@ const Services = () => {
             return (
               <div
                 key={service.title}
-                className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-slide-in-bottom animate-delay-${(index + 2) * 100}`}
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
               >
                 <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
                   <Icon className="w-8 h-8 text-blue-600" />
@@ -84,7 +84,7 @@ const Services = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-blue-600 rounded-3xl p-8 md:p-12 text-center animate-slide-in-bottom animate-delay-600">
+        <div className="bg-blue-600 rounded-3xl p-8 md:p-12 text-center">
           <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Prêt à sécuriser votre avenir financier ?
           </h3>
