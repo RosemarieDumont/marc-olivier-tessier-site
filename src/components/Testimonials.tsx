@@ -24,6 +24,7 @@ const Testimonials = () => {
   ];
 
   return (
+    <section id="testimonials" className="py-20 bg-blue-50">
     <section id="testimonials" className="py-20 bg-neutral">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-slide-up">
@@ -84,6 +85,7 @@ const Testimonials = () => {
           ))}
         </div>
       </div>
+    </section>
     </section>
   );
 };
