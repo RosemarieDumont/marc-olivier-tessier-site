@@ -26,7 +26,7 @@ const Welcome = () => {
   ];
 
   return (
-    <section id="bienvenue" className="py-20 bg-white">
+    <section id="welcome" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl font-bold text-blue-900 mb-6 animate-slide-up stagger-1">Bienvenue</h2>
@@ -35,7 +35,7 @@ const Welcome = () => {
           </p>
         </div>
 
-        {/* Notre approche */}
+        {/* Notre approche - Les 4 valeurs */}
         <div className="mb-20">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {approaches.map((approach, index) => (
