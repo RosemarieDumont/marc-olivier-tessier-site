@@ -91,7 +91,6 @@ const Hero = () => {
               <div className="absolute -inset-6 bg-gradient-to-r from-white/80 to-transparent rounded-3xl backdrop-blur-sm border border-blue-100/50 shadow-lg -z-10 hover-glow"></div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-blue-900 relative z-10 animate-slide-up stagger-1">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-primary-dark relative z-10 animate-slide-up stagger-1">
                 Bâtissons ensemble des fondations solides pour votre avenir financier.
               </h1>
               
