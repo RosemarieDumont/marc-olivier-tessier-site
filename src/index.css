@@ -10,9 +10,42 @@
 
 /* CSS Variables for customizable colors */
 :root {
-  --hero-primary-hue: 220;
-  --hero-secondary-hue: 210;
-  --hero-accent-hue: 200;
+  --primary-hue: 215;
+  --secondary-hue: 205;
+  --accent-hue: 195;
+  --neutral-hue: 210;
+  
+  /* Primary Colors */
+  --primary-50: hsl(var(--primary-hue), 100%, 97%);
+  --primary-100: hsl(var(--primary-hue), 95%, 92%);
+  --primary-200: hsl(var(--primary-hue), 85%, 84%);
+  --primary-300: hsl(var(--primary-hue), 75%, 72%);
+  --primary-400: hsl(var(--primary-hue), 65%, 58%);
+  --primary-500: hsl(var(--primary-hue), 60%, 45%);
+  --primary-600: hsl(var(--primary-hue), 65%, 35%);
+  --primary-700: hsl(var(--primary-hue), 70%, 28%);
+  --primary-800: hsl(var(--primary-hue), 75%, 22%);
+  --primary-900: hsl(var(--primary-hue), 80%, 18%);
+  
+  /* Neutral Colors */
+  --neutral-50: hsl(var(--neutral-hue), 20%, 98%);
+  --neutral-100: hsl(var(--neutral-hue), 15%, 95%);
+  --neutral-200: hsl(var(--neutral-hue), 12%, 88%);
+  --neutral-300: hsl(var(--neutral-hue), 10%, 75%);
+  --neutral-400: hsl(var(--neutral-hue), 8%, 60%);
+  --neutral-500: hsl(var(--neutral-hue), 6%, 45%);
+  --neutral-600: hsl(var(--neutral-hue), 8%, 35%);
+  --neutral-700: hsl(var(--neutral-hue), 10%, 25%);
+  --neutral-800: hsl(var(--neutral-hue), 12%, 18%);
+  --neutral-900: hsl(var(--neutral-hue), 15%, 12%);
+  
+  /* Accent Colors */
+  --accent-50: hsl(var(--accent-hue), 85%, 97%);
+  --accent-100: hsl(var(--accent-hue), 80%, 92%);
+  --accent-200: hsl(var(--accent-hue), 75%, 84%);
+  --accent-300: hsl(var(--accent-hue), 70%, 72%);
+  --accent-400: hsl(var(--accent-hue), 65%, 58%);
+  --accent-500: hsl(var(--accent-hue), 60%, 45%);
 }
 
 html {
@@ -22,15 +55,15 @@ html {
 /* Parallax gradient background */
 .parallax-gradient {
   background: 
-    radial-gradient(ellipse at top left, hsla(var(--hero-primary-hue), 15%, 95%, 0.8) 0%, transparent 50%),
-    radial-gradient(ellipse at top right, hsla(var(--hero-secondary-hue), 20%, 92%, 0.6) 0%, transparent 50%),
-    radial-gradient(ellipse at bottom left, hsla(var(--hero-accent-hue), 25%, 88%, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at top left, var(--primary-50) 0%, transparent 50%),
+    radial-gradient(ellipse at top right, var(--neutral-50) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom left, var(--accent-50) 0%, transparent 50%),
     linear-gradient(135deg, 
-      hsla(var(--hero-primary-hue), 10%, 98%, 1) 0%,
-      hsla(var(--hero-secondary-hue), 15%, 96%, 1) 25%,
-      hsla(var(--hero-accent-hue), 20%, 94%, 1) 50%,
-      hsla(var(--hero-primary-hue), 12%, 97%, 1) 75%,
-      hsla(var(--hero-secondary-hue), 8%, 99%, 1) 100%
+      var(--neutral-50) 0%,
+      var(--primary-50) 25%,
+      var(--accent-50) 50%,
+      var(--neutral-100) 75%,
+      white 100%
     );
   background-attachment: fixed;
   background-size: 200% 200%, 180% 180%, 160% 160%, 100% 100%;
@@ -279,6 +312,23 @@ html {
 .stagger-5 { animation-delay: 0.5s; }
 .stagger-6 { animation-delay: 0.6s; }
 /* House construction animations */
+/* Enhanced color utilities */
+.text-primary { color: var(--primary-600); }
+.text-primary-light { color: var(--primary-400); }
+.text-primary-dark { color: var(--primary-800); }
+.text-neutral { color: var(--neutral-600); }
+.text-neutral-light { color: var(--neutral-400); }
+.text-neutral-dark { color: var(--neutral-800); }
+
+.bg-primary { background-color: var(--primary-600); }
+.bg-primary-light { background-color: var(--primary-100); }
+.bg-primary-dark { background-color: var(--primary-800); }
+.bg-neutral { background-color: var(--neutral-100); }
+.bg-neutral-dark { background-color: var(--neutral-800); }
+
+.border-primary { border-color: var(--primary-300); }
+.border-neutral { border-color: var(--neutral-200); }
+
 @keyframes draw-foundation {
   0% {
     stroke-dashoffset: 200;

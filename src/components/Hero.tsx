@@ -91,11 +91,12 @@ const Hero = () => {
               <div className="absolute -inset-6 bg-gradient-to-r from-white/80 to-transparent rounded-3xl backdrop-blur-sm border border-blue-100/50 shadow-lg -z-10 hover-glow"></div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-blue-900 relative z-10 animate-slide-up stagger-1">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-primary-dark relative z-10 animate-slide-up stagger-1">
                 Bâtissons ensemble des fondations solides pour votre avenir financier.
               </h1>
               
               {/* Subtle decorative line */}
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-slate-600 rounded-full mb-6 animate-slide-up stagger-2"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-neutral-600 rounded-full mb-6 animate-slide-up stagger-2"></div>
               
               {/* Bouton Prendre rendez-vous */}
               <div className="mt-8 animate-slide-up stagger-3">
@@ -103,7 +104,7 @@ const Hero = () => {
                   href="https://outlook-sdf.office.com/bookwithme/user/0cb6ca6a017f4d5ea6b053f4dacafad2%40agc.ia.ca?anonymous&ismsaljsauthenabled=true"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 bg-blue-900 hover:bg-blue-800 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-500 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover-glow transform hover:scale-105"
+                  className="inline-flex items-center gap-3 bg-primary-dark hover:bg-primary-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-500 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover-glow transform hover:scale-105"
                 >
                   <svg className="w-5 h-5 transition-transform duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -135,8 +136,8 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce group cursor-pointer z-20 animate-slide-up stagger-4">
-        <div className="w-6 h-10 border-2 border-blue-400 rounded-full flex justify-center bg-white/50 backdrop-blur-sm group-hover:bg-white/70 transition-all duration-300 hover-glow">
-          <ArrowDown className="w-3 h-3 text-blue-900 mt-2 transition-transform duration-300 group-hover:translate-y-1" />
+        <div className="w-6 h-10 border-2 border-primary-400 rounded-full flex justify-center bg-white/60 backdrop-blur-sm group-hover:bg-white/80 transition-all duration-300 hover-glow">
+          <ArrowDown className="w-3 h-3 text-primary-dark mt-2 transition-transform duration-300 group-hover:translate-y-1" />
         </div>
       </div>
     </section>

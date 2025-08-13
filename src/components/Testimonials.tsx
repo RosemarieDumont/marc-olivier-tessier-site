@@ -25,24 +25,25 @@ const Testimonials = () => {
 
   return (
     <section id="testimonials" className="py-20 bg-blue-50">
+    <section id="testimonials" className="py-20 bg-neutral">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-slide-up">
           <div className="inline-block mb-4 animate-scale-in stagger-1">
-            <span className="px-6 py-2 bg-white border border-blue-200 rounded-full text-blue-700 text-sm font-medium">
+            <span className="px-6 py-2 bg-white border border-primary-200 rounded-full text-primary-dark text-sm font-medium">
               Avis clients
             </span>
           </div>
-          <h2 className="text-4xl font-bold text-blue-900 mb-6 animate-slide-up stagger-2">Témoignages</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-slide-up stagger-3">
+          <h2 className="text-4xl font-bold text-primary-dark mb-6 animate-slide-up stagger-2">Témoignages</h2>
+          <p className="text-xl text-neutral max-w-3xl mx-auto leading-relaxed animate-slide-up stagger-3">
             Découvrez ce que nos clients disent de nos services
           </p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className={`group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-blue-200 hover-lift hover-glow animate-scale-in stagger-${index + 1}`}>
+            <div key={index} className={`group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-neutral hover:border-primary-300 hover-lift hover-glow animate-scale-in stagger-${index + 1}`}>
               {/* Quote Icon */}
-              <div className="bg-blue-700 p-6 transition-all duration-300 group-hover:bg-blue-600">
+              <div className="bg-primary-700 p-6 transition-all duration-300 group-hover:bg-primary-600">
                 <div>
                   <div className="p-2 bg-white/20 rounded-lg inline-block transition-transform duration-300 group-hover:scale-110">
                     <Quote className="w-6 h-6 text-white" />
@@ -65,18 +66,18 @@ const Testimonials = () => {
                   {/* Rating */}
                   <div className="flex gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-blue-400 text-blue-400 transition-transform duration-300 group-hover:scale-110" />
+                      <Star key={i} className="w-5 h-5 fill-primary-400 text-primary-400 transition-transform duration-300 group-hover:scale-110" />
                     ))}
                   </div>
 
                   {/* Content */}
-                  <p className="text-gray-600 mb-4 leading-relaxed italic transition-colors duration-300 group-hover:text-gray-700">
+                  <p className="text-neutral mb-4 leading-relaxed italic transition-colors duration-300 group-hover:text-neutral-dark">
                     "{testimonial.content}"
                   </p>
 
                   {/* Author */}
                   <div>
-                    <h4 className="font-bold text-blue-900 text-lg transition-colors duration-300 group-hover:text-blue-700">{testimonial.name}</h4>
+                    <h4 className="font-bold text-primary-dark text-lg transition-colors duration-300 group-hover:text-primary">{testimonial.name}</h4>
                   </div>
                 </div>
               </div>
