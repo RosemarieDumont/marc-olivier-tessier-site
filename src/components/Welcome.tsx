@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, User, Handshake, TrendingUp, Award, Users } from 'lucide-react';
+import { Shield, User, Handshake, TrendingUp, Award, Users, PiggyBank } from 'lucide-react';
 
 const Welcome = () => {
   const approaches = [
