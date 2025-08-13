@@ -41,7 +41,6 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-blue-900">
     <section id="contact" className="py-20 bg-primary-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-slide-up">
@@ -64,12 +63,10 @@ const Contact = () => {
                   rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   className={`group flex items-start gap-4 p-6 bg-white/10 rounded-xl hover:bg-white/20 transition-all duration-500 border border-white/20 hover:border-white/30 backdrop-blur-sm hover-lift hover-glow animate-slide-up stagger-${index + 2}`}
                 >
-                  <div className="p-3 rounded-xl bg-blue-600 text-white transition-transform duration-300 group-hover:scale-110">
                   <div className="p-3 rounded-xl bg-primary text-white transition-transform duration-300 group-hover:scale-110">
                     {info.icon}
                   </div>
                   <div>
-                    <h4 className="font-bold text-white mb-1 transition-colors duration-300 group-hover:text-blue-100">{info.label}</h4>
                     <h4 className="font-bold text-white mb-1 transition-colors duration-300 group-hover:text-primary-100">{info.label}</h4>
                     <p className="text-primary-100 transition-colors duration-300 group-hover:text-white">
                       {info.value}
@@ -86,7 +83,6 @@ const Contact = () => {
             <form action="mailto:marc-olivier.tessier@agc.ia.ca" method="post" enctype="text/plain" className="space-y-6 animate-slide-up stagger-2">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-blue-100 mb-2">
                   <label className="block text-sm font-medium text-primary-100 mb-2">
                     Prénom
                   </label>
@@ -98,47 +94,47 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-blue-100 mb-2">
+                  <label className="block text-sm font-medium text-primary-100 mb-2">
                     Nom
                   </label>
                   <input
                     name="nom"
                     type="text"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-primary-200 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
                     placeholder="Votre nom"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-blue-100 mb-2">
+                <label className="block text-sm font-medium text-primary-100 mb-2">
                   Email
                 </label>
                 <input
                   name="email"
                   type="email"
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-primary-200 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
                   placeholder="votre@email.com"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-blue-100 mb-2">
+                <label className="block text-sm font-medium text-primary-100 mb-2">
                   Téléphone
                 </label>
                 <input
                   name="telephone"
                   type="tel"
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-primary-200 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
                   placeholder="(514) 555-0123"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-blue-100 mb-2">
+                <label className="block text-sm font-medium text-primary-100 mb-2">
                   Service d'intérêt
                 </label>
-                <select name="service" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15">
+                <select name="service" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15">
                   <option value="">Sélectionnez un service</option>
                   <option value="epargne">Épargne et placements</option>
                   <option value="assurance">Assurance</option>
@@ -148,20 +144,20 @@ const Contact = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-blue-100 mb-2">
+                <label className="block text-sm font-medium text-primary-100 mb-2">
                   Message
                 </label>
                 <textarea
                   name="message"
                   rows={4}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-500 resize-none backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-primary-200 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-all duration-500 resize-none backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
                   placeholder="Décrivez brièvement vos besoins ou questions..."
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-white text-blue-900 hover:bg-blue-50 py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-500 flex items-center justify-center gap-2 shadow-lg hover:shadow-2xl hover:-translate-y-1 hover-glow transform hover:scale-105"
+                className="w-full bg-white text-primary-dark hover:bg-primary-50 py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-500 flex items-center justify-center gap-2 shadow-lg hover:shadow-2xl hover:-translate-y-1 hover-glow transform hover:scale-105"
               >
                 <Send className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                 Envoyer la demande
@@ -170,9 +166,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    )
-    )
-    }
     </section>
   );
 };
