@@ -61,7 +61,7 @@ const Footer = () => {
 
         <div className="border-t border-slate-800 mt-8 pt-8 text-center">
           <p className="text-slate-400 text-sm">
-            © 2024 Marc-Olivier Tessier, Conseiller en sécurité financière. Tous droits réservés.
+            © 2025 Marc-Olivier Tessier, Conseiller en sécurité financière. Tous droits réservés.
           </p>
           <p className="text-slate-500 text-xs mt-2">
             Les placements peuvent fluctuer en valeur. Les rendements passés ne garantissent pas les résultats futurs.
