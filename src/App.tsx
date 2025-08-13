@@ -33,7 +33,7 @@ function App() {
       <Hero />
       <Welcome />
       <Services />
-      <div className="mb-20">
+      <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-blue-900 rounded-2xl p-8 lg:p-12 text-white shadow-xl hover-lift hover-glow animate-slide-up stagger-2 transition-all duration-500">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
