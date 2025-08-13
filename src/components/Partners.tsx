@@ -1,16 +1,28 @@
 import React from 'react';
 
 const Partners = () => {
-  // Placeholder logos - will be replaced with actual partner logos as they're shared
   const partnerLogos = [
-    { name: 'iA Groupe financier', src: '/placeholder-logo.png' },
-    { name: 'Beneva', src: '/placeholder-logo.png' },
-    { name: 'Sun Life', src: '/placeholder-logo.png' },
-    { name: 'Manuvie', src: '/placeholder-logo.png' },
-    { name: 'Desjardins', src: '/placeholder-logo.png' },
-    { name: 'Canada Vie', src: '/placeholder-logo.png' },
-    { name: 'Foresters Financial', src: '/placeholder-logo.png' },
-    { name: 'Humania Assurance', src: '/placeholder-logo.png' },
+    { name: 'iA Groupe financier' },
+    { name: 'Beneva' },
+    { name: 'Canada Vie' },
+    { name: 'Financière Foresters' },
+    { name: 'Desjardins' },
+    { name: 'Financière Sun Life' },
+    { name: 'RBC' },
+    { name: 'ivari' },
+    { name: 'Humania Assurance' },
+    { name: 'Blue Cross Life' },
+    { name: 'Plan de Protection du Canada' },
+    { name: 'Empire Life' },
+    { name: 'Manuvie' },
+    { name: 'Specialty Life Insurance (SLI)' },
+    { name: 'UV Assurance' },
+    { name: 'BMO Assurance' },
+    { name: 'Assurance vie Équitable du Canada' },
+    { name: 'La Capitale' },
+    { name: 'SSQ Assurance' },
+    { name: 'The Edge Benefits' },
+    { name: 'Assumption Vie' },
   ];
 
   return (
