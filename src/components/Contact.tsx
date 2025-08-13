@@ -42,11 +42,10 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 bg-blue-900">
-    <section id="contact" className="py-20 bg-primary-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl font-bold text-white mb-6 animate-slide-up stagger-1">Nous contacter</h2>
-          <p className="text-xl text-primary-100 max-w-3xl mx-auto leading-relaxed animate-slide-up stagger-2">
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed animate-slide-up stagger-2">
             Prêt à commencer votre parcours vers la sécurité financière ? Contactez-nous dès aujourd'hui
           </p>
         </div>
@@ -65,13 +64,11 @@ const Contact = () => {
                   className={`group flex items-start gap-4 p-6 bg-white/10 rounded-xl hover:bg-white/20 transition-all duration-500 border border-white/20 hover:border-white/30 backdrop-blur-sm hover-lift hover-glow animate-slide-up stagger-${index + 2}`}
                 >
                   <div className="p-3 rounded-xl bg-blue-600 text-white transition-transform duration-300 group-hover:scale-110">
-                  <div className="p-3 rounded-xl bg-primary text-white transition-transform duration-300 group-hover:scale-110">
                     {info.icon}
                   </div>
                   <div>
                     <h4 className="font-bold text-white mb-1 transition-colors duration-300 group-hover:text-blue-100">{info.label}</h4>
-                    <h4 className="font-bold text-white mb-1 transition-colors duration-300 group-hover:text-primary-100">{info.label}</h4>
-                    <p className="text-primary-100 transition-colors duration-300 group-hover:text-white">
+                    <p className="text-blue-100 transition-colors duration-300 group-hover:text-white">
                       {info.value}
                     </p>
                   </div>
@@ -87,13 +84,12 @@ const Contact = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-blue-100 mb-2">
-                  <label className="block text-sm font-medium text-primary-100 mb-2">
                     Prénom
                   </label>
                   <input
                     name="prenom"
                     type="text"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-primary-200 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
                     placeholder="Votre prénom"
                   />
                 </div>
@@ -170,9 +166,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    )
-    )
-    }
     </section>
   );
 };
