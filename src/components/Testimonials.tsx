@@ -86,6 +86,7 @@ const Testimonials = () => {
         </div>
       </div>
     </section>
+    </section>
   );
 };
 
