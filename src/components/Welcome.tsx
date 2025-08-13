@@ -30,11 +30,8 @@ const Welcome = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl font-bold text-blue-900 mb-6 animate-slide-up stagger-1">Bienvenue</h2>
-          <h2 className="text-4xl font-bold text-primary-dark mb-6 animate-slide-up stagger-1">Bienvenue</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-slide-up stagger-2">
-          <p className="text-xl text-neutral max-w-3xl mx-auto leading-relaxed animate-slide-up stagger-2">
             Notre approche s'appuie sur la stabilité, la création de valeur, les relations humaines et la vision à long terme pour assurer votre sécurité financière. Nous ancrons d'abord les fondations, installons la structure, puis faisons grandir votre patrimoine avec régularité et confiance.
-          </p>
           </p>
         </div>
 
@@ -91,12 +88,7 @@ const Welcome = () => {
                     </div>
                     <div className="animate-scale-in stagger-4">
                       <div className="text-3xl font-bold text-white">Investisseur</div>
-            <div key={index} className={`group bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 border border-neutral hover:border-primary-300 hover-lift hover-glow animate-scale-in stagger-${index + 1}`}>
                       <div className="text-sm text-blue-200">Actif</div>
-                <div className="text-primary mb-4 transition-transform duration-300 group-hover:scale-110">{approach.icon}</div>
-                <h4 className="text-xl font-semibold text-primary-dark mb-3 transition-colors duration-300 group-hover:text-primary">{approach.title}</h4>
-                <p className="text-neutral leading-relaxed transition-colors duration-300 group-hover:text-neutral-dark">{approach.description}</p>
-              </div>
                     </div>
                   </div>
                 </div>
