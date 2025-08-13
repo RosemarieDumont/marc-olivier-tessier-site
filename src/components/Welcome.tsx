@@ -16,12 +16,12 @@ const Welcome = () => {
     {
       icon: <Users className="w-8 h-8" />,
       title: "Relations humaines",
-      description: "Nous privilégions des relations durables basées sur la confiance et la transparence."
+      description: "Nous plaçons l'humain au centre et, puisque la confiance se bâtit par la clarté et la constance, nous apportons un soutien proactif avec des ajustements rapides pour maintenir votre stratégie en phase avec vos objectifs."
     },
     {
       icon: <Award className="w-8 h-8" />,
       title: "Vision à long terme",
-      description: "Nous construisons ensemble un plan financier durable qui évolue avec vos besoins."
+      description: "Nous élaborons une stratégie durable, conçue comme une construction par étapes fondations, structure, finitions. Au rythme de vos projets, nous la renforçons et la faisons évoluer."
     }
   ];
 
