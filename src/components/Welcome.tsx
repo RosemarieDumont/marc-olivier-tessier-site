@@ -35,6 +35,7 @@ const Welcome = () => {
           <p className="text-xl text-neutral max-w-3xl mx-auto leading-relaxed animate-slide-up stagger-2">
             Notre approche s'appuie sur la stabilité, la création de valeur, les relations humaines et la vision à long terme pour assurer votre sécurité financière. Nous ancrons d'abord les fondations, installons la structure, puis faisons grandir votre patrimoine avec régularité et confiance.
           </p>
+          </p>
         </div>
 
         {/* Notre approche */}
@@ -95,6 +96,10 @@ const Welcome = () => {
                 <div className="text-primary mb-4 transition-transform duration-300 group-hover:scale-110">{approach.icon}</div>
                 <h4 className="text-xl font-semibold text-primary-dark mb-3 transition-colors duration-300 group-hover:text-primary">{approach.title}</h4>
                 <p className="text-neutral leading-relaxed transition-colors duration-300 group-hover:text-neutral-dark">{approach.description}</p>
+              </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
