@@ -91,8 +91,9 @@ const Hero = () => {
               <div className="absolute -inset-6 bg-gradient-to-r from-blue-50/90 via-white/80 to-blue-50/60 rounded-3xl backdrop-blur-sm border border-blue-200/60 shadow-xl -z-10 hover-glow"></div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-blue-950 relative z-10 animate-slide-up stagger-1 drop-shadow-sm">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight text-blue-950 relative z-10 animate-slide-up stagger-1 drop-shadow-sm">
+              <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight text-blue-950 relative z-10 animate-slide-up stagger-1 drop-shadow-sm">
                 Bâtissons ensemble des fondations solides pour votre avenir financier.
+              </span>
               </h1>
               
               {/* Professional Subtitle */}
