@@ -34,13 +34,26 @@ function App() {
       <div className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center animate-slide-up">
-            <div className="relative group">
+            <div className="relative group w-full flex justify-center">
+              {/* Version Mobile - Image réduite de moitié */}
               <img
                 src="./marc-olivier-héro.jpeg"
                 alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
-                className="w-full max-w-4xl h-auto rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover-lift hover-glow object-cover"
+                className="md:hidden w-full max-w-2xl h-auto rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover-lift hover-glow object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              {/* Version Desktop - Image circulaire */}
+              <img
+                src="./marc-olivier-héro.jpeg"
+                alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
+                className="hidden md:block w-80 h-80 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-500 hover-lift hover-glow object-cover object-top border-4 border-white"
+              />
+              
+              {/* Overlay pour mobile */}
+              <div className="md:hidden absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              {/* Overlay pour desktop */}
+              <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
           </div>
         </div>
