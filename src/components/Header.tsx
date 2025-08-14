@@ -40,7 +40,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 pt-6">
+    <header className="fixed top-0 left-0 right-0 z-50 pt-6 hidden md:block">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`rounded-full backdrop-blur-lg border transition-all duration-500 hover:shadow-2xl animate-slide-up ${
           isScrolled 
@@ -82,31 +82,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-
-      {/* Mobile Navigation */}
-      {isMenuOpen && (
-        <div className={`md:hidden fixed left-4 right-4 ${isMobile ? 'top-16' : 'top-20'} backdrop-blur-lg z-40 rounded-2xl mt-2 animate-slide-up ${
-          isScrolled
-            ? 'bg-white/90 border border-white/20 shadow-2xl' 
-            : 'bg-white/80 border border-white/10 shadow-xl'
-        }`}>
-          <div className="px-6 pt-6 pb-6 space-y-2">
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className={`block w-full text-left px-4 py-3 rounded-xl transition-all duration-500 text-base font-semibold hover:translate-x-2 ${
-                  isScrolled
-                    ? 'text-slate-800 hover:text-blue-800 hover:bg-blue-50/80' 
-                    : 'text-slate-700 hover:text-blue-800 hover:bg-white/60'
-                }`}
-              >
-                {item.name}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
     </header>
   );
 };

@@ -31,6 +31,20 @@ function App() {
     <div className="min-h-screen">
       <Header />
       <Hero />
+      <div className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center animate-slide-up">
+            <div className="relative group">
+              <img
+                src="./marc-olivier-héro.jpeg"
+                alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
+                className="w-full max-w-4xl h-auto rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover-lift hover-glow object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <Welcome />
       <Services />
       <div className="py-20 bg-white">

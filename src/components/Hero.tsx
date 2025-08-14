@@ -92,7 +92,7 @@ const Hero = () => {
 
       {/* Hero Content */}
       <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 md:pt-0">
-        <div className="bg-white/15 backdrop-blur-lg rounded-2xl p-6 sm:p-8 md:p-12 border border-white/30 shadow-2xl animate-slide-up">
+        <div className="bg-white/15 backdrop-blur-lg rounded-2xl p-6 sm:p-8 md:p-12 border border-white/30 shadow-2xl animate-slide-up mt-16 sm:mt-0">
           {/* Main Headline */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight text-white relative z-10 animate-slide-up stagger-1 drop-shadow-lg">
             Bâtissons ensemble des fondations solides pour votre avenir financier
