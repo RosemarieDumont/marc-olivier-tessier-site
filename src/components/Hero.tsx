@@ -91,14 +91,23 @@ const Hero = () => {
               <div className="absolute -inset-6 bg-gradient-to-r from-blue-50/90 via-white/80 to-blue-50/60 rounded-3xl backdrop-blur-sm border border-blue-200/60 shadow-xl -z-10 hover-glow"></div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-blue-950 relative z-10 animate-slide-up stagger-1 drop-shadow-sm">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight text-blue-950 relative z-10 animate-slide-up stagger-1 drop-shadow-sm">
                 Bâtissons ensemble des fondations solides pour votre avenir financier.
               </h1>
               
+              {/* Professional Subtitle */}
+              <div className="mb-6 animate-slide-up stagger-2">
+                <p className="text-lg sm:text-xl md:text-2xl text-blue-800 font-medium leading-relaxed">
+                  Conseiller en sécurité financière affilié à 
+                  <span className="font-semibold text-blue-900"> Industrielle Alliance</span>
+                </p>
+              </div>
+              
               {/* Subtle decorative line */}
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-700 via-blue-600 to-blue-800 rounded-full mb-6 animate-slide-up stagger-2 shadow-sm"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-700 via-blue-600 to-blue-800 rounded-full mb-6 animate-slide-up stagger-3 shadow-sm"></div>
               
               {/* Bouton Prendre rendez-vous */}
-              <div className="mt-8 animate-slide-up stagger-3">
+              <div className="mt-8 animate-slide-up stagger-4">
                 <a
                   href="https://outlook-sdf.office.com/bookwithme/user/0cb6ca6a017f4d5ea6b053f4dacafad2%40agc.ia.ca?anonymous&ismsaljsauthenabled=true"
                   target="_blank"
