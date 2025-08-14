@@ -91,3 +91,5 @@ function App() {
 export default App;
                   <div className="text-base sm:text-lg lg:text-xl font-bold text-white leading-tight">Immobilier</div>
                   <div className="text-xs sm:text-sm text-blue-200">Propriétaire</div>
+  )
+}
