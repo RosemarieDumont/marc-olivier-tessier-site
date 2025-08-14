@@ -48,31 +48,23 @@ const Hero = () => {
           alt="Financial district buildings"
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-800/70 to-slate-900/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-blue-800/30 to-slate-900/50"></div>
       </div>
 
       {/* Mobile Navigation Bar */}
-      <div className="md:hidden fixed top-0 left-0 right-0 z-50 pt-4">
+      <div className="md:hidden absolute top-0 left-0 right-0 z-50 pt-4">
         <div className="mx-4">
-          <div className={`rounded-full backdrop-blur-lg border transition-all duration-500 ${
-            isScrolled 
-              ? 'bg-white/90 border-white/20 shadow-2xl' 
-              : 'bg-white/70 border-white/10 shadow-xl'
-          }`}>
+          <div className="rounded-full backdrop-blur-md border border-white/20 bg-white/10 shadow-xl transition-all duration-500">
             <div className="flex justify-between items-center h-12 px-4">
               {/* Marc-Olivier Tessier Name */}
-              <div className="text-sm font-semibold text-slate-800">
+              <div className="text-sm font-semibold text-white drop-shadow-lg">
                 Marc-Olivier Tessier
               </div>
               
               {/* Mobile menu button */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className={`transition-all duration-500 hover:scale-110 p-2 rounded-full ${
-                  isScrolled
-                    ? 'text-slate-800 hover:text-blue-800 hover:bg-blue-50/80' 
-                    : 'text-slate-700 hover:text-blue-800 hover:bg-white/60'
-                }`}
+                className="transition-all duration-500 hover:scale-110 p-2 rounded-full text-white hover:text-blue-200 hover:bg-white/20"
               >
                 {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
               </button>
@@ -83,21 +75,13 @@ const Hero = () => {
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && isMobile && (
-        <div className={`md:hidden fixed left-4 right-4 top-20 backdrop-blur-lg z-40 rounded-2xl animate-slide-up ${
-          isScrolled
-            ? 'bg-white/90 border border-white/20 shadow-2xl' 
-            : 'bg-white/80 border border-white/10 shadow-xl'
-        }`}>
+        <div className="md:hidden absolute left-4 right-4 top-20 backdrop-blur-md z-40 rounded-2xl animate-slide-up bg-white/10 border border-white/20 shadow-xl">
           <div className="px-6 pt-6 pb-6 space-y-2">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className={`block w-full text-left px-4 py-3 rounded-xl transition-all duration-500 text-base font-semibold hover:translate-x-2 ${
-                  isScrolled
-                    ? 'text-slate-800 hover:text-blue-800 hover:bg-blue-50/80' 
-                    : 'text-slate-700 hover:text-blue-800 hover:bg-white/60'
-                }`}
+                className="block w-full text-left px-4 py-3 rounded-xl transition-all duration-500 text-base font-semibold hover:translate-x-2 text-white hover:text-blue-200 hover:bg-white/20"
               >
                 {item.name}
               </button>
@@ -108,7 +92,7 @@ const Hero = () => {
 
       {/* Hero Content */}
       <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 md:pt-0">
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 md:p-12 border border-white/20 shadow-2xl animate-slide-up">
+        <div className="bg-white/15 backdrop-blur-lg rounded-2xl p-6 sm:p-8 md:p-12 border border-white/30 shadow-2xl animate-slide-up">
           {/* Main Headline */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight text-white relative z-10 animate-slide-up stagger-1 drop-shadow-lg">
             Bâtissons ensemble des fondations solides pour votre avenir financier
