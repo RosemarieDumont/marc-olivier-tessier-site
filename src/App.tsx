@@ -43,7 +43,7 @@ function App() {
                     <img
                       src="./marc_olivier_nous_contacter copy.jpeg"
                       alt="Marc-Olivier Tessier"
-                      className="w-10 h-10 rounded-full object-cover border-2 border-white shadow-lg transition-transform duration-300 hover:scale-110"
+                     className="w-16 h-16 rounded-full object-cover object-top border-3 border-white shadow-lg transition-transform duration-300 hover:scale-110"
                     />
                   </div>
                   <span className="text-2xl sm:text-3xl font-bold">Marc-Olivier Tessier</span>
