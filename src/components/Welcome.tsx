@@ -16,12 +16,12 @@ const Welcome = () => {
     {
       icon: <Users className="w-8 h-8" />,
       title: "Relations humaines",
-      description: "Nous plaçons l'humain au centre et, puisque la confiance se bâtit par la clarté et la constance, nous apportons un soutien proactif avec des ajustements rapides pour maintenir votre stratégie en phase avec vos objectifs."
+      description: "Nous plaçons l'humain au centre : confiance par clarté et constance, avec un suivi proactif et des ajustements rapides."
     },
     {
       icon: <Award className="w-8 h-8" />,
       title: "Vision à long terme",
-      description: "Nous élaborons une stratégie durable, conçue comme une construction par étapes fondations, structure, finitions. Au rythme de vos projets, nous la renforçons et la faisons évoluer."
+      description: "Une stratégie bâtie par étapes : fondations, structure, finitions qui évolue avec vos objectifs."
     }
   ];
 
