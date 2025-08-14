@@ -55,41 +55,37 @@ function App() {
                 </div>
               </div>
               <div className="flex justify-center relative z-10 animate-slide-in-right stagger-2">
-                <div className="bg-white/10 p-8 rounded-xl border border-white/20 hover-scale transition-all duration-500 hover:bg-white/15">
-                  <div className="grid grid-cols-2 gap-6 text-center">
+                <div className="bg-white/10 p-4 sm:p-6 lg:p-8 rounded-xl border border-white/20 hover-scale transition-all duration-500 hover:bg-white/15 w-full max-w-sm">
+                  <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6 text-center">
                     <div className="animate-scale-in stagger-1">
-                      <div className="text-3xl font-bold text-white">AMF</div>
-                      <div className="text-sm text-blue-200">Certifié</div>
+                      <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">AMF</div>
+                      <div className="text-xs sm:text-sm text-blue-200">Certifié</div>
                     </div>
                     <div className="animate-scale-in stagger-2">
-                      <div className="text-3xl font-bold text-white">iA</div>
-                      <div className="text-sm text-blue-200">Affilié</div>
+                      <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">iA</div>
+                      <div className="text-xs sm:text-sm text-blue-200">Affilié</div>
                     </div>
                     <div className="animate-scale-in stagger-3">
-                      <div className="text-3xl font-bold text-white">Immobilier</div>
-                      <div className="text-sm text-blue-200">Propriétaire</div>
+                      <div className="text-base sm:text-lg lg:text-xl font-bold text-white leading-tight">Immobilier</div>
+                      <div className="text-xs sm:text-sm text-blue-200">Propriétaire</div>
                     </div>
                     <div className="animate-scale-in stagger-4">
-                      <div className="text-3xl font-bold text-white">Investisseur</div>
-                      <div className="text-sm text-blue-200">Actif</div>
-                  <div className="text-base sm:text-lg lg:text-xl font-bold text-white leading-tight">Investisseur</div>
-                  <div className="text-xs sm:text-sm text-blue-200">Actif</div>
+                      <div className="text-base sm:text-lg lg:text-xl font-bold text-white leading-tight">Investisseur</div>
+                      <div className="text-xs sm:text-sm text-blue-200">Actif</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-            <div className="bg-white/10 p-4 sm:p-6 lg:p-8 rounded-xl border border-white/20 hover-scale transition-all duration-500 hover:bg-white/15 w-full max-w-sm">
-              <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6 text-center">
+      </div>
+      <Partners />
       <Testimonials />
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">AMF</div>
-                  <div className="text-xs sm:text-sm text-blue-200">Certifié</div>
+      <Contact />
+      <Footer />
     </div>
   );
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">iA</div>
-                  <div className="text-xs sm:text-sm text-blue-200">Affilié</div>
-export default App;
-                  <div className="text-base sm:text-lg lg:text-xl font-bold text-white leading-tight">Immobilier</div>
-                  <div className="text-xs sm:text-sm text-blue-200">Propriétaire</div>
-  )
 }
+
+export default App;
