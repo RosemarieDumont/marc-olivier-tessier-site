@@ -39,10 +39,14 @@ function App() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="relative z-10 animate-slide-in-left stagger-1">
                 <h3 className="text-3xl font-bold mb-6 flex items-center gap-3 animate-slide-up stagger-1">
-                  <div className="p-2 bg-blue-700 rounded-lg transition-transform duration-300 hover:scale-110">
-                    <User className="w-6 h-6 text-white" />
+                  <div className="relative">
+                    <img
+                      src="./marc_olivier_nous_contacter copy.jpeg"
+                      alt="Marc-Olivier Tessier"
+                      className="w-10 h-10 rounded-full object-cover border-2 border-white shadow-lg transition-transform duration-300 hover:scale-110"
+                    />
                   </div>
-                  Marc-Olivier Tessier
+                  <span className="text-2xl sm:text-3xl font-bold">Marc-Olivier Tessier</span>
                 </h3>
                 <div className="space-y-4 text-blue-100 leading-relaxed text-lg animate-slide-up stagger-2">
                   <p>
