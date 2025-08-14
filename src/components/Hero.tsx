@@ -77,8 +77,14 @@ const Header = () => {
                 }`}
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          className="w-full h-full object-cover object-center sm:object-center"
+              </button>
             </div>
+          </div>
+        </div>
+      </div>
+      <img
+        className="w-full h-full object-cover object-center sm:object-center"
+      />
       <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 sm:pt-24 lg:pt-0">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 via-blue-800/60 to-slate-900/70"></div>
       </div>
@@ -87,7 +93,7 @@ const Header = () => {
       {isMenuOpen && (
         <div className={`md:hidden fixed left-4 right-4 ${isMobile ? 'top-16' : 'top-20'} backdrop-blur-lg z-40 rounded-2xl mt-2 animate-slide-up ${
           isScrolled
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 mb-6 sm:mb-8 leading-relaxed animate-slide-up stagger-2 drop-shadow-md">
+            ? 'bg-white/95 border border-white/30 shadow-2xl'
             : 'bg-white/90 border border-white/20 shadow-xl'
         }`}>
           <div className="px-6 pt-6 pb-6 space-y-2">
@@ -97,9 +103,9 @@ const Header = () => {
                 onClick={() => scrollToSection(item.href)}
                 className={`block w-full text-left px-4 py-3 rounded-xl transition-all duration-500 text-base font-semibold hover:translate-x-2 ${
                   isScrolled
-              className="inline-flex items-center gap-2 sm:gap-3 bg-white text-blue-900 px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base md:text-lg hover:bg-blue-50 transition-all duration-500 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover-glow transform hover:scale-105 border-2 border-white"
+                    ? 'text-slate-700 hover:text-blue-700 hover:bg-blue-50'
                     : 'text-slate-600 hover:text-blue-700 hover:bg-white/50'
-              <svg className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                }`}
               >
                 {item.name}
               </button>
@@ -107,8 +113,18 @@ const Header = () => {
           </div>
         </div>
       )}
-    </header>
-  );
+      <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 mb-6 sm:mb-8 leading-relaxed animate-slide-up stagger-2 drop-shadow-md">
+      </p>
+      <button
+        className="inline-flex items-center gap-2 sm:gap-3 bg-white text-blue-900 px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base md:text-lg hover:bg-blue-50 transition-all duration-500 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover-glow transform hover:scale-105 border-2 border-white"
+      >
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        </svg>
+      </button>
       <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      </div>
+    </section>
+  );
+};
 
 export default Header;
