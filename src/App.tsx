@@ -46,7 +46,7 @@ function App() {
                      className="w-16 h-16 rounded-full object-cover object-top border-3 border-white shadow-lg transition-transform duration-300 hover:scale-110"
                     />
                   </div>
-                  <span className="text-2xl sm:text-3xl font-bold">Marc-Olivier Tessier</span>
+                  <span className="text-xl sm:text-2xl font-bold">Marc-Olivier Tessier</span>
                 </h3>
                 <div className="space-y-4 text-blue-100 leading-relaxed text-lg animate-slide-up stagger-2">
                   <p>
