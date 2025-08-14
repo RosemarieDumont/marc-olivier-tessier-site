@@ -72,20 +72,22 @@ function App() {
                     <div className="animate-scale-in stagger-4">
                       <div className="text-3xl font-bold text-white">Investisseur</div>
                       <div className="text-sm text-blue-200">Actif</div>
-                    </div>
-                  </div>
+                  <div className="text-base sm:text-lg lg:text-xl font-bold text-white leading-tight">Investisseur</div>
+                  <div className="text-xs sm:text-sm text-blue-200">Actif</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <Partners />
+            <div className="bg-white/10 p-4 sm:p-6 lg:p-8 rounded-xl border border-white/20 hover-scale transition-all duration-500 hover:bg-white/15 w-full max-w-sm">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6 text-center">
       <Testimonials />
-      <Contact />
-      <Footer />
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">AMF</div>
+                  <div className="text-xs sm:text-sm text-blue-200">Certifié</div>
     </div>
   );
-}
-
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">iA</div>
+                  <div className="text-xs sm:text-sm text-blue-200">Affilié</div>
 export default App;
+                  <div className="text-base sm:text-lg lg:text-xl font-bold text-white leading-tight">Immobilier</div>
+                  <div className="text-xs sm:text-sm text-blue-200">Propriétaire</div>
