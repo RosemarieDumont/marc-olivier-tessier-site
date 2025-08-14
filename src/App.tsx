@@ -46,27 +46,14 @@ function App() {
               <img
                 src="./marc-olivier-héro.jpeg"
                 alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
-                className="hidden md:block w-80 h-80 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-500 hover-lift hover-glow object-cover object-top border-4 border-white"
+                className="hidden md:block w-96 h-auto max-w-2xl rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover-lift hover-glow object-contain border-4 border-white"
               />
               
               {/* Overlay pour mobile */}
               <div className="md:hidden absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               {/* Overlay pour desktop */}
-              <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
-              {/* Version Desktop - Image circulaire */}
-              <img
-                src="./marc-olivier-héro.jpeg"
-                alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
-                className="hidden md:block w-80 h-80 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-500 hover-lift hover-glow object-cover object-top border-4 border-white"
-              />
-              
-              {/* Overlay pour mobile */}
-              <div className="md:hidden absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
-              {/* Overlay pour desktop */}
-              <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
           </div>
         </div>
