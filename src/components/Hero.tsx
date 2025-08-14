@@ -51,33 +51,6 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-800/70 to-slate-900/80"></div>
       </div>
 
-      {/* Desktop Navigation */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`hidden md:block rounded-full backdrop-blur-lg border transition-all duration-500 hover:shadow-2xl animate-slide-up ${
-          isScrolled 
-            ? 'bg-white/90 border-white/40 shadow-2xl' 
-            : 'bg-white/80 border-white/30 shadow-xl'
-        }`}>
-          <div className="flex justify-center items-center h-14 px-8">
-            <nav className="hidden md:flex space-x-10">
-              {navItems.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => scrollToSection(item.href)}
-                  className={`px-4 py-2 rounded-full transition-all duration-500 font-semibold hover:scale-105 ${
-                    isScrolled
-                      ? 'text-slate-700 hover:text-blue-700 hover:bg-blue-50' 
-                      : 'text-slate-600 hover:text-blue-700 hover:bg-white/50'
-                  }`}
-                >
-                  {item.name}
-                </button>
-              ))}
-            </nav>
-          </div>
-        </div>
-      </div>
-
       {/* Mobile Navigation Bar */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-50 pt-4">
         <div className="mx-4">
