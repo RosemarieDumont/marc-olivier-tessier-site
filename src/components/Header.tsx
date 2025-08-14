@@ -26,10 +26,9 @@ const Header = () => {
 
   const navItems = [
     { name: 'Accueil', href: '#home' },
-    { name: 'Bienvenue', href: '#welcome' },
+    { name: 'À propos', href: '#welcome' },
     { name: 'Services', href: '#services' },
-    { name: 'Témoignages', href: '#testimonials' },
-    { name: 'Nous contacter', href: '#contact' },
+    { name: 'Contact', href: '#contact' },
   ];
 
   const scrollToSection = (href: string) => {
@@ -41,33 +40,25 @@ const Header = () => {
   };
 
   return (
-    <header className={`${isMobile ? 'fixed' : 'absolute'} top-0 left-0 right-0 z-50 ${isMobile ? 'pt-2' : 'pt-4'}`}>
+    <header className={`${isMobile ? 'fixed' : 'absolute'} top-0 left-0 right-0 z-50 ${isMobile ? 'pt-3' : 'pt-6'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`${isMobile ? 'rounded-xl' : 'rounded-2xl'} backdrop-blur-md border transition-all duration-500 hover:shadow-2xl animate-slide-up ${
+        <div className={`${isMobile ? 'rounded-full' : 'rounded-full'} backdrop-blur-lg border transition-all duration-500 hover:shadow-2xl animate-slide-up ${
           isScrolled 
-            ? 'bg-blue-900/98 border-blue-800/80 shadow-2xl' 
-            : 'bg-blue-800/90 border-blue-700/60 shadow-xl'
+            ? 'bg-white/95 border-white/30 shadow-2xl' 
+            : 'bg-white/85 border-white/20 shadow-xl'
         }`}>
-          <div className={`flex justify-between items-center ${isMobile ? 'h-14 px-4' : 'h-16 px-6'}`}>
-            <div className="flex-shrink-0">
-              <h1 className={`${isMobile ? 'text-lg' : 'text-xl'} font-bold transition-colors duration-500 hover:text-blue-100 ${
-                isScrolled ? 'text-white' : 'text-white'
-              }`}>Marc-Olivier Tessier</h1>
-              <p className={`${isMobile ? 'text-xs' : 'text-xs'} transition-colors duration-500 ${
-                isScrolled ? 'text-blue-200 hover:text-blue-100' : 'text-blue-100 hover:text-white'
-              }`}>Conseiller en sécurité financière</p>
-            </div>
+          <div className={`flex justify-center items-center ${isMobile ? 'h-12 px-6' : 'h-14 px-8'}`}>
           
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-8">
+            <nav className="hidden md:flex space-x-10">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className={`transition-all duration-500 font-medium hover:scale-105 hover:-translate-y-0.5 ${
+                  className={`transition-all duration-500 font-semibold text-sm hover:scale-105 hover:-translate-y-0.5 px-4 py-2 rounded-full ${
                     isScrolled
-                      ? 'text-blue-200 hover:text-white' 
-                      : 'text-blue-100 hover:text-white'
+                      ? 'text-slate-700 hover:text-blue-700 hover:bg-blue-50' 
+                      : 'text-slate-600 hover:text-blue-700 hover:bg-white/50'
                   }`}
                 >
                   {item.name}
@@ -79,10 +70,10 @@ const Header = () => {
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className={`transition-all duration-500 hover:scale-110 ${
+                className={`transition-all duration-500 hover:scale-110 p-2 rounded-full ${
                   isScrolled
-                    ? 'text-blue-200 hover:text-white' 
-                    : 'text-blue-100 hover:text-white'
+                    ? 'text-slate-700 hover:text-blue-700 hover:bg-blue-50' 
+                    : 'text-slate-600 hover:text-blue-700 hover:bg-white/50'
                 }`}
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -94,20 +85,20 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className={`md:hidden fixed inset-0 ${isMobile ? 'top-16' : 'top-20'} backdrop-blur-md z-40 rounded-xl mx-4 mt-2 animate-slide-up ${
+        <div className={`md:hidden fixed left-4 right-4 ${isMobile ? 'top-16' : 'top-20'} backdrop-blur-lg z-40 rounded-2xl mt-2 animate-slide-up ${
           isScrolled
-            ? 'bg-blue-900/98' 
-            : 'bg-blue-800/95'
+            ? 'bg-white/95 border border-white/30 shadow-2xl' 
+            : 'bg-white/90 border border-white/20 shadow-xl'
         }`}>
           <div className="px-6 pt-6 pb-6 space-y-2">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className={`block w-full text-left px-4 py-4 rounded-lg transition-all duration-500 text-lg font-medium hover:translate-x-2 ${
+                className={`block w-full text-left px-4 py-3 rounded-xl transition-all duration-500 text-base font-semibold hover:translate-x-2 ${
                   isScrolled
-                    ? 'text-blue-200 hover:text-white hover:bg-blue-800/50' 
-                    : 'text-blue-100 hover:text-white hover:bg-blue-700/50'
+                    ? 'text-slate-700 hover:text-blue-700 hover:bg-blue-50' 
+                    : 'text-slate-600 hover:text-blue-700 hover:bg-white/50'
                 }`}
               >
                 {item.name}
