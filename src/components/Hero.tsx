@@ -3,7 +3,7 @@ import { ArrowDown } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-blue-100 to-slate-100">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-blue-100 to-slate-100 pt-20 md:pt-0">
       {/* Animated House Construction - Positioned strategically */}
       <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 opacity-6 z-0">
         <svg width="500" height="375" viewBox="0 0 400 300" className="drop-shadow-sm">
