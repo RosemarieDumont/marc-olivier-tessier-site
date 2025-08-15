@@ -24,7 +24,7 @@ const Footer = () => {
               <div className="mt-4 flex flex-col items-start">
                 <p className="text-xs text-slate-400 mb-2">Partenaire</p>
                 <img 
-                  src="/logo IA.png" 
+                  src="./logo IA.png" 
                   alt="iA Groupe financier" 
                   className="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
                 />
