@@ -26,80 +26,76 @@ const Welcome = () => {
   ];
 
   return (
-    <section id="welcome" className="relative py-20 bg-gradient-to-br from-[#192338] via-[#1E2E4F] to-[#31487A] overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-20 w-64 h-64 bg-[#8FB3E2] rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#31487A] rounded-full blur-3xl"></div>
+    <section id="welcome" className="relative py-10 sm:py-20 bg-gradient-to-b from-[#192338] to-[#1E2E4F] overflow-hidden">
+      {/* Luminous Background Effects */}
+      <div className="absolute inset-0">
+        {/* Spotlight gradient from top center */}
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[800px] h-[400px] bg-gradient-radial from-[#8FB3E2]/10 via-[#8FB3E2]/5 to-transparent blur-3xl"></div>
+        
+        {/* Glowing light streaks */}
+        <div className="absolute top-1/4 left-1/4 w-[600px] h-[2px] bg-gradient-to-r from-transparent via-[#8FB3E2]/20 to-transparent rotate-12 blur-sm"></div>
+        <div className="absolute top-3/4 right-1/4 w-[400px] h-[2px] bg-gradient-to-r from-transparent via-[#8FB3E2]/15 to-transparent -rotate-12 blur-sm"></div>
+        
+        {/* Subtle arcs */}
+        <div className="absolute top-1/2 left-0 w-[300px] h-[300px] border border-[#8FB3E2]/10 rounded-full blur-sm"></div>
+        <div className="absolute bottom-1/4 right-0 w-[200px] h-[200px] border border-[#8FB3E2]/8 rounded-full blur-sm"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Hero Content Section */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+        {/* Main Content Section */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[60vh] lg:min-h-[70vh]">
           {/* Left Content */}
-          <div className="relative z-10 animate-slide-in-left">
-            <h2 className="text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-              Bien<span className="text-[#8FB3E2]">venue</span>
+          <div className="relative z-10 max-w-[550px] animate-slide-in-left">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 sm:mb-8 leading-tight tracking-wide">
+              <span className="inline-block" style={{
+                textShadow: '0 0 30px rgba(143, 179, 226, 0.3), 0 0 60px rgba(143, 179, 226, 0.1)',
+                filter: 'drop-shadow(0 0 10px rgba(143, 179, 226, 0.2))'
+              }}>
+                Bienvenue
+              </span>
             </h2>
-            <div className="space-y-6 text-lg text-white/90 leading-relaxed">
-              <p className="text-xl font-light">
+            <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-white/85 leading-relaxed">
+              <p className="text-lg sm:text-xl font-light leading-relaxed">
                 Notre approche s'appuie sur la <span className="text-[#8FB3E2] font-semibold">stabilité</span>, 
                 la <span className="text-[#8FB3E2] font-semibold">création de valeur</span>, 
                 les <span className="text-[#8FB3E2] font-semibold">relations humaines</span> et 
                 la <span className="text-[#8FB3E2] font-semibold">vision à long terme</span> pour assurer votre sécurité financière.
               </p>
-              <p>
+              <p className="leading-relaxed">
                 Nous ancrons d'abord les fondations, installons la structure, puis faisons grandir votre patrimoine avec régularité et confiance.
               </p>
             </div>
           </div>
 
-          {/* Right Image - Desktop Only */}
-          <div className="hidden lg:block relative z-10 animate-slide-in-right">
+          {/* Right Image */}
+          <div className="relative z-10 animate-slide-in-right order-first lg:order-last">
             <div className="relative">
-              {/* Decorative Elements */}
-              <div className="absolute -top-8 -left-8 w-32 h-32 bg-[#8FB3E2]/20 rounded-full blur-2xl"></div>
-              <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-[#31487A]/30 rounded-full blur-2xl"></div>
-              
-              {/* Main Image */}
-              <div className="relative bg-gradient-to-br from-[#8FB3E2]/10 to-[#31487A]/10 p-8 rounded-3xl backdrop-blur-sm border border-white/10">
-                <img
-                  src="./marc-olivier-héro.jpeg"
-                  alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
-                  className="w-full h-auto rounded-2xl shadow-2xl object-cover object-top hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile Image */}
-          <div className="lg:hidden flex justify-center animate-slide-up">
-            <div className="relative">
-              <div className="bg-gradient-to-br from-[#8FB3E2]/10 to-[#31487A]/10 p-4 rounded-2xl backdrop-blur-sm border border-white/10">
-                <img
-                  src="./marc-olivier-héro.jpeg"
-                  alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
-                  className="w-48 h-auto rounded-xl shadow-2xl object-cover object-top"
-                />
-              </div>
+              <img
+                src="./marc-olivier-héro.jpeg"
+                alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
+                className="w-64 sm:w-80 lg:w-96 h-auto rounded-xl border-3 border-[#8FB3E2] object-cover object-top mx-auto lg:mx-0 transition-transform duration-500 hover:scale-105"
+                style={{
+                  boxShadow: '0 10px 18px rgba(0, 0, 0, 0.35), 0 0 30px rgba(143, 179, 226, 0.1)'
+                }}
+              />
             </div>
           </div>
         </div>
 
-        {/* Notre approche - Les 4 valeurs */}
-        <div className="relative z-10">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-white mb-4">Notre approche</h3>
-            <div className="w-24 h-1 bg-[#8FB3E2] mx-auto rounded-full"></div>
+        {/* Notre approche Section */}
+        <div className="relative z-10 mt-16 sm:mt-20">
+          <div className="text-center mb-8 sm:mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">Notre approche</h3>
+            <div className="w-16 sm:w-24 h-1 bg-[#8FB3E2] mx-auto rounded-full"></div>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {approaches.map((approach, index) => (
-              <div key={index} className={`group bg-white/5 backdrop-blur-sm p-4 sm:p-8 rounded-2xl border border-white/10 hover:border-[#8FB3E2]/50 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 animate-scale-in stagger-${index + 1}`}>
+              <div key={index} className={`group bg-white/5 backdrop-blur-sm p-4 sm:p-6 lg:p-8 rounded-2xl border border-white/10 hover:border-[#8FB3E2]/50 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 animate-scale-in stagger-${index + 1}`}>
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 sm:flex-col sm:items-start mb-4 sm:mb-6">
                     <div className="text-[#8FB3E2] transition-transform duration-300 group-hover:scale-110 group-hover:text-white flex-shrink-0">{approach.icon}</div>
-                    <h4 className="text-base sm:text-xl font-bold text-white transition-colors duration-300 group-hover:text-[#8FB3E2] leading-tight">{approach.title}</h4>
+                    <h4 className="text-base sm:text-lg lg:text-xl font-bold text-white transition-colors duration-300 group-hover:text-[#8FB3E2] leading-tight">{approach.title}</h4>
                   </div>
                   <p className="text-white/80 leading-relaxed transition-colors duration-300 group-hover:text-white text-sm sm:text-base">{approach.description}</p>
                 </div>
