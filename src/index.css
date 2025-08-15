@@ -279,3 +279,36 @@ html {
 .stagger-5 { animation-delay: 0.5s; }
 .stagger-6 { animation-delay: 0.6s; }
 /* House construction animations */
+
+/* Professional profile image styles */
+.border-brand-primary {
+  border-color: #192338;
+}
+
+.shadow-professional {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.shadow-professional-hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom width/height for 340px desktop image */
+.w-85 {
+  width: 21.25rem; /* 340px */
+}
+
+.h-85 {
+  height: 21.25rem; /* 340px */
+}
+
+/* Responsive adjustments for tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .w-85 {
+    width: 18rem; /* 288px for tablet */
+  }
+  
+  .h-85 {
+    height: 18rem; /* 288px for tablet */
+  }
+}

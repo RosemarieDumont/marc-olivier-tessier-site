@@ -39,21 +39,18 @@ function App() {
               <img
                 src="./marc-olivier-héro.jpeg"
                 alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
-                className="md:hidden w-full max-w-2xl h-auto rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover-lift hover-glow object-cover"
+                className="md:hidden w-60 h-60 rounded-full shadow-professional hover:shadow-professional-hover transition-all duration-500 hover-lift hover-glow object-cover object-top border-2 border-brand-primary mb-8"
               />
               
               {/* Version Desktop - Image circulaire */}
               <img
                 src="./marc-olivier-héro.jpeg"
                 alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
-                className="hidden md:block w-80 h-80 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-500 hover-lift hover-glow object-cover object-top"
+                className="hidden md:block w-85 h-85 rounded-full shadow-professional hover:shadow-professional-hover transition-all duration-500 hover-lift hover-glow object-cover object-top border-2 border-brand-primary mb-8"
               />
               
-              {/* Overlay pour mobile */}
-              <div className="md:hidden absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
-              {/* Overlay pour desktop */}
-              <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              {/* Overlay pour mobile et desktop */}
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
           </div>
         </div>
