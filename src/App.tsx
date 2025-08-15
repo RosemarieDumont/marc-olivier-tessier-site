@@ -46,7 +46,7 @@ function App() {
               <img
                 src="./marc-olivier-héro.jpeg"
                 alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
-                className="hidden md:block w-64 h-64 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-500 hover-lift hover-glow object-cover object-center"
+                className="hidden md:block w-80 h-80 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-500 hover-lift hover-glow object-cover object-top"
               />
               
               {/* Overlay pour mobile */}
