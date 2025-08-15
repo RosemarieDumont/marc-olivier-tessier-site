@@ -41,6 +41,8 @@ const Partners = () => {
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed animate-slide-up stagger-3">
             En tant que conseiller affilié à iA Groupe financier, Marc-Olivier Tessier collabore avec les plus grandes compagnies d'assurance et d'investissement au Canada. Cette diversité de partenaires permet de proposer des solutions flexibles et adaptées à chaque profil.
           </p>
+          <div className="partners-strip" role="region" aria-label="Partenaires">
+          </div>
         </div>
 
         {/* Horizontal Scrolling Carousel */}

@@ -284,6 +284,11 @@ html {
   background: radial-gradient(circle, var(--tw-gradient-stops));
 }
 
+.partners-strip{display:flex;gap:40px;overflow-x:auto;align-items:center;padding:20px;background:#fff;scrollbar-width:thin}
+.partners-strip img{height:200px;width:auto;object-fit:contain;display:block}
+.partners-strip::-webkit-scrollbar{height:6px}
+.partners-strip::-webkit-scrollbar-thumb{background:#cfcfcf;border-radius:4px}
+
 /* House construction animations */
 
 /* Professional profile image styles */
