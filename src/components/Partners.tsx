@@ -44,7 +44,20 @@ const Partners = () => {
         </div>
 
         <section className="partners-area">
-          <div className="partners-grid"></div>
+          <div className="partners-grid">
+            <a href="https://ia.ca/" target="_blank" rel="noopener">
+              <img src="/assets/logos/ia-groupe-financier.png?v=1" alt="iA Groupe financier" />
+            </a>
+            <a href="https://www.beneva.ca/" target="_blank" rel="noopener">
+              <img src="/assets/logos/beneva%20copy.png?v=1" alt="Beneva" />
+            </a>
+            <a href="https://www.sunlife.ca/" target="_blank" rel="noopener">
+              <img src="/assets/logos/sun-life-financial%20copy.png?v=1" alt="Sun Life" />
+            </a>
+            <a href="https://www.uvassurance.ca/" target="_blank" rel="noopener">
+              <img src="/assets/logos/blue-cross.png?v=1" alt="Blue Cross (Canada)" />
+            </a>
+          </div>
         </section>
 
       </div>
