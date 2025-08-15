@@ -61,6 +61,7 @@ const Partners = () => {
             </a>
           </div>
         </section>
+      </div>
     </section>
   );
 };
