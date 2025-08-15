@@ -43,6 +43,9 @@ const Partners = () => {
           </p>
         </div>
 
+        <section className="partners-area">
+          <div className="partners-grid"></div>
+        </section>
 
       </div>
     </section>

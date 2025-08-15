@@ -290,6 +290,12 @@ html {
 .partners-strip::-webkit-scrollbar{height:6px}
 .partners-strip::-webkit-scrollbar-thumb{background:#cfcfcf;border-radius:4px}
 
+.partners-area{max-width:min(1200px,92vw);margin:32px auto 0;background:#fff;border-radius:14px;padding:14px 18px;box-shadow:0 6px 20px rgba(0,0,0,.05)}
+.partners-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:24px;align-items:center;justify-items:center}
+.partners-grid a{display:inline-block}
+.partners-grid img{height:110px;width:auto;object-fit:contain;display:block}
+@media(max-width:640px){.partners-area{padding:12px} .partners-grid{gap:18px}}
+
 /* House construction animations */
 
 /* Professional profile image styles */
