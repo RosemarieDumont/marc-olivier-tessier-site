@@ -26,15 +26,6 @@ const Footer = () => {
 
           {/* Contact Info and iA Logo */}
           <div className="md:col-span-1">
-            {/* iA Logo */}
-            <div className="flex justify-center md:justify-end items-center mb-6">
-              <img
-                src="/Partenaire  IA.jpeg"
-                alt="Partenaire iA Groupe financier"
-                className="w-40 h-auto object-contain"
-              />
-            </div>
-            
             {/* Contact Info */}
             <div>
               <h4 className="text-lg font-semibold mb-3">Contact</h4>
@@ -57,15 +48,6 @@ const Footer = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Mobile iA Logo - Separate section for mobile only */}
-        <div className="md:hidden flex justify-center items-center mt-8 pt-8 border-t border-slate-800">
-          <img
-            src="/Partenaire  IA.jpeg"
-            alt="Partenaire iA Groupe financier"
-            className="w-48 h-auto object-contain"
-          />
         </div>
 
         <div className="border-t border-slate-800 mt-8 pt-8 text-center">
