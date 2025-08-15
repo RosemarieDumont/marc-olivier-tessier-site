@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, User, Handshake, TrendingUp, Award, Users, PiggyBank } from 'lucide-react';
+import { Shield, TrendingUp, Award, Users } from 'lucide-react';
 
 const Welcome = () => {
   const approaches = [
@@ -26,30 +26,114 @@ const Welcome = () => {
   ];
 
   return (
-    <section id="welcome" className="py-20 bg-white">
+    <section id="welcome" className="relative py-20 bg-gradient-to-br from-[#192338] via-[#1E2E4F] to-[#31487A] overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-20 w-64 h-64 bg-[#8FB3E2] rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#31487A] rounded-full blur-3xl"></div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl font-bold text-blue-900 mb-6 animate-slide-up stagger-1">Bienvenue</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-slide-up stagger-2">
-            Notre approche s'appuie sur la stabilité, la création de valeur, les relations humaines et la vision à long terme pour assurer votre sécurité financière. Nous ancrons d'abord les fondations, installons la structure, puis faisons grandir votre patrimoine avec régularité et confiance.
-          </p>
+        {/* Hero Content Section */}
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+          {/* Left Content */}
+          <div className="relative z-10 animate-slide-in-left">
+            <div className="inline-block mb-6">
+              <span className="px-6 py-3 bg-[#8FB3E2]/20 border border-[#8FB3E2]/30 rounded-full text-[#8FB3E2] text-sm font-semibold tracking-wide uppercase backdrop-blur-sm">
+                Conseiller certifié
+              </span>
+            </div>
+            <h2 className="text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+              Bien<span className="text-[#8FB3E2]">venue</span>
+            </h2>
+            <div className="space-y-6 text-lg text-white/90 leading-relaxed">
+              <p className="text-xl font-light">
+                Notre approche s'appuie sur la <span className="text-[#8FB3E2] font-semibold">stabilité</span>, 
+                la <span className="text-[#8FB3E2] font-semibold">création de valeur</span>, 
+                les <span className="text-[#8FB3E2] font-semibold">relations humaines</span> et 
+                la <span className="text-[#8FB3E2] font-semibold">vision à long terme</span> pour assurer votre sécurité financière.
+              </p>
+              <p>
+                Nous ancrons d'abord les fondations, installons la structure, puis faisons grandir votre patrimoine avec régularité et confiance.
+              </p>
+            </div>
+            
+            {/* CTA Button */}
+            <div className="mt-10">
+              <a
+                href="https://outlook-sdf.office.com/bookwithme/user/0cb6ca6a017f4d5ea6b053f4dacafad2%40agc.ia.ca?anonymous&ismsaljsauthenabled=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-[#8FB3E2] text-[#192338] px-8 py-4 rounded-full font-bold text-lg hover:bg-white transition-all duration-500 shadow-2xl hover:shadow-[#8FB3E2]/25 hover:-translate-y-2 transform hover:scale-105"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                Planifier une consultation
+              </a>
+            </div>
+          </div>
+
+          {/* Right Image - Desktop Only */}
+          <div className="hidden lg:block relative z-10 animate-slide-in-right">
+            <div className="relative">
+              {/* Decorative Elements */}
+              <div className="absolute -top-8 -left-8 w-32 h-32 bg-[#8FB3E2]/20 rounded-full blur-2xl"></div>
+              <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-[#31487A]/30 rounded-full blur-2xl"></div>
+              
+              {/* Main Image */}
+              <div className="relative bg-gradient-to-br from-[#8FB3E2]/10 to-[#31487A]/10 p-8 rounded-3xl backdrop-blur-sm border border-white/10">
+                <img
+                  src="./marc-olivier-héro.jpeg"
+                  alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
+                  className="w-full h-auto rounded-2xl shadow-2xl object-cover object-top hover:scale-105 transition-transform duration-700"
+                />
+                
+                {/* Floating Badge */}
+                <div className="absolute -bottom-4 -left-4 bg-[#192338] border-2 border-[#8FB3E2] rounded-2xl p-4 shadow-2xl">
+                  <div className="text-center">
+                    <div className="text-[#8FB3E2] text-sm font-semibold">Certifié AMF</div>
+                    <div className="text-white text-xs">Permis 262945</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Image */}
+          <div className="lg:hidden flex justify-center animate-slide-up">
+            <div className="relative">
+              <img
+                src="./marc-olivier-héro.jpeg"
+                alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
+                className="w-64 h-64 rounded-full object-cover object-top border-4 border-[#8FB3E2] shadow-2xl"
+              />
+              <div className="absolute -bottom-2 -right-2 bg-[#192338] border-2 border-[#8FB3E2] rounded-xl p-2">
+                <div className="text-[#8FB3E2] text-xs font-semibold">AMF</div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Notre approche - Les 4 valeurs */}
-        <div className="mb-20">
+        <div className="relative z-10">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-white mb-4">Notre approche</h3>
+            <div className="w-24 h-1 bg-[#8FB3E2] mx-auto rounded-full"></div>
+          </div>
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {approaches.map((approach, index) => (
-              <div key={index} className={`group bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-100 hover:border-blue-200 hover-lift hover-glow animate-scale-in stagger-${index + 1}`}>
+              <div key={index} className={`group bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-[#8FB3E2]/50 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 animate-scale-in stagger-${index + 1}`}>
                 <div className="relative z-10">
-                  <div className="text-blue-600 mb-4 transition-transform duration-300 group-hover:scale-110">{approach.icon}</div>
-                  <h4 className="text-xl font-semibold text-blue-900 mb-3 transition-colors duration-300 group-hover:text-blue-700">{approach.title}</h4>
-                  <p className="text-gray-600 leading-relaxed transition-colors duration-300 group-hover:text-gray-700">{approach.description}</p>
+                  <div className="text-[#8FB3E2] mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:text-white">{approach.icon}</div>
+                  <h4 className="text-xl font-bold text-white mb-4 transition-colors duration-300 group-hover:text-[#8FB3E2]">{approach.title}</h4>
+                  <p className="text-white/80 leading-relaxed transition-colors duration-300 group-hover:text-white">{approach.description}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );
