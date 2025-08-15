@@ -21,20 +21,13 @@ const Footer = () => {
             <div className="space-y-1 text-sm text-slate-400">
               <p>Permis de l'AMF : 262945</p>
               <p>Membre de la Chambre de la sécurité financière</p>
-              <div className="mt-4">
-                <p className="mb-2 text-[11px] uppercase tracking-widest text-slate-300/90">
-                  Partenaire de
-                </p>
-                <img
-                  src="/logo%20IA.png"
-                  alt="iA Groupe financier"
-                  width={200}
-                  height={64}
-                  className="h-auto w-[200px] max-w-full opacity-95 contrast-110"
-                  loading="lazy"
-                />
-              </div>
               <div className="mt-4 flex flex-col items-start">
+                <p className="text-xs text-slate-400 mb-2">Partenaire</p>
+                <img 
+                  src="/logo IA.png" 
+                  alt="iA Groupe financier" 
+                  className="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
+                />
               </div>
             </div>
           </div>
