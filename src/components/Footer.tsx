@@ -21,6 +21,14 @@ const Footer = () => {
             <div className="space-y-1 text-sm text-slate-400">
               <p>Permis de l'AMF : 262945</p>
               <p>Membre de la Chambre de la sécurité financière</p>
+              <div className="mt-4 flex flex-col items-start">
+                <p className="text-xs text-slate-400 mb-2">Partenaire</p>
+                <img 
+                  src="/logo IA.png" 
+                  alt="iA Groupe financier" 
+                  className="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
             </div>
           </div>
 
