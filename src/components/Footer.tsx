@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8">
           {/* Company Info */}
-          <div>
+          <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <Shield className="w-8 h-8 text-blue-400" />
               <div>
@@ -19,13 +19,13 @@ const Footer = () => {
               Votre partenaire de confiance pour bâtir un avenir financier solide et sécurisé.
             </p>
             <div className="space-y-2 text-sm text-slate-400">
-              <p>Permis AMF : #123456789</p>
+              <p>Permis de l'AMF : 262945</p>
               <p>Membre de la Chambre de la sécurité financière</p>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="hidden md:block">
             <h4 className="text-lg font-semibold mb-4">Liens rapides</h4>
             <ul className="space-y-2">
               <li><a href="#home" className="text-slate-300 hover:text-white transition-colors duration-200">Accueil</a></li>
@@ -36,8 +36,17 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* iA Logo for Mobile */}
+          <div className="md:hidden flex justify-center items-center">
+            <img
+              src="./Partenaire  IA.jpeg"
+              alt="Partenaire iA Groupe financier"
+              className="w-48 h-auto object-contain"
+            />
+          </div>
+
           {/* Contact Info */}
-          <div>
+          <div className="md:col-span-1">
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
