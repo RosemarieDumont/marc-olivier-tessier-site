@@ -31,7 +31,7 @@ function App() {
     <div className="min-h-screen">
       <Header />
       <Hero />
-      <div className="py-12 bg-white">
+      <div className="py-8 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center animate-slide-up">
             <div className="relative group w-full flex justify-center">
@@ -46,7 +46,7 @@ function App() {
               <img
                 src="./marc-olivier-héro.jpeg"
                 alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
-                className="hidden md:block w-64 h-64 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-500 hover-lift hover-glow object-cover object-top"
+                className="hidden md:block w-64 h-64 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-500 hover-lift hover-glow object-cover object-center"
               />
               
               {/* Overlay pour mobile */}
