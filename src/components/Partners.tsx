@@ -86,7 +86,7 @@ const Partners = () => {
           
           {/* Scroll Indicator */}
           <div className="scroll-indicator">
-            <ChevronRight className="w-4 h-4" />
+            <ChevronRight className="w-3 h-3 text-blue-600 opacity-80" />
           </div>
         </section>
 
