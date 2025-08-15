@@ -38,11 +38,6 @@ const Welcome = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           {/* Left Content */}
           <div className="relative z-10 animate-slide-in-left">
-            <div className="inline-block mb-6">
-              <span className="px-6 py-3 bg-[#8FB3E2]/20 border border-[#8FB3E2]/30 rounded-full text-[#8FB3E2] text-sm font-semibold tracking-wide uppercase backdrop-blur-sm">
-                Conseiller certifié
-              </span>
-            </div>
             <h2 className="text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
               Bien<span className="text-[#8FB3E2]">venue</span>
             </h2>
@@ -56,21 +51,6 @@ const Welcome = () => {
               <p>
                 Nous ancrons d'abord les fondations, installons la structure, puis faisons grandir votre patrimoine avec régularité et confiance.
               </p>
-            </div>
-            
-            {/* CTA Button */}
-            <div className="mt-10">
-              <a
-                href="https://outlook-sdf.office.com/bookwithme/user/0cb6ca6a017f4d5ea6b053f4dacafad2%40agc.ia.ca?anonymous&ismsaljsauthenabled=true"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-[#8FB3E2] text-[#192338] px-8 py-4 rounded-full font-bold text-lg hover:bg-white transition-all duration-500 shadow-2xl hover:shadow-[#8FB3E2]/25 hover:-translate-y-2 transform hover:scale-105"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                Planifier une consultation
-              </a>
             </div>
           </div>
 
@@ -88,14 +68,6 @@ const Welcome = () => {
                   alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
                   className="w-full h-auto rounded-2xl shadow-2xl object-cover object-top hover:scale-105 transition-transform duration-700"
                 />
-                
-                {/* Floating Badge */}
-                <div className="absolute -bottom-4 -left-4 bg-[#192338] border-2 border-[#8FB3E2] rounded-2xl p-4 shadow-2xl">
-                  <div className="text-center">
-                    <div className="text-[#8FB3E2] text-sm font-semibold">Certifié AMF</div>
-                    <div className="text-white text-xs">Permis 262945</div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -103,13 +75,12 @@ const Welcome = () => {
           {/* Mobile Image */}
           <div className="lg:hidden flex justify-center animate-slide-up">
             <div className="relative">
-              <img
-                src="./marc-olivier-héro.jpeg"
-                alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
-                className="w-64 h-64 rounded-full object-cover object-top border-4 border-[#8FB3E2] shadow-2xl"
-              />
-              <div className="absolute -bottom-2 -right-2 bg-[#192338] border-2 border-[#8FB3E2] rounded-xl p-2">
-                <div className="text-[#8FB3E2] text-xs font-semibold">AMF</div>
+              <div className="bg-gradient-to-br from-[#8FB3E2]/10 to-[#31487A]/10 p-4 rounded-2xl backdrop-blur-sm border border-white/10">
+                <img
+                  src="./marc-olivier-héro.jpeg"
+                  alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
+                  className="w-48 h-auto rounded-xl shadow-2xl object-cover object-top"
+                />
               </div>
             </div>
           </div>
