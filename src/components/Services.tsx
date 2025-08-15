@@ -31,6 +31,10 @@ const Services = () => {
         {
           name: "FERR",
           description: "Fonds enregistré de revenu de retraite pour convertir votre épargne en revenu régulier"
+        },
+        {
+          name: "Compte non-enregistré",
+          description: "Véhicule de placement sans limite de cotisation, mais dont les revenus et gains générés sont imposables l'année où ils sont reçus ou réalisés"
         }
       ]
     },
@@ -77,10 +81,6 @@ const Services = () => {
         {
           name: "Protection de prêts commerciaux",
           description: "Assurance en cas de décès ou d'invalidité pour protéger vos prêts commerciaux et la continuité d'affaires"
-        },
-        {
-          name: "Avantages individuels",
-          description: "Solutions d'avantages sociaux personnalisées pour vous et vos collaborateurs clés"
         },
         {
           name: "Assurance collective",
