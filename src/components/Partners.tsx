@@ -41,6 +41,14 @@ const Partners = () => {
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed animate-slide-up stagger-3">
             En tant que conseiller affilié à iA Groupe financier, Marc-Olivier Tessier collabore avec les plus grandes compagnies d'assurance et d'investissement au Canada. Cette diversité de partenaires permet de proposer des solutions flexibles et adaptées à chaque profil.
           </p>
+          <div className="partners-strip" role="region" aria-label="Partenaires">
+            <a href="https://www.beneva.ca/" target="_blank" rel="noopener">
+              <img src="/assets/logos/beneva.png" alt="Beneva" />
+            </a>
+            <a href="https://www.sunlife.ca/" target="_blank" rel="noopener">
+              <img src="/assets/logos/sun-life-financial.png" alt="Sun Life" />
+            </a>
+            <a href="https://www.uvassurance.ca/" target="_blank" rel="noopener">
         <section className="partners-area">
           <div className="partners-hint" aria-hidden="true"></div>
           <div className="partners-strip" role="region" aria-label="Partenaires">
@@ -61,6 +69,7 @@ const Partners = () => {
             </a>
           </div>
         </section>
+        </div>
     </section>
   );
 };
