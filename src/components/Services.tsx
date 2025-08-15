@@ -58,10 +58,6 @@ const Services = () => {
         {
           name: "Assurance voyage",
           description: "Couverture complète pour vos déplacements à l'étranger avec protection médicale d'urgence"
-        },
-        {
-          name: "Assurance collective",
-          description: "Solutions d'assurance groupe pour entreprises incluant vie, invalidité, maladie et soins dentaires"
         }
       ]
     },
@@ -69,7 +65,6 @@ const Services = () => {
       icon: <Building className="w-12 h-12" />,
       title: "Corporatif",
       color: "from-blue-800 to-blue-900",
-      description: "Marc-Olivier Tessier accompagne les propriétaires d'entreprise, travailleurs autonomes et professionnels dans la mise en place de solutions concrètes pour protéger et faire croître leur capital, tout en assurant la continuité de leurs activités.",
       services: [
         {
           name: "Protection des dirigeants",
@@ -80,16 +75,16 @@ const Services = () => {
           description: "Solutions d'épargne avantageuses fiscalement pour optimiser la croissance de votre capital d'entreprise"
         },
         {
-          name: "Planification de retraite",
-          description: "Planification de revenu de retraite avec produits enregistrés ou non enregistrés adaptés aux entrepreneurs"
-        },
-        {
           name: "Protection de prêts commerciaux",
           description: "Assurance en cas de décès ou d'invalidité pour protéger vos prêts commerciaux et la continuité d'affaires"
         },
         {
           name: "Avantages individuels",
           description: "Solutions d'avantages sociaux personnalisées pour vous et vos collaborateurs clés"
+        },
+        {
+          name: "Assurance collective",
+          description: "Solutions d'assurance groupe pour entreprises incluant vie, invalidité, maladie et soins dentaires"
         },
         {
           name: "Collaboration professionnelle",
@@ -129,7 +124,7 @@ const Services = () => {
               <div className="p-6 relative z-10">
                 {key === 'corporatif' && (
                   <p className="text-gray-600 text-sm mb-6 italic transition-colors duration-300 group-hover:text-gray-700">
-                    Des solutions personnalisées, alignées sur vos priorités d'affaires et de vie.
+                    Accompagnement des entrepreneurs, travailleurs autonomes et professionnels pour protéger et développer leur capital, au moyen de solutions personnalisées alignées sur vos priorités d'affaires et de vie, tout en assurant la pérennité de leurs activités.
                   </p>
                 )}
                 {key === 'epargne' && (
