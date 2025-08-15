@@ -285,7 +285,8 @@ html {
 }
 
 .partners-strip{display:flex;gap:40px;overflow-x:auto;align-items:center;padding:20px;background:#fff;scrollbar-width:thin}
-.partners-strip img{height:200px;width:auto;object-fit:contain;display:block}
+.partners-strip{display:flex;gap:24px;align-items:center;justify-content:center;flex-wrap:wrap;padding:20px;background:white;border-radius:14px}
+.partners-strip img{height:100px;width:auto;object-fit:contain}
 .partners-strip::-webkit-scrollbar{height:6px}
 .partners-strip::-webkit-scrollbar-thumb{background:#cfcfcf;border-radius:4px}
 

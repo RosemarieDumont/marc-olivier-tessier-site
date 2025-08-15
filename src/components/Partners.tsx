@@ -41,7 +41,7 @@ const Partners = () => {
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed animate-slide-up stagger-3">
             En tant que conseiller affilié à iA Groupe financier, Marc-Olivier Tessier collabore avec les plus grandes compagnies d'assurance et d'investissement au Canada. Cette diversité de partenaires permet de proposer des solutions flexibles et adaptées à chaque profil.
           </p>
-          <div className="partners-strip" role="region" aria-label="Partenaires">
+          <div className="partners-strip">
             <a href="https://www.beneva.ca/" target="_blank" rel="noopener">
               <img src="/assets/logos/beneva.png" alt="Beneva" />
             </a>
