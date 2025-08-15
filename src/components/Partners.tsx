@@ -44,7 +44,44 @@ const Partners = () => {
         </div>
 
         <section className="partners-area">
-          <div className="partners-track" role="region" aria-label="Partenaires"></div>
+          <div className="partners-track" role="region" aria-label="Partenaires">
+            <a href="https://ia.ca/" target="_blank" rel="noopener">
+              <img src="/assets/logos/ia-groupe-financier.png?v=1" alt="iA Groupe financier" loading="lazy" />
+            </a>
+            <a href="https://www.beneva.ca/" target="_blank" rel="noopener">
+              <img src="/assets/logos/beneva%20copy.png?v=1" alt="Beneva" loading="lazy" />
+            </a>
+            <a href="https://www.sunlife.ca/" target="_blank" rel="noopener">
+              <img src="/assets/logos/sun-life-financial%20copy.png?v=1" alt="Sun Life" loading="lazy" />
+            </a>
+            <a href="https://www.bluecross.ca/" target="_blank" rel="noopener">
+              <img src="/assets/logos/blue-cross.png?v=1" alt="Blue Cross (Canada)" loading="lazy" />
+            </a>
+            <a href="https://www.assumption.ca/" target="_blank" rel="noopener">
+              <img src="/assets/logos/assumption-life%20copy.png?v=1" alt="Assumption Life" loading="lazy" />
+            </a>
+            <a href="https://www.foresters.com/" target="_blank" rel="noopener">
+              <img src="/assets/logos/foresters-financial%20copy.png?v=1" alt="Foresters Financial" loading="lazy" />
+            </a>
+            <a href="https://www.desjardins.com/" target="_blank" rel="noopener">
+              <img src="/assets/logos/desjardins.png?v=1" alt="Desjardins" loading="lazy" />
+            </a>
+            <a href="https://www.canadalife.com/" target="_blank" rel="noopener">
+              <img src="/assets/logos/canada-life.png?v=1" alt="Canada Life" loading="lazy" />
+            </a>
+            <a href="https://www.equitable.ca/" target="_blank" rel="noopener">
+              <img src="/assets/logos/equitable-life-of-canada.png?v=1" alt="Equitable Life of Canada" loading="lazy" />
+            </a>
+            <a href="https://www.humania.ca/" target="_blank" rel="noopener">
+              <img src="/assets/logos/humania-assurance.png?v=1" alt="Humania Assurance" loading="lazy" />
+            </a>
+            <a href="https://www.bmo.com/" target="_blank" rel="noopener">
+              <img src="/assets/logos/bmo.png?v=1" alt="BMO" loading="lazy" />
+            </a>
+            <a href="https://www.rbcinsurance.com/" target="_blank" rel="noopener">
+              <img src="/assets/logos/RBC-logo.jpg?v=1" alt="RBC Insurance" loading="lazy" />
+            </a>
+          </div>
         </section>
 
       </div>
