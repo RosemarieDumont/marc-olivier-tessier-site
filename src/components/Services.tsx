@@ -84,7 +84,7 @@ const Services = () => {
         },
         {
           name: "Assurance collective",
-          description: "Solutions d'assurance groupe pour entreprises incluant vie, invalidité, maladie et soins dentaires"
+          description: "Solutions d'assurance groupe pour entreprises incluant vie, invalidité, maladie et soins dentaires fournis par nos partenaires"
         },
         {
           name: "Collaboration professionnelle",

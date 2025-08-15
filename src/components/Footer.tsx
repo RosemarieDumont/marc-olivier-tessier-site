@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-slate-950 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {/* Company Info */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
@@ -18,26 +18,70 @@ const Footer = () => {
             <p className="text-slate-300 mb-4">
               Votre partenaire de confiance pour bâtir un avenir financier solide et sécurisé.
             </p>
-            <div className="space-y-2 text-sm text-slate-400">
+            <div className="space-y-1 text-sm text-slate-400">
               <p>Permis de l'AMF : 262945</p>
               <p>Membre de la Chambre de la sécurité financière</p>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="hidden md:block">
-            <h4 className="text-lg font-semibold mb-4">Liens rapides</h4>
-            <ul className="space-y-2">
-              <li><a href="#home" className="text-slate-300 hover:text-white transition-colors duration-200">Accueil</a></li>
-              <li><a href="#welcome" className="text-slate-300 hover:text-white transition-colors duration-200">Bienvenue</a></li>
-              <li><a href="#services" className="text-slate-300 hover:text-white transition-colors duration-200">Services</a></li>
-              <li><a href="#testimonials" className="text-slate-300 hover:text-white transition-colors duration-200">Témoignages</a></li>
-              <li><a href="#contact" className="text-slate-300 hover:text-white transition-colors duration-200">Contact</a></li>
-            </ul>
+          {/* Contact Info and iA Logo */}
+          <div className="md:col-span-1">
+            {/* iA Logo */}
+            <div className="flex justify-center md:justify-end items-center mb-6">
+              <img
+                src="/Partenaire  IA.jpeg"
+                alt="Partenaire iA Groupe financier"
+                className="w-40 h-auto object-contain"
+              />
+            </div>
+            
+            {/* Contact Info */}
+            <div>
+              <h4 className="text-lg font-semibold mb-3">Contact</h4>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2">
+                  <Phone className="w-4 h-4 text-blue-400" />
+                  <span className="text-slate-300 text-sm">(581) 992-7850</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Mail className="w-4 h-4 text-blue-400" />
+                  <span className="text-slate-300 text-sm">marc-olivier.tessier@agc.ia.ca</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <MapPin className="w-4 h-4 text-blue-400 mt-0.5" />
+                  <span className="text-slate-300 text-sm">
+                    1255, boul. Lebourgneuf, bureau 400<br />
+                    Québec (Québec) G2K 0M6
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
 
-          {/* iA Logo for Mobile */}
-          <div className="md:hidden flex justify-center items-center">
+        {/* Mobile iA Logo - Separate section for mobile only */}
+        <div className="md:hidden flex justify-center items-center mt-8 pt-8 border-t border-slate-800">
+          <img
+            src="/Partenaire  IA.jpeg"
+            alt="Partenaire iA Groupe financier"
+            className="w-48 h-auto object-contain"
+          />
+        </div>
+
+        <div className="border-t border-slate-800 mt-8 pt-8 text-center">
+          <p className="text-slate-400 text-sm">
+            © 2025 Marc-Olivier Tessier, Conseiller en sécurité financière. Tous droits réservés.
+          </p>
+          <p className="text-slate-500 text-xs mt-2">
+            Les placements peuvent fluctuer en valeur. Les rendements passés ne garantissent pas les résultats futurs.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
             <img
               src="./Partenaire  IA.jpeg"
               alt="Partenaire iA Groupe financier"
