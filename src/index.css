@@ -311,7 +311,7 @@ html {
   min-width:120px;
 }
 .partners-track img{
-  height:80px;                /* reduced logo height for better layout */
+  height:60px;                /* further reduced logo height */
   width:auto;
   object-fit:contain;
   display:block;
@@ -320,6 +320,39 @@ html {
 .partners-track::-webkit-scrollbar{ height:6px }
 
 /* House construction animations */
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(59, 130, 246, 0.9);
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  animation: pulse-scroll 2s infinite;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@keyframes pulse-scroll {
+  0%, 100% {
+    opacity: 0.7;
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+  }
+}
+
+/* Hide scroll indicator when scrolled */
+.partners-area.scrolled .scroll-indicator {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
 
 /* Professional profile image styles */
 .border-brand-primary {

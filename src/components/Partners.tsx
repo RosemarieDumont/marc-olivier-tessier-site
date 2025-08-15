@@ -1,4 +1,5 @@
 import React from 'react';
+import { ChevronRight } from 'lucide-react';
 
 const Partners = () => {
   const partnerLogos = [
@@ -43,7 +44,7 @@ const Partners = () => {
           </p>
         </div>
 
-        <section className="partners-area">
+        <section className="partners-area relative">
           <div className="partners-track" role="region" aria-label="Partenaires">
             <a href="https://ia.ca/" target="_blank" rel="noopener">
               <img src="./logo IA.png" alt="iA Groupe financier" loading="lazy" />
@@ -81,6 +82,11 @@ const Partners = () => {
             <a href="https://www.rbcinsurance.com/" target="_blank" rel="noopener">
               <img src="./assets/logos/RBC-logo.jpg" alt="RBC Insurance" loading="lazy" />
             </a>
+          </div>
+          
+          {/* Scroll Indicator */}
+          <div className="scroll-indicator">
+            <ChevronRight className="w-4 h-4" />
           </div>
         </section>
 
