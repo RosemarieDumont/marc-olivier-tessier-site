@@ -49,16 +49,6 @@ const Partners = () => {
               <img src="/assets/logos/sun-life-financial.png" alt="Sun Life" />
             </a>
             <a href="https://www.uvassurance.ca/" target="_blank" rel="noopener">
-        <section className="partners-area">
-          <div className="partners-hint" aria-hidden="true"></div>
-          <div className="partners-strip" role="region" aria-label="Partenaires">
-            <a href="https://www.beneva.ca/" target="_blank" rel="noopener">
-              <img src="/assets/logos/beneva.png" alt="Beneva" />
-            </a>
-            <a href="https://www.sunlife.ca/" target="_blank" rel="noopener">
-              <img src="/assets/logos/sun-life-financial.png" alt="Sun Life" />
-            </a>
-            <a href="https://www.uvassurance.ca/" target="_blank" rel="noopener">
               <img src="/assets/logos/uv-assurance.png" alt="UV Assurance" />
             </a>
             <a href="https://www.assumption.ca/" target="_blank" rel="noopener">
@@ -68,12 +58,63 @@ const Partners = () => {
               <img src="/assets/logos/foresters-financial.png" alt="Foresters Financial" />
             </a>
           </div>
-        </section>
         </div>
+
+        {/* Horizontal Scrolling Carousel */}
+        <div className="relative overflow-hidden animate-slide-up stagger-4">
+          {/* Gradient Fade Edges */}
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+          
+          {/* Scrolling Container */}
+          <div className="flex animate-scroll-horizontal">
+            {/* First Set */}
+            {partnerLogos.map((partner, index) => (
+              <div
+                key={`first-${index}`}
+                className="flex-shrink-0 mx-8 flex items-center justify-center h-24 w-48 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-100 group hover-lift hover-glow"
+              >
+                <div className="text-blue-700 text-sm font-semibold text-center px-6 group-hover:text-blue-900 transition-all duration-300 group-hover:scale-105">
+                  {partner.name}
+                </div>
+              </div>
+            ))}
+            
+            {/* Second Set for Seamless Loop */}
+            {partnerLogos.map((partner, index) => (
+              <div
+                key={`second-${index}`}
+                className="flex-shrink-0 mx-8 flex items-center justify-center h-24 w-48 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-100 group hover-lift hover-glow"
+              >
+                <div className="text-blue-700 text-sm font-semibold text-center px-6 group-hover:text-blue-900 transition-all duration-300 group-hover:scale-105">
+                  {partner.name}
+                </div>
+              </div>
+            ))}
+            
+            {/* Third Set for Seamless Loop */}
+            {partnerLogos.map((partner, index) => (
+              <div
+                key={`third-${index}`}
+                className="flex-shrink-0 mx-8 flex items-center justify-center h-24 w-48 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-100 group hover-lift hover-glow"
+              >
+                <div className="text-blue-700 text-sm font-semibold text-center px-6 group-hover:text-blue-900 transition-colors duration-300">
+                  {partner.name}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom Text */}
+        <div className="text-center mt-8 animate-slide-up stagger-5">
+          <p className="text-sm text-gray-500 italic font-light">
+            Partenaires de confiance pour votre sécurité financière
+          </p>
+        </div>
+      </div>
     </section>
   );
 };
 
 export default Partners;
-  )
-}

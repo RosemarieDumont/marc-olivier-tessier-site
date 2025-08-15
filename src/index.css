@@ -284,17 +284,10 @@ html {
   background: radial-gradient(circle, var(--tw-gradient-stops));
 }
 
-.partners-area{max-width:min(1200px,92vw);margin:48px auto 24px;background:#fff;border-radius:14px;padding:12px 8px;box-shadow:0 6px 24px rgba(0,0,0,.04)}
-.partners-strip{display:flex;gap:clamp(16px,4vw,48px);overflow-x:auto;align-items:center;padding:clamp(6px,1.5vw,14px) clamp(8px,2vw,20px);scrollbar-width:thin;scroll-snap-type:x mandatory;min-height:160px}
-.partners-strip a{flex:0 0 auto;scroll-snap-align:center}
-.partners-strip img{height:clamp(80px,12vw,160px);width:auto;object-fit:contain;display:block}
+.partners-strip{display:flex;gap:40px;overflow-x:auto;align-items:center;padding:20px;background:#fff;scrollbar-width:thin}
+.partners-strip img{height:200px;width:auto;object-fit:contain;display:block}
 .partners-strip::-webkit-scrollbar{height:6px}
-.partners-strip::-webkit-scrollbar-thumb{background:#d5d5d5;border-radius:4px}
-/* légers dégradés aux bords pour suggérer le scroll */
-.partners-area{position:relative;isolation:isolate}
-.partners-area::before,.partners-area::after{content:"";position:absolute;top:0;bottom:0;width:28px;pointer-events:none;z-index:1}
-.partners-area::before{left:0;background:linear-gradient(90deg,#fff,rgba(255,255,255,0))}
-.partners-area::after{right:0;background:linear-gradient(270deg,#fff,rgba(255,255,255,0))}
+.partners-strip::-webkit-scrollbar-thumb{background:#cfcfcf;border-radius:4px}
 
 /* House construction animations */
 
