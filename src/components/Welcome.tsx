@@ -95,11 +95,13 @@ const Welcome = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {approaches.map((approach, index) => (
-              <div key={index} className={`group bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-[#8FB3E2]/50 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 animate-scale-in stagger-${index + 1}`}>
+              <div key={index} className={`group bg-white/5 backdrop-blur-sm p-4 sm:p-8 rounded-2xl border border-white/10 hover:border-[#8FB3E2]/50 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 animate-scale-in stagger-${index + 1}`}>
                 <div className="relative z-10">
-                  <div className="text-[#8FB3E2] mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:text-white">{approach.icon}</div>
-                  <h4 className="text-xl font-bold text-white mb-4 transition-colors duration-300 group-hover:text-[#8FB3E2]">{approach.title}</h4>
-                  <p className="text-white/80 leading-relaxed transition-colors duration-300 group-hover:text-white">{approach.description}</p>
+                  <div className="flex items-center gap-3 sm:flex-col sm:items-start mb-4 sm:mb-6">
+                    <div className="text-[#8FB3E2] transition-transform duration-300 group-hover:scale-110 group-hover:text-white flex-shrink-0">{approach.icon}</div>
+                    <h4 className="text-base sm:text-xl font-bold text-white transition-colors duration-300 group-hover:text-[#8FB3E2] leading-tight">{approach.title}</h4>
+                  </div>
+                  <p className="text-white/80 leading-relaxed transition-colors duration-300 group-hover:text-white text-sm sm:text-base">{approach.description}</p>
                 </div>
               </div>
             ))}
