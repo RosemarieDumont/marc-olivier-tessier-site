@@ -61,13 +61,10 @@ const Partners = () => {
             </a>
           </div>
         </section>
-      </div>
     </section>
   );
 };
 
 export default Partners;
-  )
-}
   )
 }
