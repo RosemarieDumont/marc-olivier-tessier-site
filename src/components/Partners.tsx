@@ -42,6 +42,21 @@ const Partners = () => {
             En tant que conseiller affilié à iA Groupe financier, Marc-Olivier Tessier collabore avec les plus grandes compagnies d'assurance et d'investissement au Canada. Cette diversité de partenaires permet de proposer des solutions flexibles et adaptées à chaque profil.
           </p>
           <div className="partners-strip" role="region" aria-label="Partenaires">
+            <a href="https://www.beneva.ca/" target="_blank" rel="noopener">
+              <img src="/assets/logos/beneva.png" alt="Beneva" />
+            </a>
+            <a href="https://www.sunlife.ca/" target="_blank" rel="noopener">
+              <img src="/assets/logos/sun-life-financial.png" alt="Sun Life" />
+            </a>
+            <a href="https://www.uvassurance.ca/" target="_blank" rel="noopener">
+              <img src="/assets/logos/uv-assurance.png" alt="UV Assurance" />
+            </a>
+            <a href="https://www.assumption.ca/" target="_blank" rel="noopener">
+              <img src="/assets/logos/assumption-life.png" alt="Assumption Life" />
+            </a>
+            <a href="https://www.foresters.com/" target="_blank" rel="noopener">
+              <img src="/assets/logos/foresters-financial.png" alt="Foresters Financial" />
+            </a>
           </div>
         </div>
 
