@@ -79,7 +79,7 @@ const Services = () => {
           description: "Solutions d'épargne avantageuses fiscalement pour optimiser la croissance de votre capital d'entreprise"
         },
         {
-          name: "Protection de prêts commerciaux",
+          name: "Assurance de convention d'actionnaires",
           description: "Assurance en cas de décès ou d'invalidité pour protéger vos prêts commerciaux et la continuité d'affaires"
         },
         {
