@@ -301,7 +301,7 @@ html {
   align-items:center;
   padding:12px 6px;
   scroll-snap-type:x proximity;
-  min-height:140px;
+  min-height:100px;           /* reduced height to match smaller logos */
   white-space:nowrap;
 }
 .partners-track a{ 
@@ -311,7 +311,7 @@ html {
   min-width:120px;
 }
 .partners-track img{
-  height:110px;
+  height:80px;                /* reduced logo height for better layout */
   width:auto;
   object-fit:contain;
   display:block;
