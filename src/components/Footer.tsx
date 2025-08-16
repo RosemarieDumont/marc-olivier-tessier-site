@@ -62,7 +62,7 @@ const Footer = () => {
           <p className="text-caption text-[#F9FAFB]/70">
             © 2025 Marc-Olivier Tessier, Conseiller en sécurité financière. Tous droits réservés.
           </p>
-          <p className="text-caption text-[#F9FAFB]/50 mt-2" style="font-size: 0.75rem;">
+          <p className="text-caption text-[#F9FAFB]/50 mt-2" style={{ fontSize: '0.75rem' }}>
             Les placements peuvent fluctuer en valeur. Les rendements passés ne garantissent pas les résultats futurs.
           </p>
         </div>
