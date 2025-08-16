@@ -26,19 +26,19 @@ const Welcome = () => {
   ];
 
   return (
-    <section id="welcome" className="relative py-10 sm:py-20 bg-gradient-to-b from-[#192338] to-[#1E2E4F] overflow-hidden">
+    <section id="welcome" className="relative py-10 sm:py-20 bg-gradient-to-b from-[#003153] to-[#14213D] overflow-hidden">
       {/* Luminous Background Effects */}
       <div className="absolute inset-0">
         {/* Spotlight gradient from top center */}
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[800px] h-[400px] bg-gradient-radial from-[#8FB3E2]/10 via-[#8FB3E2]/5 to-transparent blur-3xl"></div>
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[800px] h-[400px] bg-gradient-radial from-white/10 via-white/5 to-transparent blur-3xl"></div>
         
         {/* Glowing light streaks */}
-        <div className="absolute top-1/4 left-1/4 w-[600px] h-[2px] bg-gradient-to-r from-transparent via-[#8FB3E2]/20 to-transparent rotate-12 blur-sm"></div>
-        <div className="absolute top-3/4 right-1/4 w-[400px] h-[2px] bg-gradient-to-r from-transparent via-[#8FB3E2]/15 to-transparent -rotate-12 blur-sm"></div>
+        <div className="absolute top-1/4 left-1/4 w-[600px] h-[2px] bg-gradient-to-r from-transparent via-white/20 to-transparent rotate-12 blur-sm"></div>
+        <div className="absolute top-3/4 right-1/4 w-[400px] h-[2px] bg-gradient-to-r from-transparent via-white/15 to-transparent -rotate-12 blur-sm"></div>
         
         {/* Subtle arcs */}
-        <div className="absolute top-1/2 left-0 w-[300px] h-[300px] border border-[#8FB3E2]/10 rounded-full blur-sm"></div>
-        <div className="absolute bottom-1/4 right-0 w-[200px] h-[200px] border border-[#8FB3E2]/8 rounded-full blur-sm"></div>
+        <div className="absolute top-1/2 left-0 w-[300px] h-[300px] border border-white/10 rounded-full blur-sm"></div>
+        <div className="absolute bottom-1/4 right-0 w-[200px] h-[200px] border border-white/8 rounded-full blur-sm"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,18 +48,18 @@ const Welcome = () => {
           <div className="relative z-10 max-w-[550px] animate-slide-in-left">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 sm:mb-8 leading-tight tracking-wide">
               <span className="inline-block" style={{
-                textShadow: '0 0 30px rgba(143, 179, 226, 0.3), 0 0 60px rgba(143, 179, 226, 0.1)',
-                filter: 'drop-shadow(0 0 10px rgba(143, 179, 226, 0.2))'
+                textShadow: '0 0 30px rgba(255, 255, 255, 0.3), 0 0 60px rgba(255, 255, 255, 0.1)',
+                filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.2))'
               }}>
                 Bienvenue
               </span>
             </h2>
             <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-white/85 leading-relaxed">
               <p className="text-lg sm:text-xl font-light leading-relaxed">
-                Notre approche s'appuie sur la <span className="text-[#8FB3E2] font-semibold">stabilité</span>, 
-                la <span className="text-[#8FB3E2] font-semibold">création de valeur</span>, 
-                les <span className="text-[#8FB3E2] font-semibold">relations humaines</span> et 
-                la <span className="text-[#8FB3E2] font-semibold">vision à long terme</span> pour assurer votre sécurité financière.
+                Notre approche s'appuie sur la <span className="text-white font-semibold">stabilité</span>, 
+                la <span className="text-white font-semibold">création de valeur</span>, 
+                les <span className="text-white font-semibold">relations humaines</span> et 
+                la <span className="text-white font-semibold">vision à long terme</span> pour assurer votre sécurité financière.
               </p>
               <p className="leading-relaxed">
                 Nous ancrons d'abord les fondations, installons la structure, puis faisons grandir votre patrimoine avec régularité et confiance.
@@ -73,9 +73,9 @@ const Welcome = () => {
               <img
                 src="./marc-olivier-héro.jpeg"
                 alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
-                className="w-64 sm:w-80 lg:w-96 h-auto rounded-xl border-3 border-[#8FB3E2] object-cover object-top mx-auto lg:mx-0 transition-transform duration-500 hover:scale-105"
+                className="w-64 sm:w-80 lg:w-96 h-auto rounded-xl border-3 border-white object-cover object-top mx-auto lg:mx-0 transition-transform duration-500 hover:scale-105"
                 style={{
-                  boxShadow: '0 10px 18px rgba(0, 0, 0, 0.35), 0 0 30px rgba(143, 179, 226, 0.1)'
+                  boxShadow: '0 10px 18px rgba(0, 0, 0, 0.35), 0 0 30px rgba(255, 255, 255, 0.1)'
                 }}
               />
             </div>
@@ -86,16 +86,16 @@ const Welcome = () => {
         <div className="relative z-10 mt-16 sm:mt-20">
           <div className="text-center mb-8 sm:mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">Notre approche</h3>
-            <div className="w-16 sm:w-24 h-1 bg-[#8FB3E2] mx-auto rounded-full"></div>
+            <div className="w-16 sm:w-24 h-1 bg-white mx-auto rounded-full"></div>
           </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {approaches.map((approach, index) => (
-              <div key={index} className={`group bg-white/5 backdrop-blur-sm p-4 sm:p-6 lg:p-8 rounded-2xl border border-white/10 hover:border-[#8FB3E2]/50 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 animate-scale-in stagger-${index + 1}`}>
+              <div key={index} className={`group bg-white/5 backdrop-blur-sm p-4 sm:p-6 lg:p-8 rounded-2xl border border-white/10 hover:border-white/50 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 animate-scale-in stagger-${index + 1}`}>
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 sm:flex-col sm:items-start mb-4 sm:mb-6">
-                    <div className="text-[#8FB3E2] transition-transform duration-300 group-hover:scale-110 group-hover:text-white flex-shrink-0">{approach.icon}</div>
-                    <h4 className="text-base sm:text-lg lg:text-xl font-bold text-white transition-colors duration-300 group-hover:text-[#8FB3E2] leading-tight">{approach.title}</h4>
+                    <div className="text-white transition-transform duration-300 group-hover:scale-110 group-hover:text-white flex-shrink-0">{approach.icon}</div>
+                    <h4 className="text-base sm:text-lg lg:text-xl font-bold text-white transition-colors duration-300 group-hover:text-white leading-tight">{approach.title}</h4>
                   </div>
                   <p className="text-white/80 leading-relaxed transition-colors duration-300 group-hover:text-white text-sm sm:text-base">{approach.description}</p>
                 </div>

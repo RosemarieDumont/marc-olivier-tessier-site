@@ -41,11 +41,11 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-blue-900">
+    <section id="contact" className="py-20 bg-[#003153]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl font-bold text-white mb-4 animate-slide-up stagger-1">Nous contacter</h2>
-          <p className="text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed animate-slide-up stagger-2">
+          <p className="text-lg text-white/80 max-w-3xl mx-auto leading-relaxed animate-slide-up stagger-2">
             Prêt à commencer votre parcours vers la sécurité financière ? Contactez-nous dès aujourd'hui
           </p>
         </div>
@@ -67,8 +67,8 @@ const Contact = () => {
                     {info.icon}
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white mb-1 text-sm transition-colors duration-300 group-hover:text-blue-100">{info.label}</h4>
-                    <p className="text-blue-100 text-sm transition-colors duration-300 group-hover:text-white">
+                    <h4 className="font-semibold text-white mb-1 text-sm transition-colors duration-300 group-hover:text-white">{info.label}</h4>
+                    <p className="text-white/80 text-sm transition-colors duration-300 group-hover:text-white">
                       {info.value}
                     </p>
                   </div>
@@ -89,7 +89,7 @@ const Contact = () => {
                   <input
                     name="prenom"
                     type="text"
-                    className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
+                    className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-white/40 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
                     placeholder="Votre prénom"
                   />
                 </div>
@@ -100,7 +100,7 @@ const Contact = () => {
                   <input
                     name="nom"
                     type="text"
-                    className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
+                    className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-white/40 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
                     placeholder="Votre nom"
                   />
                 </div>
@@ -113,7 +113,7 @@ const Contact = () => {
                 <input
                   name="email"
                   type="email"
-                  className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
+                  className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-white/40 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
                   placeholder="votre@email.com"
                 />
               </div>
@@ -125,7 +125,7 @@ const Contact = () => {
                 <input
                   name="telephone"
                   type="tel"
-                  className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
+                  className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-white/40 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
                   placeholder="(514) 555-0123"
                 />
               </div>
@@ -134,7 +134,7 @@ const Contact = () => {
                 <label className="block text-xs font-medium text-blue-100 mb-1">
                   Service d'intérêt
                 </label>
-                <select name="service" className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15">
+                <select name="service" className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-white/40 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15">
                   <option value="">Sélectionnez un service</option>
                   <option value="epargne">Épargne et placements</option>
                   <option value="assurance">Assurance</option>
@@ -150,14 +150,14 @@ const Contact = () => {
                 <textarea
                   name="message"
                   rows={4}
-                  className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-500 resize-none backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
+                  className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-white/40 transition-all duration-500 resize-none backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
                   placeholder="Décrivez brièvement vos besoins ou questions..."
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-white text-blue-900 hover:bg-blue-50 py-3 px-5 rounded-xl font-semibold text-base transition-all duration-500 flex items-center justify-center gap-2 shadow-lg hover:shadow-2xl hover:-translate-y-1 hover-glow transform hover:scale-105"
+                className="w-full bg-white text-[#003153] hover:bg-blue-50 py-3 px-5 rounded-xl font-semibold text-base transition-all duration-500 flex items-center justify-center gap-2 shadow-lg hover:shadow-2xl hover:-translate-y-1 hover-glow transform hover:scale-105"
               >
                 <Send className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                 Envoyer la demande

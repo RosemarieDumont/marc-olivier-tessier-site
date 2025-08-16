@@ -24,35 +24,35 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-20 bg-blue-50">
+    <section id="testimonials" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-slide-up">
           <div className="inline-block mb-4 animate-scale-in stagger-1">
-            <span className="px-6 py-2 bg-white border border-blue-200 rounded-full text-blue-700 text-sm font-medium">
+            <span className="px-6 py-2 bg-[#E6E6FA] border border-[#003153]/20 rounded-full text-[#003153] text-sm font-medium">
               Avis clients
             </span>
           </div>
-          <h2 className="text-4xl font-bold text-blue-900 mb-6 animate-slide-up stagger-2">Témoignages</h2>
+          <h2 className="text-4xl font-bold text-[#003153] mb-6 animate-slide-up stagger-2">Témoignages</h2>
           <div className="mb-6 animate-slide-up stagger-3">
             <a 
               href="https://www.facebook.com/people/Marc-Olivier-Tessier-Conseiller-en-s%C3%A9curit%C3%A9-financi%C3%A8re/61556652182444/?sk=reviews"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-blue-900 opacity-70 hover:opacity-100 transition-opacity duration-300"
+              className="text-sm text-[#003153] opacity-70 hover:opacity-100 transition-opacity duration-300"
             >
               Avis vérifiés — Facebook
             </a>
           </div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-slide-up stagger-3">
+          <p className="text-xl text-[#1F2937] max-w-3xl mx-auto leading-relaxed animate-slide-up stagger-3">
             Découvrez ce que nos clients disent de nos services
           </p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className={`group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-blue-200 hover-lift hover-glow animate-scale-in stagger-${index + 1}`}>
+            <div key={index} className={`group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-[#003153]/20 hover-lift hover-glow animate-scale-in stagger-${index + 1}`}>
               {/* Quote Icon */}
-              <div className="bg-blue-700 p-6 transition-all duration-300 group-hover:bg-blue-600">
+              <div className="bg-[#14213D] p-6 transition-all duration-300 group-hover:bg-[#003153]">
                 <div>
                   <div className="p-2 bg-white/20 rounded-lg inline-block transition-transform duration-300 group-hover:scale-110">
                     <Quote className="w-6 h-6 text-white" />
@@ -75,18 +75,18 @@ const Testimonials = () => {
                   {/* Rating */}
                   <div className="flex gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-blue-400 text-blue-400 transition-transform duration-300 group-hover:scale-110" />
+                      <Star key={i} className="w-5 h-5 fill-[#003153] text-[#003153] transition-transform duration-300 group-hover:scale-110" />
                     ))}
                   </div>
 
                   {/* Content */}
-                  <p className="text-gray-600 mb-4 leading-relaxed italic transition-colors duration-300 group-hover:text-gray-700">
+                  <p className="text-[#1F2937] mb-4 leading-relaxed italic transition-colors duration-300 group-hover:text-[#1F2937]">
                     "{testimonial.content}"
                   </p>
 
                   {/* Author */}
                   <div>
-                    <h4 className="font-bold text-blue-900 text-lg transition-colors duration-300 group-hover:text-blue-700">{testimonial.name}</h4>
+                    <h4 className="font-bold text-[#003153] text-lg transition-colors duration-300 group-hover:text-[#14213D]">{testimonial.name}</h4>
                   </div>
 
                   {/* Facebook Source */}
@@ -95,7 +95,7 @@ const Testimonials = () => {
                       href="https://www.facebook.com/people/Marc-Olivier-Tessier-Conseiller-en-s%C3%A9curit%C3%A9-financi%C3%A8re/61556652182444/?sk=reviews"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-blue-900 opacity-70 hover:opacity-100 transition-opacity duration-300"
+                      className="text-xs text-[#003153] opacity-70 hover:opacity-100 transition-opacity duration-300"
                     >
                       Source : Facebook · Voir l'avis
                     </a>
