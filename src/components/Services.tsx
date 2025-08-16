@@ -98,8 +98,8 @@ const Services = () => {
     <section id="services" className="py-20 bg-[#0D1433]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl font-bold text-[#F9FAFB] mb-6 animate-slide-up stagger-1">Services</h2>
-          <p className="text-xl text-[#F9FAFB]/85 max-w-3xl mx-auto leading-relaxed animate-slide-up stagger-2">
+          <h2 className="text-display text-4xl font-bold text-[#F9FAFB] mb-6 animate-slide-up stagger-1">Services</h2>
+          <p className="text-body text-xl text-[#F9FAFB]/85 max-w-3xl mx-auto animate-slide-up stagger-2">
             Des solutions complètes pour tous vos besoins financiers
           </p>
         </div>
@@ -113,35 +113,35 @@ const Services = () => {
                   <div className="p-2 bg-white/20 rounded-lg transition-transform duration-300 group-hover:scale-110">
                     {category.icon}
                   </div>
-                  <h3 className="text-2xl font-bold transition-transform duration-300 group-hover:translate-x-1">{category.title}</h3>
+                  <h3 className="text-heading text-2xl font-bold transition-transform duration-300 group-hover:translate-x-1">{category.title}</h3>
                 </div>
                 {category.description && (
-                  <p className="text-sm opacity-90 leading-relaxed transition-opacity duration-300 group-hover:opacity-100">{category.description}</p>
+                  <p className="text-caption opacity-90 transition-opacity duration-300 group-hover:opacity-100">{category.description}</p>
                 )}
               </div>
 
               {/* Services List */}
               <div className="p-6 relative z-10">
                 {key === 'corporatif' && (
-                  <p className="text-[#111827] text-sm mb-6 italic transition-colors duration-300 group-hover:text-[#111827]">
+                  <p className="text-caption text-[#111827] mb-6 italic transition-colors duration-300 group-hover:text-[#111827]">
                     Accompagnement des entrepreneurs, travailleurs autonomes et professionnels pour protéger et développer leur capital, au moyen de solutions personnalisées alignées sur vos priorités d'affaires et de vie, tout en assurant la pérennité de leurs activités.
                   </p>
                 )}
                 {key === 'epargne' && (
-                  <p className="text-[#111827] text-sm mb-6 italic transition-colors duration-300 group-hover:text-[#111827]">
+                  <p className="text-caption text-[#111827] mb-6 italic transition-colors duration-300 group-hover:text-[#111827]">
                     Optimisez votre épargne avec des solutions fiscalement avantageuses adaptées à vos objectifs.
                   </p>
                 )}
                 {key === 'assurance' && (
-                  <p className="text-[#111827] text-sm mb-6 italic transition-colors duration-300 group-hover:text-[#111827]">
+                  <p className="text-caption text-[#111827] mb-6 italic transition-colors duration-300 group-hover:text-[#111827]">
                     Protégez ce qui compte le plus avec des couvertures complètes et personnalisées.
                   </p>
                 )}
                 <div className="space-y-4">
                   {category.services.map((service, index) => (
                     <div key={index} className="border-l-4 border-[#6C90C3] pl-4 hover:border-[#274272] transition-all duration-300 py-2 hover:pl-6 hover:bg-[#EAF0F9]/30 rounded-r-lg">
-                      <h4 className="font-semibold text-[#0D1433] mb-1 transition-colors duration-300 hover:text-[#171F55]">{service.name}</h4>
-                      <p className="text-[#111827] text-sm transition-colors duration-300 hover:text-[#111827]">{service.description}</p>
+                      <h4 className="text-subheading font-semibold text-[#0D1433] mb-1 transition-colors duration-300 hover:text-[#171F55]">{service.name}</h4>
+                      <p className="text-caption text-[#111827] transition-colors duration-300 hover:text-[#111827]">{service.description}</p>
                     </div>
                   ))}
                 </div>
@@ -154,10 +154,10 @@ const Services = () => {
         <div className="mt-16 text-center animate-slide-up stagger-4">
           <div className="bg-[#171F55] rounded-2xl p-8 lg:p-12 shadow-xl hover-lift hover-glow transition-all duration-500">
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold text-[#F9FAFB] mb-4 animate-slide-up stagger-1">
+              <h3 className="text-heading text-3xl font-bold text-[#F9FAFB] mb-4 animate-slide-up stagger-1">
                 Prêt à sécuriser votre avenir financier ?
               </h3>
-              <p className="text-xl text-[#F9FAFB]/85 mb-8 max-w-2xl mx-auto animate-slide-up stagger-2">
+              <p className="text-body text-xl text-[#F9FAFB]/85 mb-8 max-w-2xl mx-auto animate-slide-up stagger-2">
                 Contactez-nous dès aujourd'hui pour une consultation gratuite et personnalisée
               </p>
               <a className="animate-slide-up stagger-3"

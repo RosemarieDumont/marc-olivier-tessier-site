@@ -28,22 +28,22 @@ const Testimonials = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-slide-up">
           <div className="inline-block mb-4 animate-scale-in stagger-1">
-            <span className="px-6 py-2 bg-[#EAF0F9] border border-[#0D1433]/20 rounded-full text-[#0D1433] text-sm font-medium">
+            <span className="text-caption px-6 py-2 bg-[#EAF0F9] border border-[#0D1433]/20 rounded-full text-[#0D1433] font-medium">
               Avis clients
             </span>
           </div>
-          <h2 className="text-4xl font-bold text-[#0D1433] mb-6 animate-slide-up stagger-2">Témoignages</h2>
+          <h2 className="text-display text-4xl font-bold text-[#0D1433] mb-6 animate-slide-up stagger-2">Témoignages</h2>
           <div className="mb-6 animate-slide-up stagger-3">
             <a 
               href="https://www.facebook.com/people/Marc-Olivier-Tessier-Conseiller-en-s%C3%A9curit%C3%A9-financi%C3%A8re/61556652182444/?sk=reviews"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-[#0D1433] opacity-70 hover:opacity-100 transition-opacity duration-300"
+              className="text-caption text-[#0D1433] opacity-70 hover:opacity-100 transition-opacity duration-300"
             >
               Avis vérifiés — Facebook
             </a>
           </div>
-          <p className="text-xl text-[#111827] max-w-3xl mx-auto leading-relaxed animate-slide-up stagger-3">
+          <p className="text-body text-xl text-[#111827] max-w-3xl mx-auto animate-slide-up stagger-3">
             Découvrez ce que nos clients disent de nos services
           </p>
         </div>
@@ -80,13 +80,13 @@ const Testimonials = () => {
                   </div>
 
                   {/* Content */}
-                  <p className="text-[#111827] mb-4 leading-relaxed italic transition-colors duration-300 group-hover:text-[#111827]">
+                  <p className="text-body text-[#111827] mb-4 italic transition-colors duration-300 group-hover:text-[#111827]">
                     "{testimonial.content}"
                   </p>
 
                   {/* Author */}
                   <div>
-                    <h4 className="font-bold text-[#0D1433] text-lg transition-colors duration-300 group-hover:text-[#171F55]">{testimonial.name}</h4>
+                    <h4 className="text-subheading font-bold text-[#0D1433] text-lg transition-colors duration-300 group-hover:text-[#171F55]">{testimonial.name}</h4>
                   </div>
 
                   {/* Facebook Source */}
@@ -95,7 +95,7 @@ const Testimonials = () => {
                       href="https://www.facebook.com/people/Marc-Olivier-Tessier-Conseiller-en-s%C3%A9curit%C3%A9-financi%C3%A8re/61556652182444/?sk=reviews"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-[#0D1433] opacity-70 hover:opacity-100 transition-opacity duration-300"
+                      className="text-caption text-[#0D1433] opacity-70 hover:opacity-100 transition-opacity duration-300"
                     >
                       Source : Facebook · Voir l'avis
                     </a>

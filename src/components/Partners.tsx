@@ -32,14 +32,14 @@ const Partners = () => {
         {/* Section Header */}
         <div className="text-center mb-12 animate-slide-up">
           <div className="inline-block mb-4 animate-scale-in stagger-1">
-            <span className="px-6 py-2 bg-white border border-[#0D1433]/20 rounded-full text-[#0D1433] text-sm font-medium">
+            <span className="text-caption px-6 py-2 bg-white border border-[#0D1433]/20 rounded-full text-[#0D1433] font-medium">
               Réseau de confiance
             </span>
           </div>
-          <h3 className="text-4xl font-bold mb-6 animate-slide-up stagger-2">
+          <h3 className="text-display text-4xl font-bold mb-6 animate-slide-up stagger-2">
             Nos <span className="text-[#0D1433] italic">partenaires</span>
           </h3>
-          <p className="text-xl text-[#111827] max-w-4xl mx-auto leading-relaxed animate-slide-up stagger-3">
+          <p className="text-body text-xl text-[#111827] max-w-4xl mx-auto animate-slide-up stagger-3">
             En tant que conseiller affilié à iA Groupe financier, Marc-Olivier Tessier collabore avec les plus grandes compagnies d'assurance et d'investissement au Canada. Cette diversité de partenaires permet de proposer des solutions flexibles et adaptées à chaque profil.
           </p>
         </div>

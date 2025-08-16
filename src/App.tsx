@@ -38,7 +38,7 @@ function App() {
           <div className="bg-[#0D1433] rounded-2xl p-8 lg:p-12 text-[#F9FAFB] shadow-xl hover-lift hover-glow animate-slide-up stagger-2 transition-all duration-500">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="relative z-10 animate-slide-in-left stagger-1">
-                <h3 className="text-3xl font-bold mb-6 flex items-center gap-3 animate-slide-up stagger-1">
+                <h3 className="text-heading text-3xl font-bold mb-6 flex items-center gap-3 animate-slide-up stagger-1">
                   <div className="relative">
                     <img
                       src="./marc_olivier_nous_contacter copy.jpeg"
@@ -48,7 +48,7 @@ function App() {
                   </div>
                   <span className="text-xl sm:text-2xl font-bold">Marc-Olivier Tessier</span>
                 </h3>
-                <div className="space-y-4 text-[#F9FAFB]/85 leading-relaxed text-lg animate-slide-up stagger-2">
+                <div className="space-y-4 text-body text-[#F9FAFB]/85 text-lg animate-slide-up stagger-2">
                   <p>
                     Marc-Olivier Tessier est conseiller en sécurité financière certifié auprès de l'Autorité des marchés financiers, 
                     affilié à iA Groupe financier au sein de l'agence Les Rivières. Il accompagne ses clients dans des décisions clés 
@@ -63,19 +63,19 @@ function App() {
                   <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6 text-center">
                     <div className="animate-scale-in stagger-1">
                       <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#6C90C3]">AMF</div>
-                      <div className="text-xs sm:text-sm text-[#F9FAFB]/70">Certifié</div>
+                      <div className="text-caption text-[#F9FAFB]/70">Certifié</div>
                     </div>
                     <div className="animate-scale-in stagger-2">
                       <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#6C90C3]">iA</div>
-                      <div className="text-xs sm:text-sm text-[#F9FAFB]/70">Affilié</div>
+                      <div className="text-caption text-[#F9FAFB]/70">Affilié</div>
                     </div>
                     <div className="animate-scale-in stagger-3">
                       <div className="text-base sm:text-lg lg:text-xl font-bold text-[#6C90C3] leading-tight">Immobilier</div>
-                      <div className="text-xs sm:text-sm text-[#F9FAFB]/70">Propriétaire</div>
+                      <div className="text-caption text-[#F9FAFB]/70">Propriétaire</div>
                     </div>
                     <div className="animate-scale-in stagger-4">
                       <div className="text-base sm:text-lg lg:text-xl font-bold text-[#6C90C3] leading-tight">Investisseur</div>
-                      <div className="text-xs sm:text-sm text-[#F9FAFB]/70">Actif</div>
+                      <div className="text-caption text-[#F9FAFB]/70">Actif</div>
                     </div>
                   </div>
                 </div>

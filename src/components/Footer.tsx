@@ -11,18 +11,18 @@ const Footer = () => {
             <div className="flex items-center gap-2 mb-4">
               <Shield className="w-8 h-8 text-[#6C90C3]" />
               <div>
-                <h3 className="text-xl font-bold">Marc-Olivier Tessier</h3>
-                <p className="text-sm text-[#F9FAFB]/70">Conseiller en sécurité financière</p>
+                <h3 className="text-heading text-xl font-bold">Marc-Olivier Tessier</h3>
+                <p className="text-caption text-[#F9FAFB]/70">Conseiller en sécurité financière</p>
               </div>
             </div>
-            <p className="text-[#F9FAFB]/85 mb-4">
+            <p className="text-body text-[#F9FAFB]/85 mb-4">
               Votre partenaire de confiance pour bâtir un avenir financier solide et sécurisé.
             </p>
-            <div className="space-y-1 text-sm text-[#F9FAFB]/70">
+            <div className="space-y-1 text-caption text-[#F9FAFB]/70">
               <p>Permis de l'AMF : 262945</p>
               <p>Membre de la Chambre de la sécurité financière</p>
               <div className="mt-4 flex flex-col items-start">
-                <p className="text-xs text-[#F9FAFB]/70 mb-2">Partenaire</p>
+                <p className="text-caption text-[#F9FAFB]/70 mb-2">Partenaire</p>
                 <img 
                   src="./logo IA.png" 
                   alt="iA Groupe financier" 
@@ -36,19 +36,19 @@ const Footer = () => {
           <div className="md:col-span-1">
             {/* Contact Info */}
             <div>
-              <h4 className="text-lg font-semibold mb-3">Contact</h4>
+              <h4 className="text-subheading text-lg font-semibold mb-3">Contact</h4>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <Phone className="w-4 h-4 text-[#6C90C3]" />
-                  <span className="text-[#F9FAFB]/85 text-sm">(581) 992-7850</span>
+                  <span className="text-caption text-[#F9FAFB]/85">(581) 992-7850</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="w-4 h-4 text-[#6C90C3]" />
-                  <span className="text-[#F9FAFB]/85 text-sm">marc-olivier.tessier@agc.ia.ca</span>
+                  <span className="text-caption text-[#F9FAFB]/85">marc-olivier.tessier@agc.ia.ca</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <MapPin className="w-4 h-4 text-[#6C90C3] mt-0.5" />
-                  <span className="text-[#F9FAFB]/85 text-sm">
+                  <span className="text-caption text-[#F9FAFB]/85">
                     1255, boul. Lebourgneuf, bureau 400<br />
                     Québec (Québec) G2K 0M6
                   </span>
@@ -59,10 +59,10 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-[#F9FAFB]/20 mt-8 pt-8 text-center">
-          <p className="text-[#F9FAFB]/70 text-sm">
+          <p className="text-caption text-[#F9FAFB]/70">
             © 2025 Marc-Olivier Tessier, Conseiller en sécurité financière. Tous droits réservés.
           </p>
-          <p className="text-[#F9FAFB]/50 text-xs mt-2">
+          <p className="text-caption text-[#F9FAFB]/50 mt-2" style="font-size: 0.75rem;">
             Les placements peuvent fluctuer en valeur. Les rendements passés ne garantissent pas les résultats futurs.
           </p>
         </div>

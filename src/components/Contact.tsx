@@ -44,8 +44,8 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-[#0D1433]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl font-bold text-[#F9FAFB] mb-4 animate-slide-up stagger-1">Nous contacter</h2>
-          <p className="text-lg text-[#F9FAFB]/85 max-w-3xl mx-auto leading-relaxed animate-slide-up stagger-2">
+          <h2 className="text-display text-4xl font-bold text-[#F9FAFB] mb-4 animate-slide-up stagger-1">Nous contacter</h2>
+          <p className="text-body text-lg text-[#F9FAFB]/85 max-w-3xl mx-auto animate-slide-up stagger-2">
             Prêt à commencer votre parcours vers la sécurité financière ? Contactez-nous dès aujourd'hui
           </p>
         </div>
@@ -53,7 +53,7 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-10">
           {/* Contact Information */}
           <div className="relative z-10 animate-slide-in-left stagger-1">
-            <h3 className="text-xl font-bold text-[#F9FAFB] mb-6 animate-slide-up stagger-1">Informations de contact</h3>
+            <h3 className="text-heading text-xl font-bold text-[#F9FAFB] mb-6 animate-slide-up stagger-1">Informations de contact</h3>
             <div className="space-y-4">
               {contactInfo.map((info, index) => (
                 <a
@@ -67,8 +67,8 @@ const Contact = () => {
                     {info.icon}
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#F9FAFB] mb-1 text-sm transition-colors duration-300 group-hover:text-[#6C90C3]">{info.label}</h4>
-                    <p className="text-[#F9FAFB]/85 text-sm transition-colors duration-300 group-hover:text-[#F9FAFB]">
+                    <h4 className="text-subheading font-semibold text-[#F9FAFB] mb-1 transition-colors duration-300 group-hover:text-[#6C90C3]">{info.label}</h4>
+                    <p className="text-caption text-[#F9FAFB]/85 transition-colors duration-300 group-hover:text-[#F9FAFB]">
                       {info.value}
                     </p>
                   </div>
@@ -79,11 +79,11 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="relative z-10 animate-slide-in-right stagger-2">
-            <h3 className="text-xl font-bold text-[#F9FAFB] mb-6 animate-slide-up stagger-1">Assistance & renseignements</h3>
+            <h3 className="text-heading text-xl font-bold text-[#F9FAFB] mb-6 animate-slide-up stagger-1">Assistance & renseignements</h3>
             <form action="mailto:marc-olivier.tessier@agc.ia.ca" method="post" enctype="text/plain" className="space-y-4 animate-slide-up stagger-2">
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-xs font-medium text-[#6C90C3] mb-1">
+                  <label className="text-caption block font-medium text-[#6C90C3] mb-1">
                     Prénom
                   </label>
                   <input
@@ -94,7 +94,7 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-[#6C90C3] mb-1">
+                  <label className="text-caption block font-medium text-[#6C90C3] mb-1">
                     Nom
                   </label>
                   <input
@@ -107,7 +107,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-[#6C90C3] mb-1">
+                <label className="text-caption block font-medium text-[#6C90C3] mb-1">
                   Email
                 </label>
                 <input
@@ -119,7 +119,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-[#6C90C3] mb-1">
+                <label className="text-caption block font-medium text-[#6C90C3] mb-1">
                   Téléphone
                 </label>
                 <input
@@ -131,7 +131,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-[#6C90C3] mb-1">
+                <label className="text-caption block font-medium text-[#6C90C3] mb-1">
                   Service d'intérêt
                 </label>
                 <select name="service" className="w-full px-3 py-2 text-sm bg-[#274272]/30 border border-white/20 rounded-xl text-[#F9FAFB] focus:outline-none focus:ring-2 focus:ring-[#6C90C3]/50 focus:border-[#6C90C3]/50 transition-all duration-500 backdrop-blur-sm hover:bg-[#274272]/40 focus:bg-[#274272]/40">
@@ -144,7 +144,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-[#6C90C3] mb-1">
+                <label className="text-caption block font-medium text-[#6C90C3] mb-1">
                   Message
                 </label>
                 <textarea

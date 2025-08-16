@@ -46,7 +46,7 @@ const Welcome = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[60vh] lg:min-h-[70vh]">
           {/* Left Content */}
           <div className="relative z-10 max-w-[550px] animate-slide-in-left">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 sm:mb-8 leading-tight tracking-wide">
+            <h2 className="text-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 sm:mb-8">
               <span className="inline-block" style={{
                 textShadow: '0 0 30px rgba(255, 255, 255, 0.3), 0 0 60px rgba(255, 255, 255, 0.1)',
                 filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.2))'
@@ -54,7 +54,7 @@ const Welcome = () => {
                 <span className="text-[#F9FAFB]">Bienvenue</span>
               </span>
             </h2>
-            <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-[#F9FAFB]/90 leading-relaxed">
+            <div className="space-y-4 sm:space-y-6 text-body text-base sm:text-lg text-[#F9FAFB]/90">
               <p className="text-lg sm:text-xl font-light leading-relaxed">
                 Notre approche s'appuie sur la <span className="text-[#6C90C3] font-semibold">stabilité</span>, 
                 la <span className="text-[#6C90C3] font-semibold">création de valeur</span>, 
@@ -62,6 +62,7 @@ const Welcome = () => {
                 la <span className="text-[#6C90C3] font-semibold">vision à long terme</span> pour assurer votre sécurité financière.
               </p>
               <p className="leading-relaxed">
+              <p className="text-body">
                 Nous ancrons d'abord les fondations, installons la structure, puis faisons grandir votre patrimoine avec régularité et confiance.
               </p>
             </div>
@@ -85,7 +86,7 @@ const Welcome = () => {
         {/* Notre approche Section */}
         <div className="relative z-10 mt-16 sm:mt-20">
           <div className="text-center mb-8 sm:mb-12">
-            <h3 className="text-2xl sm:text-3xl font-bold text-[#F9FAFB] mb-4">Notre approche</h3>
+            <h3 className="text-heading text-2xl sm:text-3xl font-bold text-[#F9FAFB] mb-4">Notre approche</h3>
             <div className="w-16 sm:w-24 h-1 bg-[#6C90C3] mx-auto rounded-full"></div>
           </div>
           
@@ -95,9 +96,9 @@ const Welcome = () => {
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 sm:flex-col sm:items-start mb-4 sm:mb-6">
                     <div className="text-[#6C90C3] transition-transform duration-300 group-hover:scale-110 group-hover:text-[#F9FAFB] flex-shrink-0">{approach.icon}</div>
-                    <h4 className="text-base sm:text-lg lg:text-xl font-bold text-[#F9FAFB] transition-colors duration-300 group-hover:text-[#6C90C3] leading-tight">{approach.title}</h4>
+                    <h4 className="text-subheading text-base sm:text-lg lg:text-xl font-bold text-[#F9FAFB] transition-colors duration-300 group-hover:text-[#6C90C3]">{approach.title}</h4>
                   </div>
-                  <p className="text-[#F9FAFB]/85 leading-relaxed transition-colors duration-300 group-hover:text-[#F9FAFB] text-sm sm:text-base">{approach.description}</p>
+                  <p className="text-body text-[#F9FAFB]/85 transition-colors duration-300 group-hover:text-[#F9FAFB] text-sm sm:text-base">{approach.description}</p>
                 </div>
               </div>
             ))}

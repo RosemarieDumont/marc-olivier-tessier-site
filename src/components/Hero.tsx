@@ -94,12 +94,12 @@ const Hero = () => {
       <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 md:pt-0">
         <div className="bg-[#274272]/20 backdrop-blur-lg rounded-2xl p-6 sm:p-8 md:p-12 border border-white/30 shadow-2xl animate-slide-up mt-16 sm:mt-0">
           {/* Main Headline */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight text-[#F9FAFB] relative z-10 animate-slide-up stagger-1 drop-shadow-lg">
+          <h1 className="text-display text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 text-[#F9FAFB] relative z-10 animate-slide-up stagger-1 drop-shadow-lg">
             Bâtissons ensemble des fondations solides pour votre avenir financier
           </h1>
 
           {/* Professional Subtitle */}
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#6C90C3] mb-6 sm:mb-8 leading-relaxed animate-slide-up stagger-2 drop-shadow-md">
+          <p className="text-subheading text-base sm:text-lg md:text-xl lg:text-2xl text-[#6C90C3] mb-6 sm:mb-8 animate-slide-up stagger-2 drop-shadow-md">
             Conseiller en sécurité financière affilié à Industrielle Alliance
           </p>
 
