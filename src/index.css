@@ -326,8 +326,8 @@ html {
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 49, 83, 0.15);
-  color: white;
+  background: rgba(108, 144, 195, 0.15);
+  color: #F9FAFB;
   padding: 6px;
   border-radius: 50%;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
@@ -390,22 +390,34 @@ html {
 }
 
 /* Custom brand colors */
-.text-brand-primary {
-  color: #003153;
+.bg-primary {
+  background-color: #0D1433;
 }
 
-.bg-brand-primary {
-  background-color: #003153;
+.bg-secondary {
+  background-color: #171F55;
 }
 
-.text-brand-secondary {
-  color: #14213D;
+.bg-mid-tone {
+  background-color: #274272;
 }
 
-.bg-brand-secondary {
-  background-color: #14213D;
+.bg-accent {
+  background-color: #6C90C3;
 }
 
-.bg-brand-lavender {
-  background-color: #E6E6FA;
+.bg-contrast {
+  background-color: #FFFFFF;
+}
+
+.bg-contrast-alt {
+  background-color: #EAF0F9;
+}
+
+.text-dark-bg {
+  color: #F9FAFB;
+}
+
+.text-light-bg {
+  color: #111827;
 }

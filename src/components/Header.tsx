@@ -44,8 +44,8 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`rounded-full backdrop-blur-lg border transition-all duration-500 hover:shadow-2xl animate-slide-up ${
           isScrolled 
-            ? 'bg-white/90 border-white/20 shadow-2xl' 
-            : 'bg-white/70 border-white/10 shadow-xl'
+            ? 'bg-[#171F55]/95 border-white/20 shadow-2xl' 
+            : 'bg-[#171F55]/80 border-white/10 shadow-xl'
         }`}>
           <div className={`flex justify-center items-center ${isMobile ? 'h-12 px-6' : 'h-16 px-8'}`}>
           
@@ -57,8 +57,8 @@ const Header = () => {
                   onClick={() => scrollToSection(item.href)}
                   className={`transition-all duration-500 font-semibold text-base hover:scale-105 hover:-translate-y-0.5 px-6 py-3 rounded-full ${
                     isScrolled
-                      ? 'text-slate-800 hover:text-blue-800 hover:bg-blue-50/80' 
-                      : 'text-slate-700 hover:text-blue-800 hover:bg-white/60'
+                      ? 'text-[#F9FAFB] hover:text-[#6C90C3] hover:bg-[#274272]/50' 
+                      : 'text-[#F9FAFB] hover:text-[#6C90C3] hover:bg-[#274272]/40'
                   }`}
                 >
                   {item.name}
@@ -72,8 +72,8 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className={`transition-all duration-500 hover:scale-110 p-3 rounded-full ${
                   isScrolled
-                    ? 'text-slate-800 hover:text-blue-800 hover:bg-blue-50/80' 
-                    : 'text-slate-700 hover:text-blue-800 hover:bg-white/60'
+                    ? 'text-[#F9FAFB] hover:text-[#6C90C3] hover:bg-[#274272]/50' 
+                    : 'text-[#F9FAFB] hover:text-[#6C90C3] hover:bg-[#274272]/40'
                 }`}
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}

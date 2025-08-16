@@ -41,11 +41,11 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-[#003153]">
+    <section id="contact" className="py-20 bg-[#0D1433]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl font-bold text-white mb-4 animate-slide-up stagger-1">Nous contacter</h2>
-          <p className="text-lg text-white/80 max-w-3xl mx-auto leading-relaxed animate-slide-up stagger-2">
+          <h2 className="text-4xl font-bold text-[#F9FAFB] mb-4 animate-slide-up stagger-1">Nous contacter</h2>
+          <p className="text-lg text-[#F9FAFB]/85 max-w-3xl mx-auto leading-relaxed animate-slide-up stagger-2">
             Prêt à commencer votre parcours vers la sécurité financière ? Contactez-nous dès aujourd'hui
           </p>
         </div>
@@ -53,7 +53,7 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-10">
           {/* Contact Information */}
           <div className="relative z-10 animate-slide-in-left stagger-1">
-            <h3 className="text-xl font-bold text-white mb-6 animate-slide-up stagger-1">Informations de contact</h3>
+            <h3 className="text-xl font-bold text-[#F9FAFB] mb-6 animate-slide-up stagger-1">Informations de contact</h3>
             <div className="space-y-4">
               {contactInfo.map((info, index) => (
                 <a
@@ -61,14 +61,14 @@ const Contact = () => {
                   href={info.href}
                   target={info.href.startsWith('http') ? '_blank' : undefined}
                   rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className={`group flex items-start gap-3 p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-all duration-500 border border-white/20 hover:border-white/30 backdrop-blur-sm hover-lift hover-glow animate-slide-up stagger-${index + 2}`}
+                  className={`group flex items-start gap-3 p-4 bg-[#274272]/30 rounded-xl hover:bg-[#274272]/50 transition-all duration-500 border border-white/20 hover:border-[#6C90C3]/50 backdrop-blur-sm hover-lift hover-glow animate-slide-up stagger-${index + 2}`}
                 >
-                  <div className="p-2 rounded-xl bg-blue-600 text-white transition-transform duration-300 group-hover:scale-110">
+                  <div className="p-2 rounded-xl bg-[#6C90C3] text-[#F9FAFB] transition-transform duration-300 group-hover:scale-110">
                     {info.icon}
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white mb-1 text-sm transition-colors duration-300 group-hover:text-white">{info.label}</h4>
-                    <p className="text-white/80 text-sm transition-colors duration-300 group-hover:text-white">
+                    <h4 className="font-semibold text-[#F9FAFB] mb-1 text-sm transition-colors duration-300 group-hover:text-[#6C90C3]">{info.label}</h4>
+                    <p className="text-[#F9FAFB]/85 text-sm transition-colors duration-300 group-hover:text-[#F9FAFB]">
                       {info.value}
                     </p>
                   </div>
@@ -79,62 +79,62 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="relative z-10 animate-slide-in-right stagger-2">
-            <h3 className="text-xl font-bold text-white mb-6 animate-slide-up stagger-1">Assistance & renseignements</h3>
+            <h3 className="text-xl font-bold text-[#F9FAFB] mb-6 animate-slide-up stagger-1">Assistance & renseignements</h3>
             <form action="mailto:marc-olivier.tessier@agc.ia.ca" method="post" enctype="text/plain" className="space-y-4 animate-slide-up stagger-2">
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-xs font-medium text-blue-100 mb-1">
+                  <label className="block text-xs font-medium text-[#6C90C3] mb-1">
                     Prénom
                   </label>
                   <input
                     name="prenom"
                     type="text"
-                    className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-white/40 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
+                    className="w-full px-3 py-2 text-sm bg-[#274272]/30 border border-white/20 rounded-xl text-[#F9FAFB] placeholder-[#F9FAFB]/60 focus:outline-none focus:ring-2 focus:ring-[#6C90C3]/50 focus:border-[#6C90C3]/50 transition-all duration-500 backdrop-blur-sm hover:bg-[#274272]/40 focus:bg-[#274272]/40"
                     placeholder="Votre prénom"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-blue-100 mb-1">
+                  <label className="block text-xs font-medium text-[#6C90C3] mb-1">
                     Nom
                   </label>
                   <input
                     name="nom"
                     type="text"
-                    className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-white/40 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
+                    className="w-full px-3 py-2 text-sm bg-[#274272]/30 border border-white/20 rounded-xl text-[#F9FAFB] placeholder-[#F9FAFB]/60 focus:outline-none focus:ring-2 focus:ring-[#6C90C3]/50 focus:border-[#6C90C3]/50 transition-all duration-500 backdrop-blur-sm hover:bg-[#274272]/40 focus:bg-[#274272]/40"
                     placeholder="Votre nom"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-blue-100 mb-1">
+                <label className="block text-xs font-medium text-[#6C90C3] mb-1">
                   Email
                 </label>
                 <input
                   name="email"
                   type="email"
-                  className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-white/40 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
+                  className="w-full px-3 py-2 text-sm bg-[#274272]/30 border border-white/20 rounded-xl text-[#F9FAFB] placeholder-[#F9FAFB]/60 focus:outline-none focus:ring-2 focus:ring-[#6C90C3]/50 focus:border-[#6C90C3]/50 transition-all duration-500 backdrop-blur-sm hover:bg-[#274272]/40 focus:bg-[#274272]/40"
                   placeholder="votre@email.com"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-blue-100 mb-1">
+                <label className="block text-xs font-medium text-[#6C90C3] mb-1">
                   Téléphone
                 </label>
                 <input
                   name="telephone"
                   type="tel"
-                  className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-white/40 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
+                  className="w-full px-3 py-2 text-sm bg-[#274272]/30 border border-white/20 rounded-xl text-[#F9FAFB] placeholder-[#F9FAFB]/60 focus:outline-none focus:ring-2 focus:ring-[#6C90C3]/50 focus:border-[#6C90C3]/50 transition-all duration-500 backdrop-blur-sm hover:bg-[#274272]/40 focus:bg-[#274272]/40"
                   placeholder="(514) 555-0123"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-blue-100 mb-1">
+                <label className="block text-xs font-medium text-[#6C90C3] mb-1">
                   Service d'intérêt
                 </label>
-                <select name="service" className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-white/40 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15">
+                <select name="service" className="w-full px-3 py-2 text-sm bg-[#274272]/30 border border-white/20 rounded-xl text-[#F9FAFB] focus:outline-none focus:ring-2 focus:ring-[#6C90C3]/50 focus:border-[#6C90C3]/50 transition-all duration-500 backdrop-blur-sm hover:bg-[#274272]/40 focus:bg-[#274272]/40">
                   <option value="">Sélectionnez un service</option>
                   <option value="epargne">Épargne et placements</option>
                   <option value="assurance">Assurance</option>
@@ -144,20 +144,20 @@ const Contact = () => {
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-blue-100 mb-1">
+                <label className="block text-xs font-medium text-[#6C90C3] mb-1">
                   Message
                 </label>
                 <textarea
                   name="message"
                   rows={4}
-                  className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-white/40 transition-all duration-500 resize-none backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
+                  className="w-full px-3 py-2 text-sm bg-[#274272]/30 border border-white/20 rounded-xl text-[#F9FAFB] placeholder-[#F9FAFB]/60 focus:outline-none focus:ring-2 focus:ring-[#6C90C3]/50 focus:border-[#6C90C3]/50 transition-all duration-500 resize-none backdrop-blur-sm hover:bg-[#274272]/40 focus:bg-[#274272]/40"
                   placeholder="Décrivez brièvement vos besoins ou questions..."
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-white text-[#003153] hover:bg-blue-50 py-3 px-5 rounded-xl font-semibold text-base transition-all duration-500 flex items-center justify-center gap-2 shadow-lg hover:shadow-2xl hover:-translate-y-1 hover-glow transform hover:scale-105"
+                className="w-full bg-[#6C90C3] text-[#F9FAFB] hover:bg-[#274272] py-3 px-5 rounded-xl font-semibold text-base transition-all duration-500 flex items-center justify-center gap-2 shadow-lg hover:shadow-2xl hover:-translate-y-1 hover-glow transform hover:scale-105"
               >
                 <Send className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                 Envoyer la demande

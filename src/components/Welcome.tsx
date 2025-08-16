@@ -26,7 +26,7 @@ const Welcome = () => {
   ];
 
   return (
-    <section id="welcome" className="relative py-10 sm:py-20 bg-gradient-to-b from-[#003153] to-[#14213D] overflow-hidden">
+    <section id="welcome" className="relative py-10 sm:py-20 bg-gradient-to-b from-[#0D1433] to-[#171F55] overflow-hidden">
       {/* Luminous Background Effects */}
       <div className="absolute inset-0">
         {/* Spotlight gradient from top center */}
@@ -51,15 +51,15 @@ const Welcome = () => {
                 textShadow: '0 0 30px rgba(255, 255, 255, 0.3), 0 0 60px rgba(255, 255, 255, 0.1)',
                 filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.2))'
               }}>
-                Bienvenue
+                <span className="text-[#F9FAFB]">Bienvenue</span>
               </span>
             </h2>
-            <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-white/85 leading-relaxed">
+            <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-[#F9FAFB]/90 leading-relaxed">
               <p className="text-lg sm:text-xl font-light leading-relaxed">
-                Notre approche s'appuie sur la <span className="text-white font-semibold">stabilité</span>, 
-                la <span className="text-white font-semibold">création de valeur</span>, 
-                les <span className="text-white font-semibold">relations humaines</span> et 
-                la <span className="text-white font-semibold">vision à long terme</span> pour assurer votre sécurité financière.
+                Notre approche s'appuie sur la <span className="text-[#6C90C3] font-semibold">stabilité</span>, 
+                la <span className="text-[#6C90C3] font-semibold">création de valeur</span>, 
+                les <span className="text-[#6C90C3] font-semibold">relations humaines</span> et 
+                la <span className="text-[#6C90C3] font-semibold">vision à long terme</span> pour assurer votre sécurité financière.
               </p>
               <p className="leading-relaxed">
                 Nous ancrons d'abord les fondations, installons la structure, puis faisons grandir votre patrimoine avec régularité et confiance.
@@ -85,19 +85,19 @@ const Welcome = () => {
         {/* Notre approche Section */}
         <div className="relative z-10 mt-16 sm:mt-20">
           <div className="text-center mb-8 sm:mb-12">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">Notre approche</h3>
-            <div className="w-16 sm:w-24 h-1 bg-white mx-auto rounded-full"></div>
+            <h3 className="text-2xl sm:text-3xl font-bold text-[#F9FAFB] mb-4">Notre approche</h3>
+            <div className="w-16 sm:w-24 h-1 bg-[#6C90C3] mx-auto rounded-full"></div>
           </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {approaches.map((approach, index) => (
-              <div key={index} className={`group bg-white/5 backdrop-blur-sm p-4 sm:p-6 lg:p-8 rounded-2xl border border-white/10 hover:border-white/50 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 animate-scale-in stagger-${index + 1}`}>
+              <div key={index} className={`group bg-[#274272]/30 backdrop-blur-sm p-4 sm:p-6 lg:p-8 rounded-2xl border border-white/10 hover:border-[#6C90C3]/50 transition-all duration-500 hover:-translate-y-2 hover:bg-[#274272]/50 animate-scale-in stagger-${index + 1}`}>
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 sm:flex-col sm:items-start mb-4 sm:mb-6">
-                    <div className="text-white transition-transform duration-300 group-hover:scale-110 group-hover:text-white flex-shrink-0">{approach.icon}</div>
-                    <h4 className="text-base sm:text-lg lg:text-xl font-bold text-white transition-colors duration-300 group-hover:text-white leading-tight">{approach.title}</h4>
+                    <div className="text-[#6C90C3] transition-transform duration-300 group-hover:scale-110 group-hover:text-[#F9FAFB] flex-shrink-0">{approach.icon}</div>
+                    <h4 className="text-base sm:text-lg lg:text-xl font-bold text-[#F9FAFB] transition-colors duration-300 group-hover:text-[#6C90C3] leading-tight">{approach.title}</h4>
                   </div>
-                  <p className="text-white/80 leading-relaxed transition-colors duration-300 group-hover:text-white text-sm sm:text-base">{approach.description}</p>
+                  <p className="text-[#F9FAFB]/85 leading-relaxed transition-colors duration-300 group-hover:text-[#F9FAFB] text-sm sm:text-base">{approach.description}</p>
                 </div>
               </div>
             ))}
