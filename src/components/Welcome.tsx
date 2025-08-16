@@ -65,6 +65,7 @@ const Welcome = () => {
               <p className="text-body">
                 Nous ancrons d'abord les fondations, installons la structure, puis faisons grandir votre patrimoine avec régularité et confiance.
               </p>
+              </p>
             </div>
           </div>
 
