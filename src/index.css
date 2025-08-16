@@ -326,7 +326,7 @@ html {
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(59, 130, 246, 0.15);
+  background: rgba(0, 49, 83, 0.15);
   color: white;
   padding: 6px;
   border-radius: 50%;
@@ -387,4 +387,25 @@ html {
   .h-85 {
     height: 18rem; /* 288px for tablet */
   }
+}
+
+/* Custom brand colors */
+.text-brand-primary {
+  color: #003153;
+}
+
+.bg-brand-primary {
+  background-color: #003153;
+}
+
+.text-brand-secondary {
+  color: #14213D;
+}
+
+.bg-brand-secondary {
+  background-color: #14213D;
+}
+
+.bg-brand-lavender {
+  background-color: #E6E6FA;
 }
