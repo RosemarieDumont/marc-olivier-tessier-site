@@ -64,7 +64,7 @@ const Welcome = () => {
               <img
                 src="./marc-olivier-héro.jpeg"
                 alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
-                className="w-64 sm:w-80 lg:w-full lg:max-w-md h-auto rounded-xl border-3 border-white object-cover object-top transition-transform duration-500 hover:scale-105 shadow-lg"
+                className="w-32 sm:w-40 lg:w-48 h-auto rounded-xl border-3 border-white object-cover object-top transition-transform duration-500 hover:scale-105 shadow-lg"
               />
             </div>
           </div>
@@ -73,7 +73,7 @@ const Welcome = () => {
         {/* Notre approche Section */}
         <div className="relative z-10 mt-12 sm:mt-16 lg:mt-20">
           <div className="text-center mb-8 sm:mb-12">
-            <h3 className="text-heading text-2xl sm:text-3xl font-bold text-[#F9FAFB] mb-4">Notre approche</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4" style={{ fontFamily: 'Poppins', fontWeight: '700' }}>Notre approche</h3>
             <div className="w-16 sm:w-24 h-1 bg-[#6C90C3] mx-auto rounded-full"></div>
           </div>
           

@@ -44,7 +44,7 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-[#0D1433]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-display text-4xl font-bold text-[#F9FAFB] mb-4 animate-slide-up stagger-1">Nous contacter</h2>
+          <h2 className="text-4xl font-bold text-[#F9FAFB] mb-4 animate-slide-up stagger-1" style={{ fontFamily: 'Poppins', fontWeight: '700' }}>Nous contacter</h2>
           <p className="text-body text-lg text-[#F9FAFB]/85 max-w-3xl mx-auto animate-slide-up stagger-2">
             Prêt à commencer votre parcours vers la sécurité financière ? Contactez-nous dès aujourd'hui
           </p>

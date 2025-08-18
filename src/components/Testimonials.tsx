@@ -32,7 +32,7 @@ const Testimonials = () => {
               Avis clients
             </span>
           </div>
-          <h2 className="text-display text-4xl font-bold text-[#0D1433] mb-6 animate-slide-up stagger-2">Témoignages</h2>
+          <h2 className="text-4xl font-bold text-[#0D1433] mb-6 animate-slide-up stagger-2" style={{ fontFamily: 'Poppins', fontWeight: '700' }}>Témoignages</h2>
           <div className="mb-6 animate-slide-up stagger-3">
             <a 
               href="https://www.facebook.com/people/Marc-Olivier-Tessier-Conseiller-en-s%C3%A9curit%C3%A9-financi%C3%A8re/61556652182444/?sk=reviews"

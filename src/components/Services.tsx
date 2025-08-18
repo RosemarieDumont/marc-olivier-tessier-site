@@ -98,7 +98,7 @@ const Services = () => {
     <section id="services" className="py-20 bg-[#0D1433]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-display text-4xl font-bold text-[#F9FAFB] mb-6 animate-slide-up stagger-1">Services</h2>
+          <h2 className="text-4xl font-bold text-[#F9FAFB] mb-6 animate-slide-up stagger-1" style={{ fontFamily: 'Poppins', fontWeight: '700' }}>Services</h2>
           <p className="text-body text-xl text-[#F9FAFB]/85 max-w-3xl mx-auto animate-slide-up stagger-2">
             Des solutions complètes pour tous vos besoins financiers
           </p>
