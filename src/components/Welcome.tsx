@@ -34,16 +34,16 @@ const Welcome = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Content Section */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
-          <div className="relative z-10 lg:max-w-none lg:pr-16 animate-slide-in-left text-center lg:text-left">
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 sm:mb-8" style={{ fontFamily: 'Poppins', fontWeight: '700', fontSize: 'clamp(32px, 4vw, 48px)' }}>
-              <span className="inline-block" style={{
-                textShadow: '0 0 30px rgba(255, 255, 255, 0.3), 0 0 60px rgba(255, 255, 255, 0.1)',
-                filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.2))'
-              }}>
-                <span className="text-[#F9FAFB]">Bienvenue</span>
-              </span>
+          <div className="relative z-10 lg:max-w-none lg:pr-16 animate-slide-in-left text-center lg:text-left order-2 lg:order-1">
+            <h2 className="text-white mb-6 sm:mb-8" style={{ 
+              fontFamily: 'Poppins', 
+              fontWeight: '700', 
+              fontSize: 'clamp(32px, 4vw, 48px)',
+              color: '#FFFFFF'
+            }}>
+              Bienvenue
             </h2>
             <div className="space-y-4 sm:space-y-6">
               <p className="text-white/90 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
@@ -59,12 +59,16 @@ const Welcome = () => {
           </div>
 
           {/* Right Image */}
-          <div className="relative z-10 animate-slide-in-right order-first lg:order-last flex justify-center lg:justify-end">
+          <div className="relative z-10 animate-slide-in-right order-1 lg:order-2 flex justify-center">
             <div className="relative">
               <img
-                src="./marc-olivier-héro.jpeg"
+                src="./IMG_2794.jpeg"
                 alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
-                className="w-32 sm:w-40 lg:w-48 h-auto rounded-xl border-3 border-white object-cover object-top transition-transform duration-500 hover:scale-105 shadow-lg"
+                className="w-64 sm:w-72 lg:w-80 h-auto object-cover object-top transition-transform duration-500 hover:scale-105"
+                style={{
+                  borderRadius: '12px',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15), 0 4px 16px rgba(0, 0, 0, 0.1)'
+                }}
               />
             </div>
           </div>
