@@ -110,9 +110,7 @@ const Hero = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 sm:gap-3 bg-[#6C90C3] text-[#F9FAFB] px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base md:text-lg hover:bg-[#274272] transition-all duration-500 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover-glow transform hover:scale-105 border-2 border-[#6C90C3] hover:border-[#274272] animate-slide-up stagger-3"
           >
-            <svg className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 002 2z" />
-            </svg>
+            📅
             Prendre rendez-vous
           </a>
         </div>
