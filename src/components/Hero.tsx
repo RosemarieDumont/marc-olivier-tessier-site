@@ -92,30 +92,28 @@ const Hero = () => {
 
       {/* Hero Content */}
       <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 md:pt-0">
-        <div className="bg-[#274272]/20 backdrop-blur-lg rounded-2xl p-6 sm:p-8 md:p-12 border border-white/30 shadow-2xl animate-slide-up mt-16 sm:mt-0">
-          {/* Main Headline */}
-          <h1 className="text-display text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 text-[#F9FAFB] relative z-10 animate-slide-up stagger-1 drop-shadow-lg">
-            Bâtissons ensemble des fondations solides pour votre avenir financier
-          </h1>
+        {/* Main Headline */}
+        <h1 className="text-white font-semibold mb-6 relative z-10 animate-slide-up stagger-1 drop-shadow-lg" style={{ fontSize: '56px', fontFamily: 'Poppins', lineHeight: '1.1' }}>
+          Bâtissons ensemble des fondations solides pour votre avenir financier
+        </h1>
 
-          {/* Professional Subtitle */}
-          <p className="text-subheading text-base sm:text-lg md:text-xl lg:text-2xl text-[#6C90C3] mb-6 sm:mb-8 animate-slide-up stagger-2 drop-shadow-md">
-            Conseiller en sécurité financière affilié à Industrielle Alliance
-          </p>
+        {/* Professional Subtitle */}
+        <p className="text-[#CFE2F7] mb-8 animate-slide-up stagger-2 drop-shadow-md" style={{ fontSize: '22px', fontFamily: 'Poppins', fontWeight: '400' }}>
+          Conseiller en sécurité financière affilié à Industrielle Alliance
+        </p>
 
-          {/* CTA Button */}
-          <a
-            href="https://outlook-sdf.office.com/bookwithme/user/0cb6ca6a017f4d5ea6b053f4dacafad2%40agc.ia.ca?anonymous&ismsaljsauthenabled=true"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 sm:gap-3 bg-[#6C90C3] text-[#F9FAFB] px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base md:text-lg hover:bg-[#274272] transition-all duration-500 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover-glow transform hover:scale-105 border-2 border-[#6C90C3] hover:border-[#274272] animate-slide-up stagger-3"
-          >
-            <svg className="w-5 h-5 transition-transform duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-            Prendre rendez-vous
-          </a>
-        </div>
+        {/* CTA Button */}
+        <a
+          href="https://outlook-sdf.office.com/bookwithme/user/0cb6ca6a017f4d5ea6b053f4dacafad2%40agc.ia.ca?anonymous&ismsaljsauthenabled=true"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 sm:gap-3 bg-[#6C90C3] text-[#F9FAFB] px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base md:text-lg hover:bg-[#274272] transition-all duration-500 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover-glow transform hover:scale-105 border-2 border-[#6C90C3] hover:border-[#274272] animate-slide-up stagger-3"
+        >
+          <svg className="w-5 h-5 transition-transform duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          Prendre rendez-vous
+        </a>
       </div>
 
       {/* Scroll Indicator */}
