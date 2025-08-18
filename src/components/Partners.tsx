@@ -2,19 +2,71 @@ import React from 'react';
 
 const Partners: React.FC = () => {
   const partners = [
-    { name: "iA Groupe financier", logo: "./logo IA.png" },
-    { name: "BMO", logo: "./assets/logos/bmo.png" },
-    { name: "Beneva", logo: "./assets/logos/beneva.png" },
-    { name: "RBC", logo: "./assets/logos/RBC-logo.jpg" },
-    { name: "Blue Cross", logo: "./assets/logos/blue-cross.png" },
-    { name: "Desjardins", logo: "./assets/logos/desjardins.png" },
-    { name: "Canada Life", logo: "./assets/logos/canada-life.png" },
-    { name: "UV Assurance", logo: "./assets/logos/uv-assurance.png" },
-    { name: "Assumption Life", logo: "./assets/logos/assumption-life.png" },
-    { name: "Humania Assurance", logo: "./assets/logos/humania-assurance.png" },
-    { name: "Sun Life Financial", logo: "./assets/logos/sun-life-financial.png" },
-    { name: "Foresters Financial", logo: "./assets/logos/foresters-financial.png" },
-    { name: "Equitable Life of Canada", logo: "./assets/logos/equitable-life-of-canada.png" }
+    { 
+      name: "iA Groupe financier", 
+      logo: "./logo IA.png",
+      website: "https://ia.ca"
+    },
+    { 
+      name: "BMO", 
+      logo: "./assets/logos/bmo.png",
+      website: "https://www.bmo.com"
+    },
+    { 
+      name: "Beneva", 
+      logo: "./assets/logos/beneva.png",
+      website: "https://www.beneva.ca"
+    },
+    { 
+      name: "RBC", 
+      logo: "./assets/logos/RBC-logo.jpg",
+      website: "https://www.rbc.com"
+    },
+    { 
+      name: "Blue Cross", 
+      logo: "./assets/logos/blue-cross.png",
+      website: "https://www.qc.bluecross.ca"
+    },
+    { 
+      name: "Desjardins", 
+      logo: "./assets/logos/desjardins.png",
+      website: "https://www.desjardins.com"
+    },
+    { 
+      name: "Canada Life", 
+      logo: "./assets/logos/canada-life.png",
+      website: "https://www.canadalife.com"
+    },
+    { 
+      name: "UV Assurance", 
+      logo: "./assets/logos/uv-assurance.png",
+      website: "https://www.uvassurance.ca"
+    },
+    { 
+      name: "Assumption Life", 
+      logo: "./assets/logos/assumption-life.png",
+      website: "https://www.assumption.ca"
+    },
+    { 
+      name: "Humania Assurance", 
+      logo: "./assets/logos/humania-assurance.png",
+      website: "https://www.humania.ca"
+    },
+    { 
+      name: "Sun Life Financial", 
+      logo: "./assets/logos/sun-life-financial.png",
+      website: "https://www.sunlife.ca"
+    },
+    { 
+      name: "Foresters Financial", 
+      logo: "./assets/logos/foresters-financial.png",
+      website: "https://www.foresters.com"
+    },
+    { 
+      name: "Equitable Life of Canada", 
+      logo: "./assets/logos/equitable-life-of-canada.png",
+      website: "https://www.equitable.ca"
+    }
   ];
 
   return (
@@ -31,7 +83,7 @@ const Partners: React.FC = () => {
           </h3>
         </div>
 
-        {/* Scrolling Partners Band */}
+        {/* Scrollable Partners Band */}
         <div className="partners-area relative">
           {/* Scroll Indicator */}
           <div className="scroll-indicator">
@@ -40,32 +92,15 @@ const Partners: React.FC = () => {
             </svg>
           </div>
           
-          <div className="partners-track animate-scroll-horizontal">
-            {/* First set of logos */}
+          <div className="partners-track">
             {partners.map((partner, index) => (
-              <a key={`first-${index}`} href="#" className="flex-shrink-0">
-                <img 
-                  src={partner.logo} 
-                  alt={partner.name}
-                  className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
-                />
-              </a>
-            ))}
-            
-            {/* Duplicate set for seamless loop */}
-            {partners.map((partner, index) => (
-              <a key={`second-${index}`} href="#" className="flex-shrink-0">
-                <img 
-                  src={partner.logo} 
-                  alt={partner.name}
-                  className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
-                />
-              </a>
-            ))}
-            
-            {/* Third set for extra smoothness */}
-            {partners.map((partner, index) => (
-              <a key={`third-${index}`} href="#" className="flex-shrink-0">
+              <a 
+                key={index} 
+                href={partner.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 transition-transform duration-300 hover:scale-110"
+              >
                 <img 
                   src={partner.logo} 
                   alt={partner.name}
