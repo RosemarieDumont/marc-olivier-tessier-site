@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { useState } from 'react';
-import { PiggyBank, Shield, Building, TrendingUp, Heart, Users } from 'lucide-react';
+import { PiggyBank, Shield, Building, TrendingUp, Heart, Users, CreditCard, Home, Plane, Car, UserCheck, Briefcase, Calculator, FileText, Users2, Handshake, ChevronDown } from 'lucide-react';
 
 const Services = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  const [openAccordions, setOpenAccordions] = useState<{[key: string]: boolean}>({});
+  const [openServices, setOpenServices] = useState<{[key: string]: boolean}>({});
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -25,13 +25,35 @@ const Services = () => {
     return () => observer.disconnect();
   }, []);
 
-  const toggleAccordion = (categoryKey: string) => {
-    setOpenAccordions(prev => ({
+  const toggleService = (serviceKey: string) => {
+    setOpenServices(prev => ({
       ...prev,
-      [categoryKey]: !prev[categoryKey]
+      [serviceKey]: !prev[serviceKey]
     }));
   };
 
+  const getServiceIcon = (serviceName: string) => {
+    const iconMap: {[key: string]: JSX.Element} = {
+      'CELI': <PiggyBank className="w-5 h-5" />,
+      'REER': <TrendingUp className="w-5 h-5" />,
+      'CELIAPP': <Home className="w-5 h-5" />,
+      'REEE': <Users className="w-5 h-5" />,
+      'CRI/FRV': <Shield className="w-5 h-5" />,
+      'FERR': <Calculator className="w-5 h-5" />,
+      'Compte non-enregistré': <CreditCard className="w-5 h-5" />,
+      'Assurance vie': <Heart className="w-5 h-5" />,
+      'Assurance maladie grave et invalidité': <UserCheck className="w-5 h-5" />,
+      'Assurance prêt hypothécaire': <Home className="w-5 h-5" />,
+      'Assurance accident corporel': <Car className="w-5 h-5" />,
+      'Assurance voyage': <Plane className="w-5 h-5" />,
+      'Protection des dirigeants': <Briefcase className="w-5 h-5" />,
+      'Stratégies d\'épargne fiscales': <Calculator className="w-5 h-5" />,
+      'Assurance de convention d\'actionnaires': <FileText className="w-5 h-5" />,
+      'Assurance collective': <Users2 className="w-5 h-5" />,
+      'Collaboration professionnelle': <Handshake className="w-5 h-5" />
+    };
+    return iconMap[serviceName] || <Shield className="w-5 h-5" />;
+  };
   const services = {
     epargne: {
       icon: <PiggyBank className="w-12 h-12" />,
@@ -168,37 +190,49 @@ const Services = () => {
                   </p>
                 )}
                 
-                {/* Accordion Toggle Button */}
-                <button
-                  onClick={() => toggleAccordion(key)}
-                  className="w-full flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-xl transition-all duration-300 mb-4 group/toggle"
-                >
-                  <span className="font-semibold text-lg" style={{ color: 'var(--primary-blue)' }}>
-                    Voir nos solutions ({category.services.length})
-                  </span>
-                  <div className={`transform transition-transform duration-300 ${openAccordions[key] ? 'rotate-180' : ''}`}>
-                    <svg className="w-5 h-5" style={{ color: 'var(--primary-blue)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </div>
-                </button>
+                {/* Individual Service Accordions */}
+                <div className="space-y-3">
+                  {category.services.map((service, index) => {
+                    const serviceKey = `${key}-${index}`;
+                    return (
+                      <div key={index} className="border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 hover:border-blue-300 hover:shadow-md">
+                        {/* Service Header - Clickable */}
+                        <button
+                          onClick={() => toggleService(serviceKey)}
+                          className="w-full flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 transition-all duration-300 group/service"
+                        >
+                          <div className="flex items-center gap-3">
+                            <div className="p-2 rounded-lg transition-all duration-300 group-hover/service:scale-110" style={{ backgroundColor: 'var(--primary-blue)', color: 'white' }}>
+                              {getServiceIcon(service.name)}
+                            </div>
+                            <h4 className="text-left font-semibold text-base transition-colors duration-300" style={{ color: 'var(--primary-blue)' }}>
+                              {service.name}
+                            </h4>
+                          </div>
+                          <div className={`transform transition-transform duration-300 ${openServices[serviceKey] ? 'rotate-180' : ''}`}>
+                            <ChevronDown className="w-5 h-5" style={{ color: 'var(--primary-blue)' }} />
+                          </div>
+                        </button>
 
-                {/* Accordion Content */}
-                <div 
-                  className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                    openAccordions[key] 
-                      ? 'max-h-[2000px] opacity-100' 
-                      : 'max-h-0 opacity-0'
-                  }`}
-                >
-                  <div className="space-y-4 pb-2">
-                    {category.services.map((service, index) => (
-                      <div key={index} className="border-l-4 pl-4 transition-all duration-300 py-2 hover:pl-6 hover:bg-gray-50 rounded-r-lg" style={{ borderColor: 'var(--primary-blue)' }}>
-                        <h4 className="text-subheading font-semibold mb-1 transition-colors duration-300" style={{ color: 'var(--primary-blue)' }}>{service.name}</h4>
-                        <p className="text-caption text-[#111827] transition-colors duration-300 hover:text-[#111827]">{service.description}</p>
+                        {/* Service Description - Expandable */}
+                        <div 
+                          className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                            openServices[serviceKey] 
+                              ? 'max-h-96 opacity-100' 
+                              : 'max-h-0 opacity-0'
+                          }`}
+                        >
+                          <div className="p-4 pt-0 bg-white">
+                            <div className="border-l-4 pl-4 py-2" style={{ borderColor: 'var(--primary-blue)' }}>
+                              <p className="text-gray-700 leading-relaxed">
+                                {service.description}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                    ))}
-                  </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
