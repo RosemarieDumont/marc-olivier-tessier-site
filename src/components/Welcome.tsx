@@ -26,10 +26,10 @@ const Welcome = () => {
   ];
 
   return (
-    <section id="welcome" className="relative py-8 sm:py-12 overflow-hidden" style={{ backgroundColor: '#0B2545' }}>
+    <section id="welcome" className="relative py-8 sm:py-12 overflow-hidden" style={{ backgroundColor: 'var(--primary-blue)' }}>
       {/* Desktop radial gradient behind text */}
       <div className="absolute inset-0 hidden lg:block">
-        <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-radial from-blue-400/10 via-blue-500/5 to-transparent blur-2xl"></div>
+        <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-radial from-white/10 via-white/5 to-transparent blur-2xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,17 +79,18 @@ const Welcome = () => {
           <div className="text-center mb-6 sm:mb-8">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4" style={{ fontFamily: 'Poppins', fontWeight: '700' }}>Notre approche</h3>
             <div className="w-16 sm:w-24 h-1 bg-[#6C90C3] mx-auto rounded-full"></div>
+            <div className="w-16 sm:w-24 h-1 bg-white/60 mx-auto rounded-full"></div>
           </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {approaches.map((approach, index) => (
-              <div key={index} className={`group bg-[#274272]/30 backdrop-blur-sm p-4 lg:p-6 rounded-2xl border border-white/10 hover:border-[#6C90C3]/50 transition-all duration-500 hover:-translate-y-2 hover:bg-[#274272]/50 animate-scale-in stagger-${index + 1}`}>
+              <div key={index} className={`group bg-white/10 backdrop-blur-sm p-4 lg:p-6 rounded-2xl border border-white/20 hover:border-white/40 transition-all duration-500 hover:-translate-y-2 hover:bg-white/15 animate-scale-in stagger-${index + 1}`}>
                 <div className="relative z-10">
                   <div className="flex items-center justify-center sm:justify-start mb-4 gap-3">
-                    <div className="text-[#6C90C3] transition-transform duration-300 group-hover:scale-110 group-hover:text-[#F9FAFB] flex-shrink-0">{approach.icon}</div>
-                    <h4 className="text-subheading text-lg lg:text-xl font-bold text-[#F9FAFB] transition-colors duration-300 group-hover:text-[#6C90C3]">{approach.title}</h4>
+                    <div className="text-white/80 transition-transform duration-300 group-hover:scale-110 group-hover:text-white flex-shrink-0">{approach.icon}</div>
+                    <h4 className="text-subheading text-lg lg:text-xl font-bold text-white transition-colors duration-300 group-hover:text-white/90">{approach.title}</h4>
                   </div>
-                  <p className="text-body text-[#F9FAFB]/85 transition-colors duration-300 group-hover:text-[#F9FAFB] text-center sm:text-left">{approach.description}</p>
+                  <p className="text-body text-white/85 transition-colors duration-300 group-hover:text-white text-center sm:text-left">{approach.description}</p>
                 </div>
               </div>
             ))}

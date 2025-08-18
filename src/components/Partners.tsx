@@ -33,11 +33,12 @@ const Partners = () => {
         <div className="text-center mb-12 animate-slide-up">
           <div className="inline-block mb-4 animate-scale-in stagger-1">
             <span className="text-caption px-6 py-2 bg-white border border-[#0D1433]/20 rounded-full text-[#0D1433] font-medium">
+            <span className="text-caption px-6 py-2 bg-white border rounded-full font-medium" style={{ borderColor: 'var(--primary-blue)', color: 'var(--primary-blue)' }}>
               Réseau de confiance
             </span>
           </div>
           <h3 className="text-display text-4xl font-bold mb-6 animate-slide-up stagger-2">
-            <span className="text-[#0D1433] font-bold drop-shadow-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl" style={{ fontFamily: 'Poppins', fontWeight: '700', lineHeight: '1.1' }}>
+            <span className="font-bold drop-shadow-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl" style={{ fontFamily: 'Poppins', fontWeight: '700', lineHeight: '1.1', color: 'var(--primary-blue)' }}>
               Nos partenaires
             </span>
           </h3>

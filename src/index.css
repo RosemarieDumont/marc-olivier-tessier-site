@@ -86,9 +86,10 @@ p, a {
 
 /* CSS Variables for customizable colors */
 :root {
-  --hero-primary-hue: 220;
-  --hero-secondary-hue: 210;
-  --hero-accent-hue: 200;
+  --primary-blue: #0F2A52;
+  --primary-blue-light: #1a3a6b;
+  --primary-blue-dark: #0a1f3d;
+  --primary-blue-hover: #2a4a7a;
 }
 
 html {

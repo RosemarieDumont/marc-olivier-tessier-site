@@ -29,16 +29,17 @@ const Testimonials = () => {
         <div className="text-center mb-16 animate-slide-up">
           <div className="inline-block mb-4 animate-scale-in stagger-1">
             <span className="text-caption px-6 py-2 bg-[#EAF0F9] border border-[#0D1433]/20 rounded-full text-[#0D1433] font-medium">
+            <span className="text-caption px-6 py-2 bg-white border rounded-full font-medium" style={{ borderColor: 'var(--primary-blue)', color: 'var(--primary-blue)' }}>
               Avis clients
             </span>
           </div>
-          <h2 className="text-4xl font-bold text-[#0D1433] mb-6 animate-slide-up stagger-2" style={{ fontFamily: 'Poppins', fontWeight: '700' }}>Témoignages</h2>
+          <h2 className="text-4xl font-bold mb-6 animate-slide-up stagger-2" style={{ fontFamily: 'Poppins', fontWeight: '700', color: 'var(--primary-blue)' }}>Témoignages</h2>
           <div className="mb-6 animate-slide-up stagger-3">
             <a 
               href="https://www.facebook.com/people/Marc-Olivier-Tessier-Conseiller-en-s%C3%A9curit%C3%A9-financi%C3%A8re/61556652182444/?sk=reviews"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-caption text-[#0D1433] opacity-70 hover:opacity-100 transition-opacity duration-300"
+              className="text-caption opacity-70 hover:opacity-100 transition-opacity duration-300" style={{ color: 'var(--primary-blue)' }}
             >
               Avis vérifiés — Facebook
             </a>
@@ -52,10 +53,10 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div key={index} className={`group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-[#6C90C3]/30 hover-lift hover-glow animate-scale-in stagger-${index + 1}`}>
               {/* Quote Icon */}
-              <div className="bg-[#171F55] p-6 transition-all duration-300 group-hover:bg-[#274272]">
+              <div className="p-6 transition-all duration-300" style={{ backgroundColor: 'var(--primary-blue)' }}>
                 <div>
                   <div className="p-2 bg-white/20 rounded-lg inline-block transition-transform duration-300 group-hover:scale-110">
-                    <Quote className="w-6 h-6 text-[#F9FAFB]" />
+                    <Quote className="w-6 h-6 text-white" />
                   </div>
                 </div>
               </div>
@@ -75,7 +76,7 @@ const Testimonials = () => {
                   {/* Rating */}
                   <div className="flex gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-[#6C90C3] text-[#6C90C3] transition-transform duration-300 group-hover:scale-110" />
+                      <Star key={i} className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" style={{ fill: 'var(--primary-blue)', color: 'var(--primary-blue)' }} />
                     ))}
                   </div>
 
@@ -86,7 +87,7 @@ const Testimonials = () => {
 
                   {/* Author */}
                   <div>
-                    <h4 className="text-subheading font-bold text-[#0D1433] text-lg transition-colors duration-300 group-hover:text-[#171F55]">{testimonial.name}</h4>
+                    <h4 className="text-subheading font-bold text-lg transition-colors duration-300" style={{ color: 'var(--primary-blue)' }}>{testimonial.name}</h4>
                   </div>
 
                   {/* Facebook Source */}
@@ -95,7 +96,7 @@ const Testimonials = () => {
                       href="https://www.facebook.com/people/Marc-Olivier-Tessier-Conseiller-en-s%C3%A9curit%C3%A9-financi%C3%A8re/61556652182444/?sk=reviews"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-caption text-[#0D1433] opacity-70 hover:opacity-100 transition-opacity duration-300"
+                      className="text-caption opacity-70 hover:opacity-100 transition-opacity duration-300" style={{ color: 'var(--primary-blue)' }}
                     >
                       Source : Facebook · Voir l'avis
                     </a>
