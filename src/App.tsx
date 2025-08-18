@@ -59,23 +59,23 @@ function App() {
                 </div>
               </div>
               <div className="flex justify-center relative z-10 animate-slide-in-right stagger-2">
-                <div className="bg-[#274272]/30 p-4 sm:p-6 lg:p-8 rounded-xl border border-white/20 hover-scale transition-all duration-500 hover:bg-[#274272]/40 w-full max-w-sm">
-                  <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6 text-center">
+                <div className="bg-[#274272]/30 p-3 sm:p-6 lg:p-8 rounded-xl border border-white/20 hover-scale transition-all duration-500 hover:bg-[#274272]/40 w-full max-w-xs sm:max-w-sm">
+                  <div className="grid grid-cols-2 gap-2 sm:gap-4 lg:gap-6 text-center">
                     <div className="animate-scale-in stagger-1">
-                      <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">AMF</div>
-                      <div className="text-caption text-[#F9FAFB]/70">Certifié</div>
+                      <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-white">AMF</div>
+                      <div className="text-xs sm:text-sm text-[#F9FAFB]/70">Certifié</div>
                     </div>
                     <div className="animate-scale-in stagger-2">
-                      <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">iA</div>
-                      <div className="text-caption text-[#F9FAFB]/70">Affilié</div>
+                      <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-white">iA</div>
+                      <div className="text-xs sm:text-sm text-[#F9FAFB]/70">Affilié</div>
                     </div>
                     <div className="animate-scale-in stagger-3">
-                      <div className="text-base sm:text-lg lg:text-xl font-bold text-white leading-tight">Immobilier</div>
-                      <div className="text-caption text-[#F9FAFB]/70">Propriétaire</div>
+                      <div className="text-sm sm:text-lg lg:text-xl font-bold text-white leading-tight">Immobilier</div>
+                      <div className="text-xs sm:text-sm text-[#F9FAFB]/70">Propriétaire</div>
                     </div>
                     <div className="animate-scale-in stagger-4">
-                      <div className="text-base sm:text-lg lg:text-xl font-bold text-white leading-tight">Investisseur</div>
-                      <div className="text-caption text-[#F9FAFB]/70">Actif</div>
+                      <div className="text-sm sm:text-lg lg:text-xl font-bold text-white leading-tight">Investisseur</div>
+                      <div className="text-xs sm:text-sm text-[#F9FAFB]/70">Actif</div>
                     </div>
                   </div>
                 </div>
