@@ -33,23 +33,23 @@ function App() {
       <Hero />
       <Welcome />
       <Services />
-      <div className="py-20 bg-white">
+      <div className="py-8 sm:py-12 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#0D1433] rounded-2xl p-8 lg:p-12 text-[#F9FAFB] shadow-xl hover-lift hover-glow animate-slide-up stagger-2 transition-all duration-500">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="bg-[#0D1433] rounded-2xl p-4 sm:p-6 lg:p-12 text-[#F9FAFB] shadow-xl hover-lift hover-glow animate-slide-up stagger-2 transition-all duration-500">
+            <div className="grid lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-12 items-center">
               <div className="relative z-10 animate-slide-in-left stagger-1">
-                <h3 className="text-heading text-3xl font-bold mb-6 flex items-center gap-3 animate-slide-up stagger-1">
+                <h3 className="text-heading text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 lg:mb-6 flex items-center gap-2 sm:gap-3 animate-slide-up stagger-1">
                   <div className="relative">
                     <img
                       src="./marc_olivier_nous_contacter copy.jpeg"
                       alt="Marc-Olivier Tessier"
-                     className="w-16 h-16 rounded-full object-cover object-top border-3 border-white shadow-lg transition-transform duration-300 hover:scale-110"
+                     className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full object-cover object-top border-2 sm:border-3 border-white shadow-lg transition-transform duration-300 hover:scale-110"
                     />
                   </div>
-                  <span className="text-xl sm:text-2xl font-bold">Marc-Olivier Tessier</span>
+                  <span className="text-lg sm:text-xl lg:text-2xl font-bold">Marc-Olivier Tessier</span>
                 </h3>
-                <div className="space-y-4 text-body text-[#F9FAFB]/85 text-lg animate-slide-up stagger-2">
-                  <p className="text-base text-justify text-white">
+                <div className="space-y-2 sm:space-y-3 lg:space-y-4 text-body text-[#F9FAFB]/85 animate-slide-up stagger-2">
+                  <p className="text-sm sm:text-base text-justify text-white leading-relaxed">
                     Marc-Olivier Tessier est conseiller en sécurité financière certifié auprès de l'Autorité des marchés financiers, 
                     affilié à iA Groupe financier au sein de l'agence Les Rivières. Il accompagne ses clients dans des décisions clés 
                     liées à l'assurance, à l'épargne et à la retraite, en s'appuyant sur une approche structurée et orientée résultats. 
@@ -59,22 +59,22 @@ function App() {
                 </div>
               </div>
               <div className="flex justify-center relative z-10 animate-slide-in-right stagger-2">
-                <div className="bg-[#274272]/30 p-3 sm:p-6 lg:p-8 rounded-xl border border-white/20 hover-scale transition-all duration-500 hover:bg-[#274272]/40 w-full max-w-xs sm:max-w-sm">
-                  <div className="grid grid-cols-2 gap-2 sm:gap-4 lg:gap-6 text-center">
+                <div className="bg-[#274272]/30 p-3 sm:p-4 lg:p-8 rounded-xl border border-white/20 hover-scale transition-all duration-500 hover:bg-[#274272]/40 w-full max-w-xs sm:max-w-sm">
+                  <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:gap-6 text-center">
                     <div className="animate-scale-in stagger-1">
-                      <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-white">AMF</div>
+                      <div className="text-base sm:text-xl lg:text-3xl font-bold text-white">AMF</div>
                       <div className="text-xs sm:text-sm text-[#F9FAFB]/70">Certifié</div>
                     </div>
                     <div className="animate-scale-in stagger-2">
-                      <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-white">iA</div>
+                      <div className="text-base sm:text-xl lg:text-3xl font-bold text-white">iA</div>
                       <div className="text-xs sm:text-sm text-[#F9FAFB]/70">Affilié</div>
                     </div>
                     <div className="animate-scale-in stagger-3">
-                      <div className="text-sm sm:text-lg lg:text-xl font-bold text-white leading-tight">Immobilier</div>
+                      <div className="text-xs sm:text-base lg:text-xl font-bold text-white leading-tight">Immobilier</div>
                       <div className="text-xs sm:text-sm text-[#F9FAFB]/70">Propriétaire</div>
                     </div>
                     <div className="animate-scale-in stagger-4">
-                      <div className="text-sm sm:text-lg lg:text-xl font-bold text-white leading-tight">Investisseur</div>
+                      <div className="text-xs sm:text-base lg:text-xl font-bold text-white leading-tight">Investisseur</div>
                       <div className="text-xs sm:text-sm text-[#F9FAFB]/70">Actif</div>
                     </div>
                   </div>
