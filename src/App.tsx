@@ -33,7 +33,7 @@ function App() {
       <Hero />
       <Welcome />
       <Services />
-      <div className="py-8 sm:py-12 lg:py-20 bg-white">
+      <div className="py-12 sm:py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-2xl p-4 sm:p-6 lg:p-12 text-white shadow-xl hover-lift hover-glow animate-slide-up stagger-2 transition-all duration-500" style={{ backgroundColor: 'var(--primary-blue)' }}>
             <div className="grid lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-12 items-center">

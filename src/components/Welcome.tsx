@@ -47,7 +47,7 @@ const Welcome = () => {
   ];
 
   return (
-    <section ref={sectionRef} id="welcome" className="relative py-8 sm:py-12 overflow-hidden bg-white animate-section-hidden">
+    <section ref={sectionRef} id="welcome" className="relative py-12 sm:py-16 lg:py-20 overflow-hidden bg-white animate-section-hidden -mt-4">
       {/* Desktop radial gradient behind text */}
       <div className="absolute inset-0 hidden lg:block">
         <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-radial from-blue-50 via-blue-25 to-transparent blur-2xl"></div>
@@ -96,7 +96,7 @@ const Welcome = () => {
         </div>
 
         {/* Notre approche Section */}
-        <div className="relative z-10 mt-8 sm:mt-12 lg:mt-16">
+        <div className="relative z-10 mt-12 sm:mt-16 lg:mt-20">
           <div className="text-center mb-6 sm:mb-8">
             <h3 className="text-2xl sm:text-3xl font-bold mb-4" style={{ fontFamily: 'Poppins', fontWeight: '700', color: 'var(--primary-blue)' }}>Notre approche</h3>
             <div className="w-16 sm:w-24 h-1 mx-auto rounded-full" style={{ backgroundColor: 'var(--primary-blue)' }}></div>
