@@ -37,7 +37,7 @@ const Partners = () => {
             </span>
           </div>
           <h3 className="text-display text-4xl font-bold mb-6 animate-slide-up stagger-2">
-            <span style={{ fontFamily: 'Poppins', fontWeight: '700' }}>Nos <span className="text-[#0D1433] italic">partenaires</span></span>
+            <span style={{ fontFamily: 'Poppins', fontWeight: '400' }}>Nos <span className="text-[#0D1433] italic">partenaires</span></span>
           </h3>
           <p className="text-body text-xl text-[#111827] max-w-4xl mx-auto animate-slide-up stagger-3">
             En tant que conseiller affilié à iA Groupe financier, Marc-Olivier Tessier collabore avec les plus grandes compagnies d'assurance et d'investissement au Canada. Cette diversité de partenaires permet de proposer des solutions flexibles et adaptées à chaque profil.
@@ -46,11 +46,11 @@ const Partners = () => {
 
         <section className="partners-area relative">
           <div className="partners-track" role="region" aria-label="Partenaires">
-            <a href="https://ia.ca/" target="_blank" rel="noopener">
-              <img src="./logo IA.png" alt="iA Groupe financier" loading="lazy" />
-            </a>
             <a href="https://www.beneva.ca/" target="_blank" rel="noopener">
               <img src="./assets/logos/beneva copy.png" alt="Beneva" loading="lazy" />
+            </a>
+            <a href="https://ia.ca/" target="_blank" rel="noopener">
+              <img src="./logo IA.png" alt="iA Groupe financier" loading="lazy" style="height: 60px;" />
             </a>
             <a href="https://www.sunlife.ca/" target="_blank" rel="noopener">
               <img src="./assets/logos/sun-life-financial copy.png" alt="Sun Life" loading="lazy" />
