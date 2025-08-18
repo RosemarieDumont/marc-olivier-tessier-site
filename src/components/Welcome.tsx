@@ -85,9 +85,9 @@ const Welcome = () => {
             {approaches.map((approach, index) => (
               <div key={index} className={`group bg-[#274272]/30 backdrop-blur-sm p-4 lg:p-6 rounded-2xl border border-white/10 hover:border-[#6C90C3]/50 transition-all duration-500 hover:-translate-y-2 hover:bg-[#274272]/50 animate-scale-in stagger-${index + 1}`}>
                 <div className="relative z-10">
-                  <div className="flex flex-col items-center sm:items-start mb-4">
+                  <div className="flex items-center justify-center sm:justify-start mb-4 gap-3">
                     <div className="text-[#6C90C3] transition-transform duration-300 group-hover:scale-110 group-hover:text-[#F9FAFB] flex-shrink-0">{approach.icon}</div>
-                    <h4 className="text-subheading text-lg lg:text-xl font-bold text-[#F9FAFB] transition-colors duration-300 group-hover:text-[#6C90C3] mt-2 text-center sm:text-left">{approach.title}</h4>
+                    <h4 className="text-subheading text-lg lg:text-xl font-bold text-[#F9FAFB] transition-colors duration-300 group-hover:text-[#6C90C3]">{approach.title}</h4>
                   </div>
                   <p className="text-body text-[#F9FAFB]/85 transition-colors duration-300 group-hover:text-[#F9FAFB] text-center sm:text-left">{approach.description}</p>
                 </div>
