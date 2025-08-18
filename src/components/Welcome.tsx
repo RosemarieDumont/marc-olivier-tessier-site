@@ -83,13 +83,13 @@ const Welcome = () => {
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {approaches.map((approach, index) => (
-              <div key={index} className={`group p-4 lg:p-6 rounded-2xl border-2 transition-all duration-500 hover:-translate-y-2 animate-scale-in stagger-${index + 1}`} style={{ 
+              <div key={index} className={`group p-4 lg:p-6 rounded-2xl border-2 transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:bg-blue-600 animate-scale-in stagger-${index + 1}`} style={{ 
                 backgroundColor: 'var(--primary-blue)', 
                 borderColor: 'var(--primary-blue)',
                 boxShadow: '0 4px 12px rgba(15, 42, 82, 0.15)'
               }}>
                 <div className="relative z-10">
-                  <div className="flex items-center justify-center sm:justify-start mb-4 gap-3">
+                  <div className="flex items-center justify-center sm:justify-start mb-4 gap-2">
                     <div className="text-white transition-transform duration-300 group-hover:scale-110 flex-shrink-0">{approach.icon}</div>
                     <h4 className="text-subheading text-lg lg:text-xl font-bold text-white transition-colors duration-300">{approach.title}</h4>
                   </div>
