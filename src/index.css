@@ -3,9 +3,8 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
 * {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Typography Hierarchy */
@@ -18,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Body text optimization */
 p, span, div, a, button, input, textarea, select {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   font-weight: 400;
 }
@@ -53,7 +52,7 @@ p, span, div, a, button, input, textarea, select {
 
 .text-body-medium {
   font-family: 'Poppins', sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.5;
 }
 
@@ -72,7 +71,7 @@ p, span, div, a, button, input, textarea, select {
   
   p, span, div {
     line-height: 1.7;
-  }
+  font-weight: 600;
   
   .text-display {
     line-height: 1.2;
