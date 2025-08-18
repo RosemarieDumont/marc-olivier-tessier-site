@@ -32,6 +32,7 @@ const Testimonials = () => {
             <span className="text-caption px-6 py-2 bg-white border rounded-full font-medium" style={{ borderColor: 'var(--primary-blue)', color: 'var(--primary-blue)' }}>
               Avis clients
             </span>
+            </span>
           </div>
           <h2 className="text-4xl font-bold mb-6 animate-slide-up stagger-2" style={{ fontFamily: 'Poppins', fontWeight: '700', color: 'var(--primary-blue)' }}>Témoignages</h2>
           <div className="mb-6 animate-slide-up stagger-3">
