@@ -37,8 +37,8 @@ const Partners = () => {
             </span>
           </div>
           <h3 className="text-display text-4xl font-bold mb-6 animate-slide-up stagger-2">
-            <span className="text-white font-bold drop-shadow-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl" style={{ fontFamily: 'Poppins', fontWeight: '700', lineHeight: '1.1' }}>
-              Nos <span className="text-[#0D1433] italic">partenaires</span>
+            <span className="text-[#0D1433] font-bold drop-shadow-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl" style={{ fontFamily: 'Poppins', fontWeight: '700', lineHeight: '1.1' }}>
+              Nos partenaires
             </span>
           </h3>
           <p className="text-body text-xl text-[#111827] max-w-4xl mx-auto animate-slide-up stagger-3">
