@@ -56,7 +56,7 @@ const Hero = () => {
         <div className="mx-4">
           <div className="flex justify-between items-center h-12 px-4">
             {/* Marc-Olivier Tessier Name */}
-            <div className="text-sm font-semibold text-[#F9FAFB] drop-shadow-lg">
+            <div className="text-lg font-semibold text-[#F9FAFB] drop-shadow-lg">
               Marc-Olivier Tessier
             </div>
             
@@ -91,12 +91,12 @@ const Hero = () => {
       {/* Hero Content */}
       <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 md:pt-0">
         {/* Main Headline */}
-        <h1 className="text-white font-bold mb-4 relative z-10 animate-slide-up stagger-1 drop-shadow-lg" style={{ fontSize: '56px', fontFamily: 'Poppins', fontWeight: '700', lineHeight: '1.1' }}>
+        <h1 className="text-white font-bold mb-4 relative z-10 animate-slide-up stagger-1 drop-shadow-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl" style={{ fontFamily: 'Poppins', fontWeight: '700', lineHeight: '1.1' }}>
           Bâtissons ensemble des fondations solides pour votre avenir financier
         </h1>
 
         {/* Professional Subtitle */}
-        <p className="text-white mb-8 animate-slide-up stagger-2 drop-shadow-md" style={{ fontSize: '22px', fontFamily: 'Poppins', fontWeight: '400', marginTop: '24px' }}>
+        <p className="text-white mb-8 animate-slide-up stagger-2 drop-shadow-md text-base sm:text-lg md:text-xl lg:text-2xl" style={{ fontFamily: 'Poppins', fontWeight: '400', marginTop: '24px' }}>
           Conseiller en sécurité financière affilié à Industrielle Alliance
         </p>
 
