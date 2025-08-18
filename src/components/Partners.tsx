@@ -37,7 +37,9 @@ const Partners = () => {
             </span>
           </div>
           <h3 className="text-display text-4xl font-bold mb-6 animate-slide-up stagger-2">
-            <span style={{ fontFamily: 'Poppins', fontWeight: '400' }}>Nos <span className="text-[#0D1433] italic">partenaires</span></span>
+            <span className="text-white font-bold drop-shadow-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl" style={{ fontFamily: 'Poppins', fontWeight: '700', lineHeight: '1.1' }}>
+              Nos <span className="text-[#0D1433] italic">partenaires</span>
+            </span>
           </h3>
           <p className="text-body text-xl text-[#111827] max-w-4xl mx-auto animate-slide-up stagger-3">
             En tant que conseiller affilié à iA Groupe financier, Marc-Olivier Tessier collabore avec les plus grandes compagnies d'assurance et d'investissement au Canada. Cette diversité de partenaires permet de proposer des solutions flexibles et adaptées à chaque profil.
@@ -46,41 +48,41 @@ const Partners = () => {
 
         <section className="partners-area relative">
           <div className="partners-track" role="region" aria-label="Partenaires">
-            <a href="https://www.beneva.ca/" target="_blank" rel="noopener">
-              <img src="/assets/logos/beneva copy.png" alt="Beneva" loading="lazy" />
-            </a>
             <a href="https://ia.ca/" target="_blank" rel="noopener">
-              <img src="/logo IA.png" alt="iA Groupe financier" loading="lazy" style={{ height: '60px' }} />
+              <img src="logo IA.png" alt="iA Groupe financier" loading="lazy" style={{ height: '60px' }} />
+            </a>
+            <a href="https://www.beneva.ca/" target="_blank" rel="noopener">
+              <img src="assets/logos/beneva copy.png" alt="Beneva" loading="lazy" />
             </a>
             <a href="https://www.sunlife.ca/" target="_blank" rel="noopener">
-              <img src="/assets/logos/sun-life-financial copy.png" alt="Sun Life" loading="lazy" />
+              <img src="assets/logos/sun-life-financial copy.png" alt="Sun Life" loading="lazy" />
             </a>
             <a href="https://www.bluecross.ca/" target="_blank" rel="noopener">
-              <img src="/assets/logos/blue-cross.png" alt="Blue Cross (Canada)" loading="lazy" />
+              <img src="assets/logos/blue-cross.png" alt="Blue Cross (Canada)" loading="lazy" />
             </a>
             <a href="https://www.assumption.ca/" target="_blank" rel="noopener">
-              <img src="/assets/logos/assumption-life copy.png" alt="Assumption Life" loading="lazy" />
+              <img src="assets/logos/assumption-life copy.png" alt="Assumption Life" loading="lazy" />
             </a>
             <a href="https://www.foresters.com/" target="_blank" rel="noopener">
-              <img src="/assets/logos/foresters-financial copy.png" alt="Foresters Financial" loading="lazy" />
+              <img src="assets/logos/foresters-financial copy.png" alt="Foresters Financial" loading="lazy" />
             </a>
             <a href="https://www.desjardins.com/" target="_blank" rel="noopener">
-              <img src="/assets/logos/desjardins.png" alt="Desjardins" loading="lazy" />
+              <img src="assets/logos/desjardins.png" alt="Desjardins" loading="lazy" />
             </a>
             <a href="https://www.canadalife.com/" target="_blank" rel="noopener">
-              <img src="/assets/logos/canada-life.png" alt="Canada Life" loading="lazy" />
+              <img src="assets/logos/canada-life.png" alt="Canada Life" loading="lazy" />
             </a>
             <a href="https://www.equitable.ca/" target="_blank" rel="noopener">
-              <img src="/assets/logos/equitable-life-of-canada.png" alt="Equitable Life of Canada" loading="lazy" />
+              <img src="assets/logos/equitable-life-of-canada.png" alt="Equitable Life of Canada" loading="lazy" />
             </a>
             <a href="https://www.humania.ca/" target="_blank" rel="noopener">
-              <img src="/assets/logos/humania-assurance.png" alt="Humania Assurance" loading="lazy" />
+              <img src="assets/logos/humania-assurance.png" alt="Humania Assurance" loading="lazy" />
             </a>
             <a href="https://www.bmo.com/" target="_blank" rel="noopener">
-              <img src="/assets/logos/bmo.png" alt="BMO" loading="lazy" />
+              <img src="assets/logos/bmo.png" alt="BMO" loading="lazy" />
             </a>
             <a href="https://www.rbcinsurance.com/" target="_blank" rel="noopener">
-              <img src="/assets/logos/RBC-logo.jpg" alt="RBC Insurance" loading="lazy" />
+              <img src="assets/logos/RBC-logo.jpg" alt="RBC Insurance" loading="lazy" />
             </a>
           </div>
           
