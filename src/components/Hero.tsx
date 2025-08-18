@@ -96,7 +96,7 @@ const Hero = () => {
         </h1>
 
         {/* Professional Subtitle */}
-        <p className="text-[#CFE2F7] mb-8 animate-slide-up stagger-2 drop-shadow-md" style={{ fontSize: '22px', fontFamily: 'Poppins', fontWeight: '400', marginTop: '24px' }}>
+        <p className="text-white mb-8 animate-slide-up stagger-2 drop-shadow-md" style={{ fontSize: '22px', fontFamily: 'Poppins', fontWeight: '400', marginTop: '24px' }}>
           Conseiller en sécurité financière affilié à Industrielle Alliance
         </p>
 
