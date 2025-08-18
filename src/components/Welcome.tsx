@@ -26,19 +26,10 @@ const Welcome = () => {
   ];
 
   return (
-    <section id="welcome" className="relative py-12 sm:py-20 bg-gradient-to-b from-[#0D1433] to-[#171F55] overflow-hidden">
-      {/* Luminous Background Effects */}
-      <div className="absolute inset-0">
-        {/* Spotlight gradient from top center */}
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[800px] h-[400px] bg-gradient-radial from-white/10 via-white/5 to-transparent blur-3xl"></div>
-        
-        {/* Glowing light streaks */}
-        <div className="absolute top-1/4 left-1/4 w-[600px] h-[2px] bg-gradient-to-r from-transparent via-white/20 to-transparent rotate-12 blur-sm"></div>
-        <div className="absolute top-3/4 right-1/4 w-[400px] h-[2px] bg-gradient-to-r from-transparent via-white/15 to-transparent -rotate-12 blur-sm"></div>
-        
-        {/* Subtle arcs */}
-        <div className="absolute top-1/2 left-0 w-[300px] h-[300px] border border-white/10 rounded-full blur-sm"></div>
-        <div className="absolute bottom-1/4 right-0 w-[200px] h-[200px] border border-white/8 rounded-full blur-sm"></div>
+    <section id="welcome" className="relative py-12 sm:py-20 overflow-hidden" style={{ backgroundColor: '#0B2545' }}>
+      {/* Desktop radial gradient behind text */}
+      <div className="absolute inset-0 hidden lg:block">
+        <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-radial from-blue-400/10 via-blue-500/5 to-transparent blur-2xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,10 +47,10 @@ const Welcome = () => {
             </h2>
             <div className="space-y-4 sm:space-y-6">
               <p className="text-white/90 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
-                Notre approche s'appuie sur la <span className="text-[#79AEE8] underline decoration-1 underline-offset-2">stabilité</span>, 
-                la <span className="text-[#79AEE8] underline decoration-1 underline-offset-2">création de valeur</span>, 
-                les <span className="text-[#79AEE8] underline decoration-1 underline-offset-2">relations humaines</span> et 
-                la <span className="text-[#79AEE8] underline decoration-1 underline-offset-2">vision à long terme</span> pour assurer votre sécurité financière.
+                Notre approche s'appuie sur la <span className="font-semibold">stabilité</span>, 
+                la <span className="font-semibold">création de valeur</span>, 
+                les <span className="font-semibold">relations humaines</span> et 
+                la <span className="font-semibold">vision à long terme</span> pour assurer votre sécurité financière.
               </p>
               <p className="text-white/90 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
                 Nous ancrons d'abord les fondations, installons la structure, puis faisons grandir votre patrimoine avec régularité et confiance.
@@ -73,10 +64,7 @@ const Welcome = () => {
               <img
                 src="./marc-olivier-héro.jpeg"
                 alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
-                className="w-64 sm:w-80 lg:w-full lg:max-w-md h-auto rounded-xl border-3 border-white object-cover object-top transition-transform duration-500 hover:scale-105"
-                style={{
-                  boxShadow: '0 10px 18px rgba(0, 0, 0, 0.35), 0 0 30px rgba(255, 255, 255, 0.1)'
-                }}
+                className="w-64 sm:w-80 lg:w-full lg:max-w-md h-auto rounded-xl border-3 border-white object-cover object-top transition-transform duration-500 hover:scale-105 shadow-lg"
               />
             </div>
           </div>
