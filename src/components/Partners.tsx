@@ -70,7 +70,7 @@ const Partners: React.FC = () => {
   ];
 
   return (
-    <section className="py-8 sm:py-12 lg:py-20" style={{ backgroundColor: 'var(--primary-blue)' }}>
+    <section ref={sectionRef} className="py-8 sm:py-12 lg:py-20 animate-section-hidden" style={{ backgroundColor: 'var(--primary-blue)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <div className="inline-block">

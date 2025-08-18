@@ -1,7 +1,28 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Shield, TrendingUp, Award, Users } from 'lucide-react';
 
 const Welcome = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-section-visible');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '50px' }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const approaches = [
     {
       icon: <Shield className="w-8 h-8" />,
@@ -26,7 +47,7 @@ const Welcome = () => {
   ];
 
   return (
-    <section id="welcome" className="relative py-8 sm:py-12 overflow-hidden bg-white">
+    <section ref={sectionRef} id="welcome" className="relative py-8 sm:py-12 overflow-hidden bg-white animate-section-hidden">
       {/* Desktop radial gradient behind text */}
       <div className="absolute inset-0 hidden lg:block">
         <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-radial from-blue-50 via-blue-25 to-transparent blur-2xl"></div>

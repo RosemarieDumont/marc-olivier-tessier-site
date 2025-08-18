@@ -1,7 +1,28 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Star, Quote } from 'lucide-react';
 
 const Testimonials = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-section-visible');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '50px' }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const testimonials = [
     {
       name: "Salomé",
@@ -24,7 +45,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-20 bg-[#FFFFFF]">
+    <section ref={sectionRef} id="testimonials" className="py-20 bg-[#FFFFFF] animate-section-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-slide-up">
           <div className="inline-block mb-4 animate-scale-in stagger-1">

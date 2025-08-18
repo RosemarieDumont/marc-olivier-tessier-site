@@ -1,7 +1,28 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { PiggyBank, Shield, Building, TrendingUp, Heart, Users } from 'lucide-react';
 
 const Services = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-section-visible');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '50px' }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const services = {
     epargne: {
       icon: <PiggyBank className="w-12 h-12" />,
@@ -95,7 +116,7 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="py-20" style={{ backgroundColor: 'var(--primary-blue)' }}>
+    <section ref={sectionRef} id="services" className="py-20 animate-section-hidden" style={{ backgroundColor: 'var(--primary-blue)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl font-bold text-white mb-6 animate-slide-up stagger-1" style={{ fontFamily: 'Poppins', fontWeight: '700' }}>Services</h2>
