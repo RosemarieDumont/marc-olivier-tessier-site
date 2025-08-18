@@ -78,8 +78,7 @@ const Welcome = () => {
         <div className="relative z-10 mt-8 sm:mt-12 lg:mt-16">
           <div className="text-center mb-6 sm:mb-8">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4" style={{ fontFamily: 'Poppins', fontWeight: '700' }}>Notre approche</h3>
-            <div className="w-16 sm:w-24 h-1 bg-[#6C90C3] mx-auto rounded-full"></div>
-            <div className="w-16 sm:w-24 h-1 bg-white/60 mx-auto rounded-full"></div>
+            <div className="w-16 sm:w-24 h-1 bg-white mx-auto rounded-full"></div>
           </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
