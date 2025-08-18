@@ -13,6 +13,17 @@ const Hero = () => {
     
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      
+      // Parallax effect for desktop only
+      if (!isMobile && window.innerWidth >= 768) {
+        const scrolled = window.pageYOffset;
+        const parallaxElement = document.querySelector('.parallax-bg') as HTMLElement;
+        if (parallaxElement) {
+          // Move background slower than scroll (0.5 speed for subtle effect)
+          const yPos = -(scrolled * 0.5);
+          parallaxElement.style.transform = `translateY(${yPos}px)`;
+        }
+      }
     };
 
     checkMobile();
@@ -47,7 +58,7 @@ const Hero = () => {
         <img
           src="./sean-pollock-PhYq704ffdA-unsplash.jpg"
           alt="Financial district buildings"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-center parallax-bg"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[rgba(11,37,69,0.55)] via-[rgba(11,37,69,0.3)] to-[rgba(11,37,69,0)]" style={{ background: 'linear-gradient(180deg, rgba(11,37,69,.55) 0%, rgba(11,37,69,0) 60%)' }}></div>
         <div className="absolute inset-0 bg-[var(--primary-blue)]/60"></div>

@@ -129,6 +129,10 @@ html {
     background-attachment: scroll;
     background-size: 100% 100%;
   }
+  
+  .parallax-bg {
+    transform: none !important;
+  }
 }
 
 @keyframes fade-in {
@@ -355,6 +359,26 @@ html {
 .stagger-4 { animation-delay: 0.4s; }
 .stagger-5 { animation-delay: 0.5s; }
 .stagger-6 { animation-delay: 0.6s; }
+
+/* Parallax effect for hero background */
+.parallax-bg {
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+
+/* Smooth parallax animation */
+@media (min-width: 768px) {
+  .parallax-bg {
+    transform: translateY(0);
+  }
+}
+
+/* Disable parallax on mobile for performance */
+@media (max-width: 767px) {
+  .parallax-bg {
+    transform: none !important;
+  }
+}
 
 /* Radial gradient utility */
 .bg-gradient-radial {
