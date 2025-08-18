@@ -32,7 +32,6 @@ const Partners = () => {
         {/* Section Header */}
         <div className="text-center mb-12 animate-slide-up">
           <div className="inline-block mb-4 animate-scale-in stagger-1">
-            <span className="text-caption px-6 py-2 bg-white border border-[#0D1433]/20 rounded-full text-[#0D1433] font-medium">
             <span className="text-caption px-6 py-2 bg-white border rounded-full font-medium" style={{ borderColor: 'var(--primary-blue)', color: 'var(--primary-blue)' }}>
               Réseau de confiance
             </span>
