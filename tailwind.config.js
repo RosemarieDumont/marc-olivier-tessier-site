@@ -4,8 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['Poppins', 'sans-serif'],
-        'poppins': ['Poppins', 'sans-serif'],
+        'sans': ['Poppins', 'system-ui', 'sans-serif'],
       },
       textShadow: {
         'calibri': '0 4px 20px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.1)',

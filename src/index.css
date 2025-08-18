@@ -2,62 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-* {
-  font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+/* POPPINS UNIQUE FONT APPLICATION */
+html, body, h1, h2, h3, h4, h5, h6, p, a, nav, button, input, select, textarea, .btn, .badge, .card, .navbar, .hero {
+  font-family: 'Poppins', system-ui, sans-serif !important;
 }
 
-/* Typography Hierarchy */
+/* Font smoothing for better rendering */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography hierarchy with Poppins weights */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.025em;
 }
 
-/* Body text optimization */
-p, span, div, a, button, input, textarea, select {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
+/* Body text and links */
+p, a {
   font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Brand/logotype elements */
+.text-brand, .logo, .brand {
+  font-weight: 800;
 }
 
 /* Premium typography scales */
 .text-display {
-  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.03em;
 }
 
 .text-heading {
-  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.025em;
 }
 
 .text-subheading {
-  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   line-height: 1.4;
   letter-spacing: -0.01em;
 }
 
 .text-body {
-  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   line-height: 1.6;
 }
 
 .text-body-medium {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.5;
 }
 
 .text-caption {
-  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   line-height: 1.4;
   font-size: 0.875rem;
