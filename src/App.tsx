@@ -49,7 +49,7 @@ function App() {
                   <span className="text-xl sm:text-2xl font-bold">Marc-Olivier Tessier</span>
                 </h3>
                 <div className="space-y-4 text-body text-[#F9FAFB]/85 text-lg animate-slide-up stagger-2">
-                  <p>
+                  <p className="text-base">
                     Marc-Olivier Tessier est conseiller en sécurité financière certifié auprès de l'Autorité des marchés financiers, 
                     affilié à iA Groupe financier au sein de l'agence Les Rivières. Il accompagne ses clients dans des décisions clés 
                     liées à l'assurance, à l'épargne et à la retraite, en s'appuyant sur une approche structurée et orientée résultats. 
