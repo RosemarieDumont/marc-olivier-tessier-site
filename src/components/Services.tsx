@@ -151,20 +151,20 @@ const Services = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-16 text-center animate-slide-up stagger-4">
-          <div className="rounded-2xl p-8 lg:p-12 shadow-xl hover-lift hover-glow transition-all duration-500" style={{ backgroundColor: 'var(--primary-blue-light)' }}>
+        <div className="mt-12 text-center animate-slide-up stagger-4">
+          <div className="rounded-2xl p-6 lg:p-9 shadow-xl hover-lift hover-glow transition-all duration-500" style={{ backgroundColor: 'var(--primary-blue-light)' }}>
             <div className="relative z-10">
-              <h3 className="text-heading text-3xl font-bold text-white mb-4 animate-slide-up stagger-1">
+              <h3 className="text-heading text-2xl font-bold text-white mb-3 animate-slide-up stagger-1">
                 Prêt à sécuriser votre avenir financier ?
               </h3>
-              <p className="text-body text-xl text-white/85 mb-8 max-w-2xl mx-auto animate-slide-up stagger-2">
+              <p className="text-body text-lg text-white/85 mb-6 max-w-2xl mx-auto animate-slide-up stagger-2">
                 Contactez-nous dès aujourd'hui pour une consultation gratuite et personnalisée
               </p>
               <a className="animate-slide-up stagger-3"
                 href="https://outlook-sdf.office.com/bookwithme/user/0cb6ca6a017f4d5ea6b053f4dacafad2%40agc.ia.ca?anonymous&ismsaljsauthenabled=true"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transition-all duration-500 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover-glow transform hover:scale-105" style={{ color: 'var(--primary-blue)' }}
+                className="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full font-semibold text-base hover:bg-gray-50 transition-all duration-500 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover-glow transform hover:scale-105" style={{ color: 'var(--primary-blue)' }}
               >
                 <svg className="w-5 h-5 transition-transform duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
