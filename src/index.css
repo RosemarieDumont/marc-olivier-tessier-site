@@ -371,27 +371,40 @@ html {
 .partners-track{
   display:flex;
   flex-wrap:nowrap !important;
-  gap:28px;
+  gap:16px;
   overflow-x:auto;
   -webkit-overflow-scrolling:touch;
   align-items:center;
   padding:12px 6px;
   scroll-snap-type:x proximity;
-  min-height:100px;           /* reduced height to match smaller logos */
+  min-height:80px;
   white-space:nowrap;
 }
 .partners-track a{ 
   flex:0 0 auto !important; 
   scroll-snap-align:center; 
   display:inline-block;
-  min-width:120px;
+  min-width:80px;
 }
 .partners-track img{
-  height:60px;                /* further reduced logo height */
+  height:45px;
   width:auto;
   object-fit:contain;
   display:block;
   max-width:none;
+}
+
+/* Mobile optimization for partners */
+@media (max-width: 768px) {
+  .partners-track {
+    gap:12px;
+  }
+  .partners-track a {
+    min-width:70px;
+  }
+  .partners-track img {
+    height:35px;
+  }
 }
 .partners-track::-webkit-scrollbar{ height:6px }
 

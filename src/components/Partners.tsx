@@ -37,7 +37,7 @@ const Partners = () => {
             </span>
           </div>
           <h3 className="text-display text-4xl font-bold mb-6 animate-slide-up stagger-2">
-            Nos <span className="text-[#0D1433] italic">partenaires</span>
+            <span style={{ fontFamily: 'Poppins', fontWeight: '700' }}>Nos <span className="text-[#0D1433] italic">partenaires</span></span>
           </h3>
           <p className="text-body text-xl text-[#111827] max-w-4xl mx-auto animate-slide-up stagger-3">
             En tant que conseiller affilié à iA Groupe financier, Marc-Olivier Tessier collabore avec les plus grandes compagnies d'assurance et d'investissement au Canada. Cette diversité de partenaires permet de proposer des solutions flexibles et adaptées à chaque profil.
