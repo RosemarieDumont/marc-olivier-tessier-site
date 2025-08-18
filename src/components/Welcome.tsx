@@ -26,10 +26,10 @@ const Welcome = () => {
   ];
 
   return (
-    <section id="welcome" className="relative py-8 sm:py-12 overflow-hidden" style={{ backgroundColor: 'var(--primary-blue)' }}>
+    <section id="welcome" className="relative py-8 sm:py-12 overflow-hidden bg-white">
       {/* Desktop radial gradient behind text */}
       <div className="absolute inset-0 hidden lg:block">
-        <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-radial from-white/10 via-white/5 to-transparent blur-2xl"></div>
+        <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-radial from-blue-50 via-blue-25 to-transparent blur-2xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,22 +37,22 @@ const Welcome = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <div className="relative z-10 lg:max-w-none lg:pr-12 animate-slide-in-left text-center lg:text-left order-2 lg:order-1">
-            <h2 className="text-white mb-6 sm:mb-8" style={{ 
+            <h2 className="mb-6 sm:mb-8" style={{ 
               fontFamily: 'Poppins', 
               fontWeight: '700', 
               fontSize: 'clamp(32px, 4vw, 48px)',
-              color: '#FFFFFF'
+              color: 'var(--primary-blue)'
             }}>
               Bienvenue
             </h2>
             <div className="space-y-3 sm:space-y-4">
-              <p className="text-white/90 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
+              <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
                 Notre approche s'appuie sur la <span className="font-semibold">stabilité</span>, 
                 la <span className="font-semibold">création de valeur</span>, 
                 les <span className="font-semibold">relations humaines</span> et 
                 la <span className="font-semibold">vision à long terme</span> pour assurer votre sécurité financière.
               </p>
-              <p className="text-white/90 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
+              <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
                 Nous ancrons d'abord les fondations, installons la structure, puis faisons grandir votre patrimoine avec régularité et confiance.
               </p>
             </div>
@@ -77,19 +77,23 @@ const Welcome = () => {
         {/* Notre approche Section */}
         <div className="relative z-10 mt-8 sm:mt-12 lg:mt-16">
           <div className="text-center mb-6 sm:mb-8">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4" style={{ fontFamily: 'Poppins', fontWeight: '700' }}>Notre approche</h3>
-            <div className="w-16 sm:w-24 h-1 bg-white mx-auto rounded-full"></div>
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4" style={{ fontFamily: 'Poppins', fontWeight: '700', color: 'var(--primary-blue)' }}>Notre approche</h3>
+            <div className="w-16 sm:w-24 h-1 mx-auto rounded-full" style={{ backgroundColor: 'var(--primary-blue)' }}></div>
           </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {approaches.map((approach, index) => (
-              <div key={index} className={`group bg-white/10 backdrop-blur-sm p-4 lg:p-6 rounded-2xl border border-white/20 hover:border-white/40 transition-all duration-500 hover:-translate-y-2 hover:bg-white/15 animate-scale-in stagger-${index + 1}`}>
+              <div key={index} className={`group p-4 lg:p-6 rounded-2xl border-2 transition-all duration-500 hover:-translate-y-2 animate-scale-in stagger-${index + 1}`} style={{ 
+                backgroundColor: 'var(--primary-blue)', 
+                borderColor: 'var(--primary-blue)',
+                boxShadow: '0 4px 12px rgba(15, 42, 82, 0.15)'
+              }}>
                 <div className="relative z-10">
                   <div className="flex items-center justify-center sm:justify-start mb-4 gap-3">
-                    <div className="text-white/80 transition-transform duration-300 group-hover:scale-110 group-hover:text-white flex-shrink-0">{approach.icon}</div>
-                    <h4 className="text-subheading text-lg lg:text-xl font-bold text-white transition-colors duration-300 group-hover:text-white/90">{approach.title}</h4>
+                    <div className="text-white transition-transform duration-300 group-hover:scale-110 flex-shrink-0">{approach.icon}</div>
+                    <h4 className="text-subheading text-lg lg:text-xl font-bold text-white transition-colors duration-300">{approach.title}</h4>
                   </div>
-                  <p className="text-body text-white/85 transition-colors duration-300 group-hover:text-white text-center sm:text-left">{approach.description}</p>
+                  <p className="text-body text-white/90 transition-colors duration-300 group-hover:text-white text-center sm:text-left">{approach.description}</p>
                 </div>
               </div>
             ))}
