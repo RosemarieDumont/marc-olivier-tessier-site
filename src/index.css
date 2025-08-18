@@ -326,6 +326,29 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Custom smooth scrolling with precise timing */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Enhanced smooth scrolling for modern browsers */
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Respect user preferences for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  * {
+    scroll-behavior: auto;
+  }
+}
+
 /* Enhanced hover effects */
 .hover-lift {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

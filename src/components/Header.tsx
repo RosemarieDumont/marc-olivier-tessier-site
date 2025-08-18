@@ -12,12 +12,50 @@ const Header = () => {
     { name: 'Contact', href: '#contact' },
   ];
 
-  const scrollToSection = (href: string) => {
+  // Custom smooth scroll function with precise timing
+  const smoothScrollTo = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const targetPosition = element.offsetTop;
+      const startPosition = window.pageYOffset;
+      const distance = targetPosition - startPosition;
+      const duration = 600; // 600ms as requested
+      let start: number | null = null;
+
+      // Ease-in-out function
+      const easeInOutCubic = (t: number): number => {
+        return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+      };
+
+      const animation = (currentTime: number) => {
+        if (start === null) start = currentTime;
+        const timeElapsed = currentTime - start;
+        const progress = Math.min(timeElapsed / duration, 1);
+        const ease = easeInOutCubic(progress);
+        
+        window.scrollTo(0, startPosition + distance * ease);
+        
+        if (timeElapsed < duration) {
+          requestAnimationFrame(animation);
+        }
+      };
+
+      requestAnimationFrame(animation);
     }
     setIsMenuOpen(false);
+  };
+
+  const scrollToSection = (href: string) => {
+    // Use custom smooth scroll for better control
+    if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+      smoothScrollTo(href);
+    } else {
+      // Fallback for users who prefer reduced motion
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'auto' });
+      }
+    }
   };
 
   return (
