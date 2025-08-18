@@ -151,17 +151,23 @@ const Contact = () => {
                 />
               </div>
 
-              <div>
+              <div className="relative">
                 <label className="text-caption block font-medium text-white/80 mb-1">
                   Service d'intérêt
                 </label>
-                <select name="service" className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15">
+                <select name="service" className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15 appearance-none cursor-pointer">
                   <option value="">Sélectionnez un service</option>
-                  <option value="epargne">Épargne et placements</option>
-                  <option value="assurance">Assurance</option>
-                  <option value="corporatif">Services corporatifs</option>
-                  <option value="consultation">Consultation générale</option>
+                  <option value="epargne" className="bg-gray-800 text-white">Épargne et placements</option>
+                  <option value="assurance" className="bg-gray-800 text-white">Assurance</option>
+                  <option value="corporatif" className="bg-gray-800 text-white">Services corporatifs</option>
+                  <option value="consultation" className="bg-gray-800 text-white">Consultation générale</option>
                 </select>
+                {/* Custom dropdown arrow for better mobile visibility */}
+                <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                  <svg className="w-4 h-4 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
               </div>
 
               <div>
