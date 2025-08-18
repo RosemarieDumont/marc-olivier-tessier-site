@@ -26,7 +26,7 @@ const Welcome = () => {
   ];
 
   return (
-    <section id="welcome" className="relative py-12 sm:py-20 overflow-hidden" style={{ backgroundColor: '#0B2545' }}>
+    <section id="welcome" className="relative py-8 sm:py-12 overflow-hidden" style={{ backgroundColor: '#0B2545' }}>
       {/* Desktop radial gradient behind text */}
       <div className="absolute inset-0 hidden lg:block">
         <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-radial from-blue-400/10 via-blue-500/5 to-transparent blur-2xl"></div>
@@ -34,9 +34,9 @@ const Welcome = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Content Section */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="relative z-10 lg:max-w-none lg:pr-16 animate-slide-in-left text-center lg:text-left order-2 lg:order-1">
+          <div className="relative z-10 lg:max-w-none lg:pr-12 animate-slide-in-left text-center lg:text-left order-2 lg:order-1">
             <h2 className="text-white mb-6 sm:mb-8" style={{ 
               fontFamily: 'Poppins', 
               fontWeight: '700', 
@@ -45,7 +45,7 @@ const Welcome = () => {
             }}>
               Bienvenue
             </h2>
-            <div className="space-y-4 sm:space-y-6">
+            <div className="space-y-3 sm:space-y-4">
               <p className="text-white/90 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
                 Notre approche s'appuie sur la <span className="font-semibold">stabilité</span>, 
                 la <span className="font-semibold">création de valeur</span>, 
@@ -75,19 +75,19 @@ const Welcome = () => {
         </div>
 
         {/* Notre approche Section */}
-        <div className="relative z-10 mt-12 sm:mt-16 lg:mt-20">
-          <div className="text-center mb-8 sm:mb-12">
+        <div className="relative z-10 mt-8 sm:mt-12 lg:mt-16">
+          <div className="text-center mb-6 sm:mb-8">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4" style={{ fontFamily: 'Poppins', fontWeight: '700' }}>Notre approche</h3>
             <div className="w-16 sm:w-24 h-1 bg-[#6C90C3] mx-auto rounded-full"></div>
           </div>
           
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {approaches.map((approach, index) => (
-              <div key={index} className={`group bg-[#274272]/30 backdrop-blur-sm p-6 lg:p-8 rounded-2xl border border-white/10 hover:border-[#6C90C3]/50 transition-all duration-500 hover:-translate-y-2 hover:bg-[#274272]/50 animate-scale-in stagger-${index + 1}`}>
+              <div key={index} className={`group bg-[#274272]/30 backdrop-blur-sm p-4 lg:p-6 rounded-2xl border border-white/10 hover:border-[#6C90C3]/50 transition-all duration-500 hover:-translate-y-2 hover:bg-[#274272]/50 animate-scale-in stagger-${index + 1}`}>
                 <div className="relative z-10">
-                  <div className="flex flex-col items-center sm:items-start mb-6">
+                  <div className="flex flex-col items-center sm:items-start mb-4">
                     <div className="text-[#6C90C3] transition-transform duration-300 group-hover:scale-110 group-hover:text-[#F9FAFB] flex-shrink-0">{approach.icon}</div>
-                    <h4 className="text-subheading text-lg lg:text-xl font-bold text-[#F9FAFB] transition-colors duration-300 group-hover:text-[#6C90C3] mt-3 text-center sm:text-left">{approach.title}</h4>
+                    <h4 className="text-subheading text-lg lg:text-xl font-bold text-[#F9FAFB] transition-colors duration-300 group-hover:text-[#6C90C3] mt-2 text-center sm:text-left">{approach.title}</h4>
                   </div>
                   <p className="text-body text-[#F9FAFB]/85 transition-colors duration-300 group-hover:text-[#F9FAFB] text-center sm:text-left">{approach.description}</p>
                 </div>
