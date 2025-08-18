@@ -26,7 +26,7 @@ const Welcome = () => {
   ];
 
   return (
-    <section id="welcome" className="relative py-6 md:py-0 bg-gradient-to-b from-[#0D1433] to-[#171F55] overflow-hidden md:h-[75vh] flex items-center">
+    <section id="welcome" className="relative py-10 sm:py-20 bg-gradient-to-b from-[#0D1433] to-[#171F55] overflow-hidden">
       {/* Luminous Background Effects */}
       <div className="absolute inset-0">
         {/* Spotlight gradient from top center */}
@@ -41,11 +41,11 @@ const Welcome = () => {
         <div className="absolute bottom-1/4 right-0 w-[200px] h-[200px] border border-white/8 rounded-full blur-sm"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-8 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Content Section */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-center md:gap-12 lg:gap-16">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[60vh] lg:min-h-[70vh]">
           {/* Left Content */}
-          <div className="relative z-10 w-full md:w-1/2 md:max-w-[600px] animate-slide-in-left">
+          <div className="relative z-10 max-w-[550px] animate-slide-in-left">
             <h2 className="text-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 sm:mb-8">
               <span className="inline-block" style={{
                 textShadow: '0 0 30px rgba(255, 255, 255, 0.3), 0 0 60px rgba(255, 255, 255, 0.1)',
@@ -69,19 +69,13 @@ const Welcome = () => {
             </div>
           </div>
 
-          {/* Separator - Desktop only */}
-          <div className="hidden md:block relative z-10">
-            <div className="w-px h-32 bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-white/10 rounded-full border border-white/20"></div>
-          </div>
-
           {/* Right Image */}
-          <div className="relative z-10 w-full md:w-2/5 animate-slide-in-right mt-8 md:mt-0 flex justify-center">
+          <div className="relative z-10 animate-slide-in-right order-first lg:order-last">
             <div className="relative">
               <img
                 src="./marc-olivier-héro.jpeg"
                 alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
-                className="w-64 sm:w-80 md:w-full lg:w-96 h-auto rounded-xl border-3 border-white object-cover object-top transition-transform duration-500 hover:scale-105"
+                className="w-64 sm:w-80 lg:w-96 h-auto rounded-xl border-3 border-white object-cover object-top mx-auto lg:mx-0 transition-transform duration-500 hover:scale-105"
                 style={{
                   boxShadow: '0 10px 18px rgba(0, 0, 0, 0.35), 0 0 30px rgba(255, 255, 255, 0.1)'
                 }}
@@ -91,7 +85,7 @@ const Welcome = () => {
         </div>
 
         {/* Notre approche Section */}
-        <div className="relative z-10 mt-16 md:mt-20">
+        <div className="relative z-10 mt-16 sm:mt-20">
           <div className="text-center mb-8 sm:mb-12">
             <h3 className="text-heading text-2xl sm:text-3xl font-bold text-[#F9FAFB] mb-4">Notre approche</h3>
             <div className="w-16 sm:w-24 h-1 bg-[#6C90C3] mx-auto rounded-full"></div>
