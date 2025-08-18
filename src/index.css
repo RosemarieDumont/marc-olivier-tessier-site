@@ -393,6 +393,9 @@ html {
   object-fit:contain;
   display:block;
   max-width:none;
+  filter: none !important;
+  opacity: 1 !important;
+  brightness: 1 !important;
 }
 
 /* Mobile optimization for partners */

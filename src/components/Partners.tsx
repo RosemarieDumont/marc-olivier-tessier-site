@@ -113,7 +113,7 @@ const Partners: React.FC = () => {
 
         {/* Additional Info */}
         <div className="text-center mt-8 sm:mt-12">
-          <p className="text-white/70 text-sm sm:text-base max-w-2xl mx-auto">
+          <p className="text-white text-sm sm:text-base max-w-2xl mx-auto">
             Nous collaborons avec les plus grandes institutions financières du Canada pour vous offrir les meilleures solutions d'épargne et d'assurance.
           </p>
         </div>
