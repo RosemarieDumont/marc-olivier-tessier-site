@@ -46,7 +46,7 @@ const Welcome = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="relative z-10 lg:max-w-none lg:pr-16 animate-slide-in-left text-center lg:text-left">
-            <h2 className="text-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 sm:mb-8">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 sm:mb-8" style={{ fontFamily: 'Poppins', fontWeight: '700', fontSize: 'clamp(32px, 4vw, 48px)' }}>
               <span className="inline-block" style={{
                 textShadow: '0 0 30px rgba(255, 255, 255, 0.3), 0 0 60px rgba(255, 255, 255, 0.1)',
                 filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.2))'
@@ -54,17 +54,15 @@ const Welcome = () => {
                 <span className="text-[#F9FAFB]">Bienvenue</span>
               </span>
             </h2>
-            <div className="space-y-4 sm:space-y-6 text-body text-base sm:text-lg text-[#F9FAFB]/90">
-              <p className="text-lg sm:text-xl font-light leading-relaxed">
-                Notre approche s'appuie sur la <span className="text-[#6C90C3] font-semibold">stabilité</span>, 
-                la <span className="text-[#6C90C3] font-semibold">création de valeur</span>, 
-                les <span className="text-[#6C90C3] font-semibold">relations humaines</span> et 
-                la <span className="text-[#6C90C3] font-semibold">vision à long terme</span> pour assurer votre sécurité financière.
+            <div className="space-y-4 sm:space-y-6">
+              <p className="text-white/90 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
+                Notre approche s'appuie sur la <span className="text-[#79AEE8] underline decoration-1 underline-offset-2">stabilité</span>, 
+                la <span className="text-[#79AEE8] underline decoration-1 underline-offset-2">création de valeur</span>, 
+                les <span className="text-[#79AEE8] underline decoration-1 underline-offset-2">relations humaines</span> et 
+                la <span className="text-[#79AEE8] underline decoration-1 underline-offset-2">vision à long terme</span> pour assurer votre sécurité financière.
               </p>
-              <p className="leading-relaxed">
-              <p className="text-body">
+              <p className="text-white/90 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
                 Nous ancrons d'abord les fondations, installons la structure, puis faisons grandir votre patrimoine avec régularité et confiance.
-              </p>
               </p>
             </div>
           </div>
