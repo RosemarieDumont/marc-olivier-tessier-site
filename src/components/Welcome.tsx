@@ -26,7 +26,7 @@ const Welcome = () => {
   ];
 
   return (
-    <section id="welcome" className="relative py-10 sm:py-20 bg-gradient-to-b from-[#0D1433] to-[#171F55] overflow-hidden">
+    <section id="welcome" className="relative py-12 sm:py-20 bg-gradient-to-b from-[#0D1433] to-[#171F55] overflow-hidden">
       {/* Luminous Background Effects */}
       <div className="absolute inset-0">
         {/* Spotlight gradient from top center */}
@@ -43,9 +43,9 @@ const Welcome = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Content Section */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[60vh] lg:min-h-[70vh]">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Content */}
-          <div className="relative z-10 max-w-[550px] animate-slide-in-left">
+          <div className="relative z-10 lg:max-w-none lg:pr-16 animate-slide-in-left text-center lg:text-left">
             <h2 className="text-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 sm:mb-8">
               <span className="inline-block" style={{
                 textShadow: '0 0 30px rgba(255, 255, 255, 0.3), 0 0 60px rgba(255, 255, 255, 0.1)',
@@ -70,12 +70,12 @@ const Welcome = () => {
           </div>
 
           {/* Right Image */}
-          <div className="relative z-10 animate-slide-in-right order-first lg:order-last">
+          <div className="relative z-10 animate-slide-in-right order-first lg:order-last flex justify-center lg:justify-end">
             <div className="relative">
               <img
                 src="./marc-olivier-héro.jpeg"
                 alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
-                className="w-64 sm:w-80 lg:w-96 h-auto rounded-xl border-3 border-white object-cover object-top mx-auto lg:mx-0 transition-transform duration-500 hover:scale-105"
+                className="w-64 sm:w-80 lg:w-full lg:max-w-md h-auto rounded-xl border-3 border-white object-cover object-top transition-transform duration-500 hover:scale-105"
                 style={{
                   boxShadow: '0 10px 18px rgba(0, 0, 0, 0.35), 0 0 30px rgba(255, 255, 255, 0.1)'
                 }}
@@ -85,21 +85,21 @@ const Welcome = () => {
         </div>
 
         {/* Notre approche Section */}
-        <div className="relative z-10 mt-16 sm:mt-20">
+        <div className="relative z-10 mt-12 sm:mt-16 lg:mt-20">
           <div className="text-center mb-8 sm:mb-12">
             <h3 className="text-heading text-2xl sm:text-3xl font-bold text-[#F9FAFB] mb-4">Notre approche</h3>
             <div className="w-16 sm:w-24 h-1 bg-[#6C90C3] mx-auto rounded-full"></div>
           </div>
           
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {approaches.map((approach, index) => (
-              <div key={index} className={`group bg-[#274272]/30 backdrop-blur-sm p-4 sm:p-6 lg:p-8 rounded-2xl border border-white/10 hover:border-[#6C90C3]/50 transition-all duration-500 hover:-translate-y-2 hover:bg-[#274272]/50 animate-scale-in stagger-${index + 1}`}>
+              <div key={index} className={`group bg-[#274272]/30 backdrop-blur-sm p-6 lg:p-8 rounded-2xl border border-white/10 hover:border-[#6C90C3]/50 transition-all duration-500 hover:-translate-y-2 hover:bg-[#274272]/50 animate-scale-in stagger-${index + 1}`}>
                 <div className="relative z-10">
-                  <div className="flex items-center gap-3 sm:flex-col sm:items-start mb-4 sm:mb-6">
+                  <div className="flex flex-col items-center sm:items-start mb-6">
                     <div className="text-[#6C90C3] transition-transform duration-300 group-hover:scale-110 group-hover:text-[#F9FAFB] flex-shrink-0">{approach.icon}</div>
-                    <h4 className="text-subheading text-base sm:text-lg lg:text-xl font-bold text-[#F9FAFB] transition-colors duration-300 group-hover:text-[#6C90C3]">{approach.title}</h4>
+                    <h4 className="text-subheading text-lg lg:text-xl font-bold text-[#F9FAFB] transition-colors duration-300 group-hover:text-[#6C90C3] mt-3 text-center sm:text-left">{approach.title}</h4>
                   </div>
-                  <p className="text-body text-[#F9FAFB]/85 transition-colors duration-300 group-hover:text-[#F9FAFB] text-sm sm:text-base">{approach.description}</p>
+                  <p className="text-body text-[#F9FAFB]/85 transition-colors duration-300 group-hover:text-[#F9FAFB] text-center sm:text-left">{approach.description}</p>
                 </div>
               </div>
             ))}
