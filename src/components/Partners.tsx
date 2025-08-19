@@ -31,63 +31,6 @@ const Partners: React.FC = () => {
     };
   }, []);
 
-  const partners = [
-    { 
-      name: "iA Groupe financier", 
-      logo: "./logo IA.png",
-      website: "https://ia.ca"
-    },
-    { 
-      name: "BMO", 
-      logo: "./assets/logos/bmo.png",
-      website: "https://www.bmo.com"
-    },
-    { 
-      name: "Beneva", 
-      logo: "./assets/logos/beneva.png",
-      website: "https://www.beneva.ca"
-    },
-    { 
-      name: "RBC", 
-      logo: "./assets/logos/RBC-logo.jpg",
-      website: "https://www.rbc.com"
-    },
-    { 
-      name: "Blue Cross", 
-      logo: "./assets/logos/blue-cross.png",
-      website: "https://www.qc.bluecross.ca"
-    },
-    { 
-      name: "Desjardins", 
-      logo: "./assets/logos/desjardins.png",
-      website: "https://www.desjardins.com"
-    },
-    { 
-      name: "Canada Life", 
-      logo: "./assets/logos/canada-life.png",
-      website: "https://www.canadalife.com"
-    },
-    { 
-      name: "Assumption Life", 
-      logo: "./assets/logos/assumption-life.png",
-      website: "https://www.assumption.ca"
-    },
-    { 
-      name: "Sun Life Financial", 
-      logo: "./assets/logos/sun-life-financial.png",
-      website: "https://www.sunlife.ca"
-    },
-    { 
-      name: "Foresters Financial", 
-      logo: "./assets/logos/foresters-financial.png",
-      website: "https://www.foresters.com"
-    },
-    { 
-      name: "Equitable Life of Canada", 
-      logo: "./assets/logos/equitable-life-of-canada.png",
-      website: "https://www.equitable.ca"
-    }
-  ];
 
   return (
     <section ref={sectionRef} className="py-8 sm:py-12 lg:py-20 animate-section-hidden" style={{ backgroundColor: 'var(--primary-blue)' }}>
@@ -113,21 +56,153 @@ const Partners: React.FC = () => {
           </div>
           
           <div className="partners-track">
-            {partners.map((partner, index) => (
-              <a 
-                key={index} 
-                href={partner.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-shrink-0 transition-transform duration-300 hover:scale-110"
-              >
-                <img 
-                  src={partner.logo} 
-                  alt={partner.name}
-                  className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
-                />
-              </a>
-            ))}
+            <a 
+              href="https://ia.ca"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 transition-transform duration-300 hover:scale-110"
+            >
+              <img 
+                src="./logo IA.png" 
+                alt="iA Groupe financier"
+                className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
+              />
+            </a>
+            <a 
+              href="https://www.bmo.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 transition-transform duration-300 hover:scale-110"
+            >
+              <img 
+                src="./assets/logos/bmo.png" 
+                alt="BMO"
+                className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
+              />
+            </a>
+            <a 
+              href="https://www.beneva.ca"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 transition-transform duration-300 hover:scale-110"
+            >
+              <img 
+                src="./assets/logos/beneva.png" 
+                alt="Beneva"
+                className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
+              />
+            </a>
+            <a 
+              href="https://www.rbc.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 transition-transform duration-300 hover:scale-110"
+            >
+              <img 
+                src="./assets/logos/RBC-logo.jpg" 
+                alt="RBC"
+                className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
+              />
+            </a>
+            <a 
+              href="https://www.qc.bluecross.ca"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 transition-transform duration-300 hover:scale-110"
+            >
+              <img 
+                src="./assets/logos/blue-cross.png" 
+                alt="Blue Cross"
+                className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
+              />
+            </a>
+            <a 
+              href="https://www.desjardins.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 transition-transform duration-300 hover:scale-110"
+            >
+              <img 
+                src="./assets/logos/desjardins.png" 
+                alt="Desjardins"
+                className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
+              />
+            </a>
+            <a 
+              href="https://www.canadalife.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 transition-transform duration-300 hover:scale-110"
+            >
+              <img 
+                src="./assets/logos/canada-life.png" 
+                alt="Canada Life"
+                className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
+              />
+            </a>
+            <a 
+              href="https://www.assumption.ca"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 transition-transform duration-300 hover:scale-110"
+            >
+              <img 
+                src="./assets/logos/assumption-life.png" 
+                alt="Assumption Life"
+                className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
+              />
+            </a>
+            <a 
+              href="https://www.sunlife.ca"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 transition-transform duration-300 hover:scale-110"
+            >
+              <img 
+                src="./assets/logos/sun-life-financial.png" 
+                alt="Sun Life Financial"
+                className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
+              />
+            </a>
+            <a 
+              href="https://www.foresters.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 transition-transform duration-300 hover:scale-110"
+            >
+              <img 
+                src="./assets/logos/foresters-financial.png" 
+                alt="Foresters Financial"
+                className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
+              />
+            </a>
+            <a 
+              href="https://www.equitable.ca"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 transition-transform duration-300 hover:scale-110"
+            >
+              <img 
+                src="./assets/logos/equitable-life-of-canada.png" 
+                alt="Equitable Life of Canada"
+                className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
+              />
+            </a>
+            <a href="https://www.empire.ca/" target="_blank" rel="noopener" aria-label="L'Empire Vie" className="flex-shrink-0 transition-transform duration-300 hover:scale-110">
+              <img src="./assets/logos/empire-life.png" alt="L'Empire Vie" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300">
+            </a>
+            <a href="https://www.humania.ca/" target="_blank" rel="noopener" aria-label="Humania Assurance" className="flex-shrink-0 transition-transform duration-300 hover:scale-110">
+              <img src="./assets/logos/humania-assurance.jpg" alt="Humania Assurance" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300">
+            </a>
+            <a href="https://ivari.ca/" target="_blank" rel="noopener" aria-label="ivari" className="flex-shrink-0 transition-transform duration-300 hover:scale-110">
+              <img src="./assets/logos/ivari.webp" alt="ivari" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300">
+            </a>
+            <a href="https://www.beneva.ca/" target="_blank" rel="noopener" aria-label="La Capitale (Beneva)" className="flex-shrink-0 transition-transform duration-300 hover:scale-110">
+              <img src="./assets/logos/la-capitale.jpg" alt="La Capitale" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300">
+            </a>
+            <a href="https://ppi.ca/" target="_blank" rel="noopener" aria-label="PPI" className="flex-shrink-0 transition-transform duration-300 hover:scale-110">
+              <img src="./assets/logos/ppi.png" alt="PPI" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300">
+            </a>
             
             {/* Et plus encore... */}
             <div className="flex-shrink-0 flex items-center justify-center min-w-[120px] px-4">
