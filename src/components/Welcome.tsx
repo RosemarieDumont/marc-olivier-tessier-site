@@ -77,6 +77,9 @@ const Welcome = () => {
               <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
                 Nous ancrons d'abord les fondations, installons la structure, puis faisons grandir votre patrimoine avec régularité et confiance.
               </p>
+              <p className="text-gray-300 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
+                Diplômé en administration des affaires avec une spécialisation en finance de l'Université Laval, Marc-Olivier possède une solide expertise dans le domaine financier. Passionné par l'immobilier et les investissements, il met son savoir-faire au service de ses clients pour les accompagner dans la réalisation de leurs projets financiers et la sécurisation de leur avenir.
+              </p>
             </div>
           </div>
 
