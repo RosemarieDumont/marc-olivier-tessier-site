@@ -47,10 +47,11 @@ const Welcome = () => {
   ];
 
   return (
-    <section ref={sectionRef} id="welcome" className="relative py-12 sm:py-16 lg:py-20 overflow-hidden bg-white animate-section-hidden -mt-4">
+    <section ref={sectionRef} id="welcome" className="relative py-12 sm:py-16 lg:py-20 overflow-hidden animate-section-hidden -mt-4" style={{ backgroundColor: '#0B1426' }}>
       {/* Desktop radial gradient behind text */}
       <div className="absolute inset-0 hidden lg:block">
-        <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-radial from-blue-50 via-blue-25 to-transparent blur-2xl"></div>
+        <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-radial from-blue-900/20 via-blue-800/10 to-transparent blur-2xl"></div>
+        <div className="absolute top-1/3 right-1/4 transform translate-x-1/2 -translate-y-1/2 w-[400px] h-[300px] bg-gradient-radial from-slate-700/15 via-slate-600/8 to-transparent blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -98,23 +99,23 @@ const Welcome = () => {
         {/* Notre approche Section */}
         <div className="relative z-10 mt-12 sm:mt-16 lg:mt-20">
           <div className="text-center mb-6 sm:mb-8">
-            <h3 className="text-2xl sm:text-3xl font-bold mb-4" style={{ fontFamily: 'Poppins', fontWeight: '700', color: 'var(--primary-blue)' }}>Notre approche</h3>
-            <div className="w-16 sm:w-24 h-1 mx-auto rounded-full" style={{ backgroundColor: 'var(--primary-blue)' }}></div>
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4" style={{ fontFamily: 'Poppins', fontWeight: '700', color: '#E2E8F0' }}>Notre approche</h3>
+            <div className="w-16 sm:w-24 h-1 mx-auto rounded-full" style={{ backgroundColor: '#60A5FA' }}></div>
           </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {approaches.map((approach, index) => (
-              <div key={index} className={`group p-4 lg:p-6 rounded-2xl border-2 transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:bg-blue-600 animate-scale-in stagger-${index + 1}`} style={{ 
-                backgroundColor: 'var(--primary-blue)', 
-                borderColor: 'var(--primary-blue)',
-                boxShadow: '0 4px 12px rgba(15, 42, 82, 0.15)'
+              <div key={index} className={`group p-4 lg:p-6 rounded-2xl border-2 transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:bg-slate-700 animate-scale-in stagger-${index + 1}`} style={{ 
+                backgroundColor: '#1E293B', 
+                borderColor: '#334155',
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.25)'
               }}>
                 <div className="relative z-10">
                   <div className="flex items-center justify-center sm:justify-start mb-4 gap-2">
-                    <div className="text-white transition-transform duration-300 group-hover:scale-110 flex-shrink-0">{approach.icon}</div>
-                    <h4 className="text-subheading text-lg lg:text-xl font-bold text-white transition-colors duration-300">{approach.title}</h4>
+                    <div className="text-blue-400 transition-transform duration-300 group-hover:scale-110 flex-shrink-0">{approach.icon}</div>
+                    <h4 className="text-subheading text-lg lg:text-xl font-bold text-slate-100 transition-colors duration-300">{approach.title}</h4>
                   </div>
-                  <p className="text-body text-white/90 transition-colors duration-300 group-hover:text-white text-center sm:text-left">{approach.description}</p>
+                  <p className="text-body text-slate-300 transition-colors duration-300 group-hover:text-slate-100 text-center sm:text-left">{approach.description}</p>
                 </div>
               </div>
             ))}
