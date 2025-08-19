@@ -73,11 +73,6 @@ const Partners: React.FC = () => {
       website: "https://www.assumption.ca"
     },
     { 
-      name: "Humania Assurance", 
-      logo: "./assets/logos/humania-assurance.png",
-      website: "https://www.humania.ca"
-    },
-    { 
       name: "Sun Life Financial", 
       logo: "./assets/logos/sun-life-financial.png",
       website: "https://www.sunlife.ca"

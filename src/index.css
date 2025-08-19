@@ -502,7 +502,7 @@ html {
 /* Larger logos that need to be more visible */
 .partners-track a[href*="ia.ca"] img,
 .partners-track a[href*="rbc"] img {
-  height: 55px !important;
+  height: 69px !important;
 }
 
 /* Mobile optimization for partners */
@@ -528,18 +528,13 @@ html {
   .partners-track a[href*="humania"] img {
     height: 5px !important;
   }
-  
-  /* Desjardins logo on mobile */
-  .partners-track a[href*="desjardins"] img {
-    height: 26px !important;
-  }
 }
 
 /* Mobile optimization for larger logos */
 @media (max-width: 768px) {
   .partners-track a[href*="ia.ca"] img,
   .partners-track a[href*="rbc"] img {
-    height: 42px !important;
+    height: 53px !important;
   }
 }
 
