@@ -489,6 +489,14 @@ html {
 .partners-track a[href*="equitable"] img {
   height: 32px !important;
 }
+
+/* Larger logos that need to be more visible */
+.partners-track a[href*="ia.ca"] img,
+.partners-track a[href*="rbc"] img,
+.partners-track a[href*="uvassurance"] img {
+  height: 55px !important;
+}
+
 /* Mobile optimization for partners */
 @media (max-width: 768px) {
   .partners-track {
@@ -509,6 +517,16 @@ html {
     height: 26px !important;
   }
 }
+
+/* Mobile optimization for larger logos */
+@media (max-width: 768px) {
+  .partners-track a[href*="ia.ca"] img,
+  .partners-track a[href*="rbc"] img,
+  .partners-track a[href*="uvassurance"] img {
+    height: 42px !important;
+  }
+}
+
 .partners-track::-webkit-scrollbar{ height:6px }
 
 /* House construction animations */
