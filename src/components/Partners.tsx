@@ -4,7 +4,7 @@ import { useRef, useEffect } from 'react';
 // Reusable cell component with Tailwind + CSS vars
 function LogoCell({ href, src, alt, zoom = 1, clip = "0 0 0 0" }) {
   return (
-    <li className="shrink-0 h-20 w-48 md:h-24 md:w-56 xl:h-24 xl:w-60 flex items-center justify-center rounded-lg bg-white overflow-hidden">
+    <li className="shrink-0 h-20 w-48 md:h-24 md:w-56 flex items-center justify-center rounded-lg bg-white overflow-hidden">
       <a href={href} target="_blank" rel="noopener" aria-label={alt} className="block p-2 md:p-3">
         <img
           src={src}
