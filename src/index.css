@@ -456,7 +456,7 @@ html {
 .partners-track{
   display:flex;
   flex-wrap:nowrap !important;
-  gap:16px;
+  gap:24px;
   overflow-x:scroll;
   -webkit-overflow-scrolling:touch;
   align-items:center;
@@ -508,7 +508,7 @@ html {
 /* Mobile optimization for partners */
 @media (max-width: 768px) {
   .partners-track {
-    gap:12px;
+    gap:18px;
   }
   .partners-track a {
     min-width:70px;
