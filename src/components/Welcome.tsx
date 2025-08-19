@@ -83,7 +83,7 @@ const Welcome = () => {
           <div className="relative z-10 animate-slide-in-right order-1 lg:order-2 flex justify-center">
             <div className="relative">
               <img
-                src="./IMG_2794.jpeg"
+                src="./hero-marc-olivier.jpg"
                 alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
                 className="w-64 sm:w-72 lg:w-80 h-auto object-cover object-top transition-transform duration-500 hover:scale-105"
                 style={{
