@@ -109,7 +109,7 @@ const Partners: React.FC = () => {
             </span>
           </div>
           <h3 className="text-display text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 animate-slide-up stagger-2 text-white" style={{ fontFamily: 'Poppins', fontWeight: '700', lineHeight: '1.1' }}>
-            Nos partenaires
+            Mes partenaires
           </h3>
         </div>
 
@@ -154,7 +154,7 @@ const Partners: React.FC = () => {
         {/* Additional Info */}
         <div className="text-center mt-8 sm:mt-12">
           <p className="text-white text-sm sm:text-base max-w-2xl mx-auto">
-            Nous collaborons avec les plus grandes institutions financières du Canada pour vous offrir les meilleures solutions d'épargne et d'assurance.
+            Collaboration avec les plus grandes institutions financières du Canada pour vous offrir les meilleures solutions d'épargne et d'assurance.
           </p>
         </div>
       </div>
