@@ -189,19 +189,19 @@ const Partners: React.FC = () => {
               />
             </a>
             <a href="https://www.empire.ca/" target="_blank" rel="noopener" aria-label="L'Empire Vie" className="flex-shrink-0 transition-transform duration-300 hover:scale-110">
-              <img src="./assets/logos/empire-life.png" alt="L'Empire Vie" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300">
+              <img src="./assets/logos/empire-life.png" alt="L'Empire Vie" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300" />
             </a>
             <a href="https://www.humania.ca/" target="_blank" rel="noopener" aria-label="Humania Assurance" className="flex-shrink-0 transition-transform duration-300 hover:scale-110">
-              <img src="./assets/logos/humania-assurance.jpg" alt="Humania Assurance" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300">
+              <img src="./assets/logos/humania-assurance.jpg" alt="Humania Assurance" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300" />
             </a>
             <a href="https://ivari.ca/" target="_blank" rel="noopener" aria-label="ivari" className="flex-shrink-0 transition-transform duration-300 hover:scale-110">
-              <img src="./assets/logos/ivari.webp" alt="ivari" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300">
+              <img src="./assets/logos/ivari.webp" alt="ivari" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300" />
             </a>
             <a href="https://www.beneva.ca/" target="_blank" rel="noopener" aria-label="La Capitale (Beneva)" className="flex-shrink-0 transition-transform duration-300 hover:scale-110">
-              <img src="./assets/logos/la-capitale.jpg" alt="La Capitale" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300">
+              <img src="./assets/logos/la-capitale.jpg" alt="La Capitale" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300" />
             </a>
             <a href="https://ppi.ca/" target="_blank" rel="noopener" aria-label="PPI" className="flex-shrink-0 transition-transform duration-300 hover:scale-110">
-              <img src="./assets/logos/ppi.png" alt="PPI" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300">
+              <img src="./assets/logos/ppi.png" alt="PPI" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300" />
             </a>
             
             {/* Et plus encore... */}
