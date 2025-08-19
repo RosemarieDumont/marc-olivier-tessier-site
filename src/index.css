@@ -491,7 +491,7 @@ html {
 
 /* Extra small logos that need significant reduction */
 .partners-track a[href*="humania"] img {
-  height: 13px !important;
+  height: 6px !important;
 }
 
 /* Desjardins logo reduction */
@@ -526,7 +526,7 @@ html {
   
   /* Extra small logos on mobile */
   .partners-track a[href*="humania"] img {
-    height: 10px !important;
+    height: 5px !important;
   }
   
   /* Desjardins logo on mobile */
