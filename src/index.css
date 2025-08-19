@@ -492,8 +492,7 @@ html {
 
 /* Larger logos that need to be more visible */
 .partners-track a[href*="ia.ca"] img,
-.partners-track a[href*="rbc"] img,
-.partners-track a[href*="uvassurance"] img {
+.partners-track a[href*="rbc"] img {
   height: 55px !important;
 }
 
@@ -521,37 +520,11 @@ html {
 /* Mobile optimization for larger logos */
 @media (max-width: 768px) {
   .partners-track a[href*="ia.ca"] img,
-  .partners-track a[href*="rbc"] img,
-  .partners-track a[href*="uvassurance"] img {
+  .partners-track a[href*="rbc"] img {
     height: 42px !important;
   }
 }
 
-/* Special styling for UV Assurance logo for better integration */
-.partners-track a[href*="uvassurance"] {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  min-width: 100px !important;
-}
-
-.partners-track a[href*="uvassurance"] img {
-  height: 75px !important;
-  object-position: center bottom !important;
-  transform: translateY(-5px) !important;
-}
-
-/* Mobile optimization for UV Assurance */
-@media (max-width: 768px) {
-  .partners-track a[href*="uvassurance"] {
-    min-width: 85px !important;
-  }
-  
-  .partners-track a[href*="uvassurance"] img {
-    height: 60px !important;
-    transform: translateY(-3px) !important;
-  }
-}
 .partners-track::-webkit-scrollbar{ height:6px }
 
 /* House construction animations */

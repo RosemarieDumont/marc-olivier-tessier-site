@@ -68,11 +68,6 @@ const Partners: React.FC = () => {
       website: "https://www.canadalife.com"
     },
     { 
-      name: "UV Assurance", 
-      logo: "./assets/logos/uv-assurance.png",
-      website: "https://www.uvassurance.ca"
-    },
-    { 
       name: "Assumption Life", 
       logo: "./assets/logos/assumption-life.png",
       website: "https://www.assumption.ca"
