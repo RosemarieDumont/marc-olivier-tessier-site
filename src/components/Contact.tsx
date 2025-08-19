@@ -67,7 +67,7 @@ const Contact = () => {
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl font-bold text-white mb-4 animate-slide-up stagger-1" style={{ fontFamily: 'Poppins', fontWeight: '700' }}>Discutons de vos objectifs</h2>
           <p className="text-body text-lg text-white/85 max-w-3xl mx-auto animate-slide-up stagger-2">
-            Prêt à commencer votre parcours vers la sécurité financière ? Contactez-nous dès aujourd'hui
+            Prêt à commencer votre parcours vers la sécurité financière ? Je vous invite à me contacter dès aujourd'hui.
           </p>
         </div>
 
