@@ -134,7 +134,11 @@ const Partners: React.FC = () => {
                 <img 
                   src={partner.logo} 
                   alt={partner.name}
-                  className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
+                  className={`w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300 ${
+                    partner.name === "iA Groupe financier" || partner.name === "RBC" || partner.name === "UV Assurance" 
+                      ? "h-16" 
+                      : "h-12"
+                  }`}
                 />
               </a>
             ))}

@@ -493,6 +493,10 @@ html {
   .partners-track img {
     height:35px;
   }
+  /* Enlarged logos on mobile */
+  .partners-track img.h-16 {
+    height:45px;
+  }
 }
 .partners-track::-webkit-scrollbar{ height:6px }
 
