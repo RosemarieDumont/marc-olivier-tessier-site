@@ -89,15 +89,15 @@ const Partners: React.FC = () => {
               <LogoCell href="https://www.foresters.com" src="./assets/logos/foresters-financial.png" alt="Foresters Financial" />
               <LogoCell href="https://www.equitable.ca" src="./assets/logos/equitable-life-of-canada.png" alt="Equitable Life of Canada" />
               <LogoCell href="https://www.empire.ca/" src="./assets/logos/empire-life.png" alt="L'Empire Vie" />
-              <LogoCell href="https://www.humania.ca/" src="./assets/logos/humania-assurance.jpg" alt="Humania Assurance" zoom={1.2} cap="90%" />
+              <LogoCell href="https://www.humania.ca" src="./assets/logos/humania-assurance.jpg" alt="Humania Assurance" zoom={1.18} cap="96%" />
               <LogoCell href="https://ivari.ca/" src="./assets/logos/ivari.webp" alt="ivari" />
-              <LogoCell href="https://www.beneva.ca/" src="./assets/logos/la-capitale.jpg" alt="La Capitale" zoom={1.15} cap="85%" />
+              <LogoCell href="https://www.beneva.ca/" src="./assets/logos/la-capitale.jpg" alt="La Capitale" zoom={1.22} cap="96%" />
               <LogoCell href="https://ppi.ca/" src="./assets/logos/ppi.png" alt="PPI" />
               <LogoCell href="https://www.manulife.ca" src="./assets/logos/manulife-logo.jpg" alt="Manulife" />
-              <LogoCell href="https://specialtylifeinsurance.ca" src="./assets/logos/sli-logo.jpg" alt="Specialty Life Insurance (SLI)" zoom={1.25} cap="88%" />
-              <LogoCell href="https://uvinsurance.ca" src="./assets/logos/uv-assurance.png" alt="UV Insurance" zoom={1.18} cap="92%" />
-              <LogoCell href="https://www.beneva.ca" src="./assets/logos/ssq-logo.png" alt="SSQ Insurance" zoom={1.22} cap="90%" />
-              <LogoCell href="https://www.edgebenefits.com" src="./assets/logos/the-edge-logo.jpg" alt="The Edge Benefits" zoom={1.2} cap="85%" />
+              <LogoCell href="https://specialtylifeinsurance.ca" src="./assets/logos/sli-logo.jpg" alt="Specialty Life Insurance (SLI)" zoom={1.24} cap="96%" />
+              <LogoCell href="https://uvinsurance.ca" src="./assets/logos/uv-assurance.png" alt="UV Assurance" zoom={1.20} cap="96%" />
+              <LogoCell href="https://www.beneva.ca" src="./assets/logos/ssq-logo.png" alt="SSQ Assurance" zoom={1.18} cap="96%" />
+              <LogoCell href="https://www.edgebenefits.com" src="./assets/logos/the-edge-logo.jpg" alt="The Edge Benefits" zoom={1.22} cap="96%" />
               
               {/* Et plus encore... */}
               <li className="shrink-0 h-20 w-48 md:h-24 md:w-56 flex items-center justify-center bg-white rounded-lg">
