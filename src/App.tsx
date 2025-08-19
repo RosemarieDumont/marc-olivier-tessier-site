@@ -58,28 +58,6 @@ function App() {
                   </p>
                 </div>
               </div>
-              <div className="flex justify-center relative z-10 animate-slide-in-right stagger-2">
-                <div className="bg-white/10 p-3 sm:p-4 lg:p-8 rounded-xl border border-white/20 hover-scale transition-all duration-500 hover:bg-white/15 w-full max-w-xs sm:max-w-sm">
-                  <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:gap-6 text-center">
-                    <div className="animate-scale-in stagger-1">
-                      <div className="text-base sm:text-xl lg:text-3xl font-bold text-white">AMF</div>
-                      <div className="text-xs sm:text-sm text-white/70">Certifié</div>
-                    </div>
-                    <div className="animate-scale-in stagger-2">
-                      <div className="text-base sm:text-xl lg:text-3xl font-bold text-white">iA</div>
-                      <div className="text-xs sm:text-sm text-white/70">Affilié</div>
-                    </div>
-                    <div className="animate-scale-in stagger-3">
-                      <div className="text-xs sm:text-base lg:text-xl font-bold text-white leading-tight">Immobilier</div>
-                      <div className="text-xs sm:text-sm text-white/70">Propriétaire</div>
-                    </div>
-                    <div className="animate-scale-in stagger-4">
-                      <div className="text-xs sm:text-base lg:text-xl font-bold text-white leading-tight">Investisseur</div>
-                      <div className="text-xs sm:text-sm text-white/70">Actif</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
