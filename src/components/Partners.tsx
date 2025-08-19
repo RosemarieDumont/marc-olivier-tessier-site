@@ -56,179 +56,125 @@ const Partners: React.FC = () => {
           </div>
           
           <div className="partners-track">
-            <a 
-              href="https://ia.ca"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center"
-            >
-              <img 
-                src="./logo IA.png" 
-                alt="iA Groupe financier"
-                className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
-              />
-            </a>
-            <a 
-              href="https://www.bmo.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center"
-            >
-              <img 
-                src="./assets/logos/bmo.png" 
-                alt="BMO"
-                className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
-              />
-            </a>
-            <a 
-              href="https://www.beneva.ca"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center"
-            >
-              <img 
-                src="./assets/logos/beneva.png" 
-                alt="Beneva"
-                className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
-              />
-            </a>
-            <a 
-              href="https://www.rbc.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center"
-            >
-              <img 
-                src="./assets/logos/RBC-logo.jpg" 
-                alt="RBC"
-                className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
-              />
-            </a>
-            <a 
-              href="https://www.qc.bluecross.ca"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center"
-            >
-              <img 
-                src="./assets/logos/blue-cross.png" 
-                alt="Blue Cross"
-                className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
-              />
-            </a>
-            <a 
-              href="https://www.desjardins.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center"
-            >
-              <img 
-                src="./assets/logos/desjardins.png" 
-                alt="Desjardins"
-                className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
-              />
-            </a>
-            <a 
-              href="https://www.canadalife.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center"
-            >
-              <img 
-                src="./assets/logos/canada-life.png" 
-                alt="Canada Life"
-                className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
-              />
-            </a>
-            <a 
-              href="https://www.assumption.ca"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center"
-            >
-              <img 
-                src="./assets/logos/assumption-life.png" 
-                alt="Assumption Life"
-                className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
-              />
-            </a>
-            <a 
-              href="https://www.sunlife.ca"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center"
-            >
-              <img 
-                src="./assets/logos/sun-life-financial.png" 
-                alt="Sun Life Financial"
-                className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
-              />
-            </a>
-            <a 
-              href="https://www.foresters.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center"
-            >
-              <img 
-                src="./assets/logos/foresters-financial.png" 
-                alt="Foresters Financial"
-                className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
-              />
-            </a>
-            <a 
-              href="https://www.equitable.ca"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center"
-            >
-              <img 
-                src="./assets/logos/equitable-life-of-canada.png" 
-                alt="Equitable Life of Canada"
-                className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
-              />
-            </a>
-            <a href="https://www.empire.ca/" target="_blank" rel="noopener" aria-label="L'Empire Vie" className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center">
-              <img src="./assets/logos/empire-life.png" alt="L'Empire Vie" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300" />
-            </a>
-            <a href="https://www.humania.ca/" target="_blank" rel="noopener" aria-label="Humania Assurance" className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center">
-              <img src="./assets/logos/humania-assurance.jpg" alt="Humania Assurance" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300" />
-            </a>
-            <a href="https://ivari.ca/" target="_blank" rel="noopener" aria-label="ivari" className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center">
-              <img src="./assets/logos/ivari.webp" alt="ivari" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300" />
-            </a>
-            <a href="https://www.beneva.ca/" target="_blank" rel="noopener" aria-label="La Capitale (Beneva)" className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center">
-              <img src="./assets/logos/la-capitale.jpg" alt="La Capitale" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300" />
-            </a>
-            <a href="https://ppi.ca/" target="_blank" rel="noopener" aria-label="PPI" className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center">
-              <img src="./assets/logos/ppi.png" alt="PPI" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300" />
-            </a>
-            
-            <a href="https://www.manulife.ca" target="_blank" rel="noopener" aria-label="Manulife" className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center">
-              <img src="./assets/logos/manulife-logo.jpg" alt="Manulife" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300" />
-            </a>
-            <a href="https://specialtylifeinsurance.ca" target="_blank" rel="noopener" aria-label="Specialty Life Insurance (SLI)" className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center">
-              <img src="./assets/logos/sli-logo.jpg" alt="Specialty Life Insurance (SLI)" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300" />
-            </a>
-            <a href="https://uvinsurance.ca" target="_blank" rel="noopener" aria-label="UV Insurance" className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center">
-              <img src="./assets/logos/uv-assurance.png" alt="UV Insurance" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300" />
-            </a>
-            <a href="https://www.beneva.ca" target="_blank" rel="noopener" aria-label="SSQ Insurance" className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center">
-              <img src="./assets/logos/ssq-logo.png" alt="SSQ Insurance" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300" />
-            </a>
-            <a href="https://www.edgebenefits.com" target="_blank" rel="noopener" aria-label="The Edge Benefits" className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center">
-              <img src="./assets/logos/the-edge-logo.jpg" alt="The Edge Benefits" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300" />
-            </a>
-            
-            {/* Et plus encore... */}
-            <div className="flex-shrink-0 flex items-center justify-center min-w-[120px] px-4 h-14">
-              <span 
-                className="text-white/70 font-medium text-sm italic transition-all duration-300 hover:text-white/90 hover:scale-105 cursor-default whitespace-nowrap"
-                style={{ fontFamily: 'Poppins', fontWeight: '500' }}
-              >
-                Et plus encore...
-              </span>
-            </div>
+            <ul className="flex items-center gap-8 md:gap-12 overflow-x-auto md:overflow-visible snap-x snap-mandatory">
+              <li className="snap-center shrink-0 h-16 w-40 md:h-20 md:w-48 xl:h-24 xl:w-56 flex items-center justify-center bg-white rounded-lg">
+                <a href="https://ia.ca" target="_blank" rel="noopener" aria-label="iA Groupe financier" className="block p-2 md:p-3">
+                  <img src="./logo IA.png" alt="iA Groupe financier" loading="lazy" className="block max-h-full max-w-full object-contain opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-200 will-change-transform" />
+                </a>
+              </li>
+              <li className="snap-center shrink-0 h-16 w-40 md:h-20 md:w-48 xl:h-24 xl:w-56 flex items-center justify-center bg-white rounded-lg">
+                <a href="https://www.bmo.com" target="_blank" rel="noopener" aria-label="BMO" className="block p-2 md:p-3">
+                  <img src="./assets/logos/bmo.png" alt="BMO" loading="lazy" className="block max-h-full max-w-full object-contain opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-200 will-change-transform" />
+                </a>
+              </li>
+              <li className="snap-center shrink-0 h-16 w-40 md:h-20 md:w-48 xl:h-24 xl:w-56 flex items-center justify-center bg-white rounded-lg">
+                <a href="https://www.beneva.ca" target="_blank" rel="noopener" aria-label="Beneva" className="block p-2 md:p-3">
+                  <img src="./assets/logos/beneva.png" alt="Beneva" loading="lazy" className="block max-h-full max-w-full object-contain opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-200 will-change-transform" />
+                </a>
+              </li>
+              <li className="snap-center shrink-0 h-16 w-40 md:h-20 md:w-48 xl:h-24 xl:w-56 flex items-center justify-center bg-white rounded-lg">
+                <a href="https://www.rbc.com" target="_blank" rel="noopener" aria-label="RBC" className="block p-2 md:p-3">
+                  <img src="./assets/logos/RBC-logo.jpg" alt="RBC" loading="lazy" className="block max-h-full max-w-full object-contain opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-200 will-change-transform" />
+                </a>
+              </li>
+              <li className="snap-center shrink-0 h-16 w-40 md:h-20 md:w-48 xl:h-24 xl:w-56 flex items-center justify-center bg-white rounded-lg">
+                <a href="https://www.qc.bluecross.ca" target="_blank" rel="noopener" aria-label="Blue Cross" className="block p-2 md:p-3">
+                  <img src="./assets/logos/blue-cross.png" alt="Blue Cross" loading="lazy" className="block max-h-full max-w-full object-contain opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-200 will-change-transform" />
+                </a>
+              </li>
+              <li className="snap-center shrink-0 h-16 w-40 md:h-20 md:w-48 xl:h-24 xl:w-56 flex items-center justify-center bg-white rounded-lg">
+                <a href="https://www.desjardins.com" target="_blank" rel="noopener" aria-label="Desjardins" className="block p-2 md:p-3">
+                  <img src="./assets/logos/desjardins.png" alt="Desjardins" loading="lazy" className="block max-h-full max-w-full object-contain opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-200 will-change-transform" />
+                </a>
+              </li>
+              <li className="snap-center shrink-0 h-16 w-40 md:h-20 md:w-48 xl:h-24 xl:w-56 flex items-center justify-center bg-white rounded-lg">
+                <a href="https://www.canadalife.com" target="_blank" rel="noopener" aria-label="Canada Life" className="block p-2 md:p-3">
+                  <img src="./assets/logos/canada-life.png" alt="Canada Life" loading="lazy" className="block max-h-full max-w-full object-contain opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-200 will-change-transform" />
+                </a>
+              </li>
+              <li className="snap-center shrink-0 h-16 w-40 md:h-20 md:w-48 xl:h-24 xl:w-56 flex items-center justify-center bg-white rounded-lg">
+                <a href="https://www.assumption.ca" target="_blank" rel="noopener" aria-label="Assumption Life" className="block p-2 md:p-3">
+                  <img src="./assets/logos/assumption-life.png" alt="Assumption Life" loading="lazy" className="block max-h-full max-w-full object-contain opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-200 will-change-transform" />
+                </a>
+              </li>
+              <li className="snap-center shrink-0 h-16 w-40 md:h-20 md:w-48 xl:h-24 xl:w-56 flex items-center justify-center bg-white rounded-lg">
+                <a href="https://www.sunlife.ca" target="_blank" rel="noopener" aria-label="Sun Life Financial" className="block p-2 md:p-3">
+                  <img src="./assets/logos/sun-life-financial.png" alt="Sun Life Financial" loading="lazy" className="block max-h-full max-w-full object-contain opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-200 will-change-transform" />
+                </a>
+              </li>
+              <li className="snap-center shrink-0 h-16 w-40 md:h-20 md:w-48 xl:h-24 xl:w-56 flex items-center justify-center bg-white rounded-lg">
+                <a href="https://www.foresters.com" target="_blank" rel="noopener" aria-label="Foresters Financial" className="block p-2 md:p-3">
+                  <img src="./assets/logos/foresters-financial.png" alt="Foresters Financial" loading="lazy" className="block max-h-full max-w-full object-contain opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-200 will-change-transform" />
+                </a>
+              </li>
+              <li className="snap-center shrink-0 h-16 w-40 md:h-20 md:w-48 xl:h-24 xl:w-56 flex items-center justify-center bg-white rounded-lg">
+                <a href="https://www.equitable.ca" target="_blank" rel="noopener" aria-label="Equitable Life of Canada" className="block p-2 md:p-3">
+                  <img src="./assets/logos/equitable-life-of-canada.png" alt="Equitable Life of Canada" loading="lazy" className="block max-h-full max-w-full object-contain opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-200 will-change-transform" />
+                </a>
+              </li>
+              <li className="snap-center shrink-0 h-16 w-40 md:h-20 md:w-48 xl:h-24 xl:w-56 flex items-center justify-center bg-white rounded-lg">
+                <a href="https://www.empire.ca/" target="_blank" rel="noopener" aria-label="L'Empire Vie" className="block p-2 md:p-3">
+                  <img src="./assets/logos/empire-life.png" alt="L'Empire Vie" loading="lazy" className="block max-h-full max-w-full object-contain opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-200 will-change-transform" />
+                </a>
+              </li>
+              <li className="snap-center shrink-0 h-16 w-40 md:h-20 md:w-48 xl:h-24 xl:w-56 flex items-center justify-center bg-white rounded-lg">
+                <a href="https://www.humania.ca/" target="_blank" rel="noopener" aria-label="Humania Assurance" className="block p-2 md:p-3">
+                  <img src="./assets/logos/humania-assurance.jpg" alt="Humania Assurance" loading="lazy" className="block max-h-full max-w-full object-contain opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-200 will-change-transform" />
+                </a>
+              </li>
+              <li className="snap-center shrink-0 h-16 w-40 md:h-20 md:w-48 xl:h-24 xl:w-56 flex items-center justify-center bg-white rounded-lg">
+                <a href="https://ivari.ca/" target="_blank" rel="noopener" aria-label="ivari" className="block p-2 md:p-3">
+                  <img src="./assets/logos/ivari.webp" alt="ivari" loading="lazy" className="block max-h-full max-w-full object-contain opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-200 will-change-transform" />
+                </a>
+              </li>
+              <li className="snap-center shrink-0 h-16 w-40 md:h-20 md:w-48 xl:h-24 xl:w-56 flex items-center justify-center bg-white rounded-lg">
+                <a href="https://www.beneva.ca/" target="_blank" rel="noopener" aria-label="La Capitale (Beneva)" className="block p-2 md:p-3">
+                  <img src="./assets/logos/la-capitale.jpg" alt="La Capitale" loading="lazy" className="block max-h-full max-w-full object-contain opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-200 will-change-transform" />
+                </a>
+              </li>
+              <li className="snap-center shrink-0 h-16 w-40 md:h-20 md:w-48 xl:h-24 xl:w-56 flex items-center justify-center bg-white rounded-lg">
+                <a href="https://ppi.ca/" target="_blank" rel="noopener" aria-label="PPI" className="block p-2 md:p-3">
+                  <img src="./assets/logos/ppi.png" alt="PPI" loading="lazy" className="block max-h-full max-w-full object-contain opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-200 will-change-transform" />
+                </a>
+              </li>
+              <li className="snap-center shrink-0 h-16 w-40 md:h-20 md:w-48 xl:h-24 xl:w-56 flex items-center justify-center bg-white rounded-lg">
+                <a href="https://www.manulife.ca" target="_blank" rel="noopener" aria-label="Manulife" className="block p-2 md:p-3">
+                  <img src="./assets/logos/manulife-logo.jpg" alt="Manulife" loading="lazy" className="block max-h-full max-w-full object-contain opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-200 will-change-transform" />
+                </a>
+              </li>
+              <li className="snap-center shrink-0 h-16 w-40 md:h-20 md:w-48 xl:h-24 xl:w-56 flex items-center justify-center bg-white rounded-lg">
+                <a href="https://specialtylifeinsurance.ca" target="_blank" rel="noopener" aria-label="Specialty Life Insurance (SLI)" className="block p-2 md:p-3">
+                  <img src="./assets/logos/sli-logo.jpg" alt="Specialty Life Insurance (SLI)" loading="lazy" className="block max-h-full max-w-full object-contain opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-200 will-change-transform" />
+                </a>
+              </li>
+              <li className="snap-center shrink-0 h-16 w-40 md:h-20 md:w-48 xl:h-24 xl:w-56 flex items-center justify-center bg-white rounded-lg">
+                <a href="https://uvinsurance.ca" target="_blank" rel="noopener" aria-label="UV Insurance" className="block p-2 md:p-3">
+                  <img src="./assets/logos/uv-assurance.png" alt="UV Insurance" loading="lazy" className="block max-h-full max-w-full object-contain opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-200 will-change-transform" />
+                </a>
+              </li>
+              <li className="snap-center shrink-0 h-16 w-40 md:h-20 md:w-48 xl:h-24 xl:w-56 flex items-center justify-center bg-white rounded-lg">
+                <a href="https://www.beneva.ca" target="_blank" rel="noopener" aria-label="SSQ Insurance" className="block p-2 md:p-3">
+                  <img src="./assets/logos/ssq-logo.png" alt="SSQ Insurance" loading="lazy" className="block max-h-full max-w-full object-contain opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-200 will-change-transform" />
+                </a>
+              </li>
+              <li className="snap-center shrink-0 h-16 w-40 md:h-20 md:w-48 xl:h-24 xl:w-56 flex items-center justify-center bg-white rounded-lg">
+                <a href="https://www.edgebenefits.com" target="_blank" rel="noopener" aria-label="The Edge Benefits" className="block p-2 md:p-3">
+                  <img src="./assets/logos/the-edge-logo.jpg" alt="The Edge Benefits" loading="lazy" className="block max-h-full max-w-full object-contain opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-200 will-change-transform" />
+                </a>
+              </li>
+              
+              {/* Et plus encore... */}
+              <li className="snap-center shrink-0 h-16 w-40 md:h-20 md:w-48 xl:h-24 xl:w-56 flex items-center justify-center bg-white rounded-lg">
+                <div className="block p-2 md:p-3">
+                  <span 
+                    className="text-gray-600 font-medium text-sm italic transition-all duration-300 hover:text-gray-800 hover:scale-105 cursor-default whitespace-nowrap"
+                    style={{ fontFamily: 'Poppins', fontWeight: '500' }}
+                  >
+                    Et plus encore...
+                  </span>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
 
