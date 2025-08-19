@@ -22,7 +22,7 @@ const Footer = () => {
               <p>Permis de l'AMF : 262945</p>
               <p>Membre de la Chambre de la sécurité financière</p>
               <div className="mt-4 flex flex-col items-start">
-                <p className="text-caption text-white/70 mb-2">Partenaire</p>
+                <p className="text-caption text-white/70 mb-2">Partenaire affilié</p>
                 <img 
                   src="./logo IA.png" 
                   alt="iA Groupe financier" 
