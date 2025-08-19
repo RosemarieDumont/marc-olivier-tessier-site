@@ -47,7 +47,7 @@ const Welcome = () => {
   ];
 
   return (
-    <section ref={sectionRef} id="welcome" className="relative py-12 sm:py-16 lg:py-20 overflow-hidden bg-white animate-section-hidden -mt-4">
+    <section ref={sectionRef} id="welcome" className="relative py-6 sm:py-8 lg:py-12 overflow-hidden bg-white animate-section-hidden -mt-16">
       {/* Desktop radial gradient behind text */}
       <div className="absolute inset-0 hidden lg:block">
         <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-radial from-blue-50 via-blue-25 to-transparent blur-2xl"></div>

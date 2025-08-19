@@ -30,7 +30,9 @@ function App() {
   return (
     <div className="min-h-screen">
       <Header />
-      <Hero />
+      <div className="mb-0">
+        <Hero />
+      </div>
       <Welcome />
       <Services />
       <div className="py-12 sm:py-16 lg:py-24 bg-white">
