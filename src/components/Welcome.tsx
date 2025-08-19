@@ -82,15 +82,22 @@ const Welcome = () => {
           {/* Right Image */}
           <div className="relative z-10 animate-slide-in-right order-1 lg:order-2 flex justify-center">
             <div className="relative">
-              <img
-                src="./hero-marc-olivier.jpg"
-                alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
-                className="w-64 sm:w-72 lg:w-80 h-auto object-cover object-top transition-transform duration-500 hover:scale-105"
-                style={{
-                  borderRadius: '12px',
-                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15), 0 4px 16px rgba(0, 0, 0, 0.1)'
-                }}
-              />
+              {/* Background with gradient */}
+              <div className="relative p-6 rounded-2xl" style={{ 
+                background: 'linear-gradient(135deg, var(--primary-blue) 0%, #1a3a6b 50%, #274272 100%)',
+                boxShadow: '0 12px 40px rgba(15, 42, 82, 0.25), 0 6px 20px rgba(15, 42, 82, 0.15)'
+              }}>
+                <img
+                  src="./marc-olivier-héro.jpeg"
+                  alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
+                  className="w-64 sm:w-72 lg:w-80 h-auto object-cover object-center transition-transform duration-500 hover:scale-105 rounded-xl"
+                  style={{
+                    boxShadow: '0 8px 24px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.1)'
+                  }}
+                />
+                {/* Subtle overlay for better integration */}
+                <div className="absolute inset-6 rounded-xl bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none"></div>
+              </div>
             </div>
           </div>
         </div>
