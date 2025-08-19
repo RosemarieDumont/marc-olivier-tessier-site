@@ -60,7 +60,7 @@ const Partners: React.FC = () => {
               href="https://ia.ca"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-shrink-0 transition-transform duration-300 hover:scale-110"
+              className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center"
             >
               <img 
                 src="./logo IA.png" 
@@ -72,7 +72,7 @@ const Partners: React.FC = () => {
               href="https://www.bmo.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-shrink-0 transition-transform duration-300 hover:scale-110"
+              className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center"
             >
               <img 
                 src="./assets/logos/bmo.png" 
@@ -84,7 +84,7 @@ const Partners: React.FC = () => {
               href="https://www.beneva.ca"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-shrink-0 transition-transform duration-300 hover:scale-110"
+              className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center"
             >
               <img 
                 src="./assets/logos/beneva.png" 
@@ -96,7 +96,7 @@ const Partners: React.FC = () => {
               href="https://www.rbc.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-shrink-0 transition-transform duration-300 hover:scale-110"
+              className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center"
             >
               <img 
                 src="./assets/logos/RBC-logo.jpg" 
@@ -108,7 +108,7 @@ const Partners: React.FC = () => {
               href="https://www.qc.bluecross.ca"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-shrink-0 transition-transform duration-300 hover:scale-110"
+              className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center"
             >
               <img 
                 src="./assets/logos/blue-cross.png" 
@@ -120,7 +120,7 @@ const Partners: React.FC = () => {
               href="https://www.desjardins.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-shrink-0 transition-transform duration-300 hover:scale-110"
+              className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center"
             >
               <img 
                 src="./assets/logos/desjardins.png" 
@@ -132,7 +132,7 @@ const Partners: React.FC = () => {
               href="https://www.canadalife.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-shrink-0 transition-transform duration-300 hover:scale-110"
+              className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center"
             >
               <img 
                 src="./assets/logos/canada-life.png" 
@@ -144,7 +144,7 @@ const Partners: React.FC = () => {
               href="https://www.assumption.ca"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-shrink-0 transition-transform duration-300 hover:scale-110"
+              className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center"
             >
               <img 
                 src="./assets/logos/assumption-life.png" 
@@ -156,7 +156,7 @@ const Partners: React.FC = () => {
               href="https://www.sunlife.ca"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-shrink-0 transition-transform duration-300 hover:scale-110"
+              className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center"
             >
               <img 
                 src="./assets/logos/sun-life-financial.png" 
@@ -168,7 +168,7 @@ const Partners: React.FC = () => {
               href="https://www.foresters.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-shrink-0 transition-transform duration-300 hover:scale-110"
+              className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center"
             >
               <img 
                 src="./assets/logos/foresters-financial.png" 
@@ -180,7 +180,7 @@ const Partners: React.FC = () => {
               href="https://www.equitable.ca"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-shrink-0 transition-transform duration-300 hover:scale-110"
+              className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center"
             >
               <img 
                 src="./assets/logos/equitable-life-of-canada.png" 
@@ -188,24 +188,24 @@ const Partners: React.FC = () => {
                 className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300"
               />
             </a>
-            <a href="https://www.empire.ca/" target="_blank" rel="noopener" aria-label="L'Empire Vie" className="flex-shrink-0 transition-transform duration-300 hover:scale-110">
+            <a href="https://www.empire.ca/" target="_blank" rel="noopener" aria-label="L'Empire Vie" className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center">
               <img src="./assets/logos/empire-life.png" alt="L'Empire Vie" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300" />
             </a>
-            <a href="https://www.humania.ca/" target="_blank" rel="noopener" aria-label="Humania Assurance" className="flex-shrink-0 transition-transform duration-300 hover:scale-110">
+            <a href="https://www.humania.ca/" target="_blank" rel="noopener" aria-label="Humania Assurance" className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center">
               <img src="./assets/logos/humania-assurance.jpg" alt="Humania Assurance" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300" />
             </a>
-            <a href="https://ivari.ca/" target="_blank" rel="noopener" aria-label="ivari" className="flex-shrink-0 transition-transform duration-300 hover:scale-110">
+            <a href="https://ivari.ca/" target="_blank" rel="noopener" aria-label="ivari" className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center">
               <img src="./assets/logos/ivari.webp" alt="ivari" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300" />
             </a>
-            <a href="https://www.beneva.ca/" target="_blank" rel="noopener" aria-label="La Capitale (Beneva)" className="flex-shrink-0 transition-transform duration-300 hover:scale-110">
+            <a href="https://www.beneva.ca/" target="_blank" rel="noopener" aria-label="La Capitale (Beneva)" className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center">
               <img src="./assets/logos/la-capitale.jpg" alt="La Capitale" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300" />
             </a>
-            <a href="https://ppi.ca/" target="_blank" rel="noopener" aria-label="PPI" className="flex-shrink-0 transition-transform duration-300 hover:scale-110">
+            <a href="https://ppi.ca/" target="_blank" rel="noopener" aria-label="PPI" className="flex-shrink-0 transition-transform duration-300 hover:scale-110 flex items-center justify-center">
               <img src="./assets/logos/ppi.png" alt="PPI" loading="lazy" decoding="async" className="h-12 w-auto object-contain filter brightness-0 opacity-60 hover:opacity-100 hover:brightness-100 transition-all duration-300" />
             </a>
             
             {/* Et plus encore... */}
-            <div className="flex-shrink-0 flex items-center justify-center min-w-[120px] px-4">
+            <div className="flex-shrink-0 flex items-center justify-center min-w-[120px] px-4 h-14">
               <span 
                 className="text-white/70 font-medium text-sm italic transition-all duration-300 hover:text-white/90 hover:scale-105 cursor-default whitespace-nowrap"
                 style={{ fontFamily: 'Poppins', fontWeight: '500' }}
