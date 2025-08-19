@@ -68,7 +68,7 @@ const Welcome = () => {
             </h2>
             <div className="space-y-3 sm:space-y-4">
               <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
-                Mon approche s'appuie sur la <span className="font-semibold">stabilité</span>, 
+                Mes valeurs s'appuient sur la <span className="font-semibold">stabilité</span>, 
                 la <span className="font-semibold">création de valeur</span>, 
                 les <span className="font-semibold">relations humaines</span> et 
                 la <span className="font-semibold">vision à long terme</span> pour assurer votre sécurité financière.
@@ -125,7 +125,7 @@ const Welcome = () => {
 
         <div className="relative z-10 mt-12 sm:mt-16 lg:mt-20">
           <div className="text-center mb-6 sm:mb-8">
-            <h3 className="text-2xl sm:text-3xl font-bold mb-4" style={{ fontFamily: 'Poppins', fontWeight: '700', color: 'var(--primary-blue)' }}>Mon approche</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4" style={{ fontFamily: 'Poppins', fontWeight: '700', color: 'var(--primary-blue)' }}>Mes valeurs</h3>
             <div className="w-16 sm:w-24 h-1 mx-auto rounded-full" style={{ backgroundColor: 'var(--primary-blue)' }}></div>
           </div>
           
