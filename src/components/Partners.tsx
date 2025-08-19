@@ -2,17 +2,19 @@ import React from 'react';
 import { useRef, useEffect } from 'react';
 
 // Reusable cell component with Tailwind + CSS vars
-function LogoCell({ href, src, alt, zoom = 1, clip = "0 0 0 0", cap = "100%" }) {
+function LogoCell({ href, src, alt, zoom = 1, clip = "0 0 0 0", cap = "88%" }) {
   return (
-    <li className="shrink-0 h-20 w-48 md:h-24 md:w-56 flex items-center justify-center rounded-lg bg-white overflow-hidden">
+    <li className="shrink-0 h-20 w-48 md:h-24 md:w-56 xl:h-24 xl:w-60
+                   flex items-center justify-center rounded-lg bg-white overflow-hidden">
       <a href={href} target="_blank" rel="noopener" aria-label={alt} className="block p-2 md:p-3">
         <img
           src={src}
           alt={alt}
           loading="lazy"
           style={{ "--zoom": zoom, "--clip": clip, "--cap": cap }}
-          className="block max-h-full max-w-full object-contain opacity-80 hover:opacity-100 transition-transform duration-200
-                   [transform:scale(var(--zoom))] [clip-path:inset(var(--clip))] [max-width:var(--cap)] will-change-transform"
+          className="block object-contain max-h-full opacity-80 hover:opacity-100 transition
+                   [transform:scale(var(--zoom))] [clip-path:inset(var(--clip))]
+                   [max-width:var(--cap)]"
         />
       </a>
     </li>
