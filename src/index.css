@@ -482,6 +482,13 @@ html {
   brightness: 1 !important;
 }
 
+/* Specific logo size adjustments */
+.partners-track a[href*="bluecross"] img,
+.partners-track a[href*="humania"] img,
+.partners-track a[href*="sunlife"] img,
+.partners-track a[href*="equitable"] img {
+  height: 32px !important;
+}
 /* Mobile optimization for partners */
 @media (max-width: 768px) {
   .partners-track {
@@ -492,6 +499,14 @@ html {
   }
   .partners-track img {
     height:35px;
+  }
+  
+  /* Smaller logos on mobile too */
+  .partners-track a[href*="bluecross"] img,
+  .partners-track a[href*="humania"] img,
+  .partners-track a[href*="sunlife"] img,
+  .partners-track a[href*="equitable"] img {
+    height: 26px !important;
   }
 }
 .partners-track::-webkit-scrollbar{ height:6px }
