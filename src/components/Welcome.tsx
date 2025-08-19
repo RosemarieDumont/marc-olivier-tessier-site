@@ -112,11 +112,11 @@ const Welcome = () => {
               </h3>
               <div className="space-y-2 sm:space-y-3 lg:space-y-4 text-body text-white/85 animate-slide-up stagger-2">
                 <p className="text-sm sm:text-base text-justify text-white leading-relaxed">
-                  Marc-Olivier Tessier est conseiller en sécurité financière certifié auprès de l'Autorité des marchés financiers, 
-                  affilié à iA Groupe financier au sein de l'agence Les Rivières. Il accompagne ses clients dans des décisions clés 
+                  Conseiller en sécurité financière certifié auprès de l'Autorité des marchés financiers, 
+                  affilié à iA Groupe financier au sein de l'agence Les Rivières. J'accompagne mes clients dans des décisions clés 
                   liées à l'assurance, à l'épargne et à la retraite, en s'appuyant sur une approche structurée et orientée résultats. 
-                  Propriétaire de biens immobiliers et investisseur actif, il transforme son expérience concrète du marché en conseils 
-                  pratiques, pour aider à construire un avenir financier structuré, fiable et enraciné dans la réalité du terrain.
+                  Propriétaire de biens immobiliers et investisseur actif, je transforme mon expérience concrète du marché en conseils 
+                  pratiques, pour vous aider à construire un avenir financier structuré, fiable et enraciné dans la réalité du terrain.
                 </p>
               </div>
             </div>
@@ -125,7 +125,7 @@ const Welcome = () => {
 
         <div className="relative z-10 mt-12 sm:mt-16 lg:mt-20">
           <div className="text-center mb-6 sm:mb-8">
-            <h3 className="text-2xl sm:text-3xl font-bold mb-4" style={{ fontFamily: 'Poppins', fontWeight: '700', color: 'var(--primary-blue)' }}>Notre approche</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4" style={{ fontFamily: 'Poppins', fontWeight: '700', color: 'var(--primary-blue)' }}>Mon approche</h3>
             <div className="w-16 sm:w-24 h-1 mx-auto rounded-full" style={{ backgroundColor: 'var(--primary-blue)' }}></div>
           </div>
           
