@@ -68,7 +68,7 @@ const Welcome = () => {
             </h2>
             <div className="space-y-3 sm:space-y-4">
               <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
-                Mes valeurs s'appuient sur la <span className="font-semibold">stabilité</span>, 
+                Mon approche s'appuie sur la <span className="font-semibold">stabilité</span>, 
                 la <span className="font-semibold">création de valeur</span>, 
                 les <span className="font-semibold">relations humaines</span> et 
                 la <span className="font-semibold">vision à long terme</span> pour assurer votre sécurité financière.
