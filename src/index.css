@@ -536,8 +536,9 @@ html {
 }
 
 .partners-track a[href*="uvassurance"] img {
-  height: 60px !important;
-  object-position: center !important;
+  height: 75px !important;
+  object-position: center bottom !important;
+  transform: translateY(-5px) !important;
 }
 
 /* Mobile optimization for UV Assurance */
@@ -547,7 +548,8 @@ html {
   }
   
   .partners-track a[href*="uvassurance"] img {
-    height: 45px !important;
+    height: 60px !important;
+    transform: translateY(-3px) !important;
   }
 }
 .partners-track::-webkit-scrollbar{ height:6px }
