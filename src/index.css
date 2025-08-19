@@ -484,10 +484,14 @@ html {
 
 /* Specific logo size adjustments */
 .partners-track a[href*="bluecross"] img,
-.partners-track a[href*="humania"] img,
 .partners-track a[href*="sunlife"] img,
 .partners-track a[href*="equitable"] img {
   height: 32px !important;
+}
+
+/* Extra small logos that need significant reduction */
+.partners-track a[href*="humania"] img {
+  height: 22px !important;
 }
 
 /* Larger logos that need to be more visible */
@@ -510,10 +514,14 @@ html {
   
   /* Smaller logos on mobile too */
   .partners-track a[href*="bluecross"] img,
-  .partners-track a[href*="humania"] img,
   .partners-track a[href*="sunlife"] img,
   .partners-track a[href*="equitable"] img {
     height: 26px !important;
+  }
+  
+  /* Extra small logos on mobile */
+  .partners-track a[href*="humania"] img {
+    height: 18px !important;
   }
 }
 
