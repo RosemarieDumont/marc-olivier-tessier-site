@@ -527,6 +527,29 @@ html {
   }
 }
 
+/* Special styling for UV Assurance logo for better integration */
+.partners-track a[href*="uvassurance"] {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 100px !important;
+}
+
+.partners-track a[href*="uvassurance"] img {
+  height: 60px !important;
+  object-position: center !important;
+}
+
+/* Mobile optimization for UV Assurance */
+@media (max-width: 768px) {
+  .partners-track a[href*="uvassurance"] {
+    min-width: 85px !important;
+  }
+  
+  .partners-track a[href*="uvassurance"] img {
+    height: 45px !important;
+  }
+}
 .partners-track::-webkit-scrollbar{ height:6px }
 
 /* House construction animations */
