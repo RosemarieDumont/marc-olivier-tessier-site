@@ -127,7 +127,7 @@ const Services = () => {
           description: "Assurance vie ou invalidité pour protéger les dirigeants et personnes clés de votre entreprise"
         },
         {
-          name: "Stratégies d'épargne",
+          name: "Stratégies d'épargne fiscales",
           description: "Solutions d'épargne avantageuses fiscalement pour optimiser la croissance de votre capital d'entreprise"
         },
         {
