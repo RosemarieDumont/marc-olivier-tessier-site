@@ -98,7 +98,7 @@ const Partners: React.FC = () => {
               <LogoCell href="https://www.edgebenefits.com" src="./assets/logos/the-edge-logo.jpg" alt="The Edge Benefits" />
               
               {/* Et plus encore... */}
-              <li className="shrink-0 h-20 w-48 md:h-24 md:w-56 xl:h-24 xl:w-60 flex items-center justify-center bg-white rounded-lg">
+              <li className="shrink-0 h-20 w-48 md:h-24 md:w-56 flex items-center justify-center bg-white rounded-lg">
                 <div className="block p-2 md:p-3">
                   <span 
                     className="text-gray-600 font-medium text-sm italic transition-all duration-300 hover:text-gray-800 hover:scale-105 cursor-default whitespace-nowrap"
