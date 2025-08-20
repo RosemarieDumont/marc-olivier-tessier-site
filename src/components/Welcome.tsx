@@ -63,12 +63,9 @@ const Welcome = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <div className="relative z-10 lg:max-w-none lg:pr-12 animate-slide-in-left text-center lg:text-left order-2 lg:order-1">
-            {/* Bande blanche pour Bienvenue */}
-            <div className="bg-white rounded-2xl p-6 sm:p-8 mb-6 shadow-lg">
-              <div className="inline-flex flex-col items-center text-left">
-                <h1 className="text-4xl lg:text-5xl font-semibold text-[#0F2241] tracking-tight">Bienvenue</h1>
-                <span className="mt-2 h-1.5 w-24 rounded-full bg-[#0F2A52]"></span>
-              </div>
+            <div className="inline-flex flex-col items-center text-left mb-6">
+              <h1 className="text-4xl lg:text-5xl font-semibold text-[#0F2241] tracking-tight">Bienvenue</h1>
+              <span className="mt-2 h-1.5 w-24 rounded-full bg-[#0F2A52]"></span>
             </div>
             
             {/* Bande bleue pour le texte */}
