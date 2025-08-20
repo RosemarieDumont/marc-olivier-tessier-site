@@ -39,28 +39,27 @@ function LogoCell({
 
 // ---------- ONE SOURCE OF TRUTH ----------
 const partnersRaw = [
-  { alt: "BMO", href: "https://www.bmo.com", src: "/assets/logos/bmo.png" },
-  { alt: "iA Groupe financier", href: "https://ia.ca", src: "/logo IA.png" },
-  { alt: "Beneva", href: "https://www.beneva.ca", src: "/assets/logos/beneva.png" },
+  { alt: "BMO", href: "https://www.bmo.com", src: "./assets/logos/bmo.png" },
+  { alt: "iA Groupe financier", href: "https://ia.ca", src: "./logo IA.png" },
+  { alt: "Beneva", href: "https://www.beneva.ca", src: "./assets/logos/beneva.png" },
   { alt: "RBC", href: "https://www.rbc.com", src: "./assets/logos/RBC-logo.jpg" },
-  { alt: "Medavie Blue Cross", href: "https://www.medaviebc.ca", src: "/assets/logos/blue-cross.png" },
-  { alt: "Desjardins", href: "https://www.desjardins.com", src: "/assets/logos/desjardins.png" },
+  { alt: "Medavie Blue Cross", href: "https://www.medaviebc.ca", src: "./assets/logos/blue-cross.png" },
+  { alt: "Desjardins", href: "https://www.desjardins.com", src: "./assets/logos/desjardins.png" },
   { alt: "Canada Life", href: "https://www.canadalife.com", src: "./assets/logos/canada-life.png" },
-  { alt: "Assumption Life", href: "https://assumption.ca", src: "/assets/logos/assumption-life.png" },
+  { alt: "Assumption Life", href: "https://www.assumption.ca", src: "./assets/logos/assumption-life.png" },
   { alt: "Sun Life Financial", href: "https://www.sunlife.ca", src: "./assets/logos/sun-life-financial.png" },
   { alt: "Foresters Financial", href: "https://www.foresters.com", src: "./assets/logos/foresters-financial.png" },
   { alt: "Equitable Life of Canada", href: "https://www.equitable.ca", src: "./assets/logos/equitable-life-of-canada.png" },
   { alt: "L'Empire Vie", href: "https://www.empire.ca/", src: "./assets/logos/empire-life.png" },
+  { alt: "Humania", href: "https://www.humania.ca", src: "./assets/logos/humania-assurance.jpg" },
   { alt: "ivari", href: "https://ivari.ca/", src: "./assets/logos/ivari.webp" },
   { alt: "La Capitale", href: "https://www.beneva.ca/", src: "./assets/logos/la-capitale.jpg" },
   { alt: "PPI", href: "https://ppi.ca/", src: "./assets/logos/ppi.png" },
-  { alt: "UV Assurance", href: "https://uvinsurance.ca", src: "/assets/logos/uv-assurance.png" },
-  { alt: "The Edge Benefits", href: "https://www.edgebenefits.com", src: "/assets/logos/the-edge-logo.jpg" },
-  { alt: "SSQ Assurance", href: "https://www.beneva.ca", src: "/assets/logos/ssq-logo.png" },
-  { alt: "RBC", href: "https://www.rbc.com", src: "/assets/logos/rbc.png" },
-  { alt: "Humania", href: "https://www.humania.ca", src: "/assets/logos/humania-logo.jpg" },
-  { alt: "Manulife", href: "https://www.manulife.ca", src: "/assets/logos/manulife-logo.jpg" },
-  { alt: "Specialty Life Insurance (SLI)", href: "https://specialtylifeinsurance.ca", src: "/assets/logos/sli-logo.jpg" },
+  { alt: "Manulife", href: "https://www.manulife.ca", src: "./assets/logos/manulife-logo.jpg" },
+  { alt: "Specialty Life Insurance (SLI)", href: "https://specialtylifeinsurance.ca", src: "./assets/logos/sli-logo.jpg" },
+  { alt: "UV Assurance", href: "https://uvinsurance.ca", src: "./assets/logos/uv-assurance.png" },
+  { alt: "SSQ Assurance", href: "https://www.beneva.ca", src: "./assets/logos/ssq-logo.png" },
+  { alt: "The Edge Benefits", href: "https://www.edgebenefits.com", src: "./assets/logos/the-edge-logo.jpg" },
 ];
 
 // Auto-dedupe by (alt, href)
@@ -77,10 +76,8 @@ const partners = (() => {
 // Per-logo overrides (desktop kept as you already tuned; mobile fixes added for problematic ones)
 const overrides: Record<string, Override> = {
   // Desktop tuning you already had
-  "bmo": { zoom: 1.0, cap: "88%" },
-  "rbc": { zoom: 1.42, cap: "96%", clip: "3% 3% 3% 3%" },
-  "ia groupe financier": { zoom: 1.24, cap: "94%", clip: "2% 4% 2% 4%" },
-  "beneva": { zoom: 1.0, cap: "88%" },
+  "rbc": { zoom: 1.50, cap: "100%", clip: "2% 2% 2% 2%" },
+  "ia groupe financier": { zoom: 1.15, cap: "92%" },
   "medavie blue cross": { zoom: 0.6, cap: "100%" },
   "desjardins": { zoom: 0.86 },
   "assumption life": { zoom: 1.0 },
@@ -95,11 +92,9 @@ const overrides: Record<string, Override> = {
   "ssq assurance": { zoom: 1.18, cap: "96%" },
   "the edge benefits": { zoom: 1.22, cap: "96%" },
   // --- Mobile-only fixes for the 5 problematic logos ---
-  "bmo#xs": { zoomXs: 0.70, capXs: "80%" },
-  "beneva#xs": { zoomXs: 0.75, capXs: "82%" },
-  "medavie blue cross#xs": { zoomXs: 0.80, capXs: "82%" },
+  "medavie blue cross#xs": { zoomXs: 0.5, capXs: "90%" },
   "desjardins#xs":         { zoomXs: 0.55, capXs: "75%" },
-  "assumption life#xs":    { zoomXs: 0.92, capXs: "88%" },
+  "assumption life#xs":    { zoomXs: 0.85, capXs: "80%" },
   "sun life financial#xs": { zoomXs: 0.78, capXs: "78%" },
   "equitable life of canada#xs": { zoomXs: 0.76, capXs: "76%" },
 };
