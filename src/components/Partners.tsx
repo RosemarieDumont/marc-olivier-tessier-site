@@ -78,8 +78,16 @@ const partners = (() => {
 const overrides: Record<string, Override> = {
   // Desktop tuning you already had
   "bmo": { zoom: 1.0, cap: "88%" },
+  "beneva": { zoom: 1.0, cap: "88%" },
+  "bmo": { zoom: 1.0, cap: "88%" },
   "rbc": { zoom: 1.42, cap: "96%", clip: "3% 3% 3% 3%" },
   "ia groupe financier": { zoom: 1.24, cap: "94%", clip: "2% 4% 2% 4%" },
+  "canada life": { zoom: 0.90, cap: "86%" },
+  "sun life financial": { zoom: 0.90, cap: "86%" },
+  "foresters financial": { zoom: 0.88, cap: "84%" },
+  "equitable life of canada": { zoom: 0.88, cap: "84%" },
+  "l'empire vie": { zoom: 1.0 },
+  "la capitale": { zoom: 1.30, cap: "96%", clip: "1% 3% 1% 3%" },
   "beneva": { zoom: 1.0, cap: "88%" },
   "medavie blue cross": { zoom: 0.6, cap: "100%" },
   "desjardins": { zoom: 0.86 },
@@ -92,9 +100,9 @@ const overrides: Record<string, Override> = {
   "manulife": { zoom: 1.0 },
   "specialty life insurance (sli)": { zoom: 1.24, cap: "96%" },
   "uv assurance": { zoom: 1.20, cap: "96%" },
-  "ssq assurance": { zoom: 1.18, cap: "96%" },
-  "the edge benefits": { zoom: 1.22, cap: "96%" },
   // --- Mobile-only fixes for the 5 problematic logos ---
+  "bmo#xs": { zoomXs: 0.70, capXs: "80%" },
+  "beneva#xs": { zoomXs: 0.75, capXs: "82%" },
   "bmo#xs": { zoomXs: 0.70, capXs: "80%" },
   "beneva#xs": { zoomXs: 0.75, capXs: "82%" },
   "medavie blue cross#xs": { zoomXs: 0.80, capXs: "82%" },
