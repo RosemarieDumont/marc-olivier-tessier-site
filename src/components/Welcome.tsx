@@ -66,7 +66,7 @@ const Welcome = () => {
             }}>
               Bienvenue
             </h2>
-            <div className="w-16 sm:w-24 h-1 mx-auto lg:mx-0 rounded-full mb-6 sm:mb-8" style={{ backgroundColor: 'var(--primary-blue)' }}></div>
+            <div className="w-16 sm:w-24 h-1 rounded-full mb-6 sm:mb-8 mx-auto lg:mx-0" style={{ backgroundColor: 'var(--primary-blue)' }}></div>
             <div className="space-y-3 sm:space-y-4">
               <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
                 Mon approche s'appuie sur la <span className="font-semibold">stabilité</span>, 
