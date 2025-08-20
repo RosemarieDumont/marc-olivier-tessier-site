@@ -2,7 +2,7 @@ import React from 'react';
 import { useRef, useEffect } from 'react';
 
 // Reusable cell component with Tailwind + CSS vars
-function LogoCell({ href, src, alt, zoom = 1, clip = "0 0 0 0", cap = "88%" }) {
+function LogoCell({ href, src, alt, zoom = 1, clip = "0 0 0 0", cap = "88%", zoomXs, capXs }) {
   return (
     <li className="snap-center shrink-0
                    h-16 w-36 sm:w-40
@@ -14,10 +14,16 @@ function LogoCell({ href, src, alt, zoom = 1, clip = "0 0 0 0", cap = "88%" }) {
           src={src}
           alt={alt}
           loading="lazy"
-          style={{ "--zoom": zoom, "--clip": clip, "--cap": cap }}
+          style={{ 
+            "--zoom": zoom, 
+            "--clip": clip, 
+            "--cap": cap,
+            "--zoom-xs": zoomXs || zoom,
+            "--cap-xs": capXs || cap
+          }}
           className="block object-contain max-h-full opacity-80 hover:opacity-100 transition
-                   [transform:scale(var(--zoom))] [clip-path:inset(var(--clip))]
-                   max-w-[84%] sm:max-w-[86%] md:max-w-[88%]"
+                   [transform:scale(var(--zoom-xs))] sm:[transform:scale(var(--zoom))] [clip-path:inset(var(--clip))]
+                   max-w-[var(--cap-xs)] sm:max-w-[var(--cap)] md:max-w-[88%]"
         />
       </a>
     </li>
@@ -85,12 +91,17 @@ const Partners: React.FC = () => {
               <LogoCell href="https://www.beneva.ca" src="./assets/logos/beneva.png" alt="Beneva" />
               <LogoCell href="https://www.rbc.com" src="./assets/logos/RBC-logo.jpg" alt="RBC" zoom={1.50} cap="100%" clip="2% 2% 2% 2%" />
               <LogoCell href="https://www.medaviebc.ca" src="./assets/logos/blue-cross.png" alt="Medavie Blue Cross" zoom={0.6} cap="100%" />
+              <LogoCell href="https://www.medaviebc.ca" src="./assets/logos/blue-cross.png" alt="Medavie Blue Cross" zoom={0.6} cap="100%" zoomXs={0.5} capXs="90%" />
               <LogoCell href="https://www.desjardins.com" src="./assets/logos/desjardins.png" alt="Desjardins" zoom={0.86} />
+              <LogoCell href="https://www.desjardins.com" src="./assets/logos/desjardins.png" alt="Desjardins" zoom={0.86} zoomXs={0.75} capXs="82%" />
               <LogoCell href="https://www.canadalife.com" src="./assets/logos/canada-life.png" alt="Canada Life" />
               <LogoCell href="https://www.assumption.ca" src="./assets/logos/assumption-life.png" alt="Assumption Life" />
+              <LogoCell href="https://www.assumption.ca" src="./assets/logos/assumption-life.png" alt="Assumption Life" zoomXs={0.85} capXs="80%" />
               <LogoCell href="https://www.sunlife.ca" src="./assets/logos/sun-life-financial.png" alt="Sun Life Financial" zoom={0.90} cap="86%" />
+              <LogoCell href="https://www.sunlife.ca" src="./assets/logos/sun-life-financial.png" alt="Sun Life Financial" zoom={0.90} cap="86%" zoomXs={0.78} capXs="78%" />
               <LogoCell href="https://www.foresters.com" src="./assets/logos/foresters-financial.png" alt="Foresters Financial" />
               <LogoCell href="https://www.equitable.ca" src="./assets/logos/equitable-life-of-canada.png" alt="Equitable Life of Canada" zoom={0.88} cap="84%" />
+              <LogoCell href="https://www.equitable.ca" src="./assets/logos/equitable-life-of-canada.png" alt="Equitable Life of Canada" zoom={0.88} cap="84%" zoomXs={0.76} capXs="76%" />
               <LogoCell href="https://www.empire.ca/" src="./assets/logos/empire-life.png" alt="L'Empire Vie" />
               <LogoCell href="https://www.humania.ca" src="./assets/logos/humania-assurance.jpg" alt="Humania" zoom={1.26} cap="96%" clip="1% 2% 1% 2%" />
               <LogoCell href="https://ivari.ca/" src="./assets/logos/ivari.webp" alt="ivari" />
