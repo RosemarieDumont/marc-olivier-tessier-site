@@ -26,7 +26,7 @@ const Footer = () => {
                 <img 
                   src="./logo IA.png" 
                   alt="iA Groupe financier" 
-                  className="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
+                  className="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
             </div>
