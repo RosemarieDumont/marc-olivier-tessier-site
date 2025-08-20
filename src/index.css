@@ -534,6 +534,20 @@ html {
   transition: opacity 0.3s ease;
 }
 
+/* Mobile logo responsive scaling */
+@media (max-width: 640px) {
+  .logo-img { 
+    transform: scale(var(--zoom-xs)); 
+    max-width: var(--cap-xs); 
+  }
+}
+/* Desktop/tablet logo scaling */
+@media (min-width: 641px) {
+  .logo-img { 
+    transform: scale(var(--zoom)); 
+    max-width: var(--cap); 
+  }
+}
 
 /* Professional profile image styles */
 .border-brand-primary {
