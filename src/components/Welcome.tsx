@@ -58,15 +58,10 @@ const Welcome = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <div className="relative z-10 lg:max-w-none lg:pr-12 animate-slide-in-left text-center lg:text-left order-2 lg:order-1">
-            <h2 className="mb-4 sm:mb-6 lg:mb-8" style={{ 
-              fontFamily: 'Poppins', 
-              fontWeight: '700', 
-              fontSize: 'clamp(32px, 4vw, 48px)',
-              color: 'var(--primary-blue)'
-            }}>
-              Bienvenue
-            </h2>
-            <div className="w-16 sm:w-24 h-1 rounded-full mb-6 sm:mb-8 mx-auto lg:mx-0" style={{ backgroundColor: 'var(--primary-blue)' }}></div>
+            <div className="inline-flex flex-col items-center text-left mb-6 sm:mb-8">
+              <h1 className="text-4xl lg:text-5xl font-semibold text-[#0F2241] tracking-tight">Bienvenue</h1>
+              <span className="mt-2 h-1.5 w-24 rounded-full bg-[#2F6FE4]"></span>
+            </div>
             <div className="space-y-3 sm:space-y-4">
               <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
                 Mon approche s'appuie sur la <span className="font-semibold">stabilité</span>, 
