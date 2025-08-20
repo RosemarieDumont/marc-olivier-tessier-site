@@ -88,6 +88,14 @@ const Welcome = () => {
                 alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
                 className="w-64 sm:w-72 lg:w-80 h-auto object-cover object-center transition-transform duration-500 hover:scale-105 rounded-xl shadow-lg"
               />
+              {/* Signature overlay */}
+              <div className="absolute bottom-2 right-2 lg:bottom-3 lg:right-3">
+                <img
+                  src="./Signature M-O-Tessier.png"
+                  alt="Signature Marc-Olivier Tessier"
+                  className="w-16 sm:w-20 lg:w-24 h-auto opacity-90 hover:opacity-100 transition-opacity duration-300 drop-shadow-lg"
+                />
+              </div>
             </div>
           </div>
         </div>
