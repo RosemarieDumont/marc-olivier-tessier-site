@@ -17,7 +17,16 @@ const Services = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            entry.target.classList.remove('animate-section-hidden');
             entry.target.classList.add('animate-section-visible');
+            
+            // Progressive animation for child elements
+            const childElements = entry.target.querySelectorAll('.animate-on-scroll');
+            childElements.forEach((child, index) => {
+              setTimeout(() => {
+                child.classList.add('animate-slide-up-ios');
+              }, index * 100);
+            });
           }
         });
       },
@@ -232,14 +241,14 @@ const Services = () => {
         <div className="lg:hidden mb-8">
           <div 
             ref={tabsRef}
-            className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-1 mb-6"
+            className="relative bg-white/10 backdrop-blur-md rounded-2xl p-1 mb-6 border border-white/20 shadow-lg"
             role="tablist"
             aria-label="Services categories"
           >
             {/* Sliding indicator */}
             <div
               ref={indicatorRef}
-              className="absolute top-1 bottom-1 bg-white rounded-xl shadow-lg transition-all duration-[350ms] ease-out motion-reduce:transition-none"
+              className="absolute top-1 bottom-1 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg transition-all duration-[350ms] ease-ios motion-reduce:transition-none"
               aria-hidden="true"
             />
             
@@ -251,12 +260,15 @@ const Services = () => {
                 aria-selected={activeTab === key}
                 aria-controls={`panel-${key}`}
                 onClick={() => switchTab(key)}
-                className={`relative z-10 flex-1 px-4 py-3 text-sm font-semibold rounded-xl transition-colors duration-200 ${
+                className={`relative z-10 flex-1 px-4 py-3 text-sm font-semibold rounded-xl transition-all duration-200 flex items-center justify-center gap-2 ${
                   activeTab === key 
-                    ? 'text-blue-900' 
-                    : 'text-white hover:text-white/80'
+                    ? 'text-blue-900 scale-105' 
+                    : 'text-white/70 hover:text-white/90 hover:scale-102'
                 }`}
               >
+                <div className={`transition-all duration-200 ${activeTab === key ? 'opacity-80' : 'opacity-60'}`}>
+                  {category.icon}
+                </div>
                 {category.title}
               </button>
             ))}
@@ -276,63 +288,64 @@ const Services = () => {
                 aria-labelledby={`tab-${key}`}
                 className={`${
                   activeTab === key 
-                    ? 'block animate-panel-enter motion-reduce:animate-none' 
+                    ? 'block animate-panel-enter-ios motion-reduce:animate-none' 
                     : 'hidden'
                 }`}
               >
-                <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
+                <div className="bg-white/95 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl border border-white/20">
                   {/* Header */}
-                  <div className="p-6 text-white" style={{ backgroundColor: 'var(--primary-blue)' }}>
+                  <div className="p-6 text-white relative overflow-hidden" style={{ backgroundColor: 'var(--primary-blue)' }}>
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-transparent to-blue-800/30"></div>
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="p-2 bg-white/20 rounded-lg">
+                      <div className="p-3 bg-white/20 backdrop-blur-sm rounded-xl shadow-inner relative z-10">
                         {category.icon}
                       </div>
-                      <h3 className="text-2xl font-bold">{category.title}</h3>
+                      <h3 className="text-2xl font-bold relative z-10">{category.title}</h3>
                     </div>
                   </div>
 
                   {/* Content */}
-                  <div className="p-6">
+                  <div className="p-6 animate-on-scroll">
                     {key === 'corporatif' && (
-                      <p className="text-gray-700 mb-6 italic">
+                      <p className="text-gray-700 mb-6 italic animate-on-scroll">
                         Accompagnement des entrepreneurs, travailleurs autonomes et professionnels pour protéger et développer leur capital, au moyen de solutions personnalisées alignées sur vos priorités d'affaires et de vie, tout en assurant la pérennité de leurs activités.
                       </p>
                     )}
                     {key === 'epargne' && (
-                      <p className="text-gray-700 mb-6 italic">
+                      <p className="text-gray-700 mb-6 italic animate-on-scroll">
                         Optimisez votre épargne avec des solutions fiscalement avantageuses adaptées à vos objectifs.
                       </p>
                     )}
                     {key === 'assurance' && (
-                      <p className="text-gray-700 mb-6 italic">
+                      <p className="text-gray-700 mb-6 italic animate-on-scroll">
                         Protégez ce qui compte le plus avec des couvertures complètes et personnalisées.
                       </p>
                     )}
                     
-                    <div className="space-y-3">
+                    <div className="space-y-3 animate-on-scroll">
                       {category.services.map((service, index) => {
                         const serviceKey = `${key}-${index}`;
                         return (
-                          <div key={index} className="border border-gray-200 rounded-xl overflow-hidden">
+                          <div key={index} className="border border-gray-200/60 rounded-xl overflow-hidden backdrop-blur-sm bg-white/50 hover:bg-white/80 transition-all duration-300 hover:shadow-md animate-on-scroll" style={{ animationDelay: `${index * 50}ms` }}>
                             <button
                               onClick={() => toggleService(serviceKey)}
-                              className="w-full flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 transition-colors duration-300"
+                              className="w-full flex items-center justify-between p-4 bg-gray-50/80 backdrop-blur-sm hover:bg-gray-100/90 transition-all duration-300 group/service"
                             >
                               <div className="flex items-center gap-3">
-                                <div className="p-2 rounded-lg text-white" style={{ backgroundColor: 'var(--primary-blue)' }}>
+                                <div className="p-2 rounded-lg text-white shadow-sm transition-all duration-300 group-hover/service:scale-110 group-hover/service:shadow-md" style={{ backgroundColor: 'var(--primary-blue)' }}>
                                   {getServiceIcon(service.name)}
                                 </div>
-                                <h4 className="text-left font-semibold text-base" style={{ color: 'var(--primary-blue)' }}>
+                                <h4 className="text-left font-semibold text-base transition-all duration-300 group-hover/service:translate-x-1" style={{ color: 'var(--primary-blue)' }}>
                                   {service.name}
                                 </h4>
                               </div>
-                              <ChevronDown className={`w-5 h-5 transform transition-transform duration-300 ${openServices[serviceKey] ? 'rotate-180' : ''}`} style={{ color: 'var(--primary-blue)' }} />
+                              <ChevronDown className={`w-5 h-5 transform transition-all duration-300 group-hover/service:scale-110 ${openServices[serviceKey] ? 'rotate-180' : ''}`} style={{ color: 'var(--primary-blue)' }} />
                             </button>
                             
-                            <div className={`overflow-hidden transition-all duration-500 ease-in-out ${openServices[serviceKey] ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-                              <div className="p-4 pt-0 bg-white">
+                            <div className={`overflow-hidden transition-all duration-500 ease-ios ${openServices[serviceKey] ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                              <div className="p-4 pt-0 bg-white/90 backdrop-blur-sm">
                                 <div className="border-l-4 pl-4 py-2" style={{ borderColor: 'var(--primary-blue)' }}>
-                                  <p className="text-gray-700 leading-relaxed">
+                                  <p className="text-gray-700 leading-relaxed transition-all duration-300">
                                     {service.description}
                                   </p>
                                 </div>
@@ -352,73 +365,74 @@ const Services = () => {
         {/* Desktop Grid */}
         <div className="hidden lg:grid lg:grid-cols-3 gap-8">
           {Object.entries(services).map(([key, category]) => (
-            <div key={key} className={`group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 hover-lift hover-glow animate-scale-in stagger-${Object.keys(services).indexOf(key) + 1}`}>
+            <div key={key} className={`group bg-white/95 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 hover-lift hover-glow animate-scale-in stagger-${Object.keys(services).indexOf(key) + 1} border border-white/20 animate-on-scroll`}>
               {/* Header */}
-              <div className="p-6 text-white transition-all duration-300" style={{ backgroundColor: 'var(--primary-blue)' }}>
+              <div className="p-6 text-white transition-all duration-300 relative overflow-hidden" style={{ backgroundColor: 'var(--primary-blue)' }}>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-transparent to-blue-800/30"></div>
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="p-2 bg-white/20 rounded-lg transition-transform duration-300 group-hover:scale-110">
+                  <div className="p-3 bg-white/20 backdrop-blur-sm rounded-xl shadow-inner transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg relative z-10">
                     {category.icon}
                   </div>
-                  <h3 className="text-heading text-2xl font-bold transition-transform duration-300 group-hover:translate-x-1">{category.title}</h3>
+                  <h3 className="text-heading text-2xl font-bold transition-all duration-300 group-hover:translate-x-1 relative z-10">{category.title}</h3>
                 </div>
                 {category.description && (
-                  <p className="text-caption text-white/90 transition-opacity duration-300 group-hover:opacity-100">{category.description}</p>
+                  <p className="text-caption text-white/90 transition-all duration-300 group-hover:opacity-100 relative z-10">{category.description}</p>
                 )}
               </div>
 
               {/* Services List */}
-              <div className="p-6 relative z-10">
+              <div className="p-6 relative z-10 animate-on-scroll">
                 {key === 'corporatif' && (
-                  <p className="text-caption text-[#111827] mb-6 italic transition-colors duration-300 group-hover:text-[#111827]">
+                  <p className="text-caption text-[#111827] mb-6 italic transition-all duration-300 group-hover:text-[#111827] animate-on-scroll">
                     Accompagnement des entrepreneurs, travailleurs autonomes et professionnels pour protéger et développer leur capital, au moyen de solutions personnalisées alignées sur vos priorités d'affaires et de vie, tout en assurant la pérennité de leurs activités.
                   </p>
                 )}
                 {key === 'epargne' && (
-                  <p className="text-caption text-[#111827] mb-6 italic transition-colors duration-300 group-hover:text-[#111827]">
+                  <p className="text-caption text-[#111827] mb-6 italic transition-all duration-300 group-hover:text-[#111827] animate-on-scroll">
                     Optimisez votre épargne avec des solutions fiscalement avantageuses adaptées à vos objectifs.
                   </p>
                 )}
                 {key === 'assurance' && (
-                  <p className="text-caption text-[#111827] mb-6 italic transition-colors duration-300 group-hover:text-[#111827]">
+                  <p className="text-caption text-[#111827] mb-6 italic transition-all duration-300 group-hover:text-[#111827] animate-on-scroll">
                     Protégez ce qui compte le plus avec des couvertures complètes et personnalisées.
                   </p>
                 )}
                 
                 {/* Individual Service Accordions */}
-                <div className="space-y-3">
+                <div className="space-y-3 animate-on-scroll">
                   {category.services.map((service, index) => {
                     const serviceKey = `${key}-${index}`;
                     return (
-                      <div key={index} className="border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 hover:border-blue-300 hover:shadow-md">
+                      <div key={index} className="border border-gray-200/60 rounded-xl overflow-hidden transition-all duration-300 hover:border-blue-300/60 hover:shadow-md backdrop-blur-sm bg-white/50 hover:bg-white/80 animate-on-scroll" style={{ animationDelay: `${index * 50}ms` }}>
                         {/* Service Header - Clickable */}
                         <button
                           onClick={() => toggleService(serviceKey)}
-                          className="w-full flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 transition-all duration-300 group/service"
+                          className="w-full flex items-center justify-between p-4 bg-gray-50/80 backdrop-blur-sm hover:bg-gray-100/90 transition-all duration-300 group/service"
                         >
                           <div className="flex items-center gap-3">
-                            <div className="p-2 rounded-lg transition-all duration-300 group-hover/service:scale-110" style={{ backgroundColor: 'var(--primary-blue)', color: 'white' }}>
+                            <div className="p-2 rounded-lg transition-all duration-300 group-hover/service:scale-110 group-hover/service:shadow-md shadow-sm" style={{ backgroundColor: 'var(--primary-blue)', color: 'white' }}>
                               {getServiceIcon(service.name)}
                             </div>
-                            <h4 className="text-left font-semibold text-base transition-colors duration-300" style={{ color: 'var(--primary-blue)' }}>
+                            <h4 className="text-left font-semibold text-base transition-all duration-300 group-hover/service:translate-x-1" style={{ color: 'var(--primary-blue)' }}>
                               {service.name}
                             </h4>
                           </div>
                           <div className={`transform transition-transform duration-300 ${openServices[serviceKey] ? 'rotate-180' : ''}`}>
-                            <ChevronDown className="w-5 h-5" style={{ color: 'var(--primary-blue)' }} />
+                            <ChevronDown className="w-5 h-5 transition-all duration-300 group-hover/service:scale-110" style={{ color: 'var(--primary-blue)' }} />
                           </div>
                         </button>
 
                         {/* Service Description - Expandable */}
                         <div 
-                          className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                          className={`overflow-hidden transition-all duration-500 ease-ios ${
                             openServices[serviceKey] 
                               ? 'max-h-96 opacity-100' 
                               : 'max-h-0 opacity-0'
                           }`}
                         >
-                          <div className="p-4 pt-0 bg-white">
+                          <div className="p-4 pt-0 bg-white/90 backdrop-blur-sm">
                             <div className="border-l-4 pl-4 py-2" style={{ borderColor: 'var(--primary-blue)' }}>
-                              <p className="text-gray-700 leading-relaxed">
+                              <p className="text-gray-700 leading-relaxed transition-all duration-300">
                                 {service.description}
                               </p>
                             </div>
@@ -434,24 +448,24 @@ const Services = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-12 text-center animate-slide-up stagger-4">
-          <div className="rounded-2xl p-6 lg:p-9 shadow-xl hover-lift hover-glow transition-all duration-500 relative overflow-hidden" style={{ backgroundColor: 'var(--primary-blue-light)' }}>
+        <div className="mt-12 text-center animate-slide-up stagger-4 animate-on-scroll">
+          <div className="rounded-2xl p-6 lg:p-9 shadow-xl hover-lift hover-glow transition-all duration-500 relative overflow-hidden backdrop-blur-md border border-white/20" style={{ backgroundColor: 'var(--primary-blue-light)' }}>
             {/* Strategic blue enhancements for PC */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-800/40 via-blue-600/20 to-blue-900/30 hidden lg:block"></div>
             <div className="absolute top-0 left-1/4 w-40 h-40 bg-blue-500/15 rounded-full blur-3xl hidden lg:block"></div>
             <div className="absolute bottom-0 right-1/4 w-32 h-32 bg-blue-400/20 rounded-full blur-2xl hidden lg:block"></div>
             <div className="relative z-10">
-              <h3 className="text-heading text-2xl font-bold text-white mb-3 animate-slide-up stagger-1">
+              <h3 className="text-heading text-2xl font-bold text-white mb-3 animate-slide-up stagger-1 animate-on-scroll">
                 Prêt à sécuriser votre avenir financier ?
               </h3>
-              <p className="text-body text-lg text-white/85 mb-6 max-w-2xl mx-auto animate-slide-up stagger-2">
+              <p className="text-body text-lg text-white/85 mb-6 max-w-2xl mx-auto animate-slide-up stagger-2 animate-on-scroll">
                 Contactez-nous dès aujourd'hui pour une consultation gratuite et personnalisée
               </p>
-              <a className="animate-slide-up stagger-3"
+              <a className="animate-slide-up stagger-3 animate-on-scroll"
                 href="https://outlook-sdf.office.com/bookwithme/user/0cb6ca6a017f4d5ea6b053f4dacafad2%40agc.ia.ca?anonymous&ismsaljsauthenabled=true"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full font-semibold text-base hover:bg-gray-50 transition-all duration-500 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover-glow transform hover:scale-105" style={{ color: 'var(--primary-blue)' }}
+                className="inline-flex items-center gap-2 bg-white/95 backdrop-blur-sm px-6 py-3 rounded-full font-semibold text-base hover:bg-white transition-all duration-500 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover-glow transform hover:scale-105 border border-white/20" style={{ color: 'var(--primary-blue)' }}
               >
                 <svg className="w-5 h-5 transition-transform duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
