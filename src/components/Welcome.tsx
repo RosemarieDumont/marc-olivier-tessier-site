@@ -66,6 +66,9 @@ const Welcome = () => {
             }}>
               Bienvenue
             </h2>
+            <p className="mt-3 pl-4 border-l-4 border-[#2F6FE4]/90 text-[17px] leading-7 text-[#0B1220]/80 max-w-[46rem]">
+              De la vision à l'action : un plan simple, des actions concrètes, un patrimoine qui progresse.
+            </p>
             <div className="space-y-3 sm:space-y-4">
               <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
                 Mon approche s'appuie sur la <span className="font-semibold">stabilité</span>, 
