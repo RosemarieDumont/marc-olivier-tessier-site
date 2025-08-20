@@ -48,6 +48,11 @@ const Welcome = () => {
 
   return (
     <section ref={sectionRef} id="welcome" className="relative py-6 sm:py-8 lg:py-12 overflow-hidden bg-white animate-section-hidden -mt-24 lg:-mt-32">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10
+           bg-[radial-gradient(1200px_600px_at_-10%_-20%,#F3F7FF_0%,transparent_55%),
+              radial-gradient(900px_500px_at_110%_10%,#EFF3F9_0%,transparent_45%)]">
+      </div>
+
       {/* Desktop radial gradient behind text */}
       <div className="absolute inset-0 hidden lg:block">
         <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-radial from-blue-50 via-blue-25 to-transparent blur-2xl"></div>
@@ -60,7 +65,7 @@ const Welcome = () => {
           <div className="relative z-10 lg:max-w-none lg:pr-12 animate-slide-in-left text-center lg:text-left order-2 lg:order-1">
             <div className="inline-flex flex-col items-center text-left mb-6 sm:mb-8">
               <h1 className="text-4xl lg:text-5xl font-semibold text-[#0F2241] tracking-tight">Bienvenue</h1>
-              <span className="mt-2 h-1.5 w-24 rounded-full bg-[#2F6FE4]"></span>
+              <span className="mt-2 h-1.5 w-24 rounded-full bg-[#0F2A52]"></span>
             </div>
             <div className="space-y-3 sm:space-y-4">
               <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
