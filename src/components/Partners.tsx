@@ -93,7 +93,7 @@ const overrides: Record<string, Override> = {
   "the edge benefits": { zoom: 1.22, cap: "96%" },
   // --- Mobile-only fixes for the 5 problematic logos ---
   "medavie blue cross#xs": { zoomXs: 0.5, capXs: "90%" },
-  "desjardins#xs":         { zoomXs: 0.75, capXs: "85%" },
+  "desjardins#xs":         { zoomXs: 0.55, capXs: "75%" },
   "assumption life#xs":    { zoomXs: 0.85, capXs: "80%" },
   "sun life financial#xs": { zoomXs: 0.78, capXs: "78%" },
   "equitable life of canada#xs": { zoomXs: 0.76, capXs: "76%" },
