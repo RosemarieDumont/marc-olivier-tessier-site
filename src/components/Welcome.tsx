@@ -93,7 +93,7 @@ const Welcome = () => {
                 <img
                   src="./Signature M-O-Tessier.png"
                   alt="Signature Marc-Olivier Tessier"
-                  className="w-16 sm:w-20 lg:w-24 h-auto opacity-90 hover:opacity-100 transition-opacity duration-300 drop-shadow-lg"
+                  className="w-16 sm:w-20 lg:w-24 h-auto opacity-90 hover:opacity-100 transition-opacity duration-300 drop-shadow-lg filter brightness-0 invert"
                 />
               </div>
             </div>
