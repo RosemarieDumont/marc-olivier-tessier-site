@@ -81,7 +81,7 @@ const Partners: React.FC = () => {
               <LogoCell href="https://ia.ca" src="./logo IA.png" alt="iA Groupe financier" />
               <LogoCell href="https://www.beneva.ca" src="./assets/logos/beneva.png" alt="Beneva" />
               <LogoCell href="https://www.rbc.com" src="./assets/logos/RBC-logo.jpg" alt="RBC" zoom={1.32} clip="2% 2% 2% 2%" />
-              <LogoCell href="https://www.medaviebc.ca" src="./assets/logos/blue-cross.png" alt="Medavie Blue Cross" zoom={0.88} />
+              <LogoCell href="https://www.medaviebc.ca" src="./assets/logos/blue-cross.png" alt="Medavie Blue Cross" zoom={0.75} cap="95%" />
               <LogoCell href="https://www.desjardins.com" src="./assets/logos/desjardins.png" alt="Desjardins" zoom={0.86} />
               <LogoCell href="https://www.canadalife.com" src="./assets/logos/canada-life.png" alt="Canada Life" />
               <LogoCell href="https://www.assumption.ca" src="./assets/logos/assumption-life.png" alt="Assumption Life" />
