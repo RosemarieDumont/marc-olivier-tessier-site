@@ -63,20 +63,27 @@ const Welcome = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <div className="relative z-10 lg:max-w-none lg:pr-12 animate-slide-in-left text-center lg:text-left order-2 lg:order-1">
-            <div className="inline-flex flex-col items-center text-left mb-6 sm:mb-8">
-              <h1 className="text-4xl lg:text-5xl font-semibold text-[#0F2241] tracking-tight">Bienvenue</h1>
-              <span className="mt-2 h-1.5 w-24 rounded-full bg-[#0F2A52]"></span>
+            {/* Bande blanche pour Bienvenue */}
+            <div className="bg-white rounded-2xl p-6 sm:p-8 mb-6 shadow-lg">
+              <div className="inline-flex flex-col items-center text-left">
+                <h1 className="text-4xl lg:text-5xl font-semibold text-[#0F2241] tracking-tight">Bienvenue</h1>
+                <span className="mt-2 h-1.5 w-24 rounded-full bg-[#0F2A52]"></span>
+              </div>
             </div>
-            <div className="space-y-3 sm:space-y-4">
-              <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
-                Mon approche s'appuie sur la <span className="font-semibold">stabilité</span>, 
-                la <span className="font-semibold">création de valeur</span>, 
-                les <span className="font-semibold">relations humaines</span> et 
-                la <span className="font-semibold">vision à long terme</span> pour assurer votre sécurité financière.
-              </p>
-              <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
-                Nous ancrons d'abord les fondations, installons la structure, puis faisons grandir votre patrimoine avec régularité et confiance.
-              </p>
+            
+            {/* Bande bleue pour le texte */}
+            <div className="rounded-2xl p-6 sm:p-8 shadow-lg" style={{ backgroundColor: 'var(--primary-blue)' }}>
+              <div className="space-y-3 sm:space-y-4">
+                <p className="text-white leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
+                  Mon approche s'appuie sur la <span className="font-semibold">stabilité</span>, 
+                  la <span className="font-semibold">création de valeur</span>, 
+                  les <span className="font-semibold">relations humaines</span> et 
+                  la <span className="font-semibold">vision à long terme</span> pour assurer votre sécurité financière.
+                </p>
+                <p className="text-white leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
+                  Nous ancrons d'abord les fondations, installons la structure, puis faisons grandir votre patrimoine avec régularité et confiance.
+                </p>
+              </div>
             </div>
           </div>
 
