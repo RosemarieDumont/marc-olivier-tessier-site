@@ -152,11 +152,11 @@ const Welcome = () => {
                 className="w-64 sm:w-72 lg:w-80 h-auto object-cover object-center transition-transform duration-500 hover:scale-105 rounded-xl shadow-lg"
               />
               {/* Signature overlay */}
-              <div className="absolute bottom-0 right-0 lg:bottom-1 lg:right-1">
+              <div className="absolute bottom-2 right-2 lg:bottom-3 lg:right-3">
                 <img
                   src="./Signature M-O-Tessier.png"
                   alt="Signature Marc-Olivier Tessier"
-                  className="w-16 sm:w-20 lg:w-24 h-auto opacity-90 hover:opacity-100 transition-opacity duration-300 drop-shadow-lg filter brightness-0 invert"
+                  className="w-20 sm:w-24 lg:w-28 h-auto opacity-95 hover:opacity-100 transition-all duration-300 drop-shadow-xl filter brightness-0 invert contrast-200"
                 />
               </div>
             </div>
