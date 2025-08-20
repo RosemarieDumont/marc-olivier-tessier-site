@@ -163,33 +163,59 @@ const Welcome = () => {
           </div>
         </div>
 
-        {/* Notre approche Section */}
-        {/* Marc-Olivier Bio Box */}
+        {/* Two-column layout for desktop */}
         <div className="relative z-10 mt-12 sm:mt-16 lg:mt-20">
-          <div className="rounded-2xl p-4 sm:p-6 lg:p-8 text-white shadow-xl hover-lift hover-glow animate-slide-up stagger-2 transition-all duration-500 relative overflow-hidden" style={{ backgroundColor: 'var(--primary-blue)' }}>
-            {/* Subtle blue gradient overlay for PC */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-transparent to-blue-800/30 hidden lg:block"></div>
-            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl hidden lg:block"></div>
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-blue-400/15 rounded-full blur-xl hidden lg:block"></div>
-            <div className="relative z-10 animate-slide-in-left stagger-1">
-              <h3 className="text-heading text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-white mb-3 sm:mb-4 lg:mb-6 flex flex-col sm:flex-row items-center sm:items-center gap-2 sm:gap-3 animate-slide-up stagger-1">
-                <div className="relative">
-                  <img
-                    src="./marc_olivier_nous_contacter copy.jpeg"
-                    alt="Marc-Olivier Tessier"
-                    className="w-16 h-16 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full object-cover object-top border-2 sm:border-3 border-white shadow-lg transition-transform duration-300 hover:scale-110"
-                  />
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+            {/* Left Column - Bio Box */}
+            <div className="rounded-2xl p-6 text-white shadow-xl hover-lift hover-glow animate-slide-up stagger-2 transition-all duration-500 relative overflow-hidden" style={{ backgroundColor: 'var(--primary-blue)' }}>
+              {/* Subtle blue gradient overlay for PC */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-transparent to-blue-800/30 hidden lg:block"></div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl hidden lg:block"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-blue-400/15 rounded-full blur-xl hidden lg:block"></div>
+              <div className="relative z-10 animate-slide-in-left stagger-1">
+                <h3 className="text-heading text-xl lg:text-2xl font-bold text-white mb-4 lg:mb-6 flex flex-col sm:flex-row items-center sm:items-center gap-2 sm:gap-3 animate-slide-up stagger-1">
+                  <div className="relative">
+                    <img
+                      src="./marc_olivier_nous_contacter copy.jpeg"
+                      alt="Marc-Olivier Tessier"
+                      className="w-16 h-16 lg:w-16 lg:h-16 rounded-full object-cover object-top border-2 sm:border-3 border-white shadow-lg transition-transform duration-300 hover:scale-110"
+                    />
+                  </div>
+                  <span className="text-xl lg:text-2xl font-bold text-center sm:text-left">Marc-Olivier Tessier</span>
+                </h3>
+                <div className="space-y-3 lg:space-y-4 text-body text-white/85 animate-slide-up stagger-2">
+                  <p className="text-sm sm:text-base text-left sm:text-justify text-white leading-relaxed">
+                    Conseiller en sécurité financière certifié auprès de l'Autorité des marchés financiers, 
+                    affilié à iA Groupe financier au sein de l'agence Les Rivières. J'accompagne mes clients dans des décisions clés 
+                    liées à l'assurance, à l'épargne et à la retraite, en s'appuyant sur une approche structurée et orientée résultats. 
+                    Propriétaire de biens immobiliers et investisseur actif, je transforme mon expérience concrète du marché en conseils 
+                    pratiques, pour vous aider à construire un avenir financier structuré, fiable et enraciné dans la réalité du terrain.
+                  </p>
                 </div>
-                <span className="text-lg sm:text-xl lg:text-2xl font-bold text-center sm:text-left">Marc-Olivier Tessier</span>
-              </h3>
-              <div className="space-y-3 sm:space-y-3 lg:space-y-4 text-body text-white/85 animate-slide-up stagger-2">
-                <p className="text-sm sm:text-base text-left sm:text-justify text-white leading-relaxed sm:leading-relaxed lg:leading-relaxed">
-                  Conseiller en sécurité financière certifié auprès de l'Autorité des marchés financiers, 
-                  affilié à iA Groupe financier au sein de l'agence Les Rivières. J'accompagne mes clients dans des décisions clés 
-                  liées à l'assurance, à l'épargne et à la retraite, en s'appuyant sur une approche structurée et orientée résultats. 
-                  Propriétaire de biens immobiliers et investisseur actif, je transforme mon expérience concrète du marché en conseils 
-                  pratiques, pour vous aider à construire un avenir financier structuré, fiable et enraciné dans la réalité du terrain.
-                </p>
+              </div>
+            </div>
+
+            {/* Right Column - Approach Box */}
+            <div className="rounded-2xl p-6 text-white shadow-xl hover-lift hover-glow animate-slide-up stagger-3 transition-all duration-500 relative overflow-hidden" style={{ backgroundColor: 'var(--primary-blue)' }}>
+              {/* Enhanced blue atmosphere for PC */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-transparent to-blue-800/30 hidden lg:block"></div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl hidden lg:block"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-blue-400/15 rounded-full blur-xl hidden lg:block"></div>
+              <div className="relative z-10">
+                <h3 className="text-heading text-xl lg:text-2xl font-bold text-white mb-4 lg:mb-6 animate-slide-up stagger-1">
+                  Mon approche
+                </h3>
+                <div className="space-y-3 lg:space-y-4 animate-slide-up stagger-2">
+                  <p className="text-white leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(14px, 2.5vw, 16px)', lineHeight: '1.5' }}>
+                    Mon approche s'appuie sur la <span className="font-semibold">stabilité</span>, 
+                    la <span className="font-semibold">création de valeur</span>, 
+                    les <span className="font-semibold">relations humaines</span> et 
+                    la <span className="font-semibold">vision à long terme</span> pour assurer votre sécurité financière.
+                  </p>
+                  <p className="text-white leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(14px, 2.5vw, 16px)', lineHeight: '1.5' }}>
+                    Nous ancrons d'abord les fondations, installons la structure, puis faisons grandir votre patrimoine avec régularité et confiance.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
