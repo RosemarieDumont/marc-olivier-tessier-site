@@ -156,7 +156,7 @@ const Welcome = () => {
                 <img
                   src="./Signature M-O-Tessier.png"
                   alt="Signature Marc-Olivier Tessier"
-                  className="w-20 sm:w-24 lg:w-28 h-auto opacity-95 hover:opacity-100 transition-all duration-300 drop-shadow-xl filter brightness-0 invert contrast-125"
+                  className="w-16 sm:w-20 lg:w-24 h-auto opacity-90 hover:opacity-100 transition-opacity duration-300 drop-shadow-lg filter brightness-0 invert"
                 />
               </div>
             </div>
