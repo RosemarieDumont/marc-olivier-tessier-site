@@ -225,7 +225,6 @@ const Welcome = () => {
           <div className="text-center mb-6 sm:mb-8">
             <h3 className="text-2xl sm:text-3xl font-bold mb-4" style={{ fontFamily: 'Poppins', fontWeight: '700', color: 'var(--primary-blue)' }}>Mes valeurs</h3>
             <div className="w-16 sm:w-24 h-1 mx-auto rounded-full" style={{ backgroundColor: 'var(--primary-blue)' }}></div>
-          </div>
         </div>
       </div>
     </section>
@@ -233,3 +232,5 @@ const Welcome = () => {
 };
 
 export default Welcome;
+  )
+}
