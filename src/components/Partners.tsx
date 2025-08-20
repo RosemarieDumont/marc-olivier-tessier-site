@@ -96,11 +96,8 @@ const Partners: React.FC = () => {
               <LogoCell href="https://www.manulife.ca" src="./assets/logos/manulife-logo.jpg" alt="Manulife" />
               <LogoCell href="https://specialtylifeinsurance.ca" src="./assets/logos/sli-logo.jpg" alt="Specialty Life Insurance (SLI)" zoom={1.24} cap="96%" />
               <LogoCell href="https://uvinsurance.ca" src="./assets/logos/uv-assurance.png" alt="UV Assurance" zoom={1.20} cap="96%" />
-              <LogoCell href="https://uvinsurance.ca" src="./assets/logos/uv-assurance.png" alt="UV Assurance" zoom={1.22} cap="96%" clip="1% 2% 1% 2%" />
               <LogoCell href="https://www.beneva.ca" src="./assets/logos/ssq-logo.png" alt="SSQ Assurance" zoom={1.18} cap="96%" />
-              <LogoCell href="https://www.beneva.ca" src="./assets/logos/ssq-logo.png" alt="SSQ Assurance" zoom={1.20} cap="96%" />
               <LogoCell href="https://www.edgebenefits.com" src="./assets/logos/the-edge-logo.jpg" alt="The Edge Benefits" zoom={1.22} cap="96%" />
-              <LogoCell href="https://www.edgebenefits.com" src="./assets/logos/the-edge-logo.jpg" alt="The Edge Benefits" zoom={1.24} cap="96%" clip="0% 2% 0% 2%" />
               
               {/* Et plus encore... */}
               <li className="shrink-0 h-20 w-48 md:h-24 md:w-56 flex items-center justify-center bg-white rounded-lg">
