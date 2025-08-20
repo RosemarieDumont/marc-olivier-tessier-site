@@ -77,11 +77,6 @@ const Partners: React.FC = () => {
           
           <div className="partners-track">
             <ul className="flex items-center gap-8 md:gap-12 overflow-x-auto md:overflow-visible snap-x snap-mandatory">
-            <ul className="flex items-center justify-start
-                           gap-4 sm:gap-6 md:gap-10
-                           overflow-x-auto md:overflow-visible
-                           snap-x snap-mandatory scroll-smooth
-                           -mx-3 px-3 md:mx-0 md:px-0">
               <LogoCell href="https://www.bmo.com" src="./assets/logos/bmo.png" alt="BMO" />
               <LogoCell href="https://ia.ca" src="./logo IA.png" alt="iA Groupe financier" zoom={1.15} cap="92%" />
               <LogoCell href="https://www.beneva.ca" src="./assets/logos/beneva.png" alt="Beneva" />
