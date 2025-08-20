@@ -89,9 +89,9 @@ const Partners: React.FC = () => {
               <LogoCell href="https://www.foresters.com" src="./assets/logos/foresters-financial.png" alt="Foresters Financial" />
               <LogoCell href="https://www.equitable.ca" src="./assets/logos/equitable-life-of-canada.png" alt="Equitable Life of Canada" zoom={0.88} cap="84%" />
               <LogoCell href="https://www.empire.ca/" src="./assets/logos/empire-life.png" alt="L'Empire Vie" />
-              <LogoCell href="https://www.humania.ca" src="./assets/logos/humania-assurance.jpg" alt="Humania Assurance" zoom={1.18} cap="96%" />
+              <LogoCell href="https://www.humania.ca" src="./assets/logos/humania-assurance.jpg" alt="Humania" zoom={1.26} cap="96%" clip="1% 2% 1% 2%" />
               <LogoCell href="https://ivari.ca/" src="./assets/logos/ivari.webp" alt="ivari" />
-              <LogoCell href="https://www.beneva.ca/" src="./assets/logos/la-capitale.jpg" alt="La Capitale" zoom={1.22} cap="96%" />
+              <LogoCell href="https://www.beneva.ca/" src="./assets/logos/la-capitale.jpg" alt="La Capitale" zoom={1.30} cap="96%" clip="1% 3% 1% 3%" />
               <LogoCell href="https://ppi.ca/" src="./assets/logos/ppi.png" alt="PPI" />
               <LogoCell href="https://www.manulife.ca" src="./assets/logos/manulife-logo.jpg" alt="Manulife" />
               <LogoCell href="https://specialtylifeinsurance.ca" src="./assets/logos/sli-logo.jpg" alt="Specialty Life Insurance (SLI)" zoom={1.24} cap="96%" />
