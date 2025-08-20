@@ -151,18 +151,14 @@ const Welcome = () => {
                 alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
                 className="w-64 sm:w-72 lg:w-80 h-auto object-cover object-center transition-transform duration-500 hover:scale-105 rounded-xl shadow-lg"
               />
-            </div>
-            
-            {/* Signature séparée - VISIBLE */}
-            <div className="mt-4 flex justify-center">
-              <img
-                src="./Signature M-O-Tessier.png"
-                alt="Signature Marc-Olivier Tessier"
-                className="w-32 sm:w-36 lg:w-40 h-auto opacity-100 transition-all duration-300 drop-shadow-2xl"
-                style={{
-                  filter: 'brightness(0) saturate(100%) invert(13%) sepia(94%) saturate(1352%) hue-rotate(209deg) brightness(95%) contrast(107%)'
-                }}
-              />
+              {/* Signature overlay */}
+              <div className="absolute bottom-0 right-0 lg:bottom-1 lg:right-1">
+                <img
+                  src="./Signature M-O-Tessier.png"
+                  alt="Signature Marc-Olivier Tessier"
+                  className="w-20 sm:w-24 lg:w-28 h-auto opacity-95 hover:opacity-100 transition-all duration-300 drop-shadow-xl filter brightness-0 invert contrast-125"
+                />
+              </div>
             </div>
           </div>
         </div>
