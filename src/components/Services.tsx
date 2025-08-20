@@ -1,10 +1,16 @@
 import React, { useEffect, useRef } from 'react';
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { PiggyBank, Shield, Building, TrendingUp, Heart, Users, CreditCard, Home, Plane, Car, UserCheck, Briefcase, Calculator, FileText, Users2, Handshake, ChevronDown } from 'lucide-react';
 
 const Services = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const [activeTab, setActiveTab] = useState('epargne');
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const [openServices, setOpenServices] = useState<{[key: string]: boolean}>({});
+  const tabsRef = useRef<HTMLDivElement>(null);
+  const indicatorRef = useRef<HTMLDivElement>(null);
+  const touchStartX = useRef<number>(0);
+  const touchStartY = useRef<number>(0);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -24,6 +30,72 @@ const Services = () => {
 
     return () => observer.disconnect();
   }, []);
+
+  // Update indicator position
+  const updateIndicator = useCallback(() => {
+    if (!tabsRef.current || !indicatorRef.current) return;
+    
+    const activeButton = tabsRef.current.querySelector(`[data-tab="${activeTab}"]`) as HTMLElement;
+    if (activeButton) {
+      const { offsetLeft, offsetWidth } = activeButton;
+      indicatorRef.current.style.transform = `translateX(${offsetLeft}px)`;
+      indicatorRef.current.style.width = `${offsetWidth}px`;
+    }
+  }, [activeTab]);
+
+  useEffect(() => {
+    updateIndicator();
+    window.addEventListener('resize', updateIndicator);
+    return () => window.removeEventListener('resize', updateIndicator);
+  }, [updateIndicator]);
+
+  // Tab switching with smooth transitions
+  const switchTab = useCallback((newTab: string) => {
+    if (newTab === activeTab || isTransitioning) return;
+    
+    setIsTransitioning(true);
+    
+    // Exit animation
+    setTimeout(() => {
+      setActiveTab(newTab);
+      // Enter animation
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 50);
+    }, 260);
+  }, [activeTab, isTransitioning]);
+
+  // Touch handlers for swipe navigation
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (!touchStartX.current) return;
+    
+    const touchEndX = e.changedTouches[0].clientX;
+    const touchEndY = e.changedTouches[0].clientY;
+    const deltaX = touchStartX.current - touchEndX;
+    const deltaY = touchStartY.current - touchEndY;
+    
+    // Only trigger if horizontal swipe is dominant
+    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+      const tabs = Object.keys(services);
+      const currentIndex = tabs.indexOf(activeTab);
+      
+      if (deltaX > 0 && currentIndex < tabs.length - 1) {
+        // Swipe left - next tab
+        switchTab(tabs[currentIndex + 1]);
+      } else if (deltaX < 0 && currentIndex > 0) {
+        // Swipe right - previous tab
+        switchTab(tabs[currentIndex - 1]);
+      }
+    }
+    
+    touchStartX.current = 0;
+    touchStartY.current = 0;
+  };
 
   const toggleService = (serviceKey: string) => {
     setOpenServices(prev => ({
@@ -156,7 +228,129 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        {/* Mobile Tabs */}
+        <div className="lg:hidden mb-8">
+          <div 
+            ref={tabsRef}
+            className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-1 mb-6"
+            role="tablist"
+            aria-label="Services categories"
+          >
+            {/* Sliding indicator */}
+            <div
+              ref={indicatorRef}
+              className="absolute top-1 bottom-1 bg-white rounded-xl shadow-lg transition-all duration-[350ms] ease-out motion-reduce:transition-none"
+              aria-hidden="true"
+            />
+            
+            {Object.entries(services).map(([key, category]) => (
+              <button
+                key={key}
+                data-tab={key}
+                role="tab"
+                aria-selected={activeTab === key}
+                aria-controls={`panel-${key}`}
+                onClick={() => switchTab(key)}
+                className={`relative z-10 flex-1 px-4 py-3 text-sm font-semibold rounded-xl transition-colors duration-200 ${
+                  activeTab === key 
+                    ? 'text-blue-900' 
+                    : 'text-white hover:text-white/80'
+                }`}
+              >
+                {category.title}
+              </button>
+            ))}
+          </div>
+
+          {/* Mobile Tab Panels */}
+          <div 
+            className="relative"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
+            {Object.entries(services).map(([key, category]) => (
+              <div
+                key={key}
+                id={`panel-${key}`}
+                role="tabpanel"
+                aria-labelledby={`tab-${key}`}
+                className={`${
+                  activeTab === key 
+                    ? 'block animate-panel-enter motion-reduce:animate-none' 
+                    : 'hidden'
+                }`}
+              >
+                <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
+                  {/* Header */}
+                  <div className="p-6 text-white" style={{ backgroundColor: 'var(--primary-blue)' }}>
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="p-2 bg-white/20 rounded-lg">
+                        {category.icon}
+                      </div>
+                      <h3 className="text-2xl font-bold">{category.title}</h3>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6">
+                    {key === 'corporatif' && (
+                      <p className="text-gray-700 mb-6 italic">
+                        Accompagnement des entrepreneurs, travailleurs autonomes et professionnels pour protéger et développer leur capital, au moyen de solutions personnalisées alignées sur vos priorités d'affaires et de vie, tout en assurant la pérennité de leurs activités.
+                      </p>
+                    )}
+                    {key === 'epargne' && (
+                      <p className="text-gray-700 mb-6 italic">
+                        Optimisez votre épargne avec des solutions fiscalement avantageuses adaptées à vos objectifs.
+                      </p>
+                    )}
+                    {key === 'assurance' && (
+                      <p className="text-gray-700 mb-6 italic">
+                        Protégez ce qui compte le plus avec des couvertures complètes et personnalisées.
+                      </p>
+                    )}
+                    
+                    <div className="space-y-3">
+                      {category.services.map((service, index) => {
+                        const serviceKey = `${key}-${index}`;
+                        return (
+                          <div key={index} className="border border-gray-200 rounded-xl overflow-hidden">
+                            <button
+                              onClick={() => toggleService(serviceKey)}
+                              className="w-full flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 transition-colors duration-300"
+                            >
+                              <div className="flex items-center gap-3">
+                                <div className="p-2 rounded-lg text-white" style={{ backgroundColor: 'var(--primary-blue)' }}>
+                                  {getServiceIcon(service.name)}
+                                </div>
+                                <h4 className="text-left font-semibold text-base" style={{ color: 'var(--primary-blue)' }}>
+                                  {service.name}
+                                </h4>
+                              </div>
+                              <ChevronDown className={`w-5 h-5 transform transition-transform duration-300 ${openServices[serviceKey] ? 'rotate-180' : ''}`} style={{ color: 'var(--primary-blue)' }} />
+                            </button>
+                            
+                            <div className={`overflow-hidden transition-all duration-500 ease-in-out ${openServices[serviceKey] ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                              <div className="p-4 pt-0 bg-white">
+                                <div className="border-l-4 pl-4 py-2" style={{ borderColor: 'var(--primary-blue)' }}>
+                                  <p className="text-gray-700 leading-relaxed">
+                                    {service.description}
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop Grid */}
+        <div className="hidden lg:grid lg:grid-cols-3 gap-8">
           {Object.entries(services).map(([key, category]) => (
             <div key={key} className={`group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 hover-lift hover-glow animate-scale-in stagger-${Object.keys(services).indexOf(key) + 1}`}>
               {/* Header */}
