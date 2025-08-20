@@ -225,28 +225,6 @@ const Welcome = () => {
           <div className="text-center mb-6 sm:mb-8">
             <h3 className="text-2xl sm:text-3xl font-bold mb-4" style={{ fontFamily: 'Poppins', fontWeight: '700', color: 'var(--primary-blue)' }}>Mes valeurs</h3>
             <div className="w-16 sm:w-24 h-1 mx-auto rounded-full" style={{ backgroundColor: 'var(--primary-blue)' }}></div>
-          </div>
-          
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {approaches.map((approach, index) => (
-              <div key={index} className={`group p-4 lg:p-6 rounded-2xl border-2 transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:bg-blue-600 animate-scale-in stagger-${index + 1} relative overflow-hidden`} style={{ 
-                backgroundColor: 'var(--primary-blue)', 
-                borderColor: 'var(--primary-blue)',
-                boxShadow: '0 4px 12px rgba(15, 42, 82, 0.15)'
-              }}>
-                {/* Enhanced blue gradients for PC */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-700/30 via-transparent to-blue-500/20 hidden lg:block"></div>
-                <div className="absolute -top-4 -right-4 w-16 h-16 bg-blue-400/20 rounded-full blur-lg hidden lg:block"></div>
-                <div className="relative z-10">
-                  <div className="flex items-center justify-center sm:justify-start mb-4 gap-2">
-                    <div className="text-white transition-transform duration-300 group-hover:scale-110 flex-shrink-0">{approach.icon}</div>
-                    <h4 className="text-subheading text-lg lg:text-xl font-bold text-white transition-colors duration-300">{approach.title}</h4>
-                  </div>
-                  <p className="text-body text-white/90 transition-colors duration-300 group-hover:text-white text-center sm:text-left">{approach.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
