@@ -154,12 +154,12 @@ const Welcome = () => {
               {/* Signature overlay */}
               <div className="absolute bottom-2 right-2 lg:bottom-3 lg:right-3">
                 <img
-                  src="./Signature M-O-Tessier.png"
+                  src="./Signature M-O-Tessier copy.png"
                   alt="Signature Marc-Olivier Tessier"
                   className="w-24 sm:w-28 lg:w-32 h-auto transition-all duration-300 hover:scale-110"
                   style={{
                     filter: 'brightness(0) invert(1) contrast(2) drop-shadow(2px 2px 4px rgba(0,0,0,0.8))',
-                    opacity: '0.9'
+                    opacity: '0.95'
                   }}
                 />
               </div>
