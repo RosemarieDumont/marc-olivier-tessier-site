@@ -54,6 +54,7 @@ const Testimonials = () => {
             </span>
           </div>
           <h2 className="text-4xl font-bold mb-6 animate-slide-up stagger-2" style={{ fontFamily: 'Poppins', fontWeight: '700', color: 'var(--primary-blue)' }}>Témoignages</h2>
+          <span className="mt-2 block h-1.5 w-24 rounded-full bg-[#2F6FE4] mx-auto animate-slide-up stagger-3"></span>
           <div className="mb-6 animate-slide-up stagger-3">
             <a 
               href="https://www.facebook.com/people/Marc-Olivier-Tessier-Conseiller-en-s%C3%A9curit%C3%A9-financi%C3%A8re/61556652182444/?sk=reviews"
