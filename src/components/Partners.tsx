@@ -85,9 +85,9 @@ const Partners: React.FC = () => {
               <LogoCell href="https://www.desjardins.com" src="./assets/logos/desjardins.png" alt="Desjardins" zoom={0.86} />
               <LogoCell href="https://www.canadalife.com" src="./assets/logos/canada-life.png" alt="Canada Life" />
               <LogoCell href="https://www.assumption.ca" src="./assets/logos/assumption-life.png" alt="Assumption Life" />
-              <LogoCell href="https://www.sunlife.ca" src="./assets/logos/sun-life-financial.png" alt="Sun Life Financial" />
+              <LogoCell href="https://www.sunlife.ca" src="./assets/logos/sun-life-financial.png" alt="Sun Life Financial" zoom={0.90} cap="86%" />
               <LogoCell href="https://www.foresters.com" src="./assets/logos/foresters-financial.png" alt="Foresters Financial" />
-              <LogoCell href="https://www.equitable.ca" src="./assets/logos/equitable-life-of-canada.png" alt="Equitable Life of Canada" />
+              <LogoCell href="https://www.equitable.ca" src="./assets/logos/equitable-life-of-canada.png" alt="Equitable Life of Canada" zoom={0.88} cap="84%" />
               <LogoCell href="https://www.empire.ca/" src="./assets/logos/empire-life.png" alt="L'Empire Vie" />
               <LogoCell href="https://www.humania.ca" src="./assets/logos/humania-assurance.jpg" alt="Humania Assurance" zoom={1.18} cap="96%" />
               <LogoCell href="https://ivari.ca/" src="./assets/logos/ivari.webp" alt="ivari" />
