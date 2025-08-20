@@ -232,7 +232,7 @@ const Services = () => {
         <div className="lg:hidden mb-8">
           <div 
             ref={tabsRef}
-            className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-1 mb-6"
+            className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-1 mb-6 flex"
             role="tablist"
             aria-label="Services categories"
           >
@@ -251,7 +251,7 @@ const Services = () => {
                 aria-selected={activeTab === key}
                 aria-controls={`panel-${key}`}
                 onClick={() => switchTab(key)}
-                className={`relative z-10 flex-1 px-4 py-3 text-sm font-semibold rounded-xl transition-colors duration-200 ${
+                className={`relative z-10 flex-1 px-2 py-3 text-sm font-semibold rounded-xl transition-colors duration-200 text-center ${
                   activeTab === key 
                     ? 'text-blue-900' 
                     : 'text-white hover:text-white/80'
