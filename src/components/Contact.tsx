@@ -74,6 +74,8 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-10">
           {/* Contact Information */}
           <div className="relative z-10 animate-slide-in-left stagger-1">
+            {/* Enhanced blue atmosphere for PC */}
+            <div className="absolute -inset-4 bg-gradient-to-br from-blue-600/10 via-transparent to-blue-800/15 rounded-3xl blur-xl hidden lg:block"></div>
             <h3 className="text-heading text-xl font-bold text-white mb-6 animate-slide-up stagger-1">Informations de contact</h3>
             <div className="space-y-4">
               {contactInfo.map((info, index) => (
@@ -82,8 +84,10 @@ const Contact = () => {
                   href={info.href}
                   target={info.href.startsWith('http') ? '_blank' : undefined}
                   rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className={`group flex items-start gap-3 p-4 bg-white/10 rounded-xl hover:bg-white/15 transition-all duration-500 border border-white/20 hover:border-white/40 backdrop-blur-sm hover-lift hover-glow animate-slide-up stagger-${index + 2}`}
+                  className={`group flex items-start gap-3 p-4 bg-white/10 rounded-xl hover:bg-white/15 transition-all duration-500 border border-white/20 hover:border-white/40 backdrop-blur-sm hover-lift hover-glow animate-slide-up stagger-${index + 2} relative overflow-hidden`}
                 >
+                  {/* Subtle blue depth for PC */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-blue-700/10 hidden lg:block"></div>
                   <div className="p-2 rounded-xl bg-white/20 text-white transition-transform duration-300 group-hover:scale-110">
                     {info.icon}
                   </div>
@@ -100,8 +104,10 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="relative z-10 animate-slide-in-right stagger-2">
+            {/* Enhanced form background for PC */}
+            <div className="absolute -inset-6 bg-gradient-to-tl from-blue-700/10 via-blue-500/5 to-blue-800/15 rounded-3xl blur-2xl hidden lg:block"></div>
             <h3 className="text-heading text-xl font-bold text-white mb-6 animate-slide-up stagger-1">Assistance & renseignements</h3>
-            <form action="mailto:marc-olivier.tessier@agc.ia.ca" method="post" enctype="text/plain" className="space-y-4 animate-slide-up stagger-2">
+            <form action="mailto:marc-olivier.tessier@agc.ia.ca" method="post" enctype="text/plain" className="space-y-4 animate-slide-up stagger-2 relative">
               <div className="grid grid-cols-2 gap-3">
                 <div>
                   <label className="text-caption block font-medium text-white/80 mb-1">

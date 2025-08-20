@@ -241,7 +241,11 @@ const Services = () => {
 
         {/* Call to Action */}
         <div className="mt-12 text-center animate-slide-up stagger-4">
-          <div className="rounded-2xl p-6 lg:p-9 shadow-xl hover-lift hover-glow transition-all duration-500" style={{ backgroundColor: 'var(--primary-blue-light)' }}>
+          <div className="rounded-2xl p-6 lg:p-9 shadow-xl hover-lift hover-glow transition-all duration-500 relative overflow-hidden" style={{ backgroundColor: 'var(--primary-blue-light)' }}>
+            {/* Strategic blue enhancements for PC */}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-800/40 via-blue-600/20 to-blue-900/30 hidden lg:block"></div>
+            <div className="absolute top-0 left-1/4 w-40 h-40 bg-blue-500/15 rounded-full blur-3xl hidden lg:block"></div>
+            <div className="absolute bottom-0 right-1/4 w-32 h-32 bg-blue-400/20 rounded-full blur-2xl hidden lg:block"></div>
             <div className="relative z-10">
               <h3 className="text-heading text-2xl font-bold text-white mb-3 animate-slide-up stagger-1">
                 Prêt à sécuriser votre avenir financier ?

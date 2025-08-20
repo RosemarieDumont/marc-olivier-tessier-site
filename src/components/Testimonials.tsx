@@ -71,11 +71,14 @@ const Testimonials = () => {
 
         <div className="grid lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className={`group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-[#6C90C3]/30 hover-lift hover-glow animate-scale-in stagger-${index + 1}`}>
+            <div key={index} className={`group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-[#6C90C3]/30 hover-lift hover-glow animate-scale-in stagger-${index + 1} relative`}>
               {/* Quote Icon */}
-              <div className="p-6 transition-all duration-300" style={{ backgroundColor: 'var(--primary-blue)' }}>
+              <div className="p-6 transition-all duration-300 relative overflow-hidden" style={{ backgroundColor: 'var(--primary-blue)' }}>
+                {/* Enhanced blue header for PC */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/30 via-transparent to-blue-800/20 hidden lg:block"></div>
+                <div className="absolute top-0 right-0 w-20 h-20 bg-blue-400/15 rounded-full blur-xl hidden lg:block"></div>
                 <div>
-                  <div className="p-2 bg-white/20 rounded-lg inline-block transition-transform duration-300 group-hover:scale-110">
+                  <div className="p-2 bg-white/20 rounded-lg inline-block transition-transform duration-300 group-hover:scale-110 relative z-10">
                     <Quote className="w-6 h-6 text-white" />
                   </div>
                 </div>
