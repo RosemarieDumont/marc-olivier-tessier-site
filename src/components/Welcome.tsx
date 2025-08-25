@@ -27,22 +27,22 @@ const Welcome = () => {
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Stabilité",
-      description: "Nous mettons vos priorités en premier et privilégions des solutions fiables, négociées au meilleur taux disponible et ajustées à votre réalité."
+      description: "Je mets vos priorités en premier et privilégie des solutions fiables, négociées au meilleur taux disponible et ajustées à votre réalité."
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
       title: "Création de valeur",
-      description: "Nous optimisons les leviers de croissance: placements pertinents, stratégie fiscale et réinvestissement."
+      description: "J'optimise les leviers de croissance: placements pertinents, stratégie fiscale et réinvestissement."
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "Relations humaines",
-      description: "Nous plaçons l'humain au centre : confiance par clarté et constance, avec un suivi proactif et des ajustements rapides."
+      description: "Je place l'humain au centre : confiance par clarté et constance, avec un suivi proactif et des ajustements rapides."
     },
     {
       icon: <Award className="w-8 h-8" />,
       title: "Vision à long terme",
-      description: "Une stratégie bâtie par étapes : fondations, structure, finitions qui évolue avec vos objectifs."
+      description: "Une stratégie que je bâtis par étapes : fondations, structure, finitions qui évolue avec vos objectifs."
     }
   ];
 
