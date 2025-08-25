@@ -445,7 +445,7 @@ const Services = () => {
                 Prêt à sécuriser votre avenir financier ?
               </h3>
               <p className="text-body text-lg text-white/85 mb-6 max-w-2xl mx-auto animate-slide-up stagger-2">
-                Contactez-nous dès aujourd'hui pour une consultation gratuite et personnalisée
+                Contactez-moi dès aujourd'hui pour une consultation gratuite et personnalisée
               </p>
               <a className="animate-slide-up stagger-3"
                 href="https://outlook-sdf.office.com/bookwithme/user/0cb6ca6a017f4d5ea6b053f4dacafad2%40agc.ia.ca?anonymous&ismsaljsauthenabled=true"
