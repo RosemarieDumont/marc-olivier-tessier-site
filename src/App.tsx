@@ -30,9 +30,7 @@ function App() {
   return (
     <div className="min-h-screen">
       <Header />
-      <div className="mb-0">
-        <Hero />
-      </div>
+      <Hero />
       <Welcome />
       <Services />
       <Partners />
