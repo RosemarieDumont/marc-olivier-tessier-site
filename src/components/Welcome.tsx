@@ -37,7 +37,7 @@ const Welcome = () => {
     {
       icon: <Users className="w-8 h-8" />,
       title: "Relations humaines",
-      description: "Je place l'humain au centre : confiance par clarté et constance, avec un suivi proactif et des ajustements rapides."
+      description: "Les besoins uniques de chaque individu guident nos plans et nos échanges. Confiance, écoute et suivi proactif sont les fondements de nos interactions."
     },
     {
       icon: <Award className="w-8 h-8" />,
