@@ -40,7 +40,7 @@ const Welcome = () => {
               </p>
               
               <p className="text-lg text-gray-700 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', lineHeight: '1.6' }}>
-                Je comprends que chaque entrepreneur et propriétaire d'entreprise a des besoins uniques en matière de protection financière. Avec une expertise pointue dans le domaine de l'assurance, je suis dédié à fournir des solutions sur mesure pour protéger ce que vous avez construit avec soin. Que ce soit pour sécuriser votre entreprise ou protéger votre patrimoine personnel, je suis là pour vous guider à chaque étape.
+                Conseiller en sécurité financière certifié auprès de l'Autorité des marchés financiers et affilié à iA Groupe financier, j'accompagne mes clients dans leurs décisions clés avec une approche structurée et orientée résultats. Mon rôle est de rendre claires et accessibles des solutions parfois complexes, en reliant la stratégie financière aux réalités concrètes du marché et de la vie quotidienne.
               </p>
             </div>
 
