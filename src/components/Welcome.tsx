@@ -27,14 +27,14 @@ const Welcome = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
-          <div className="animate-slide-in-left">
+          <div className="animate-slide-in-left text-center lg:text-left">
             {/* Title */}
             <h2 className="text-4xl lg:text-5xl font-bold mb-8 animate-slide-up stagger-1" style={{ fontFamily: 'Poppins', fontWeight: '700', color: 'var(--primary-blue)', lineHeight: '1.1' }}>
               À propos
             </h2>
 
             {/* Content */}
-            <div className="space-y-6 mb-8 animate-slide-up stagger-2">
+            <div className="space-y-6 mb-8 animate-slide-up stagger-2 text-left">
               <p className="text-lg text-gray-700 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', lineHeight: '1.6' }}>
                 Mon approche s'appuie sur la stabilité, la création de valeur, les relations humaines et la vision à long terme pour assurer votre sécurité financière. Nous ancrons d'abord les fondations, installons la structure, puis faisons grandir votre patrimoine avec régularité et confiance.
               </p>
@@ -45,7 +45,7 @@ const Welcome = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="animate-slide-up stagger-3">
+            <div className="animate-slide-up stagger-3 flex justify-center lg:justify-start">
               <a
                 href="https://outlook-sdf.office.com/bookwithme/user/0cb6ca6a017f4d5ea6b053f4dacafad2%40agc.ia.ca?anonymous&ismsaljsauthenabled=true"
                 target="_blank"
@@ -67,7 +67,7 @@ const Welcome = () => {
               <img
                 src="./marc-olivier-héro.jpeg"
                 alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
-                className="w-1/2 h-auto object-cover object-center transition-transform duration-500 hover:scale-105 shadow-lg mx-auto"
+                className="w-2/3 lg:w-1/2 h-auto object-cover object-center transition-transform duration-500 hover:scale-105 shadow-lg mx-auto"
               />
             </div>
           </div>
