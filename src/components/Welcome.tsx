@@ -67,7 +67,7 @@ const Welcome = () => {
               <img
                 src="./marc-olivier-héro.jpeg"
                 alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
-                className="w-full h-auto object-cover object-center transition-transform duration-500 hover:scale-105 shadow-lg"
+                className="w-1/2 h-auto object-cover object-center transition-transform duration-500 hover:scale-105 shadow-lg mx-auto"
               />
             </div>
           </div>
