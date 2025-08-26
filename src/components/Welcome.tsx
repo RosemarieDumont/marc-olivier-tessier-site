@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import { Shield, TrendingUp, Award, Users } from 'lucide-react';
 
 const Welcome = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -23,28 +22,6 @@ const Welcome = () => {
     return () => observer.disconnect();
   }, []);
 
-  const approaches = [
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Stabilité",
-      description: "Je mets vos priorités en premier et privilégie des solutions fiables, négociées au meilleur taux disponible et ajustées à votre réalité."
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Création de valeur",
-      description: "J'optimise les leviers de croissance: placements pertinents, stratégie fiscale et réinvestissement."
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Relations humaines",
-      description: "Les besoins uniques de chaque individu guident nos plans et nos échanges. Confiance, écoute et suivi proactif sont les fondements de nos interactions."
-    },
-    {
-      icon: <Award className="w-8 h-8" />,
-      title: "Vision à long terme",
-      description: "Une stratégie que je bâtis par étapes : fondations, structure, finitions qui évolue avec vos objectifs."
-    }
-  ];
 
   return (
     <section ref={sectionRef} id="welcome" className="relative py-6 sm:py-8 lg:py-12 overflow-hidden animate-section-hidden -mt-24 lg:-mt-32" style={{ backgroundColor: 'var(--primary-blue)' }}>
@@ -109,7 +86,6 @@ const Welcome = () => {
           </div>
         </div>
 
-        {/* Notre approche Section */}
         {/* Marc-Olivier Bio Box */}
         <div className="relative z-10 mt-12 sm:mt-16 lg:mt-20">
           <div className="rounded-2xl p-4 sm:p-6 lg:p-8 text-white shadow-xl hover-lift hover-glow animate-slide-up stagger-2 transition-all duration-500 relative overflow-hidden bg-black/20 backdrop-blur-sm border border-white/10">
@@ -138,32 +114,6 @@ const Welcome = () => {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div className="relative z-10 mt-12 sm:mt-16 lg:mt-20">
-          <div className="text-center mb-6 sm:mb-8">
-            <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-white" style={{ fontFamily: 'Poppins', fontWeight: '700' }}>Mes valeurs</h3>
-            <div className="w-16 sm:w-24 h-1 mx-auto rounded-full bg-white"></div>
-          </div>
-          
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {approaches.map((approach, index) => (
-              <div key={index} className={`group p-4 lg:p-6 rounded-2xl border-2 border-white/20 transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:bg-white/10 animate-scale-in stagger-${index + 1} relative overflow-hidden bg-black/20 backdrop-blur-sm`} style={{ 
-                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)'
-              }}>
-                {/* Enhanced blue gradients for PC */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-white/5 hidden lg:block"></div>
-                <div className="absolute -top-4 -right-4 w-16 h-16 bg-white/10 rounded-full blur-lg hidden lg:block"></div>
-                <div className="relative z-10">
-                  <div className="flex items-center justify-center sm:justify-start mb-4 gap-2">
-                    <div className="text-white transition-transform duration-300 group-hover:scale-110 flex-shrink-0">{approach.icon}</div>
-                    <h4 className="text-subheading text-lg lg:text-xl font-bold text-white transition-colors duration-300">{approach.title}</h4>
-                  </div>
-                  <p className="text-body text-white/85 transition-colors duration-300 group-hover:text-white text-center sm:text-left">{approach.description}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </div>

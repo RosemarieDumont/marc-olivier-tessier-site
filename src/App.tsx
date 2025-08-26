@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Welcome from './components/Welcome';
 import Services from './components/Services';
+import Values from './components/Values';
 import Partners from './components/Partners';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
@@ -33,6 +34,7 @@ function App() {
       <Hero />
       <Welcome />
       <Services />
+      <Values />
       <Partners />
       <Testimonials />
       <Contact />
