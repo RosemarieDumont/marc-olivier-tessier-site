@@ -53,64 +53,6 @@ const Welcome = () => {
               radial-gradient(900px_500px_at_110%_10%,rgba(255,255,255,0.05)_0%,transparent_45%)]">
       </div>
 
-      {/* Éléments financiers en arrière-plan */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 opacity-10">
-        {/* Graphiques et tendances */}
-        <div className="absolute top-20 left-10 w-32 h-24 border-2 border-white/30 rounded-lg transform rotate-12">
-          <div className="absolute bottom-2 left-2 w-4 h-8 bg-white/30 rounded-sm"></div>
-          <div className="absolute bottom-2 left-8 w-4 h-12 bg-white/40 rounded-sm"></div>
-          <div className="absolute bottom-2 left-14 w-4 h-16 bg-white/50 rounded-sm"></div>
-          <div className="absolute bottom-2 left-20 w-4 h-10 bg-white/40 rounded-sm"></div>
-        </div>
-        
-        {/* Symbole dollar stylisé */}
-        <div className="absolute top-32 right-16 w-20 h-20 border-4 border-white/30 rounded-full flex items-center justify-center transform -rotate-12">
-          <span className="text-4xl font-bold text-white/40">$</span>
-        </div>
-        
-        {/* Graphique en secteurs */}
-        <div className="absolute bottom-32 left-20 w-24 h-24 border-4 border-white/30 rounded-full transform rotate-45">
-          <div className="absolute inset-0 bg-white/20 rounded-full" style={{clipPath: 'polygon(50% 50%, 50% 0%, 100% 0%, 100% 50%)'}}></div>
-          <div className="absolute inset-0 bg-white/30 rounded-full" style={{clipPath: 'polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%)'}}></div>
-        </div>
-        
-        {/* Tendance croissante */}
-        <div className="absolute top-40 right-32 w-28 h-20 transform rotate-6">
-          <svg viewBox="0 0 100 60" className="w-full h-full stroke-white/30 stroke-2 fill-none">
-            <path d="M10,50 Q30,30 50,35 T90,15" strokeLinecap="round"/>
-            <circle cx="90" cy="15" r="3" className="fill-white/40"/>
-          </svg>
-        </div>
-        
-        {/* Icônes financières subtiles */}
-        <div className="absolute bottom-40 right-20 w-16 h-16 border-2 border-white/30 rounded-lg transform -rotate-6 flex items-center justify-center">
-          <div className="w-8 h-8 bg-white/30 rounded-full"></div>
-        </div>
-        
-        {/* Barres de progression */}
-        <div className="absolute top-60 left-32 w-20 h-16 transform rotate-12">
-          <div className="flex items-end gap-1 h-full">
-            <div className="w-3 h-6 bg-white/20 rounded-sm"></div>
-            <div className="w-3 h-10 bg-white/30 rounded-sm"></div>
-            <div className="w-3 h-8 bg-white/20 rounded-sm"></div>
-            <div className="w-3 h-12 bg-white/40 rounded-sm"></div>
-          </div>
-        </div>
-        
-        {/* Cercles concentriques (croissance) */}
-        <div className="absolute bottom-20 left-1/3 w-32 h-32 transform -rotate-12">
-          <div className="absolute inset-0 border-2 border-white/20 rounded-full"></div>
-          <div className="absolute inset-4 border-2 border-white/30 rounded-full"></div>
-          <div className="absolute inset-8 border-2 border-white/40 rounded-full"></div>
-          <div className="absolute inset-12 w-8 h-8 bg-white/50 rounded-full"></div>
-        </div>
-        
-        {/* Flèche de croissance */}
-        <div className="absolute top-16 right-1/4 w-24 h-24 transform rotate-45">
-          <div className="absolute bottom-0 left-1/2 w-1 h-16 bg-white/30 transform -translate-x-1/2"></div>
-          <div className="absolute top-0 left-1/2 w-0 h-0 transform -translate-x-1/2 border-l-4 border-r-4 border-b-8 border-transparent border-b-white/40"></div>
-        </div>
-      </div>
 
       {/* Desktop radial gradient behind text */}
       <div className="absolute inset-0 hidden lg:block">
@@ -123,7 +65,7 @@ const Welcome = () => {
           {/* Left Content */}
           <div className="relative z-10 lg:max-w-none lg:pr-12 animate-slide-in-left text-center lg:text-left order-2 lg:order-1 lg:flex lg:flex-col lg:justify-center">
             <div className="inline-flex flex-col items-center text-left mb-6 lg:mb-8">
-              <h1 className="text-4xl lg:text-5xl font-semibold text-white tracking-tight">Bienvenue</h1>
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight" style={{ fontFamily: 'Poppins', fontWeight: '700', lineHeight: '1.1' }}>Bienvenue</h1>
               <span className="mt-2 h-1.5 w-24 rounded-full bg-white"></span>
             </div>
             
