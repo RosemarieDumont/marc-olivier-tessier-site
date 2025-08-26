@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Shield, TrendingUp, Award, Users } from 'lucide-react';
 
 const Welcome = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -22,39 +23,65 @@ const Welcome = () => {
     return () => observer.disconnect();
   }, []);
 
+  const approaches = [
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Stabilité",
+      description: "Je mets vos priorités en premier et privilégie des solutions fiables, négociées au meilleur taux disponible et ajustées à votre réalité."
+    },
+    {
+      icon: <TrendingUp className="w-8 h-8" />,
+      title: "Création de valeur",
+      description: "J'optimise les leviers de croissance: placements pertinents, stratégie fiscale et réinvestissement."
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Relations humaines",
+      description: "Les besoins uniques de chaque individu guident nos plans et nos échanges. Confiance, écoute et suivi proactif sont les fondements de nos interactions."
+    },
+    {
+      icon: <Award className="w-8 h-8" />,
+      title: "Vision à long terme",
+      description: "Une stratégie que je bâtis par étapes : fondations, structure, finitions qui évolue avec vos objectifs."
+    }
+  ];
+
   return (
-    <section ref={sectionRef} id="welcome" className="relative py-20 lg:py-32 overflow-hidden animate-section-hidden bg-white">
+    <section ref={sectionRef} id="welcome" className="relative py-6 sm:py-8 lg:py-12 overflow-hidden animate-section-hidden -mt-24 lg:-mt-32" style={{ backgroundColor: 'var(--primary-blue)' }}>
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10
+           bg-[radial-gradient(1200px_600px_at_-10%_-20%,rgba(255,255,255,0.1)_0%,transparent_55%),
+              radial-gradient(900px_500px_at_110%_10%,rgba(255,255,255,0.05)_0%,transparent_45%)]">
+      </div>
+
+
+      {/* Desktop radial gradient behind text */}
+      <div className="absolute inset-0 hidden lg:block">
+        <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-radial from-white/10 via-white/5 to-transparent blur-2xl"></div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Content Section */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="relative z-10 text-center lg:text-left order-2 lg:order-1">
-            {/* Title */}
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 animate-slide-in-left" style={{ fontFamily: 'Poppins', fontWeight: '700', lineHeight: '1.1' }}>
-              Conseiller en sécurité financière
-            </h2>
-            
-            {/* Short Description */}
-            <div className="mb-10 animate-slide-in-left stagger-1">
-              <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed mb-6" style={{ fontFamily: 'Poppins', fontWeight: '400', lineHeight: '1.5' }}>
-                Je vous accompagne dans vos décisions clés en matière d'assurance, d'épargne et de retraite. Mon objectif : protéger ce que vous avez construit et faire croître votre patrimoine avec régularité et confiance.
-              </p>
+          <div className="relative z-10 lg:max-w-none lg:pr-12 animate-slide-in-left text-center lg:text-left order-2 lg:order-1 lg:flex lg:flex-col lg:justify-center">
+            <div className="inline-flex flex-col items-center text-left mb-6 lg:mb-8">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight" style={{ fontFamily: 'Poppins', fontWeight: '700', lineHeight: '1.1' }}>Bienvenue</h1>
+              <span className="mt-2 h-1.5 w-24 rounded-full bg-white"></span>
             </div>
-
-            {/* Call to Action Button */}
-            <div className="animate-slide-in-left stagger-2">
-              <a
-                href="https://outlook-sdf.office.com/bookwithme/user/0cb6ca6a017f4d5ea6b053f4dacafad2%40agc.ia.ca?anonymous&ismsaljsauthenabled=true"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-white rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 transform hover:scale-105"
-                style={{ backgroundColor: 'var(--primary-blue)' }}
-              >
-                <svg className="w-6 h-6 transition-transform duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                Planifier une rencontre
-              </a>
+            
+            {/* Bande avec fond légèrement plus foncé pour le texte */}
+            <div className="rounded-2xl p-6 sm:p-8 shadow-lg bg-black/20 backdrop-blur-sm border border-white/10">
+              <div className="space-y-3 sm:space-y-4">
+                <p className="text-white leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
+                  Mon approche s'appuie sur la <span className="font-semibold">stabilité</span>, 
+                  la <span className="font-semibold">création de valeur</span>, 
+                  les <span className="font-semibold">relations humaines</span> et 
+                  la <span className="font-semibold">vision à long terme</span> pour assurer votre sécurité financière.
+                </p>
+                <p className="text-white leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
+                  Nous ancrons d'abord les fondations, installons la structure, puis faisons grandir votre patrimoine avec régularité et confiance.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -64,14 +91,14 @@ const Welcome = () => {
               <img
                 src="./marc-olivier-héro.jpeg"
                 alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
-                className="w-80 sm:w-96 lg:w-[420px] h-auto object-cover object-center transition-transform duration-500 hover:scale-105 rounded-2xl shadow-xl"
+                className="w-64 sm:w-72 lg:w-80 h-auto object-cover object-center transition-transform duration-500 hover:scale-105 rounded-xl shadow-lg"
               />
               {/* Signature overlay */}
-              <div className="absolute bottom-4 right-4 lg:bottom-6 lg:right-6">
+              <div className="absolute bottom-2 right-2 lg:bottom-3 lg:right-3">
                 <img
                   src="./Signature M-O-Tessier copy.png"
                   alt="Signature Marc-Olivier Tessier"
-                  className="w-28 sm:w-32 lg:w-36 h-auto transition-all duration-300 hover:scale-110"
+                  className="w-24 sm:w-28 lg:w-32 h-auto transition-all duration-300 hover:scale-110"
                   style={{
                     filter: 'brightness(0) invert(1) contrast(2) drop-shadow(2px 2px 4px rgba(0,0,0,0.8))',
                     opacity: '0.95'
@@ -79,6 +106,64 @@ const Welcome = () => {
                 />
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Notre approche Section */}
+        {/* Marc-Olivier Bio Box */}
+        <div className="relative z-10 mt-12 sm:mt-16 lg:mt-20">
+          <div className="rounded-2xl p-4 sm:p-6 lg:p-8 text-white shadow-xl hover-lift hover-glow animate-slide-up stagger-2 transition-all duration-500 relative overflow-hidden bg-black/20 backdrop-blur-sm border border-white/10">
+            {/* Subtle blue gradient overlay for PC */}
+            <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-white/5 hidden lg:block"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-2xl hidden lg:block"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full blur-xl hidden lg:block"></div>
+            <div className="relative z-10 animate-slide-in-left stagger-1">
+              <h3 className="text-heading text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-white mb-3 sm:mb-4 lg:mb-6 flex flex-col sm:flex-row items-center sm:items-center gap-2 sm:gap-3 animate-slide-up stagger-1">
+                <div className="relative">
+                  <img
+                    src="./marc_olivier_nous_contacter copy.jpeg"
+                    alt="Marc-Olivier Tessier"
+                    className="w-16 h-16 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full object-cover object-top border-2 sm:border-3 border-white shadow-lg transition-transform duration-300 hover:scale-110"
+                  />
+                </div>
+                <span className="text-lg sm:text-xl lg:text-2xl font-bold text-center sm:text-left">Marc-Olivier Tessier</span>
+              </h3>
+              <div className="space-y-3 sm:space-y-3 lg:space-y-4 text-body text-white/85 animate-slide-up stagger-2">
+                <p className="text-sm sm:text-base text-left sm:text-justify text-white/90 leading-relaxed sm:leading-relaxed lg:leading-relaxed">
+                  Conseiller en sécurité financière certifié auprès de l'Autorité des marchés financiers, 
+                  affilié à iA Groupe financier au sein de l'agence Les Rivières. J'accompagne mes clients dans des décisions clés 
+                  liées à l'assurance, à l'épargne et à la retraite, en s'appuyant sur une approche structurée et orientée résultats. 
+                  Propriétaire de biens immobiliers et investisseur actif, je transforme mon expérience concrète du marché en conseils 
+                  pratiques, pour vous aider à construire un avenir financier structuré, fiable et enraciné dans la réalité du terrain.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative z-10 mt-12 sm:mt-16 lg:mt-20">
+          <div className="text-center mb-6 sm:mb-8">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-white" style={{ fontFamily: 'Poppins', fontWeight: '700' }}>Mes valeurs</h3>
+            <div className="w-16 sm:w-24 h-1 mx-auto rounded-full bg-white"></div>
+          </div>
+          
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            {approaches.map((approach, index) => (
+              <div key={index} className={`group p-4 lg:p-6 rounded-2xl border-2 border-white/20 transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:bg-white/10 animate-scale-in stagger-${index + 1} relative overflow-hidden bg-black/20 backdrop-blur-sm`} style={{ 
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)'
+              }}>
+                {/* Enhanced blue gradients for PC */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-white/5 hidden lg:block"></div>
+                <div className="absolute -top-4 -right-4 w-16 h-16 bg-white/10 rounded-full blur-lg hidden lg:block"></div>
+                <div className="relative z-10">
+                  <div className="flex items-center justify-center sm:justify-start mb-4 gap-2">
+                    <div className="text-white transition-transform duration-300 group-hover:scale-110 flex-shrink-0">{approach.icon}</div>
+                    <h4 className="text-subheading text-lg lg:text-xl font-bold text-white transition-colors duration-300">{approach.title}</h4>
+                  </div>
+                  <p className="text-body text-white/85 transition-colors duration-300 group-hover:text-white text-center sm:text-left">{approach.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
