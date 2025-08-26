@@ -22,97 +22,53 @@ const Welcome = () => {
     return () => observer.disconnect();
   }, []);
 
-
   return (
-    <section ref={sectionRef} id="welcome" className="relative py-6 sm:py-8 lg:py-12 overflow-hidden animate-section-hidden -mt-24 lg:-mt-32" style={{ backgroundColor: 'var(--primary-blue)' }}>
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10
-           bg-[radial-gradient(1200px_600px_at_-10%_-20%,rgba(255,255,255,0.1)_0%,transparent_55%),
-              radial-gradient(900px_500px_at_110%_10%,rgba(255,255,255,0.05)_0%,transparent_45%)]">
-      </div>
-
-
-      {/* Desktop radial gradient behind text */}
-      <div className="absolute inset-0 hidden lg:block">
-        <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-radial from-white/10 via-white/5 to-transparent blur-2xl"></div>
-      </div>
-
+    <section ref={sectionRef} id="welcome" className="py-20 bg-white animate-section-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Content Section */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
-          <div className="relative z-10 lg:max-w-none lg:pr-12 animate-slide-in-left text-center lg:text-left order-2 lg:order-1 lg:flex lg:flex-col lg:justify-center">
-            <div className="inline-flex flex-col items-center text-left mb-6 lg:mb-8">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight" style={{ fontFamily: 'Poppins', fontWeight: '700', lineHeight: '1.1' }}>Bienvenue</h1>
-              <span className="mt-2 h-1.5 w-24 rounded-full bg-white"></span>
+          <div className="animate-slide-in-left">
+            {/* Title */}
+            <h2 className="text-4xl lg:text-5xl font-bold mb-8 animate-slide-up stagger-1" style={{ fontFamily: 'Poppins', fontWeight: '700', color: 'var(--primary-blue)', lineHeight: '1.1' }}>
+              À propos
+            </h2>
+
+            {/* Content */}
+            <div className="space-y-6 mb-8 animate-slide-up stagger-2">
+              <p className="text-lg text-gray-700 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', lineHeight: '1.6' }}>
+                Mon approche s'appuie sur la stabilité, la création de valeur, les relations humaines et la vision à long terme pour assurer votre sécurité financière. Nous ancrons d'abord les fondations, installons la structure, puis faisons grandir votre patrimoine avec régularité et confiance.
+              </p>
+              
+              <p className="text-lg text-gray-700 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', lineHeight: '1.6' }}>
+                Je comprends que chaque entrepreneur et propriétaire d'entreprise a des besoins uniques en matière de protection financière. Avec une expertise pointue dans le domaine de l'assurance, je suis dédié à fournir des solutions sur mesure pour protéger ce que vous avez construit avec soin. Que ce soit pour sécuriser votre entreprise ou protéger votre patrimoine personnel, je suis là pour vous guider à chaque étape.
+              </p>
             </div>
-            
-            {/* Bande avec fond légèrement plus foncé pour le texte */}
-            <div className="rounded-2xl p-6 sm:p-8 shadow-lg bg-black/20 backdrop-blur-sm border border-white/10">
-              <div className="space-y-3 sm:space-y-4">
-                <p className="text-white leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
-                  Mon approche s'appuie sur la <span className="font-semibold">stabilité</span>, 
-                  la <span className="font-semibold">création de valeur</span>, 
-                  les <span className="font-semibold">relations humaines</span> et 
-                  la <span className="font-semibold">vision à long terme</span> pour assurer votre sécurité financière.
-                </p>
-                <p className="text-white leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.5' }}>
-                  Nous ancrons d'abord les fondations, installons la structure, puis faisons grandir votre patrimoine avec régularité et confiance.
-                </p>
-              </div>
+
+            {/* CTA Button */}
+            <div className="animate-slide-up stagger-3">
+              <a
+                href="https://outlook-sdf.office.com/bookwithme/user/0cb6ca6a017f4d5ea6b053f4dacafad2%40agc.ia.ca?anonymous&ismsaljsauthenabled=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold text-lg rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 transform hover:scale-105"
+                style={{ backgroundColor: 'var(--primary-blue)' }}
+              >
+                <svg className="w-5 h-5 transition-transform duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                Planifier une rencontre
+              </a>
             </div>
           </div>
 
           {/* Right Image */}
-          <div className="relative z-10 animate-slide-in-right order-1 lg:order-2 flex justify-center">
+          <div className="animate-slide-in-right order-first lg:order-last">
             <div className="relative">
               <img
                 src="./marc-olivier-héro.jpeg"
                 alt="Marc-Olivier Tessier - Conseiller en sécurité financière"
-                className="w-64 sm:w-72 lg:w-80 h-auto object-cover object-center transition-transform duration-500 hover:scale-105 rounded-xl shadow-lg"
+                className="w-full h-auto object-cover object-center transition-transform duration-500 hover:scale-105 shadow-lg"
               />
-              {/* Signature overlay */}
-              <div className="absolute bottom-2 right-2 lg:bottom-3 lg:right-3">
-                <img
-                  src="./Signature M-O-Tessier copy.png"
-                  alt="Signature Marc-Olivier Tessier"
-                  className="w-24 sm:w-28 lg:w-32 h-auto transition-all duration-300 hover:scale-110"
-                  style={{
-                    filter: 'brightness(0) invert(1) contrast(2) drop-shadow(2px 2px 4px rgba(0,0,0,0.8))',
-                    opacity: '0.95'
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Marc-Olivier Bio Box */}
-        <div className="relative z-10 mt-12 sm:mt-16 lg:mt-20">
-          <div className="rounded-2xl p-4 sm:p-6 lg:p-8 text-white shadow-xl hover-lift hover-glow animate-slide-up stagger-2 transition-all duration-500 relative overflow-hidden bg-black/20 backdrop-blur-sm border border-white/10">
-            {/* Subtle blue gradient overlay for PC */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-white/5 hidden lg:block"></div>
-            <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-2xl hidden lg:block"></div>
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full blur-xl hidden lg:block"></div>
-            <div className="relative z-10 animate-slide-in-left stagger-1">
-              <h3 className="text-heading text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-white mb-3 sm:mb-4 lg:mb-6 flex flex-col sm:flex-row items-center sm:items-center gap-2 sm:gap-3 animate-slide-up stagger-1">
-                <div className="relative">
-                  <img
-                    src="./marc_olivier_nous_contacter copy.jpeg"
-                    alt="Marc-Olivier Tessier"
-                    className="w-16 h-16 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full object-cover object-top border-2 sm:border-3 border-white shadow-lg transition-transform duration-300 hover:scale-110"
-                  />
-                </div>
-                <span className="text-lg sm:text-xl lg:text-2xl font-bold text-center sm:text-left">Marc-Olivier Tessier</span>
-              </h3>
-              <div className="space-y-3 sm:space-y-3 lg:space-y-4 text-body text-white/85 animate-slide-up stagger-2">
-                <p className="text-sm sm:text-base text-left sm:text-justify text-white/90 leading-relaxed sm:leading-relaxed lg:leading-relaxed">
-                  Conseiller en sécurité financière certifié auprès de l'Autorité des marchés financiers, 
-                  affilié à iA Groupe financier au sein de l'agence Les Rivières. J'accompagne mes clients dans des décisions clés 
-                  liées à l'assurance, à l'épargne et à la retraite, en s'appuyant sur une approche structurée et orientée résultats. 
-                  Propriétaire de biens immobiliers et investisseur actif, je transforme mon expérience concrète du marché en conseils 
-                  pratiques, pour vous aider à construire un avenir financier structuré, fiable et enraciné dans la réalité du terrain.
-                </p>
-              </div>
             </div>
           </div>
         </div>
