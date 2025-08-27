@@ -35,11 +35,11 @@ const Welcome = () => {
 
             {/* Content */}
             <div className="space-y-6 mb-8 animate-slide-up stagger-2 text-left">
-              <p className="text-lg text-gray-700 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', lineHeight: '1.6' }}>
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', lineHeight: '1.6' }}>
                 Mon approche s'appuie sur la stabilité, la création de valeur, les relations humaines et la vision à long terme pour assurer votre sécurité financière. Nous ancrons d'abord les fondations, installons la structure, puis faisons grandir votre patrimoine avec régularité et confiance.
               </p>
               
-              <p className="text-lg text-gray-700 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', lineHeight: '1.6' }}>
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', lineHeight: '1.6' }}>
                 Conseiller en sécurité financière certifié auprès de l'Autorité des marchés financiers et affilié à iA Groupe financier, j'accompagne mes clients dans leurs décisions clés avec une approche structurée et orientée résultats. Mon rôle est de rendre claires et accessibles des solutions parfois complexes, en reliant la stratégie financière aux réalités concrètes du marché et de la vie quotidienne.
               </p>
             </div>
