@@ -29,17 +29,17 @@ const Welcome = () => {
           {/* Left Content */}
           <div className="animate-slide-in-left text-center lg:text-left">
             {/* Title */}
-            <h2 className="text-4xl lg:text-5xl font-bold mb-8 animate-slide-up stagger-1" style={{ fontFamily: 'Poppins', fontWeight: '700', color: 'var(--primary-blue)', lineHeight: '1.1' }}>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-8 animate-slide-up stagger-1" style={{ fontFamily: 'Poppins', fontWeight: '700', color: 'var(--primary-blue)', lineHeight: '1.1' }} data-aos="fade-up">
               À propos
             </h2>
 
             {/* Content */}
             <div className="space-y-6 mb-8 animate-slide-up stagger-2 text-left">
-              <p className="text-lg text-gray-700 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', lineHeight: '1.6' }}>
+              <p className="text-lg text-gray-700 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', lineHeight: '1.6' }} data-aos="fade-up" data-aos-delay="150">
                 Mon approche s'appuie sur la stabilité, la création de valeur, les relations humaines et la vision à long terme pour assurer votre sécurité financière. Nous ancrons d'abord les fondations, installons la structure, puis faisons grandir votre patrimoine avec régularité et confiance.
               </p>
               
-              <p className="text-lg text-gray-700 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', lineHeight: '1.6' }}>
+              <p className="text-lg text-gray-700 leading-relaxed" style={{ fontFamily: 'Poppins', fontWeight: '400', lineHeight: '1.6' }} data-aos="fade-up" data-aos-delay="300">
                 Conseiller en sécurité financière certifié auprès de l'Autorité des marchés financiers et affilié à iA Groupe financier, j'accompagne mes clients dans leurs décisions clés avec une approche structurée et orientée résultats. Mon rôle est de rendre claires et accessibles des solutions parfois complexes, en reliant la stratégie financière aux réalités concrètes du marché et de la vie quotidienne.
               </p>
             </div>

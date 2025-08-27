@@ -352,7 +352,7 @@ const Services = () => {
         {/* Desktop Grid */}
         <div className="hidden lg:grid lg:grid-cols-3 gap-8">
           {Object.entries(services).map(([key, category]) => (
-            <div key={key} className={`group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 hover-lift hover-glow animate-scale-in stagger-${Object.keys(services).indexOf(key) + 1}`}>
+            <div key={key} className={`group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 hover-lift hover-glow animate-scale-in stagger-${Object.keys(services).indexOf(key) + 1}`} data-aos="fade-up" data-aos-offset="120" data-aos-delay={Object.keys(services).indexOf(key) * 50}>
               {/* Header */}
               <div className="p-6 text-white transition-all duration-300" style={{ backgroundColor: 'var(--primary-blue)' }}>
                 <div className="flex items-center gap-4 mb-4">
