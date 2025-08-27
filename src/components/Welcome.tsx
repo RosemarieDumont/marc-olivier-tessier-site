@@ -23,7 +23,7 @@ const Welcome = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="welcome" className="py-8 sm:py-10 lg:py-12 bg-white animate-section-hidden">
+    <section ref={sectionRef} id="welcome" className="py-8 sm:py-10 lg:py-12 bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100 animate-section-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
