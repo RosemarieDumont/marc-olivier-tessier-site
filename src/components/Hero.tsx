@@ -140,14 +140,14 @@ const Hero = () => {
       )}
 
       {/* Hero Content */}
-      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 md:pt-0">
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 md:pt-0" data-aos="fade-up" data-aos-delay="100">
         {/* Main Headline */}
-        <h1 className="text-white font-bold mb-4 relative z-10 animate-slide-up stagger-1 drop-shadow-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl" style={{ fontFamily: 'Poppins', fontWeight: '700', lineHeight: '1.1' }} data-aos="fade-up" data-aos-delay="100">
+        <h1 className="text-white font-bold mb-4 relative z-10 animate-slide-up stagger-1 drop-shadow-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl" style={{ fontFamily: 'Poppins', fontWeight: '700', lineHeight: '1.1' }}>
           Bâtissons ensemble des fondations solides pour votre avenir financier
         </h1>
 
         {/* Professional Subtitle */}
-        <p className="text-white mb-8 animate-slide-up stagger-2 drop-shadow-md text-base sm:text-lg md:text-xl lg:text-2xl" style={{ fontFamily: 'Poppins', fontWeight: '400', marginTop: '24px' }} data-aos="fade-up" data-aos-delay="200">
+        <p className="text-white mb-8 animate-slide-up stagger-2 drop-shadow-md text-base sm:text-lg md:text-xl lg:text-2xl" style={{ fontFamily: 'Poppins', fontWeight: '400', marginTop: '24px' }}>
           Conseiller en sécurité financière
         </p>
 
@@ -155,7 +155,6 @@ const Hero = () => {
         <button
           onClick={() => scrollToSection('#services')}
           className="inline-flex items-center gap-2 sm:gap-3 bg-white text-[#0B2545] px-6 py-3 rounded-full font-semibold text-base hover:bg-[#F7F9FB] transition-all duration-500 shadow-lg hover:shadow-xl hover:-translate-y-1 transform hover:scale-105 animate-slide-up stagger-3"
-          data-aos="fade-up" data-aos-delay="300"
         >
           <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
