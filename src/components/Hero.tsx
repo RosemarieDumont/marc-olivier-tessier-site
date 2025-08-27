@@ -129,13 +129,13 @@ const Hero = () => {
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && isMobile && (
-        <div className="md:hidden absolute left-4 right-4 top-16 backdrop-blur-md z-40 rounded-2xl animate-slide-up bg-[#171F55]/90 border border-white/20 shadow-xl">
+        <div className="md:hidden absolute left-4 right-4 top-16 backdrop-blur-md z-40 rounded-2xl animate-slide-up bg-slate-800/95 border border-white/20 shadow-xl">
           <div className="px-6 pt-6 pb-6 space-y-2">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left px-4 py-3 rounded-xl transition-all duration-500 text-base font-semibold hover:translate-x-2 text-[#F9FAFB] hover:text-[#6C90C3] hover:bg-white/20"
+                className="block w-full text-left px-4 py-3 rounded-xl transition-all duration-500 text-base font-semibold hover:translate-x-2 text-[#F9FAFB] hover:text-slate-300 hover:bg-slate-700/50"
               >
                 {item.name}
               </button>
