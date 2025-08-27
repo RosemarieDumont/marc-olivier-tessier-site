@@ -3,7 +3,7 @@ import { Shield, Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="text-white py-12" style={{ backgroundColor: 'var(--primary-blue)' }}>
+    <footer className="text-white py-12 bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-8">
           {/* Company Info */}
