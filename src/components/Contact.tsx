@@ -103,7 +103,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="relative z-10 animate-slide-in-right stagger-2" data-aos="zoom-in" data-aos-delay="200">
+          <div className="relative z-10 animate-slide-in-right stagger-2">
             {/* Enhanced form background for PC */}
             <div className="absolute -inset-6 bg-gradient-to-tl from-blue-700/10 via-blue-500/5 to-blue-800/15 rounded-3xl blur-2xl hidden lg:block"></div>
             <h3 className="text-heading text-xl font-bold text-white mb-6 animate-slide-up stagger-1">Assistance & renseignements</h3>

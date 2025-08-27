@@ -45,7 +45,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section ref={sectionRef} id="testimonials" className="py-20 bg-[#FFFFFF] animate-section-hidden" data-aos="fade-in">
+    <section ref={sectionRef} id="testimonials" className="py-20 bg-[#FFFFFF] animate-section-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-slide-up">
           <div className="inline-block mb-4 animate-scale-in stagger-1">
@@ -72,7 +72,7 @@ const Testimonials = () => {
 
         <div className="grid lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className={`group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-[#6C90C3]/30 hover-lift hover-glow animate-scale-in stagger-${index + 1} relative`} data-aos="fade-up" data-aos-delay={index * 100}>
+            <div key={index} className={`group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-[#6C90C3]/30 hover-lift hover-glow animate-scale-in stagger-${index + 1} relative`}>
               {/* Quote Icon */}
               <div className="p-4 transition-all duration-300 relative overflow-hidden" style={{ backgroundColor: 'var(--primary-blue)' }}>
                 {/* Enhanced blue header for PC */}

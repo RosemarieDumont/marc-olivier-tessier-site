@@ -140,7 +140,7 @@ const Hero = () => {
       )}
 
       {/* Hero Content */}
-      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 md:pt-0" data-aos="fade-up" data-aos-delay="100">
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 md:pt-0">
         {/* Main Headline */}
         <h1 className="text-white font-bold mb-4 relative z-10 animate-slide-up stagger-1 drop-shadow-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl" style={{ fontFamily: 'Poppins', fontWeight: '700', lineHeight: '1.1' }}>
           Bâtissons ensemble des fondations solides pour votre avenir financier
