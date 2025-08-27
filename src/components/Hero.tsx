@@ -107,8 +107,13 @@ const Hero = () => {
         <div className="mx-4">
           <div className="flex justify-between items-center h-12 px-4">
             {/* Marc-Olivier Tessier Name */}
-            <div className="text-lg font-semibold text-[#F9FAFB] drop-shadow-lg">
-              Marc-Olivier Tessier
+            <div className="text-[#F9FAFB] drop-shadow-lg">
+              <div className="text-lg font-semibold">
+                Marc-Olivier Tessier
+              </div>
+              <div className="text-sm opacity-80 -mt-1">
+                Services financiers
+              </div>
             </div>
             
             {/* Mobile menu button */}

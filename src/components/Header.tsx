@@ -64,9 +64,14 @@ const Header = () => {
         <div className="flex justify-between items-center">
           {/* Marc-Olivier Tessier Name - Left Side */}
           <div className="flex-shrink-0">
-            <h1 className="text-xl font-semibold text-white transition-colors duration-300 hover:text-[#79AEE8]">
-              Marc-Olivier Tessier
-            </h1>
+            <div className="text-white">
+              <h1 className="text-xl font-semibold transition-colors duration-300 hover:text-[#79AEE8]">
+                Marc-Olivier Tessier
+              </h1>
+              <p className="text-sm opacity-80 -mt-1">
+                Services financiers
+              </p>
+            </div>
           </div>
 
           {/* Desktop Navigation - Center */}
