@@ -24,7 +24,7 @@ const LoadingPage = () => {
           <h1 className="text-3xl font-bold text-slate-900 mb-2 animate-fade-in">
             Marc-Olivier Tessier
           </h1>
-          <p className="text-lg text-slate-700 mb-2 animate-fade-in-delay">
+          <p className="text-xl font-semibold text-slate-700 mb-2 animate-fade-in-delay tracking-wide" style={{ fontFamily: 'Poppins', fontWeight: '600', letterSpacing: '0.5px' }}>
             Services financiers
           </p>
           <p className="text-lg text-slate-600 animate-fade-in-delay">

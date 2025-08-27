@@ -107,11 +107,11 @@ const Hero = () => {
         <div className="mx-4">
           <div className="flex justify-between items-center h-12 px-4">
             {/* Marc-Olivier Tessier Name */}
-            <div className="text-[#F9FAFB] drop-shadow-lg">
-              <div className="text-lg font-semibold">
+            <div className="text-[#F9FAFB] drop-shadow-lg group cursor-pointer">
+              <div className="text-xl font-bold transition-all duration-300 hover:scale-105 tracking-tight" style={{ fontFamily: 'Poppins', fontWeight: '700', textShadow: '0 3px 12px rgba(0,0,0,0.4)' }}>
                 Marc-Olivier Tessier
               </div>
-              <div className="text-sm opacity-80 -mt-1">
+              <div className="text-sm font-medium opacity-90 -mt-1 transition-all duration-300 group-hover:opacity-100 tracking-wide" style={{ fontFamily: 'Poppins', fontWeight: '500', letterSpacing: '0.3px' }}>
                 Services financiers
               </div>
             </div>
