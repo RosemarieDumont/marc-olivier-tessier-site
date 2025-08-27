@@ -64,11 +64,11 @@ const Header = () => {
         <div className="flex justify-between items-center">
           {/* Marc-Olivier Tessier Name - Left Side */}
           <div className="flex-shrink-0">
-            <div className="text-white">
-              <h1 className="text-xl font-semibold transition-colors duration-300 hover:text-[#79AEE8]">
+            <div className="text-white group cursor-pointer">
+              <h1 className="text-2xl font-bold transition-all duration-300 hover:text-[#79AEE8] hover:scale-105 tracking-tight" style={{ fontFamily: 'Poppins', fontWeight: '700', textShadow: '0 2px 8px rgba(0,0,0,0.3)' }}>
                 Marc-Olivier Tessier
               </h1>
-              <p className="text-sm opacity-80 -mt-1">
+              <p className="text-base font-medium opacity-90 -mt-1 transition-all duration-300 group-hover:opacity-100 group-hover:text-[#79AEE8] tracking-wide" style={{ fontFamily: 'Poppins', fontWeight: '500', letterSpacing: '0.5px' }}>
                 Services financiers
               </p>
             </div>
