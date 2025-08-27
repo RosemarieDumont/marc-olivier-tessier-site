@@ -105,9 +105,9 @@ const Hero = () => {
       {/* Mobile Navigation Bar */}
       <div className="md:hidden absolute top-0 left-0 right-0 z-50 pt-4">
         <div className="mx-4">
-          <div className="flex justify-between items-center h-12 px-4">
-            {/* Marc-Olivier Tessier Name */}
-            <div className="text-[#F9FAFB] drop-shadow-lg group cursor-pointer">
+          <div className="flex justify-center items-center h-12 px-4 relative">
+            {/* Marc-Olivier Tessier Name - Centered */}
+            <div className="text-[#F9FAFB] drop-shadow-lg group cursor-pointer text-center">
               <div className="text-xl font-bold transition-all duration-300 hover:scale-105 tracking-tight" style={{ fontFamily: 'Poppins', fontWeight: '700', textShadow: '0 3px 12px rgba(0,0,0,0.4)' }}>
                 Marc-Olivier Tessier
               </div>
@@ -116,10 +116,10 @@ const Hero = () => {
               </div>
             </div>
             
-            {/* Mobile menu button */}
+            {/* Mobile menu button - Absolute positioned */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="transition-all duration-500 hover:scale-110 p-2 rounded-full text-[#F9FAFB] hover:text-[#6C90C3] hover:bg-white/20"
+              className="absolute right-0 transition-all duration-500 hover:scale-110 p-2 rounded-full text-[#F9FAFB] hover:text-[#6C90C3] hover:bg-white/20"
             >
               {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
