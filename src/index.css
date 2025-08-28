@@ -586,15 +586,15 @@ html {
 /* Mobile logo responsive scaling */
 @media (max-width: 640px) {
   .logo-img { 
-    transform: scale(var(--zoom-xs)); 
-    max-width: var(--cap-xs); 
+    transform: scale(var(--zoom-xs, var(--zoom, 1))); 
+    max-width: var(--cap-xs, var(--cap, 88%)); 
   }
 }
 /* Desktop/tablet logo scaling */
 @media (min-width: 641px) {
   .logo-img { 
-    transform: scale(var(--zoom)); 
-    max-width: var(--cap); 
+    transform: scale(var(--zoom, 1)); 
+    max-width: var(--cap, 88%); 
   }
 }
 

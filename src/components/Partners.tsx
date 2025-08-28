@@ -153,7 +153,7 @@ const Partners: React.FC = () => {
           </div>
           
           <div className="partners-track">
-            <ul className="flex items-center justify-start
+            <div className="flex items-center justify-start
                            gap-4 sm:gap-6 md:gap-10
                            overflow-x-auto md:overflow-visible
                            snap-x snap-mandatory scroll-smooth
@@ -163,20 +163,35 @@ const Partners: React.FC = () => {
                 const base = overrides[key] || {};
                 const xs = overrides[key + "#xs"] || {};
                 return (
-                  <LogoCell
+                  <div
                     key={p.alt}
-                    href={p.href}
-                    src={p.src}
-                    alt={p.alt}
-                    zoom={base.zoom}
-                    cap={base.cap}
-                    clip={base.clip}
-                    zoomXs={xs.zoomXs}
-                    capXs={xs.capXs}
-                  />
+                    className="snap-center shrink-0
+                               h-16 w-36 sm:w-40
+                               md:h-24 md:w-56 xl:h-24 xl:w-60
+                               flex items-center justify-center rounded-lg bg-white overflow-hidden"
+                  >
+                    <a href={p.href} target="_blank" rel="noopener" aria-label={p.alt} className="block p-1.5 sm:p-2 md:p-3">
+                      <img
+                        src={p.src}
+                        alt={p.alt}
+                        loading="lazy"
+                        style={{
+                          // desktop/tablet
+                          ["--zoom" as any]: base.zoom || 1,
+                          ["--cap" as any]: base.cap || "88%",
+                          ["--clip" as any]: base.clip || "0 0 0 0",
+                          // mobile overrides
+                          ["--zoom-xs" as any]: xs.zoomXs || base.zoom || 1,
+                          ["--cap-xs" as any]: xs.capXs || base.cap || "88%",
+                        }}
+                        className="logo-img block object-contain max-h-full opacity-80 hover:opacity-100 transition
+                                   [clip-path:inset(var(--clip))]"
+                      />
+                    </a>
+                  </div>
                 );
               })}
-            </ul>
+            </div>
           </div>
         </div>
 
