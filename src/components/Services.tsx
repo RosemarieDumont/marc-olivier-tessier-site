@@ -171,7 +171,7 @@ const Services = () => {
       services: [
         {
           name: "Assurance vie temporaire",
-          description: "Offre une protection abordable pour une période déterminée, idéale pour sécuriser vos proches pendant vos obligations financières comme l'hypothèque ou les études des enfants."
+          description: "Offre une protection abordable pour une période déterminée, idéale pour sécuriser vos proches pendant vos obligations financières comme l'hypothèque ou les études des enfants"
         },
         {
           name: "Assurance maladie grave et invalidité",
@@ -191,7 +191,7 @@ const Services = () => {
         },
         {
           name: "Assurance vie permanente et participative",
-          description: "Offre une protection garantie à vie tout en accumulant une valeur qui croît avec le temps grâce aux dividendes, vous permettant de bâtir un héritage et un capital durable."
+          description: "Offre une protection garantie à vie tout en accumulant une valeur qui croît avec le temps grâce aux dividendes, vous permettant de bâtir un héritage et un capital durable"
         }
       ]
     },
