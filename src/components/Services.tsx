@@ -118,6 +118,8 @@ const Services = () => {
       'Assurance prêt hypothécaire': <Home className="w-5 h-5" />,
       'Assurance accident corporel': <Car className="w-5 h-5" />,
       'Assurance voyage': <Plane className="w-5 h-5" />,
+      'Assurance vie temporaire': <Heart className="w-5 h-5" />,
+      'Assurance vie permanente et participative': <TrendingUp className="w-5 h-5" />,
       'Protection des dirigeants': <Briefcase className="w-5 h-5" />,
       'Stratégies d\'épargne fiscales': <Calculator className="w-5 h-5" />,
       'Assurance de convention d\'actionnaires': <FileText className="w-5 h-5" />,
@@ -168,7 +170,7 @@ const Services = () => {
       color: "from-blue-700 to-blue-800",
       services: [
         {
-          name: "Assurance vie",
+          name: "Assurance vie temporaire",
           description: "Couverture essentielle pour protéger vos proches, couvrir les dettes et maintenir le niveau de vie familial"
         },
         {
@@ -186,6 +188,10 @@ const Services = () => {
         {
           name: "Assurance voyage",
           description: "Couverture complète pour vos déplacements à l'étranger avec protection médicale d'urgence"
+        },
+        {
+          name: "Assurance vie permanente et participative",
+          description: "Offre une protection garantie à vie tout en accumulant une valeur qui croît avec le temps grâce aux dividendes, vous permettant de bâtir un héritage et un capital durable."
         }
       ]
     },
