@@ -57,7 +57,6 @@ const partnersRaw = [
   { alt: "La Capitale", href: "https://www.beneva.ca/", src: "./assets/logos/la-capitale.jpg" },
   { alt: "SSQ Assurance", href: "https://www.beneva.ca", src: "./assets/logos/ssq-logo.png" },
   { alt: "Assumption Life", href: "https://www.assumption.ca", src: "./assets/logos/assumption-life.png" },
-  { alt: "PPI", href: "https://ppi.ca/", src: "./assets/logos/ppi.png" },
 ];
 
 // Auto-dedupe by (alt, href)
