@@ -171,7 +171,7 @@ const Services = () => {
       services: [
         {
           name: "Assurance vie temporaire",
-          description: "Couverture essentielle pour protéger vos proches, couvrir les dettes et maintenir le niveau de vie familial"
+          description: "Offre une protection abordable pour une période déterminée, idéale pour sécuriser vos proches pendant vos obligations financières comme l'hypothèque ou les études des enfants."
         },
         {
           name: "Assurance maladie grave et invalidité",
