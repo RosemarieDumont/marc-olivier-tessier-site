@@ -31,10 +31,11 @@ const Footer = () => {
                   />
                   <img 
                     src="./assets/logos/ppi.png" 
-                    alt="PPI - Plan de Protection du Canada" 
+                    alt="Plan de Protection du Canada (PPI)" 
                     className="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
+                <p className="text-xs text-white/60 mt-1">Plan de Protection du Canada</p>
               </div>
             </div>
           </div>
