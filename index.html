@@ -25,6 +25,20 @@
   <meta name="twitter:description" content="Conseiller affilié à iA Groupe financier. Épargne, assurances et solutions pour entreprises.">
   <meta name="twitter:image" content="https://servicesfinancierstessier.ca/assets/og-cover.jpg">
 
+  <!-- SPA route restore (no change to UI) -->
+  <script>
+    (function () {
+      // Si on arrive avec ?p=/services, réécrit proprement l’URL en /services
+      var params = new URLSearchParams(window.location.search);
+      var p = params.get('p');
+      if (p) {
+        var clean = p.replace(/^\//, '/');               // force le slash initial
+        var finalUrl = window.location.origin + clean + window.location.hash;
+        window.history.replaceState(null, '', finalUrl); // enlève ?p=
+      }
+    })();
+  </script>
+
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
