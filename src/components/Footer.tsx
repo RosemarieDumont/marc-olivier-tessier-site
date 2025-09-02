@@ -23,11 +23,16 @@ const Footer = () => {
               <p>Membre de la Chambre de la sécurité financière</p>
               <div className="mt-4 flex flex-col items-start">
                 <p className="text-caption text-white/70 mb-2">Partenaire</p>
-                <div className="flex items-center">
+                <div className="flex items-center gap-4">
                   <img 
                     src="./logo IA.png" 
                     alt="iA Groupe financier" 
                     className="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
+                  />
+                  <img 
+                    src="./assets/logos/ppi_text_white.png" 
+                    alt="PPI" 
+                    className="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
               </div>
