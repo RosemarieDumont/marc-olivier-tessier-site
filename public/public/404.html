@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8">
+  <title>Redirection…</title>
+  <meta name="robots" content="noindex">
+  <script>
+    (function() {
+      // Redirige vers index.html en encodant le chemin demandé dans ?p=
+      var l = window.location;
+      var path = l.pathname + l.search;
+      var newUrl = l.protocol + '//' + l.host + '/?p=' + encodeURIComponent(path) + l.hash;
+      l.replace(newUrl);
+    })();
+  </script>
+</head>
+<body>Redirection…</body>
+</html>
