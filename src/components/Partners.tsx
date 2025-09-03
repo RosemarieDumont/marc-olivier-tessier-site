@@ -88,17 +88,17 @@ const overrides: Record<string, Override> = {
   "uv assurance": { zoom: 1.20, cap: "96%" },
   "ssq assurance": { zoom: 1.18, cap: "96%" },
   "ppi": { zoom: 1.0, cap: "88%" },
-  // --- Mobile-only fixes for problematic logos ---
-  "beneva#xs": { zoomXs: 0.85, capXs: "85%" },
-  "canada life#xs": { zoomXs: 0.80, capXs: "80%" },
-  "l'empire vie#xs": { zoomXs: 0.85, capXs: "85%" },
-  "equitable life of canada#xs": { zoomXs: 0.75, capXs: "75%" },
-  "uv assurance#xs": { zoomXs: 0.90, capXs: "85%" },
-  "desjardins#xs": { zoomXs: 0.70, capXs: "75%" },
-  "sun life financial#xs": { zoomXs: 0.75, capXs: "75%" },
-  "medavie blue cross#xs": { zoomXs: 0.55, capXs: "85%" },
-  "bmo#xs": { zoomXs: 0.90, capXs: "85%" },
-  "assumption life#xs": { zoomXs: 0.80, capXs: "80%" },
+  // --- MOBILE FIXES URGENTS ---
+  "beneva": { zoomXs: 0.95, capXs: "100%" },
+  "canada life": { zoomXs: 0.90, capXs: "100%" },
+  "l'empire vie": { zoomXs: 0.95, capXs: "100%" },
+  "equitable life of canada": { zoomXs: 0.85, capXs: "100%" },
+  "uv assurance": { zoomXs: 1.0, capXs: "100%" },
+  "desjardins": { zoomXs: 0.80, capXs: "100%" },
+  "sun life financial": { zoomXs: 0.85, capXs: "100%" },
+  "medavie blue cross": { zoomXs: 0.65, capXs: "100%" },
+  "bmo": { zoomXs: 1.0, capXs: "100%" },
+  "assumption life": { zoomXs: 0.90, capXs: "100%" },
 };
 
 const Partners: React.FC = () => {
@@ -168,11 +168,11 @@ const Partners: React.FC = () => {
                   <div
                     key={p.alt}
                     className="snap-center shrink-0
-                               h-16 w-36 sm:w-40
+                               h-20 w-40 sm:w-44
                                md:h-24 md:w-56 xl:h-24 xl:w-60
                                flex items-center justify-center rounded-lg bg-white overflow-hidden"
                   >
-                    <a href={p.href} target="_blank" rel="noopener" aria-label={p.alt} className="block p-1.5 sm:p-2 md:p-3">
+                    <a href={p.href} target="_blank" rel="noopener" aria-label={p.alt} className="block p-2 sm:p-3 md:p-3 w-full h-full flex items-center justify-center">
                       <img
                         src={p.src}
                         alt={p.alt}
@@ -183,8 +183,8 @@ const Partners: React.FC = () => {
                           ["--cap" as any]: base.cap || "88%",
                           ["--clip" as any]: base.clip || "0 0 0 0",
                           // mobile overrides
-                          ["--zoom-xs" as any]: xs.zoomXs || base.zoom || 1,
-                          ["--cap-xs" as any]: xs.capXs || base.cap || "88%",
+                          ["--zoom-xs" as any]: base.zoomXs || base.zoom || 1,
+                          ["--cap-xs" as any]: base.capXs || base.cap || "100%",
                         }}
                         className="logo-img block object-contain max-h-full opacity-80 hover:opacity-100 transition
                                    [clip-path:inset(var(--clip))]"

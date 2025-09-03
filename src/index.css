@@ -509,19 +509,19 @@ html {
   overflow-x:scroll;
   -webkit-overflow-scrolling:touch;
   align-items:center;
-  padding:16px 8px;
+  padding:20px 12px;
   scroll-snap-type:x proximity;
-  min-height:90px;
+  min-height:120px;
   white-space:nowrap;
 }
 .partners-track a{ 
   flex:0 0 auto !important; 
   scroll-snap-align:center; 
   display:inline-block;
-  min-width:90px;
+  min-width:120px;
 }
 .partners-track img{
-  height:60px;
+  height:70px;
   width:auto;
   object-fit:contain;
   display:block;
@@ -535,15 +535,16 @@ html {
 /* Mobile optimization for partners */
 @media (max-width: 768px) {
   .partners-track {
-    gap:16px;
-    padding:20px 10px;
-    min-height:100px;
+    gap:20px;
+    padding:25px 15px;
+    min-height:130px;
   }
   .partners-track a {
-    min-width:85px;
+    min-width:130px;
   }
   .partners-track img {
-    height:50px;
+    height:65px;
+    max-width: 110px;
   }
 }
 
