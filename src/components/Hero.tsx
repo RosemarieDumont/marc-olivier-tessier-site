@@ -150,7 +150,7 @@ const Hero = () => {
 
         {/* Professional Subtitle */}
         <p className="text-white mb-8 animate-slide-up stagger-2 drop-shadow-md text-base sm:text-lg md:text-xl lg:text-2xl" style={{ fontFamily: 'Poppins', fontWeight: '400', marginTop: '24px' }}>
-          Conseiller en sécurité financière
+          Conseiller en sécurité financière<sup className="text-sm ml-1 opacity-90">1</sup>
         </p>
 
         {/* CTA Button */}

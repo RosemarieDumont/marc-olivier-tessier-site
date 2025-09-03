@@ -59,6 +59,11 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/20 mt-8 pt-8 text-center">
+          <div className="mb-4">
+            <p className="text-caption text-white/70 text-left max-w-4xl mx-auto">
+              <sup className="mr-1">1</sup>Auprès de l'Industrielle Alliance, Assurance et services financiers inc. Cabinet de services financiers
+            </p>
+          </div>
           <p className="text-caption text-white/70">
             © 2025 Marc-Olivier Tessier, Conseiller en sécurité financière. Tous droits réservés.
           </p>
