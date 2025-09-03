@@ -21,7 +21,10 @@ const Footer = () => {
             <div className="space-y-1 text-caption text-white/70">
               <p>Permis de l'AMF : 262945</p>
               <p className="hidden sm:block">Membre de la Chambre de la sécurité financière | <sup>1</sup> Auprès de l'Industrielle Alliance, Assurance et services financiers inc. Cabinet de services financiers</p>
-              <p className="block sm:hidden">Membre de la Chambre de la sécurité financière <sup>1</sup>Auprès de l'Industrielle Alliance, Assurance et services financiers inc. Cabinet de services financiers</p>
+              <div className="block sm:hidden">
+                <p>Membre de la Chambre de la sécurité financière <sup>1</sup>Auprès de l'Industrielle Alliance, Assurance et services financiers inc. Cabinet de services financiers</p>
+                <div className="h-4"></div>
+              </div>
               <div className="mt-4 flex flex-col items-start">
                 <p className="text-caption text-white/70 mb-2">Partenaire</p>
                 <img 
