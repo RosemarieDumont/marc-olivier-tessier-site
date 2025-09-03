@@ -505,23 +505,23 @@ html {
 .partners-track{
   display:flex;
   flex-wrap:nowrap !important;
-  gap:24px;
+  gap:20px;
   overflow-x:scroll;
   -webkit-overflow-scrolling:touch;
   align-items:center;
-  padding:12px 6px;
+  padding:16px 8px;
   scroll-snap-type:x proximity;
-  min-height:80px;
+  min-height:90px;
   white-space:nowrap;
 }
 .partners-track a{ 
   flex:0 0 auto !important; 
   scroll-snap-align:center; 
   display:inline-block;
-  min-width:80px;
+  min-width:90px;
 }
 .partners-track img{
-  height:56px;
+  height:60px;
   width:auto;
   object-fit:contain;
   display:block;
@@ -535,13 +535,15 @@ html {
 /* Mobile optimization for partners */
 @media (max-width: 768px) {
   .partners-track {
-    gap:18px;
+    gap:16px;
+    padding:20px 10px;
+    min-height:100px;
   }
   .partners-track a {
-    min-width:70px;
+    min-width:85px;
   }
   .partners-track img {
-    height:44px;
+    height:50px;
   }
 }
 

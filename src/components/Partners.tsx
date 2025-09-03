@@ -88,12 +88,17 @@ const overrides: Record<string, Override> = {
   "uv assurance": { zoom: 1.20, cap: "96%" },
   "ssq assurance": { zoom: 1.18, cap: "96%" },
   "ppi": { zoom: 1.0, cap: "88%" },
-  // --- Mobile-only fixes for the 5 problematic logos ---
-  "medavie blue cross#xs": { zoomXs: 0.5, capXs: "90%" },
-  "desjardins#xs":         { zoomXs: 0.55, capXs: "75%" },
-  "assumption life#xs":    { zoomXs: 0.85, capXs: "80%" },
-  "sun life financial#xs": { zoomXs: 0.78, capXs: "78%" },
-  "equitable life of canada#xs": { zoomXs: 0.76, capXs: "76%" },
+  // --- Mobile-only fixes for problematic logos ---
+  "beneva#xs": { zoomXs: 0.85, capXs: "85%" },
+  "canada life#xs": { zoomXs: 0.80, capXs: "80%" },
+  "l'empire vie#xs": { zoomXs: 0.85, capXs: "85%" },
+  "equitable life of canada#xs": { zoomXs: 0.75, capXs: "75%" },
+  "uv assurance#xs": { zoomXs: 0.90, capXs: "85%" },
+  "desjardins#xs": { zoomXs: 0.70, capXs: "75%" },
+  "sun life financial#xs": { zoomXs: 0.75, capXs: "75%" },
+  "medavie blue cross#xs": { zoomXs: 0.55, capXs: "85%" },
+  "bmo#xs": { zoomXs: 0.90, capXs: "85%" },
+  "assumption life#xs": { zoomXs: 0.80, capXs: "80%" },
 };
 
 const Partners: React.FC = () => {
