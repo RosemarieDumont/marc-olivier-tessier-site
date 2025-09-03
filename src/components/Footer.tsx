@@ -20,7 +20,7 @@ const Footer = () => {
             </p>
             <div className="space-y-1 text-caption text-white/70">
               <p>Permis de l'AMF : 262945</p>
-              <p>Membre de la Chambre de la sécurité financière</p>
+              <p>Membre de la Chambre de la sécurité financière | <sup>1</sup> Auprès de l'Industrielle Alliance, Assurance et services financiers inc. Cabinet de services financiers</p>
               <div className="mt-4 flex flex-col items-start">
                 <p className="text-caption text-white/70 mb-2">Partenaire</p>
                 <img 
@@ -59,11 +59,6 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/20 mt-8 pt-8 text-center">
-          <div className="mb-4">
-            <p className="text-caption text-white/70 text-left max-w-4xl mx-auto">
-              <sup className="mr-1">1</sup>Auprès de l'Industrielle Alliance, Assurance et services financiers inc. Cabinet de services financiers
-            </p>
-          </div>
           <p className="text-caption text-white/70">
             © 2025 Marc-Olivier Tessier, Conseiller en sécurité financière. Tous droits réservés.
           </p>
