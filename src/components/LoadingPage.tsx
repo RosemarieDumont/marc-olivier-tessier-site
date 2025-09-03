@@ -25,7 +25,7 @@ const LoadingPage = () => {
             Marc-Olivier Tessier
           </h1>
           <p className="text-xl font-semibold text-slate-700 mb-2 animate-fade-in-delay tracking-wide" style={{ fontFamily: 'Poppins', fontWeight: '600', letterSpacing: '0.5px' }}>
-            Services financiers
+            Conseiller en sécurité financière
           </p>
         </div>
 
