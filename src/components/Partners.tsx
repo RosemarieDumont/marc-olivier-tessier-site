@@ -76,7 +76,7 @@ const overrides: Record<string, Override> = {
   // Desktop tuning you already had
   "rbc": { zoom: 1.50, cap: "100%", clip: "2% 2% 2% 2%" },
   "ia groupe financier": { zoom: 1.15, cap: "92%" },
-  "medavie blue cross": { zoom: 0.25, cap: "70%" },
+  "medavie blue cross": { zoom: 0.25, cap: "100%", clip: "0% 0% 0% 0%" },
   "desjardins": { zoom: 0.45, cap: "70%" },
   "assumption life": { zoom: 0.50, cap: "70%" },
   "sun life financial": { zoom: 0.45, cap: "65%" },
@@ -84,7 +84,7 @@ const overrides: Record<string, Override> = {
   "l'empire vie": { zoom: 1.0 },
   "humania": { zoom: 1.26, cap: "96%", clip: "1% 2% 1% 2%" },
   "la capitale": { zoom: 1.30, cap: "96%", clip: "1% 3% 1% 3%" },
-  "manulife": { zoom: 1.0 },
+  "manulife": { zoom: 0.75, cap: "75%" },
   "uv assurance": { zoom: 1.20, cap: "96%" },
   "ssq assurance": { zoom: 1.18, cap: "96%" },
   "ppi": { zoom: 1.0, cap: "88%" },
@@ -96,7 +96,7 @@ const overrides: Record<string, Override> = {
   "uv assurance": { zoomXs: 1.0, capXs: "100%" },
   "desjardins": { zoom: 0.45, cap: "70%", zoomXs: 0.60, capXs: "100%" },
   "sun life financial": { zoom: 0.45, cap: "65%", zoomXs: 0.65, capXs: "100%" },
-  "medavie blue cross": { zoom: 0.25, cap: "70%", zoomXs: 0.40, capXs: "100%" },
+  "medavie blue cross": { zoom: 0.25, cap: "100%", clip: "0% 0% 0% 0%", zoomXs: 0.40, capXs: "100%" },
   "bmo": { zoomXs: 1.0, capXs: "100%" },
   "assumption life": { zoom: 0.50, cap: "70%", zoomXs: 0.65, capXs: "100%" },
   "beneva": { zoom: 0.75, cap: "75%", zoomXs: 0.95, capXs: "100%" },
@@ -105,6 +105,7 @@ const overrides: Record<string, Override> = {
   "foresters financial": { zoom: 0.70, cap: "75%", zoomXs: 0.90, capXs: "100%" },
   "ivari": { zoom: 0.75, cap: "75%", zoomXs: 0.95, capXs: "100%" },
   "bmo": { zoom: 0.70, cap: "75%", zoomXs: 1.0, capXs: "100%" },
+  "manulife": { zoom: 0.75, cap: "75%", zoomXs: 0.90, capXs: "100%" },
 };
 
 const Partners: React.FC = () => {
