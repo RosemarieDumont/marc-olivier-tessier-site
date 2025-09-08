@@ -182,7 +182,7 @@ const Partners: React.FC = () => {
           
           <div className="partners-track">
             <div className="flex items-center justify-start
-                           gap-3 sm:gap-4 md:gap-6 lg:gap-10
+                           gap-2 sm:gap-3 md:gap-4 lg:gap-6
                            overflow-x-auto md:overflow-visible
                            snap-x snap-mandatory scroll-smooth
                            px-2 sm:px-3 md:px-0">

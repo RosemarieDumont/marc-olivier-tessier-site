@@ -505,7 +505,7 @@ html {
 .partners-track{
   display:flex;
   flex-wrap:nowrap !important;
-  gap:12px;
+  gap:8px;
   overflow-x:scroll;
   -webkit-overflow-scrolling:touch;
   align-items:center;
