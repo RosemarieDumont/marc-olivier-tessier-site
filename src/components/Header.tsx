@@ -68,7 +68,7 @@ const Header = () => {
               <h1 className="text-2xl font-bold transition-all duration-300 hover:text-[#79AEE8] hover:scale-105 tracking-tight" style={{ fontFamily: 'Poppins', fontWeight: '700', textShadow: '0 2px 8px rgba(0,0,0,0.3)' }}>
                 Marc-Olivier Tessier
               </h1>
-              <p className="text-sm font-medium text-white/90 transition-all duration-300 hover:text-[#79AEE8] mt-1" style={{ fontFamily: 'Poppins', fontWeight: '400', textShadow: '0 1px 4px rgba(0,0,0,0.3)' }}>
+              <p className="text-sm font-medium text-white/90 transition-all duration-300 hover:text-[#79AEE8] mt-1" style={{ fontFamily: 'Poppins', fontWeight: '600', textShadow: '0 1px 4px rgba(0,0,0,0.3)' }}>
                 Conseiller en sécurité financière<sup className="text-xs ml-0.5">1</sup>
               </p>
             </div>
