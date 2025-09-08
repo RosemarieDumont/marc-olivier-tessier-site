@@ -99,6 +99,12 @@ const overrides: Record<string, Override> = {
   "medavie blue cross": { zoom: 0.25, cap: "70%", zoomXs: 0.40, capXs: "100%" },
   "bmo": { zoomXs: 1.0, capXs: "100%" },
   "assumption life": { zoom: 0.50, cap: "70%", zoomXs: 0.65, capXs: "100%" },
+  "beneva": { zoom: 0.75, cap: "75%", zoomXs: 0.95, capXs: "100%" },
+  "canada life": { zoom: 0.70, cap: "75%", zoomXs: 0.90, capXs: "100%" },
+  "l'empire vie": { zoom: 0.75, cap: "75%", zoomXs: 0.95, capXs: "100%" },
+  "foresters financial": { zoom: 0.70, cap: "75%", zoomXs: 0.90, capXs: "100%" },
+  "ivari": { zoom: 0.75, cap: "75%", zoomXs: 0.95, capXs: "100%" },
+  "bmo": { zoom: 0.70, cap: "75%", zoomXs: 1.0, capXs: "100%" },
 };
 
 const Partners: React.FC = () => {
