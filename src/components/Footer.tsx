@@ -20,10 +20,10 @@ const Footer = () => {
             </p>
             <div className="space-y-1 text-caption text-white/70">
               <p>Permis de l'AMF : 262945</p>
-              <p>Membre de la Chambre de la sécurité financière</p>
-              <p className="text-caption text-white/70"><sup className="text-sm ml-1 opacity-90">1</sup> Auprès de l'Industrielle Alliance, Assurance et services financiers inc.</p>
-              <div className="mt-4 flex flex-col items-start">
-                <p className="text-caption text-white/70 mb-2">Partenaire</p>
+              <p className="mb-3 md:mb-1">Membre de la Chambre de la sécurité financière</p>
+              <p className="mb-3 md:mb-1">¹ Auprès de l'Industrielle Alliance, Assurance et services financiers inc.</p>
+              <div className="mt-6 md:mt-4 flex flex-col items-start">
+                <p className="text-caption text-white/70 mb-3 md:mb-2">Partenaire</p>
                 <img 
                   src="./logo IA.png" 
                   alt="iA Groupe financier" 
