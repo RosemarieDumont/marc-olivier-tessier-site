@@ -111,6 +111,9 @@ const Hero = () => {
               <div className="text-xl font-bold transition-all duration-300 hover:scale-105 tracking-tight" style={{ fontFamily: 'Poppins', fontWeight: '700', textShadow: '0 3px 12px rgba(0,0,0,0.4)' }}>
                 Marc-Olivier Tessier
               </div>
+              <div className="text-sm font-medium transition-all duration-300 hover:scale-105 mt-1" style={{ fontFamily: 'Poppins', fontWeight: '400', textShadow: '0 2px 8px rgba(0,0,0,0.4)' }}>
+                Conseiller en sécurité financière<sup className="text-xs ml-0.5">1</sup>
+              </div>
             </div>
             
             {/* Mobile menu button - Absolute positioned */}
