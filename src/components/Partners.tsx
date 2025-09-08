@@ -103,6 +103,7 @@ const overrides: Record<string, Override> = {
 
 const Partners: React.FC = () => {
   const sectionRef = React.useRef<HTMLElement>(null);
+  const [scrollIndicatorVisible, setScrollIndicatorVisible] = React.useState(true);
 
   React.useEffect(() => {
     const observer = new IntersectionObserver(
@@ -131,6 +132,24 @@ const Partners: React.FC = () => {
     };
   }, []);
 
+  // Handle scroll indicator visibility
+  React.useEffect(() => {
+    const handleScroll = (e: Event) => {
+      const target = e.target as HTMLElement;
+      if (target.scrollLeft > 50) {
+        setScrollIndicatorVisible(false);
+      } else {
+        setScrollIndicatorVisible(true);
+      }
+    };
+
+    const partnersTrack = document.querySelector('.partners-track');
+    if (partnersTrack) {
+      partnersTrack.addEventListener('scroll', handleScroll);
+      return () => partnersTrack.removeEventListener('scroll', handleScroll);
+    }
+  }, []);
+
   return (
     <section ref={sectionRef} className="py-8 sm:py-12 lg:py-20 animate-section-hidden" style={{ backgroundColor: 'var(--primary-blue)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -148,7 +167,7 @@ const Partners: React.FC = () => {
         {/* Scrollable Partners Band */}
         <div className="partners-area relative">
           {/* Scroll Indicator */}
-          <div className="scroll-indicator">
+          <div className={`scroll-indicator transition-opacity duration-300 ${scrollIndicatorVisible ? 'opacity-70' : 'opacity-0'}`}>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
@@ -156,10 +175,10 @@ const Partners: React.FC = () => {
           
           <div className="partners-track">
             <div className="flex items-center justify-start
-                           gap-4 sm:gap-6 md:gap-10
+                           gap-3 sm:gap-4 md:gap-6 lg:gap-10
                            overflow-x-auto md:overflow-visible
                            snap-x snap-mandatory scroll-smooth
-                           -mx-3 px-3 md:mx-0 md:px-0">
+                           px-2 sm:px-3 md:px-0">
               {partners.map((p) => {
                 const key = p.alt.toLowerCase();
                 const base = overrides[key] || {};
@@ -168,11 +187,11 @@ const Partners: React.FC = () => {
                   <div
                     key={p.alt}
                     className="snap-center shrink-0
-                               h-20 w-40 sm:w-44
-                               md:h-24 md:w-56 xl:h-24 xl:w-60
+                               h-16 w-32 xs:h-18 xs:w-36 sm:h-20 sm:w-40
+                               md:h-24 md:w-56 lg:h-24 lg:w-60
                                flex items-center justify-center rounded-lg bg-white overflow-hidden"
                   >
-                    <a href={p.href} target="_blank" rel="noopener" aria-label={p.alt} className="block p-2 sm:p-3 md:p-3 w-full h-full flex items-center justify-center">
+                    <a href={p.href} target="_blank" rel="noopener" aria-label={p.alt} className="block p-1.5 sm:p-2 md:p-3 w-full h-full flex items-center justify-center">
                       <img
                         src={p.src}
                         alt={p.alt}
