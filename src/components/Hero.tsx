@@ -151,15 +151,11 @@ const Hero = () => {
           Bâtissons ensemble des fondations solides pour votre avenir financier
         </h1>
 
-        {/* Professional Subtitle */}
-        <p className="text-white mb-8 animate-slide-up stagger-2 drop-shadow-md text-base sm:text-lg md:text-xl lg:text-2xl" style={{ fontFamily: 'Poppins', fontWeight: '400', marginTop: '24px' }}>
-          Conseiller en sécurité financière<sup className="text-sm ml-1 opacity-90">1</sup>
-        </p>
 
         {/* CTA Button */}
         <button
           onClick={() => scrollToSection('#services')}
-          className="inline-flex items-center gap-2 sm:gap-3 bg-white text-[#0B2545] px-6 py-3 rounded-full font-semibold text-base hover:bg-[#F7F9FB] transition-all duration-500 shadow-lg hover:shadow-xl hover:-translate-y-1 transform hover:scale-105 animate-slide-up stagger-3"
+          className="inline-flex items-center gap-2 sm:gap-3 bg-white text-[#0B2545] px-6 py-3 rounded-full font-semibold text-base hover:bg-[#F7F9FB] transition-all duration-500 shadow-lg hover:shadow-xl hover:-translate-y-1 transform hover:scale-105 animate-slide-up stagger-2 mt-8"
         >
           <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
