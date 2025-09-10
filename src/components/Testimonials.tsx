@@ -38,7 +38,7 @@ const Testimonials = () => {
     },
     {
       name: "Jonathan",
-      content: "Merci Marc-Olivier pour ton super service. Super accompagnement dans l'approche et la démarche. Répond parfaitement à mes besoins sans chercher à me vendre ce que je n'ai pas besoin. Au plaisir de refaire affaire.",
+      content: "Merci Marc-Olivier pour ton super service.  Incroyable accompagnement dans l'approche et la démarche. Répond parfaitement à mes besoins sans chercher à me vendre ce que je n'ai pas besoin. Au plaisir de refaire affaire.",
       rating: 5,
       image: "./jonathan.jpeg"
     }
