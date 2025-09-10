@@ -108,6 +108,7 @@ const overrides: Record<string, Override> = {
 
 const Partners: React.FC = () => {
   const sectionRef = React.useRef<HTMLElement>(null);
+  const [scrollIndicatorVisible, setScrollIndicatorVisible] = React.useState(true);
 
   React.useEffect(() => {
     const observer = new IntersectionObserver(
