@@ -50,7 +50,6 @@ const partnersRaw = [
   { alt: "Desjardins", href: "https://www.desjardins.com", src: "./assets/logos/desjardins.png" },
   { alt: "Sun Life Financial", href: "https://www.sunlife.ca", src: "./assets/logos/sun-life-financial.png" },
   { alt: "Manulife", href: "https://www.manulife.ca", src: "./assets/logos/manulife-logo.jpg" },
-  { alt: "Medavie Blue Cross", href: "https://www.medaviebc.ca", src: "./assets/logos/blue-cross.png" },
   { alt: "ivari", href: "https://ivari.ca/", src: "./assets/logos/ivari.webp" },
   { alt: "BMO", href: "https://www.bmo.com", src: "./assets/logos/bmo.png" },
   { alt: "RBC", href: "https://www.rbc.com", src: "./assets/logos/RBC-logo.jpg" },
@@ -76,12 +75,11 @@ const overrides: Record<string, Override> = {
   // Desktop tuning you already had
   "rbc": { zoom: 1.50, cap: "100%", clip: "2% 2% 2% 2%" },
   "ia groupe financier": { zoom: 1.15, cap: "92%" },
-  "medavie blue cross": { zoom: 0.25, cap: "100%", clip: "0% 0% 0% 0%" },
   "desjardins": { zoom: 0.45, cap: "70%" },
   "assumption life": { zoom: 0.50, cap: "70%" },
   "sun life financial": { zoom: 0.45, cap: "65%" },
   "equitable life of canada": { zoom: 0.40, cap: "65%" },
-  "l'empire vie": { zoom: 1.0 },
+  "l'empire vie": { zoom: 0.56, cap: "75%" },
   "humania": { zoom: 1.26, cap: "96%", clip: "1% 2% 1% 2%" },
   "la capitale": { zoom: 1.30, cap: "96%", clip: "1% 3% 1% 3%" },
   "manulife": { zoom: 0.75, cap: "75%" },
@@ -101,16 +99,15 @@ const overrides: Record<string, Override> = {
   "assumption life": { zoom: 0.50, cap: "70%", zoomXs: 0.65, capXs: "100%" },
   "beneva": { zoom: 0.75, cap: "75%", zoomXs: 0.95, capXs: "100%" },
   "canada life": { zoom: 0.70, cap: "75%", zoomXs: 0.90, capXs: "100%" },
-  "l'empire vie": { zoom: 0.75, cap: "75%", zoomXs: 0.95, capXs: "100%" },
+  "l'empire vie": { zoom: 0.56, cap: "75%", zoomXs: 0.71, capXs: "100%" },
   "foresters financial": { zoom: 0.70, cap: "75%", zoomXs: 0.90, capXs: "100%" },
-  "ivari": { zoom: 0.75, cap: "75%", zoomXs: 0.95, capXs: "100%" },
+  "ivari": { zoom: 0.56, cap: "75%", zoomXs: 0.71, capXs: "100%" },
   "bmo": { zoom: 0.70, cap: "75%", zoomXs: 1.0, capXs: "100%" },
   "manulife": { zoom: 0.75, cap: "75%", zoomXs: 0.90, capXs: "100%" },
 };
 
 const Partners: React.FC = () => {
   const sectionRef = React.useRef<HTMLElement>(null);
-  const [scrollIndicatorVisible, setScrollIndicatorVisible] = React.useState(true);
 
   React.useEffect(() => {
     const observer = new IntersectionObserver(
