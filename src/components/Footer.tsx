@@ -40,11 +40,12 @@ const Footer = () => {
               <h4 className="text-subheading text-lg font-semibold mb-3">Contact</h4>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );
 };
-
-export default Footer;
-  )
-}
