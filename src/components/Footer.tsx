@@ -40,30 +40,6 @@ const Footer = () => {
               <h4 className="text-subheading text-lg font-semibold mb-3">Contact</h4>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
-                  <Phone className="w-4 h-4 text-white/80" />
-                  <span className="text-caption text-white/85">(581) 992-7850</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Mail className="w-4 h-4 text-white/80" />
-                  <span className="text-caption text-white/85">marc-olivier.tessier@agc.ia.ca</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <MapPin className="w-4 h-4 text-white/80 mt-0.5" />
-                  <span className="text-caption text-white/85">
-                    1255, boul. Lebourgneuf, bureau 400<br />
-                    Québec (Québec) G2K 0M6
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="border-t border-white/20 mt-8 pt-8 text-center">
-          <p className="text-caption text-white/70">
-            © 2025 Marc-Olivier Tessier, Conseiller en sécurité financière. Tous droits réservés.
-          </p>
-        </div>
       </div>
     </footer>
   );
