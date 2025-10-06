@@ -116,10 +116,11 @@ const Services = () => {
       'Assurance vie': <Heart className="w-5 h-5" />,
       'Assurance maladie grave et invalidité': <UserCheck className="w-5 h-5" />,
       'Assurance prêt hypothécaire': <Home className="w-5 h-5" />,
-      'Assurance accident corporel': <Car className="w-5 h-5" />,
+      'Assurance accident corporel': <UserCheck className="w-5 h-5" />,
       'Assurance voyage': <Plane className="w-5 h-5" />,
       'Assurance vie temporaire': <Heart className="w-5 h-5" />,
       'Assurance vie permanente et participative': <TrendingUp className="w-5 h-5" />,
+      'Assurance auto et habitation': <Car className="w-5 h-5" />,
       'Protection des dirigeants': <Briefcase className="w-5 h-5" />,
       'Stratégies d\'épargne fiscales': <Calculator className="w-5 h-5" />,
       'Assurance de convention d\'actionnaires': <FileText className="w-5 h-5" />,
@@ -194,7 +195,7 @@ const Services = () => {
           description: "Offre une protection garantie à vie tout en accumulant une valeur qui croît avec le temps grâce aux dividendes, vous permettant de bâtir un héritage et un capital durable"
         },
         {
-          name: "Assurance Auto et Habitation",
+          name: "Assurance auto et habitation",
           description: "Partenariat de référencement chez Industrielle Alliance pour vos assurances de véhicules et habitation"
         }
       ]
