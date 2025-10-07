@@ -34,16 +34,6 @@ export default function Footer() {
           </div>
 
           {/* Contact Info and iA Logo */}
-          <div className="md:col-span-1">
-            <div className="flex flex-col items-center md:items-end">
-              <p className="text-caption text-white/70 mb-3 md:mb-2">Partenaire</p>
-              <img 
-                src="./logo IA.png" 
-                alt="iA Groupe financier" 
-                className="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
-              />
-            </div>
-          </div>
         </div>
       </div>
     </footer>
