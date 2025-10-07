@@ -36,6 +36,15 @@ export default function Footer() {
           {/* Contact Info and iA Logo */}
         </div>
       </div>
+      
+      {/* Copyright */}
+      <div className="border-t border-white/20 mt-8 pt-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-white/70 text-sm">
+            © {new Date().getFullYear()} Marc-Olivier Tessier. Tous droits réservés.
+          </p>
+        </div>
+      </div>
     </footer>
   );
 }
