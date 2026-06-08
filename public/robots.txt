@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /jonathan.jpeg
 
 Sitemap: https://servicesfinancierstessier.ca/sitemap.xml
