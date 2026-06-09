@@ -3,20 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="google-site-verification" content="RNEDQRJE9taoAZkaUhW0OLCKz6Y6MmXSdgga-F7QpMI" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+  <!-- Favicons (pointent vers des fichiers qui existent réellement) -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
-<link rel="apple-touch-icon" sizes="192x192" href="/favicon.png">
-<link rel="icon" href="/logo.png" type="image/png" sizes="192x192">  
-<script type="application/ld+json">                                  
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Marc-Olivier Tessier",
-  "url": "https://rosemariedumont.github.io/marc-olivier-tessier-site/",
-  "logo": "https://rosemariedumont.github.io/marc-olivier-tessier-site/logo.png"
-}
-</script>                                                              
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon.png">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO TITLE + DESCRIPTION -->
@@ -32,21 +24,21 @@
   <meta property="og:url" content="https://servicesfinancierstessier.ca/" />
   <meta property="og:locale" content="fr_CA" />
 
-  <!-- Image de partage -->
-  <meta property="og:image" content="https://servicesfinancierstessier.ca/sean-pollock-PhYq704ffdA-unsplash.jpg" />
-  <meta property="og:image:secure_url" content="https://servicesfinancierstessier.ca/sean-pollock-PhYq704ffdA-unsplash.jpg" />
-  <meta property="og:image:alt" content="Photo d’accueil – Services financiers Tessier" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <!-- Image d'aperçu : logo de la marque -->
+  <meta property="og:image" content="https://servicesfinancierstessier.ca/logo-mot.png" />
+  <meta property="og:image:secure_url" content="https://servicesfinancierstessier.ca/logo-mot.png" />
+  <meta property="og:image:alt" content="Logo Marc-Olivier Tessier Services financiers" />
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="1024" />
 
   <!-- Twitter (fallback) -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Marc-Olivier Tessier | Conseiller en sécurité financière – iA Groupe financier" />
   <meta name="twitter:description" content="Conseiller affilié à iA Groupe financier. Épargne, assurances et solutions pour entreprises." />
-  <meta name="twitter:image" content="https://servicesfinancierstessier.ca/sean-pollock-PhYq704ffdA-unsplash.jpg" />
+  <meta name="twitter:image" content="https://servicesfinancierstessier.ca/logo-mot.png" />
 
   <!-- Fallback pour anciens scrapers -->
-  <link rel="image_src" href="https://servicesfinancierstessier.ca/sean-pollock-PhYq704ffdA-unsplash.jpg" />
+  <link rel="image_src" href="https://servicesfinancierstessier.ca/logo-mot.png" />
 
   <!-- SPA route restore (no change to UI) -->
   <script>
@@ -62,13 +54,15 @@
     })();
   </script>
 
-  <!-- JSON-LD Structured Data -->
+  <!-- JSON-LD Structured Data (source unique, domaine correct, logo de marque) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FinancialService",
     "name": "Services financiers Tessier",
     "url": "https://servicesfinancierstessier.ca/",
+    "logo": "https://servicesfinancierstessier.ca/logo-mot.png",
+    "image": "https://servicesfinancierstessier.ca/logo-mot.png",
     "areaServed": "CA-QC",
     "description": "Conseiller en sécurité financière affilié à iA Groupe financier. Épargne, assurances et solutions pour entreprises.",
     "founder": {
@@ -85,4 +79,3 @@
   <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>
-
