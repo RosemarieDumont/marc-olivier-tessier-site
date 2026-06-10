@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useLang } from '../contexts/LanguageContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t, lang, toggle } = useLang();
 
   const navItems = [
-    { name: 'Accueil', href: '#home' },
-    { name: 'À propos', href: '#welcome' },
-    { name: 'Services', href: '#services' },
-    { name: 'Témoignages', href: '#testimonials' },
-    { name: 'Contact', href: '#contact' },
+    { name: t('nav.home'), href: '#home' },
+    { name: t('nav.about'), href: '#welcome' },
+    { name: t('nav.services'), href: '#services' },
+    { name: t('nav.testimonials'), href: '#testimonials' },
+    { name: t('nav.contact'), href: '#contact' },
   ];
 
   // Custom smooth scroll function with precise timing
@@ -32,9 +34,9 @@ const Header = () => {
         const timeElapsed = currentTime - start;
         const progress = Math.min(timeElapsed / duration, 1);
         const ease = easeInOutCubic(progress);
-        
+
         window.scrollTo(0, startPosition + distance * ease);
-        
+
         if (timeElapsed < duration) {
           requestAnimationFrame(animation);
         }
@@ -69,7 +71,7 @@ const Header = () => {
                 Marc-Olivier Tessier
               </h1>
               <p className="text-sm font-medium text-white/90 transition-all duration-300 hover:text-[#79AEE8] mt-1" style={{ fontFamily: 'Poppins', fontWeight: '600', textShadow: '0 1px 4px rgba(0,0,0,0.3)' }}>
-                Conseiller en sécurité financière<sup className="text-[0.5rem] ml-0.5">1</sup>
+                {t('header.role')}<sup className="text-[0.5rem] ml-0.5">1</sup>
               </p>
             </div>
           </div>
@@ -78,7 +80,7 @@ const Header = () => {
           <nav className="flex space-x-8" style={{ lineHeight: '72px' }}>
             {navItems.map((item) => (
               <button
-                key={item.name}
+                key={item.href}
                 onClick={() => scrollToSection(item.href)}
                 className="transition-all duration-300 font-medium text-base text-white hover:text-[#79AEE8]"
               >
@@ -87,8 +89,17 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Right side spacer for balance */}
-          <div className="flex-shrink-0 w-48"></div>
+          {/* Right side : sélecteur de langue (occupe l'espace déjà réservé, w-48) */}
+          <div className="flex-shrink-0 w-48 flex justify-end">
+            <button
+              onClick={toggle}
+              aria-label={t('header.switchLabel')}
+              className="transition-all duration-300 font-semibold text-sm text-white/90 hover:text-[#79AEE8] tracking-wide"
+              style={{ fontFamily: 'Poppins', fontWeight: '600', textShadow: '0 1px 4px rgba(0,0,0,0.3)' }}
+            >
+              {lang === 'fr' ? 'EN' : 'FR'}
+            </button>
+          </div>
         </div>
       </div>
     </header>
