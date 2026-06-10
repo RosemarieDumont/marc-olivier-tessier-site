@@ -1,7 +1,10 @@
 import React from 'react';
 import { Shield, Phone, Mail, MapPin } from 'lucide-react';
+import { useLang } from '../contexts/LanguageContext';
 
 export default function Footer() {
+  const { t } = useLang();
+
   return (
     <footer className="text-white py-12 bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,21 +15,21 @@ export default function Footer() {
               <Shield className="w-8 h-8 text-white/80" />
               <div>
                 <h3 className="text-heading text-xl font-bold">Marc-Olivier Tessier</h3>
-                <p className="text-caption text-white/70">Conseiller en sécurité financière</p>
+                <p className="text-caption text-white/70">{t('header.role')}</p>
               </div>
             </div>
             <p className="text-body text-white/85 mb-4">
-              Votre partenaire de confiance pour bâtir un avenir financier solide et sécurisé.
+              {t('footer.tagline')}
             </p>
             <div className="space-y-1 text-caption text-white/70">
-              <p>Permis de l'AMF : 262945</p>
-              <p className="mb-3 md:mb-1">Membre de la Chambre de la sécurité financière</p>
-              <p className="mb-3 md:mb-1">¹ Auprès de l'Industrielle Alliance, Assurance et services financiers inc.</p>
+              <p>{t('footer.amf')}</p>
+              <p className="mb-3 md:mb-1">{t('footer.csf')}</p>
+              <p className="mb-3 md:mb-1">{t('footer.disclaimer')}</p>
               <div className="mt-[1cm] md:mt-6 flex flex-col items-start">
-                <p className="text-caption text-white/70 mb-3 md:mb-2">Partenaire</p>
-                <img 
-                  src="./logo IA.png" 
-                  alt="iA Groupe financier" 
+                <p className="text-caption text-white/70 mb-3 md:mb-2">{t('footer.partnerLabel')}</p>
+                <img
+                  src="./logo IA.png"
+                  alt="iA Groupe financier"
                   className="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
@@ -36,12 +39,12 @@ export default function Footer() {
           {/* Contact Info and iA Logo */}
         </div>
       </div>
-      
+
       {/* Copyright */}
       <div className="border-t border-white/20 mt-8 pt-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-white/70 text-sm">
-            © {new Date().getFullYear()} Marc-Olivier Tessier. Tous droits réservés.
+            © {new Date().getFullYear()} Marc-Olivier Tessier. {t('footer.rights')}
           </p>
         </div>
       </div>
