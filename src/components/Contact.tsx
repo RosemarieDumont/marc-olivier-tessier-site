@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { Phone, Mail, Linkedin, Facebook, MapPin, Clock, Send } from 'lucide-react';
+import { useLang } from '../contexts/LanguageContext';
 
 const Contact = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const { t } = useLang();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -26,14 +28,14 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: <Phone className="w-6 h-6" />,
-      label: "Téléphone",
+      label: t('contact.labels.phone'),
       value: "(581) 992-7850",
       href: "tel:+15819927850",
       color: "from-blue-500 to-blue-600"
     },
     {
       icon: <Mail className="w-6 h-6" />,
-      label: "Email",
+      label: t('contact.labels.email'),
       value: "marc-olivier.tessier@agc.ia.ca",
       href: "mailto:marc-olivier.tessier@agc.ia.ca",
       color: "from-blue-600 to-blue-700"
@@ -54,7 +56,7 @@ const Contact = () => {
     },
     {
       icon: <MapPin className="w-6 h-6" />,
-      label: "Adresse",
+      label: t('contact.labels.address'),
       value: "1255, boul. Lebourgneuf, bureau 400, Québec (Québec) G2K 0M6",
       href: "https://maps.google.com/?q=1255+boul.+Lebourgneuf,+bureau+400,+Québec,+QC+G2K+0M6",
       color: "from-blue-800 to-blue-900"
@@ -65,9 +67,9 @@ const Contact = () => {
     <section ref={sectionRef} id="contact" className="py-20 animate-section-hidden" style={{ backgroundColor: 'var(--primary-blue)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl font-bold text-white mb-4 animate-slide-up stagger-1" style={{ fontFamily: 'Poppins', fontWeight: '700' }}>Discutons de vos objectifs</h2>
+          <h2 className="text-4xl font-bold text-white mb-4 animate-slide-up stagger-1" style={{ fontFamily: 'Poppins', fontWeight: '700' }}>{t('contact.title')}</h2>
           <p className="text-body text-lg text-white/85 max-w-3xl mx-auto animate-slide-up stagger-2">
-            Prêt à commencer votre parcours vers la sécurité financière ? Je vous invite à me contacter dès aujourd'hui.
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -76,7 +78,7 @@ const Contact = () => {
           <div className="relative z-10 animate-slide-in-left stagger-1">
             {/* Enhanced blue atmosphere for PC */}
             <div className="absolute -inset-4 bg-gradient-to-br from-blue-600/10 via-transparent to-blue-800/15 rounded-3xl blur-xl hidden lg:block"></div>
-            <h3 className="text-heading text-xl font-bold text-white mb-6 animate-slide-up stagger-1">Informations de contact</h3>
+            <h3 className="text-heading text-xl font-bold text-white mb-6 animate-slide-up stagger-1">{t('contact.infoTitle')}</h3>
             <div className="space-y-4">
               {contactInfo.map((info, index) => (
                 <a
@@ -106,67 +108,67 @@ const Contact = () => {
           <div className="relative z-10 animate-slide-in-right stagger-2">
             {/* Enhanced form background for PC */}
             <div className="absolute -inset-6 bg-gradient-to-tl from-blue-700/10 via-blue-500/5 to-blue-800/15 rounded-3xl blur-2xl hidden lg:block"></div>
-            <h3 className="text-heading text-xl font-bold text-white mb-6 animate-slide-up stagger-1">Assistance & renseignements</h3>
+            <h3 className="text-heading text-xl font-bold text-white mb-6 animate-slide-up stagger-1">{t('contact.formTitle')}</h3>
             <form action="mailto:marc-olivier.tessier@agc.ia.ca" method="post" enctype="text/plain" className="space-y-4 animate-slide-up stagger-2 relative">
               <div className="grid grid-cols-2 gap-3">
                 <div>
                   <label className="text-caption block font-medium text-white/80 mb-1">
-                    Prénom
+                    {t('contact.form.firstName')}
                   </label>
                   <input
                     name="prenom"
                     type="text"
                     className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
-                    placeholder="Votre prénom"
+                    placeholder={t('contact.form.firstNamePlaceholder')}
                   />
                 </div>
                 <div>
                   <label className="text-caption block font-medium text-white/80 mb-1">
-                    Nom
+                    {t('contact.form.lastName')}
                   </label>
                   <input
                     name="nom"
                     type="text"
                     className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
-                    placeholder="Votre nom"
+                    placeholder={t('contact.form.lastNamePlaceholder')}
                   />
                 </div>
               </div>
 
               <div>
                 <label className="text-caption block font-medium text-white/80 mb-1">
-                  Email
+                  {t('contact.form.email')}
                 </label>
                 <input
                   name="email"
                   type="email"
                   className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
-                  placeholder="votre@email.com"
+                  placeholder={t('contact.form.emailPlaceholder')}
                 />
               </div>
 
               <div>
                 <label className="text-caption block font-medium text-white/80 mb-1">
-                  Téléphone
+                  {t('contact.form.phone')}
                 </label>
                 <input
                   name="telephone"
                   type="tel"
                   className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
-                  placeholder="(514) 555-0123"
+                  placeholder={t('contact.form.phonePlaceholder')}
                 />
               </div>
 
               <div className="relative">
                 <label className="text-caption block font-medium text-white/80 mb-1">
-                  Service d'intérêt
+                  {t('contact.form.serviceLabel')}
                 </label>
                 <select name="service" className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all duration-500 backdrop-blur-sm hover:bg-white/15 focus:bg-white/15 appearance-none cursor-pointer">
-                  <option value="">Sélectionnez un service</option>
-                  <option value="epargne" className="bg-gray-800 text-white">Épargne et placements</option>
-                  <option value="assurance" className="bg-gray-800 text-white">Assurance</option>
-                  <option value="corporatif" className="bg-gray-800 text-white">Services corporatifs</option>
-                  <option value="consultation" className="bg-gray-800 text-white">Consultation générale</option>
+                  <option value="">{t('contact.form.serviceDefault')}</option>
+                  <option value="epargne" className="bg-gray-800 text-white">{t('contact.form.serviceSavings')}</option>
+                  <option value="assurance" className="bg-gray-800 text-white">{t('contact.form.serviceInsurance')}</option>
+                  <option value="corporatif" className="bg-gray-800 text-white">{t('contact.form.serviceCorporate')}</option>
+                  <option value="consultation" className="bg-gray-800 text-white">{t('contact.form.serviceConsultation')}</option>
                 </select>
                 {/* Custom dropdown arrow for better mobile visibility */}
                 <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
@@ -178,13 +180,13 @@ const Contact = () => {
 
               <div>
                 <label className="text-caption block font-medium text-white/80 mb-1">
-                  Message
+                  {t('contact.form.message')}
                 </label>
                 <textarea
                   name="message"
                   rows={4}
                   className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all duration-500 resize-none backdrop-blur-sm hover:bg-white/15 focus:bg-white/15"
-                  placeholder="Décrivez brièvement vos besoins ou questions..."
+                  placeholder={t('contact.form.messagePlaceholder')}
                 ></textarea>
               </div>
 
@@ -193,7 +195,7 @@ const Contact = () => {
                 className="w-full bg-white text-black hover:bg-gray-100 py-3 px-5 rounded-xl font-semibold text-base transition-all duration-500 flex items-center justify-center gap-2 shadow-lg hover:shadow-2xl hover:-translate-y-1 hover-glow transform hover:scale-105"
               >
                 <Send className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-                Envoyer la demande
+                {t('contact.form.submit')}
               </button>
             </form>
           </div>
