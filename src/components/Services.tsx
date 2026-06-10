@@ -5,7 +5,7 @@ import { useLang } from '../contexts/LanguageContext';
 
 const Services = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  const [activeTab, setActiveTab] = useState('epargne');I
+  const [activeTab, setActiveTab] = useState('epargne');
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [openServices, setOpenServices] = useState<{[key: string]: boolean}>({});
   const tabsRef = useRef<HTMLDivElement>(null);
