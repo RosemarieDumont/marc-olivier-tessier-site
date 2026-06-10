@@ -1,4 +1,5 @@
 import React from "react";
+import { useLang } from '../contexts/LanguageContext';
 
 type Override = {
   zoom?: number; cap?: string; clip?: string;
@@ -109,6 +110,7 @@ const overrides: Record<string, Override> = {
 const Partners: React.FC = () => {
   const sectionRef = React.useRef<HTMLElement>(null);
   const [scrollIndicatorVisible, setScrollIndicatorVisible] = React.useState(true);
+  const { t } = useLang();
 
   React.useEffect(() => {
     const observer = new IntersectionObserver(
@@ -161,11 +163,11 @@ const Partners: React.FC = () => {
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <div className="inline-block">
             <span className="text-white/80 text-sm sm:text-base lg:text-lg font-medium tracking-wide uppercase mb-2 sm:mb-3 lg:mb-4 block animate-fade-in">
-              Réseau de confiance
+              {t('partners.network')}
             </span>
           </div>
           <h3 className="text-display text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 animate-slide-up stagger-2 text-white" style={{ fontFamily: 'Poppins', fontWeight: '700', lineHeight: '1.1' }}>
-            Mes partenaires
+            {t('partners.title')}
           </h3>
         </div>
 
@@ -177,7 +179,7 @@ const Partners: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </div>
-          
+
           <div className="partners-track">
             <div className="flex items-center justify-start
                            gap-2 sm:gap-3 md:gap-4 lg:gap-6
@@ -224,7 +226,7 @@ const Partners: React.FC = () => {
         {/* Additional Info */}
         <div className="text-center mt-8 sm:mt-12">
           <p className="text-white text-sm sm:text-base max-w-2xl mx-auto">
-            En collaboration avec les plus grandes institutions financières au Québec pour vous offrir les meilleures solutions d'épargne et d'assurance.
+            {t('partners.caption')}
           </p>
         </div>
       </div>
