@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useLang } from '../contexts/LanguageContext';
 
 const Hero = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const { t, lang, toggle } = useLang();
 
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-      
+
       // Parallax effect for desktop only
       if (!isMobile && window.innerWidth >= 768) {
         const scrolled = window.pageYOffset;
@@ -36,11 +38,11 @@ const Hero = () => {
   }, []);
 
   const navItems = [
-    { name: 'Accueil', href: '#home' },
-    { name: 'À propos', href: '#welcome' },
-    { name: 'Services', href: '#services' },
-    { name: 'Témoignages', href: '#testimonials' },
-    { name: 'Contact', href: '#contact' },
+    { name: t('nav.home'), href: '#home' },
+    { name: t('nav.about'), href: '#welcome' },
+    { name: t('nav.services'), href: '#services' },
+    { name: t('nav.testimonials'), href: '#testimonials' },
+    { name: t('nav.contact'), href: '#contact' },
   ];
 
   // Custom smooth scroll function with precise timing
@@ -63,9 +65,9 @@ const Hero = () => {
         const timeElapsed = currentTime - start;
         const progress = Math.min(timeElapsed / duration, 1);
         const ease = easeInOutCubic(progress);
-        
+
         window.scrollTo(0, startPosition + distance * ease);
-        
+
         if (timeElapsed < duration) {
           requestAnimationFrame(animation);
         }
@@ -106,16 +108,26 @@ const Hero = () => {
       <div className="md:hidden absolute top-0 left-0 right-0 z-50 pt-4">
         <div className="mx-4">
           <div className="flex justify-center items-center h-12 px-4 relative">
+            {/* Sélecteur de langue mobile - à gauche (miroir du bouton menu) */}
+            <button
+              onClick={toggle}
+              aria-label={t('header.switchLabel')}
+              className="absolute left-0 transition-all duration-300 hover:scale-110 px-2 py-1 rounded-full text-sm font-semibold text-[#F9FAFB] hover:text-[#6C90C3]"
+              style={{ fontFamily: 'Poppins', fontWeight: '600', textShadow: '0 2px 8px rgba(0,0,0,0.4)' }}
+            >
+              {lang === 'fr' ? 'EN' : 'FR'}
+            </button>
+
             {/* Marc-Olivier Tessier Name - Centered */}
             <div className="text-[#F9FAFB] drop-shadow-lg group cursor-pointer text-center">
               <h1 className="text-xl font-bold transition-all duration-300 hover:scale-105 tracking-tight" style={{ fontFamily: 'Poppins', fontWeight: '700', textShadow: '0 3px 12px rgba(0,0,0,0.4)' }}>
                 Marc-Olivier Tessier
               </h1>
               <p className="text-sm font-medium transition-all duration-300 hover:scale-105 mt-1" style={{ fontFamily: 'Poppins', fontWeight: '600', textShadow: '0 2px 8px rgba(0,0,0,0.4)' }}>
-                Conseiller en sécurité financière<sup className="text-[0.5rem] ml-0.5">1</sup>
+                {t('header.role')}<sup className="text-[0.5rem] ml-0.5">1</sup>
               </p>
             </div>
-            
+
             {/* Mobile menu button - Absolute positioned */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -133,7 +145,7 @@ const Hero = () => {
           <div className="px-6 pt-6 pb-6 space-y-2">
             {navItems.map((item) => (
               <button
-                key={item.name}
+                key={item.href}
                 onClick={() => scrollToSection(item.href)}
                 className="block w-full text-left px-4 py-3 rounded-xl transition-all duration-500 text-base font-semibold hover:translate-x-2 text-[#F9FAFB] hover:text-slate-300 hover:bg-slate-700/50"
               >
@@ -148,7 +160,7 @@ const Hero = () => {
       <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 md:pt-0">
         {/* Main Headline */}
         <h1 className="text-white font-bold mb-4 relative z-10 animate-slide-up stagger-1 drop-shadow-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl" style={{ fontFamily: 'Poppins', fontWeight: '700', lineHeight: '1.1' }}>
-          Bâtissons ensemble des fondations solides pour votre avenir financier
+          {t('hero.headline')}
         </h1>
 
 
@@ -160,7 +172,7 @@ const Hero = () => {
           <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
-          Mes services
+          {t('hero.cta')}
         </button>
       </div>
     </section>
