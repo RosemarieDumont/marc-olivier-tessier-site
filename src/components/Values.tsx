@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { Shield, TrendingUp, Users, Award } from 'lucide-react';
+import { useLang } from '../contexts/LanguageContext';
 
 const Values = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const { t } = useLang();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -26,24 +28,24 @@ const Values = () => {
   const values = [
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "Stabilité",
-      description: "Je mets vos priorités en premier et privilégie des solutions fiables, négociées au meilleur taux disponible et ajustées à votre réalité."
+      title: t('values.stability.title'),
+      description: t('values.stability.desc'),
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
-      title: "Création de valeur",
-      description: "J'optimise les leviers de croissance: placements pertinents, stratégie fiscale et réinvestissement."
+      title: t('values.valueCreation.title'),
+      description: t('values.valueCreation.desc'),
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Relations humaines",
-      description: "Les besoins uniques de chaque individu guident nos plans et nos échanges. Confiance, écoute et suivi proactif sont les fondements de nos interactions."
+      title: t('values.human.title'),
+      description: t('values.human.desc'),
     },
     {
       icon: <Award className="w-8 h-8" />,
-      title: "Vision à long terme",
-      description: "Une stratégie que je bâtis par étapes : fondations, structure, finitions qui évolue avec vos objectifs."
-    }
+      title: t('values.vision.title'),
+      description: t('values.vision.desc'),
+    },
   ];
 
   return (
@@ -52,7 +54,7 @@ const Values = () => {
         {/* Header */}
         <div className="text-center mb-10 animate-slide-up">
           <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-slide-up stagger-1" style={{ fontFamily: 'Poppins', fontWeight: '700' }}>
-            Mes valeurs
+            {t('values.title')}
           </h2>
           <div className="w-24 h-0.5 mx-auto animate-slide-up stagger-2" style={{ backgroundColor: 'var(--primary-blue)' }}></div>
         </div>
@@ -60,8 +62,8 @@ const Values = () => {
         {/* Values Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {values.map((value, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className={`group bg-white border rounded-2xl p-6 transition-all duration-300 hover:shadow-lg animate-scale-in stagger-${index + 1}`}
               style={{ borderColor: '#E6E8EC' }}
             >
