@@ -1,10 +1,9 @@
 // =============================================================
 //  src/contexts/LanguageContext.tsx
-//  Fournit la langue courante + le helper t() à toute l'app.
-//  - Français par défaut (contexte Québec)
-//  - Mémorise le choix dans localStorage
-//  - Détecte la langue du navigateur au 1er passage (repli FR)
-//  - Met à jour l'attribut <html lang="...">
+//  - FRANÇAIS PAR DÉFAUT, toujours (peu importe la langue du navigateur).
+//  - On ne mémorise la langue QUE si l'utilisateur clique le bouton.
+//  - Nouvelle clé de stockage : ignore toute mémorisation "en" erronée
+//    laissée par la version précédente.
 // =============================================================
 
 import {
@@ -25,32 +24,54 @@ type LanguageContextValue = {
 
 const LanguageContext = createContext<LanguageContextValue | undefined>(undefined);
 
-function detectInitialLang(): Lang {
-  if (typeof window === 'undefined') return 'fr';
-  const saved = window.localStorage.getItem('lang');
-  if (saved === 'fr' || saved === 'en') return saved;
-  // Québec : le français est la valeur par défaut.
-  // On ne bascule en anglais que si le navigateur est clairement anglophone.
-  const browser = (window.navigator.language || 'fr').toLowerCase();
-  return browser.startsWith('en') ? 'en' : 'fr';
+// Nouvelle clé (v2) pour repartir proprement, sans l'ancienne valeur "en".
+const STORAGE_KEY = 'mot_lang';
+
+function getStoredLang(): Lang | null {
+  if (typeof window === 'undefined') return null;
+  try {
+    const saved = window.localStorage.getItem(STORAGE_KEY);
+    return saved === 'fr' || saved === 'en' ? saved : null;
+  } catch {
+    return null;
+  }
+}
+
+function persistLang(l: Lang): void {
+  try {
+    window.localStorage.setItem(STORAGE_KEY, l);
+  } catch {
+    /* localStorage indisponible : on ignore */
+  }
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>(() => detectInitialLang());
+  // Français par défaut ; on respecte un choix EXPLICITE antérieur s'il existe.
+  const [lang, setLangState] = useState<Lang>(() => getStoredLang() ?? 'fr');
 
+  // Met seulement à jour l'attribut <html lang>. N'écrit PAS dans localStorage
+  // au montage, pour ne jamais "mémoriser" une langue non choisie.
   useEffect(() => {
     document.documentElement.lang = lang === 'en' ? 'en' : 'fr-CA';
-    try {
-      window.localStorage.setItem('lang', lang);
-    } catch {
-      /* localStorage indisponible : on ignore */
-    }
   }, [lang]);
+
+  const setLang = (l: Lang) => {
+    setLangState(l);
+    persistLang(l);
+  };
+
+  const toggle = () => {
+    setLangState((prev) => {
+      const next = prev === 'fr' ? 'en' : 'fr';
+      persistLang(next);
+      return next;
+    });
+  };
 
   const value: LanguageContextValue = {
     lang,
-    setLang: (l) => setLangState(l),
-    toggle: () => setLangState((prev) => (prev === 'fr' ? 'en' : 'fr')),
+    setLang,
+    toggle,
     t: (key) => translate(lang, key),
   };
 
@@ -65,7 +86,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 export function useLang(): LanguageContextValue {
   const ctx = useContext(LanguageContext);
   if (!ctx) {
-    throw new Error('useLang doit être utilisé à l’intérieur de <LanguageProvider>');
+    throw new Error('useLang doit etre utilise a l interieur de <LanguageProvider>');
   }
   return ctx;
 }
+
