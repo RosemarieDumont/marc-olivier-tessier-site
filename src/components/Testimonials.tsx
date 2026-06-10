@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { Star, Quote } from 'lucide-react';
+import { useLang } from '../contexts/LanguageContext';
 
 const Testimonials = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const { t } = useLang();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -23,25 +25,11 @@ const Testimonials = () => {
     return () => observer.disconnect();
   }, []);
 
+  // id stable (indépendant de la langue) ; le texte vient des traductions.
   const testimonials = [
-    {
-      name: "Salomé",
-      content: "Marco est très professionnel, et il sait se montrer aussi chaleureux et amical. Il donne des explications claires sur les placements, et la stratégie à suivre en fonction de vos besoins. Je recommande.",
-      rating: 5,
-      image: "./salomé.jpeg"
-    },
-    {
-      name: "Philippe",
-      content: "Je recommande vivement Marc-Olivier pour son expertise. Son approche personnalisée et son souci du détail font de lui le choix idéal pour sécuriser votre avenir financier.",
-      rating: 5,
-      image: "./philippe.jpeg"
-    },
-    {
-      name: "Jonathan",
-      content: "Merci Marc-Olivier pour ton super service.  Incroyable accompagnement dans l'approche et la démarche. Répond parfaitement à mes besoins sans chercher à me vendre ce que je n'ai pas besoin. Au plaisir de refaire affaire.",
-      rating: 5,
-      image:"./avis-jonathan.jpeg"
-    }
+    { id: 'salome', name: "Salomé", rating: 5, image: "./salomé.jpeg" },
+    { id: 'philippe', name: "Philippe", rating: 5, image: "./philippe.jpeg" },
+    { id: 'jonathan', name: "Jonathan", rating: 5, image: "./avis-jonathan.jpeg" },
   ];
 
   return (
@@ -50,23 +38,23 @@ const Testimonials = () => {
         <div className="text-center mb-16 animate-slide-up">
           <div className="inline-block mb-4 animate-scale-in stagger-1">
             <span className="text-caption px-6 py-2 bg-white border rounded-full font-medium" style={{ borderColor: 'var(--primary-blue)', color: 'var(--primary-blue)' }}>
-              Avis clients
+              {t('testimonials.badge')}
             </span>
           </div>
-          <h2 className="text-4xl font-bold mb-6 animate-slide-up stagger-2" style={{ fontFamily: 'Poppins', fontWeight: '700', color: 'var(--primary-blue)' }}>Témoignages</h2>
+          <h2 className="text-4xl font-bold mb-6 animate-slide-up stagger-2" style={{ fontFamily: 'Poppins', fontWeight: '700', color: 'var(--primary-blue)' }}>{t('testimonials.title')}</h2>
           <div className="w-16 sm:w-24 h-1 mx-auto rounded-full animate-slide-up stagger-3" style={{ backgroundColor: 'var(--primary-blue)' }}></div>
           <div className="mb-6 animate-slide-up stagger-3">
-            <a 
+            <a
               href="https://www.facebook.com/people/Marc-Olivier-Tessier-Conseiller-en-s%C3%A9curit%C3%A9-financi%C3%A8re/61556652182444/?sk=reviews"
               target="_blank"
               rel="noopener noreferrer"
               className="text-caption opacity-70 hover:opacity-100 transition-opacity duration-300" style={{ color: 'var(--primary-blue)' }}
             >
-              Avis vérifiés — Facebook
+              {t('testimonials.verified')}
             </a>
           </div>
           <p className="text-body text-xl text-[#111827] max-w-3xl mx-auto animate-slide-up stagger-3">
-            Découvrez ce que nos clients disent de nos services
+            {t('testimonials.subtitle')}
           </p>
         </div>
 
@@ -106,7 +94,7 @@ const Testimonials = () => {
 
                   {/* Content */}
                   <p className="text-body text-[#111827] mb-4 italic transition-colors duration-300 group-hover:text-[#111827]">
-                    "{testimonial.content}"
+                    "{t(`testimonials.items.${testimonial.id}.content`)}"
                   </p>
 
                   {/* Author */}
@@ -116,13 +104,13 @@ const Testimonials = () => {
 
                   {/* Facebook Source */}
                   <div className="mt-4 text-right">
-                    <a 
+                    <a
                       href="https://www.facebook.com/people/Marc-Olivier-Tessier-Conseiller-en-s%C3%A9curit%C3%A9-financi%C3%A8re/61556652182444/?sk=reviews"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-caption opacity-70 hover:opacity-100 transition-opacity duration-300" style={{ color: 'var(--primary-blue)' }}
                     >
-                      Source : Facebook · Voir l'avis
+                      {t('testimonials.source')}
                     </a>
                   </div>
                 </div>
