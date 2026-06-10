@@ -1,11 +1,11 @@
-mport React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useState, useCallback } from 'react';
 import { PiggyBank, Shield, Building, TrendingUp, Heart, Users, CreditCard, Home, Plane, Car, UserCheck, Briefcase, Calculator, FileText, Users as Users2, Handshake, ChevronDown } from 'lucide-react';
 import { useLang } from '../contexts/LanguageContext';
 
 const Services = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  const [activeTab, setActiveTab] = useState('epargne');
+  const [activeTab, setActiveTab] = useState('epargne');I
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [openServices, setOpenServices] = useState<{[key: string]: boolean}>({});
   const tabsRef = useRef<HTMLDivElement>(null);
