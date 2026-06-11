@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /avis-jonathan.jpeg
+Disallow: /*.jpg$
+Disallow: /*.jpeg$
 
 Sitemap: https://servicesfinancierstessier.ca/sitemap.xml
