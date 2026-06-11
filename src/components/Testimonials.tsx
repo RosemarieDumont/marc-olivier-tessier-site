@@ -25,11 +25,12 @@ const Testimonials = () => {
     return () => observer.disconnect();
   }, []);
 
-  // id stable (indépendant de la langue) ; le texte vient des traductions.
-  const testimonials = [
+  // id stable (independant de la langue) ; le texte vient des traductions.
+  // image = null -> on affiche un cercle a initiales (aucun visage sur la page).
+  const testimonials: { id: string; name: string; rating: number; image: string | null }[] = [
     { id: 'salome', name: "Salomé", rating: 5, image: "./salomé.jpeg" },
     { id: 'philippe', name: "Philippe", rating: 5, image: "./philippe.jpeg" },
-    { id: 'jonathan', name: "Jonathan", rating: 5, image: "./avis-jonathan.jpeg" },
+    { id: 'jonathan', name: "Jonathan", rating: 5, image: null },
   ];
 
   return (
@@ -74,13 +75,23 @@ const Testimonials = () => {
               </div>
 
               <div className="p-6 flex gap-6 items-start relative z-10">
-                {/* Large Photo on the Side */}
+                {/* Photo (ou initiale si aucune image) */}
                 <div className="flex-shrink-0">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-24 h-24 rounded-full object-cover shadow-lg border-4 border-white group-hover:scale-110 transition-transform duration-500 hover-glow"
-                  />
+                  {testimonial.image ? (
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className="w-24 h-24 rounded-full object-cover shadow-lg border-4 border-white group-hover:scale-110 transition-transform duration-500 hover-glow"
+                    />
+                  ) : (
+                    <div
+                      className="w-24 h-24 rounded-full shadow-lg border-4 border-white flex items-center justify-center text-white text-3xl font-bold group-hover:scale-110 transition-transform duration-500 hover-glow"
+                      style={{ backgroundColor: 'var(--primary-blue)' }}
+                      aria-label={testimonial.name}
+                    >
+                      {testimonial.name.charAt(0)}
+                    </div>
+                  )}
                 </div>
 
                 {/* Content */}
